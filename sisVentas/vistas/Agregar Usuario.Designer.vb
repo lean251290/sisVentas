@@ -27,13 +27,20 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUser = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.PanelAgregarUser = New System.Windows.Forms.Panel()
-        Me.LblNombre = New System.Windows.Forms.Label()
-        Me.lblApellido = New System.Windows.Forms.Label()
-        Me.LblDNI = New System.Windows.Forms.Label()
-        Me.LblEmail = New System.Windows.Forms.Label()
-        Me.LblDireccion = New System.Windows.Forms.Label()
-        Me.LblPass = New System.Windows.Forms.Label()
         Me.Lblrepetir = New System.Windows.Forms.Label()
+        Me.LblPass = New System.Windows.Forms.Label()
+        Me.LblDireccion = New System.Windows.Forms.Label()
+        Me.LblEmail = New System.Windows.Forms.Label()
+        Me.LblDNI = New System.Windows.Forms.Label()
+        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.LblNombre = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.PanelAgregarUser.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,6 +96,13 @@ Partial Class Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.PanelAgregarUser.Controls.Add(Me.TextBox7)
+        Me.PanelAgregarUser.Controls.Add(Me.TextBox6)
+        Me.PanelAgregarUser.Controls.Add(Me.TextBox5)
+        Me.PanelAgregarUser.Controls.Add(Me.TextBox4)
+        Me.PanelAgregarUser.Controls.Add(Me.TextBox3)
+        Me.PanelAgregarUser.Controls.Add(Me.TextBox2)
+        Me.PanelAgregarUser.Controls.Add(Me.TextBox1)
         Me.PanelAgregarUser.Controls.Add(Me.Lblrepetir)
         Me.PanelAgregarUser.Controls.Add(Me.LblPass)
         Me.PanelAgregarUser.Controls.Add(Me.LblDireccion)
@@ -101,31 +115,57 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUser.Size = New System.Drawing.Size(747, 383)
         Me.PanelAgregarUser.TabIndex = 4
         '
-        'LblNombre
+        'Lblrepetir
         '
-        Me.LblNombre.AutoSize = True
-        Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LblNombre.Location = New System.Drawing.Point(3, 24)
-        Me.LblNombre.Name = "LblNombre"
-        Me.LblNombre.Size = New System.Drawing.Size(69, 20)
-        Me.LblNombre.TabIndex = 0
-        Me.LblNombre.Text = "Nombre:"
-        Me.LblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Lblrepetir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Lblrepetir.AutoSize = True
+        Me.Lblrepetir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lblrepetir.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Lblrepetir.Location = New System.Drawing.Point(13, 339)
+        Me.Lblrepetir.Name = "Lblrepetir"
+        Me.Lblrepetir.Size = New System.Drawing.Size(152, 20)
+        Me.Lblrepetir.TabIndex = 6
+        Me.Lblrepetir.Text = "Repetir Contraseña:"
+        Me.Lblrepetir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lblApellido
+        'LblPass
         '
-        Me.lblApellido.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lblApellido.AutoSize = True
-        Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lblApellido.Location = New System.Drawing.Point(3, 77)
-        Me.lblApellido.Name = "lblApellido"
-        Me.lblApellido.Size = New System.Drawing.Size(69, 20)
-        Me.lblApellido.TabIndex = 1
-        Me.lblApellido.Text = "Apellido:"
-        Me.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblPass.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.LblPass.AutoSize = True
+        Me.LblPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPass.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LblPass.Location = New System.Drawing.Point(13, 284)
+        Me.LblPass.Name = "LblPass"
+        Me.LblPass.Size = New System.Drawing.Size(96, 20)
+        Me.LblPass.TabIndex = 5
+        Me.LblPass.Text = "Contraseña:"
+        Me.LblPass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblDireccion
+        '
+        Me.LblDireccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.LblDireccion.AutoSize = True
+        Me.LblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LblDireccion.Location = New System.Drawing.Point(13, 178)
+        Me.LblDireccion.Name = "LblDireccion"
+        Me.LblDireccion.Size = New System.Drawing.Size(79, 20)
+        Me.LblDireccion.TabIndex = 4
+        Me.LblDireccion.Text = "Dirección:"
+        Me.LblDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblEmail
+        '
+        Me.LblEmail.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.LblEmail.AutoSize = True
+        Me.LblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LblEmail.Location = New System.Drawing.Point(13, 235)
+        Me.LblEmail.Name = "LblEmail"
+        Me.LblEmail.Size = New System.Drawing.Size(57, 20)
+        Me.LblEmail.TabIndex = 3
+        Me.LblEmail.Text = "E-mail:"
+        Me.LblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblDNI
         '
@@ -134,64 +174,101 @@ Partial Class Agregar_Usuario
         Me.LblDNI.AutoSize = True
         Me.LblDNI.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDNI.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LblDNI.Location = New System.Drawing.Point(3, 127)
+        Me.LblDNI.Location = New System.Drawing.Point(13, 127)
         Me.LblDNI.Name = "LblDNI"
         Me.LblDNI.Size = New System.Drawing.Size(53, 20)
         Me.LblDNI.TabIndex = 2
         Me.LblDNI.Text = "D.N.I.:"
         Me.LblDNI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblEmail
+        'lblApellido
         '
-        Me.LblEmail.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.LblEmail.AutoSize = True
-        Me.LblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LblEmail.Location = New System.Drawing.Point(3, 237)
-        Me.LblEmail.Name = "LblEmail"
-        Me.LblEmail.Size = New System.Drawing.Size(57, 20)
-        Me.LblEmail.TabIndex = 3
-        Me.LblEmail.Text = "E-mail:"
-        Me.LblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblApellido.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblApellido.AutoSize = True
+        Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApellido.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lblApellido.Location = New System.Drawing.Point(13, 75)
+        Me.lblApellido.Name = "lblApellido"
+        Me.lblApellido.Size = New System.Drawing.Size(69, 20)
+        Me.lblApellido.TabIndex = 1
+        Me.lblApellido.Text = "Apellido:"
+        Me.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblDireccion
+        'LblNombre
         '
-        Me.LblDireccion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.LblDireccion.AutoSize = True
-        Me.LblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDireccion.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LblDireccion.Location = New System.Drawing.Point(3, 178)
-        Me.LblDireccion.Name = "LblDireccion"
-        Me.LblDireccion.Size = New System.Drawing.Size(79, 20)
-        Me.LblDireccion.TabIndex = 4
-        Me.LblDireccion.Text = "Dirección:"
-        Me.LblDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblNombre.AutoSize = True
+        Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LblNombre.Location = New System.Drawing.Point(13, 24)
+        Me.LblNombre.Name = "LblNombre"
+        Me.LblNombre.Size = New System.Drawing.Size(69, 20)
+        Me.LblNombre.TabIndex = 0
+        Me.LblNombre.Text = "Nombre:"
+        Me.LblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblPass
+        'TextBox1
         '
-        Me.LblPass.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.LblPass.AutoSize = True
-        Me.LblPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPass.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LblPass.Location = New System.Drawing.Point(3, 293)
-        Me.LblPass.Name = "LblPass"
-        Me.LblPass.Size = New System.Drawing.Size(96, 20)
-        Me.LblPass.TabIndex = 5
-        Me.LblPass.Text = "Contraseña:"
-        Me.LblPass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Location = New System.Drawing.Point(188, 339)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(444, 13)
+        Me.TextBox1.TabIndex = 7
         '
-        'Lblrepetir
+        'TextBox2
         '
-        Me.Lblrepetir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Lblrepetir.AutoSize = True
-        Me.Lblrepetir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lblrepetir.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Lblrepetir.Location = New System.Drawing.Point(3, 339)
-        Me.Lblrepetir.Name = "Lblrepetir"
-        Me.Lblrepetir.Size = New System.Drawing.Size(152, 20)
-        Me.Lblrepetir.TabIndex = 6
-        Me.Lblrepetir.Text = "Repetir Contraseña:"
-        Me.Lblrepetir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Location = New System.Drawing.Point(188, 286)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(444, 13)
+        Me.TextBox2.TabIndex = 8
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox3.Location = New System.Drawing.Point(188, 235)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(444, 13)
+        Me.TextBox3.TabIndex = 9
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox4.Location = New System.Drawing.Point(188, 180)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(444, 13)
+        Me.TextBox4.TabIndex = 10
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox5.Location = New System.Drawing.Point(188, 127)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(444, 13)
+        Me.TextBox5.TabIndex = 11
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox6.Location = New System.Drawing.Point(188, 77)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(444, 13)
+        Me.TextBox6.TabIndex = 12
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox7.Location = New System.Drawing.Point(188, 26)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(444, 13)
+        Me.TextBox7.TabIndex = 13
         '
         'Agregar_Usuario
         '
@@ -227,4 +304,11 @@ Partial Class Agregar_Usuario
     Friend WithEvents lblApellido As Label
     Friend WithEvents LblNombre As Label
     Friend WithEvents Lblrepetir As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
