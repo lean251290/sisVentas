@@ -73,29 +73,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agregar Usuario.Designer.vb">
+    <Compile Include="vistas\Agregar Usuario.Designer.vb">
       <DependentUpon>Agregar Usuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Agregar Usuario.vb">
+    <Compile Include="vistas\Agregar Usuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.vb">
+    <Compile Include="vistas\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.vb">
+    <Compile Include="vistas\FrmLogin.Designer.vb">
       <DependentUpon>FrmLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PanelAdmin.Designer.vb">
+    <Compile Include="vistas\PanelAdmin.Designer.vb">
       <DependentUpon>PanelAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="PanelAdmin.vb">
+    <Compile Include="vistas\PanelAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ErrorLogin.Designer.vb">
+    <Compile Include="vistas\ventanasEmergentes\ErrorLogin.Designer.vb">
       <DependentUpon>ErrorLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="ErrorLogin.vb">
+    <Compile Include="vistas\ventanasEmergentes\ErrorLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -116,16 +116,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Agregar Usuario.resx">
+    <EmbeddedResource Include="vistas\Agregar Usuario.resx">
       <DependentUpon>Agregar Usuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="vistas\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PanelAdmin.resx">
+    <EmbeddedResource Include="vistas\PanelAdmin.resx">
       <DependentUpon>PanelAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ErrorLogin.resx">
+    <EmbeddedResource Include="vistas\ventanasEmergentes\ErrorLogin.resx">
       <DependentUpon>ErrorLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
