@@ -4,8 +4,7 @@
     End Sub
 
 
-    Private Sub PanelAgregarUser_Resize(sender As Object, e As EventArgs) Handles PanelAgregarUser.Resize
 
 
-    End Sub
+
 End Class

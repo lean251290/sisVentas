@@ -79,4 +79,8 @@ Public Class PanelAdmin
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         abrirFormHijo(New Agregar_Usuario)
     End Sub
+
+    Private Sub BtnClientes_Click(sender As Object, e As EventArgs) Handles BtnClientes.Click
+        abrirFormHijo(New Clientes)
+    End Sub
 End Class

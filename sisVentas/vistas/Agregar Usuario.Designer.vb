@@ -28,13 +28,13 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUser = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.PanelAgregarUser = New System.Windows.Forms.Panel()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TNombreUsuario = New System.Windows.Forms.TextBox()
+        Me.TApellidoUsuario = New System.Windows.Forms.TextBox()
+        Me.TDniUsuario = New System.Windows.Forms.TextBox()
+        Me.TDireccionUsuario = New System.Windows.Forms.TextBox()
+        Me.TMailUsuario = New System.Windows.Forms.TextBox()
+        Me.TContraseniaUsuario = New System.Windows.Forms.TextBox()
+        Me.TRepetirContraseniaUsuario = New System.Windows.Forms.TextBox()
         Me.Lblrepetir = New System.Windows.Forms.Label()
         Me.LblPass = New System.Windows.Forms.Label()
         Me.LblDireccion = New System.Windows.Forms.Label()
@@ -101,13 +101,13 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUser.BackColor = System.Drawing.Color.White
         Me.PanelAgregarUser.BackgroundImage = CType(resources.GetObject("PanelAgregarUser.BackgroundImage"), System.Drawing.Image)
         Me.PanelAgregarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarUser.Controls.Add(Me.TextBox7)
-        Me.PanelAgregarUser.Controls.Add(Me.TextBox6)
-        Me.PanelAgregarUser.Controls.Add(Me.TextBox5)
-        Me.PanelAgregarUser.Controls.Add(Me.TextBox4)
-        Me.PanelAgregarUser.Controls.Add(Me.TextBox3)
-        Me.PanelAgregarUser.Controls.Add(Me.TextBox2)
-        Me.PanelAgregarUser.Controls.Add(Me.TextBox1)
+        Me.PanelAgregarUser.Controls.Add(Me.TNombreUsuario)
+        Me.PanelAgregarUser.Controls.Add(Me.TApellidoUsuario)
+        Me.PanelAgregarUser.Controls.Add(Me.TDniUsuario)
+        Me.PanelAgregarUser.Controls.Add(Me.TDireccionUsuario)
+        Me.PanelAgregarUser.Controls.Add(Me.TMailUsuario)
+        Me.PanelAgregarUser.Controls.Add(Me.TContraseniaUsuario)
+        Me.PanelAgregarUser.Controls.Add(Me.TRepetirContraseniaUsuario)
         Me.PanelAgregarUser.Controls.Add(Me.Lblrepetir)
         Me.PanelAgregarUser.Controls.Add(Me.LblPass)
         Me.PanelAgregarUser.Controls.Add(Me.LblDireccion)
@@ -120,75 +120,75 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUser.Size = New System.Drawing.Size(747, 383)
         Me.PanelAgregarUser.TabIndex = 4
         '
-        'TextBox7
+        'TNombreUsuario
         '
-        Me.TextBox7.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox7.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox7.Location = New System.Drawing.Point(188, 26)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(444, 13)
-        Me.TextBox7.TabIndex = 13
+        Me.TNombreUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TNombreUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TNombreUsuario.Location = New System.Drawing.Point(188, 26)
+        Me.TNombreUsuario.Name = "TNombreUsuario"
+        Me.TNombreUsuario.Size = New System.Drawing.Size(444, 13)
+        Me.TNombreUsuario.TabIndex = 13
         '
-        'TextBox6
+        'TApellidoUsuario
         '
-        Me.TextBox6.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox6.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Location = New System.Drawing.Point(188, 77)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(444, 13)
-        Me.TextBox6.TabIndex = 12
+        Me.TApellidoUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TApellidoUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TApellidoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TApellidoUsuario.Location = New System.Drawing.Point(188, 77)
+        Me.TApellidoUsuario.Name = "TApellidoUsuario"
+        Me.TApellidoUsuario.Size = New System.Drawing.Size(444, 13)
+        Me.TApellidoUsuario.TabIndex = 12
         '
-        'TextBox5
+        'TDniUsuario
         '
-        Me.TextBox5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox5.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Location = New System.Drawing.Point(188, 127)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(444, 13)
-        Me.TextBox5.TabIndex = 11
+        Me.TDniUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TDniUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TDniUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDniUsuario.Location = New System.Drawing.Point(188, 127)
+        Me.TDniUsuario.Name = "TDniUsuario"
+        Me.TDniUsuario.Size = New System.Drawing.Size(444, 13)
+        Me.TDniUsuario.TabIndex = 11
         '
-        'TextBox4
+        'TDireccionUsuario
         '
-        Me.TextBox4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.TextBox4.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Location = New System.Drawing.Point(188, 180)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(444, 13)
-        Me.TextBox4.TabIndex = 10
+        Me.TDireccionUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TDireccionUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TDireccionUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDireccionUsuario.Location = New System.Drawing.Point(188, 180)
+        Me.TDireccionUsuario.Name = "TDireccionUsuario"
+        Me.TDireccionUsuario.Size = New System.Drawing.Size(444, 13)
+        Me.TDireccionUsuario.TabIndex = 10
         '
-        'TextBox3
+        'TMailUsuario
         '
-        Me.TextBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Location = New System.Drawing.Point(188, 235)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(444, 13)
-        Me.TextBox3.TabIndex = 9
+        Me.TMailUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TMailUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TMailUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TMailUsuario.Location = New System.Drawing.Point(188, 235)
+        Me.TMailUsuario.Name = "TMailUsuario"
+        Me.TMailUsuario.Size = New System.Drawing.Size(444, 13)
+        Me.TMailUsuario.TabIndex = 9
         '
-        'TextBox2
+        'TContraseniaUsuario
         '
-        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Location = New System.Drawing.Point(188, 286)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(444, 13)
-        Me.TextBox2.TabIndex = 8
+        Me.TContraseniaUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TContraseniaUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TContraseniaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TContraseniaUsuario.Location = New System.Drawing.Point(188, 286)
+        Me.TContraseniaUsuario.Name = "TContraseniaUsuario"
+        Me.TContraseniaUsuario.Size = New System.Drawing.Size(444, 13)
+        Me.TContraseniaUsuario.TabIndex = 8
         '
-        'TextBox1
+        'TRepetirContraseniaUsuario
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(188, 339)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(444, 13)
-        Me.TextBox1.TabIndex = 7
+        Me.TRepetirContraseniaUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TRepetirContraseniaUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TRepetirContraseniaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TRepetirContraseniaUsuario.Location = New System.Drawing.Point(188, 339)
+        Me.TRepetirContraseniaUsuario.Name = "TRepetirContraseniaUsuario"
+        Me.TRepetirContraseniaUsuario.Size = New System.Drawing.Size(444, 13)
+        Me.TRepetirContraseniaUsuario.TabIndex = 7
         '
         'Lblrepetir
         '
@@ -316,11 +316,11 @@ Partial Class Agregar_Usuario
     Friend WithEvents lblApellido As Label
     Friend WithEvents LblNombre As Label
     Friend WithEvents Lblrepetir As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TNombreUsuario As TextBox
+    Friend WithEvents TApellidoUsuario As TextBox
+    Friend WithEvents TDniUsuario As TextBox
+    Friend WithEvents TDireccionUsuario As TextBox
+    Friend WithEvents TMailUsuario As TextBox
+    Friend WithEvents TContraseniaUsuario As TextBox
+    Friend WithEvents TRepetirContraseniaUsuario As TextBox
 End Class
