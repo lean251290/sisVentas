@@ -26,7 +26,6 @@ Partial Class Usuarios
         Me.LUsuarios = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelAgregarUser = New System.Windows.Forms.Panel()
-        Me.BBuscarUsuario = New System.Windows.Forms.Button()
         Me.DGUsuarios = New System.Windows.Forms.DataGridView()
         Me.CNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CApellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,8 +35,10 @@ Partial Class Usuarios
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TBuscarUsuario = New System.Windows.Forms.TextBox()
         Me.LBuscarUsuario = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarUser.SuspendLayout()
         CType(Me.DGUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LUsuarios
@@ -72,7 +73,7 @@ Partial Class Usuarios
         Me.PanelAgregarUser.BackColor = System.Drawing.Color.White
         Me.PanelAgregarUser.BackgroundImage = CType(resources.GetObject("PanelAgregarUser.BackgroundImage"), System.Drawing.Image)
         Me.PanelAgregarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarUser.Controls.Add(Me.BBuscarUsuario)
+        Me.PanelAgregarUser.Controls.Add(Me.PictureBox1)
         Me.PanelAgregarUser.Controls.Add(Me.DGUsuarios)
         Me.PanelAgregarUser.Controls.Add(Me.TBuscarUsuario)
         Me.PanelAgregarUser.Controls.Add(Me.LBuscarUsuario)
@@ -80,17 +81,6 @@ Partial Class Usuarios
         Me.PanelAgregarUser.Name = "PanelAgregarUser"
         Me.PanelAgregarUser.Size = New System.Drawing.Size(747, 383)
         Me.PanelAgregarUser.TabIndex = 7
-        '
-        'BBuscarUsuario
-        '
-        Me.BBuscarUsuario.BackColor = System.Drawing.Color.Transparent
-        Me.BBuscarUsuario.BackgroundImage = CType(resources.GetObject("BBuscarUsuario.BackgroundImage"), System.Drawing.Image)
-        Me.BBuscarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BBuscarUsuario.Location = New System.Drawing.Point(592, 18)
-        Me.BBuscarUsuario.Name = "BBuscarUsuario"
-        Me.BBuscarUsuario.Size = New System.Drawing.Size(53, 54)
-        Me.BBuscarUsuario.TabIndex = 16
-        Me.BBuscarUsuario.UseVisualStyleBackColor = False
         '
         'DGUsuarios
         '
@@ -133,12 +123,13 @@ Partial Class Usuarios
         '
         'TBuscarUsuario
         '
-        Me.TBuscarUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TBuscarUsuario.Location = New System.Drawing.Point(142, 39)
+        Me.TBuscarUsuario.Multiline = True
         Me.TBuscarUsuario.Name = "TBuscarUsuario"
-        Me.TBuscarUsuario.Size = New System.Drawing.Size(444, 13)
+        Me.TBuscarUsuario.Size = New System.Drawing.Size(444, 20)
         Me.TBuscarUsuario.TabIndex = 14
         '
         'LBuscarUsuario
@@ -146,12 +137,23 @@ Partial Class Usuarios
         Me.LBuscarUsuario.AutoSize = True
         Me.LBuscarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBuscarUsuario.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LBuscarUsuario.Location = New System.Drawing.Point(61, 32)
+        Me.LBuscarUsuario.Location = New System.Drawing.Point(37, 39)
         Me.LBuscarUsuario.Name = "LBuscarUsuario"
         Me.LBuscarUsuario.Size = New System.Drawing.Size(59, 20)
         Me.LBuscarUsuario.TabIndex = 1
         Me.LBuscarUsuario.Text = "Buscar"
         Me.LBuscarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(592, 28)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
         '
         'Usuarios
         '
@@ -168,6 +170,7 @@ Partial Class Usuarios
         Me.PanelAgregarUser.ResumeLayout(False)
         Me.PanelAgregarUser.PerformLayout()
         CType(Me.DGUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -179,11 +182,11 @@ Partial Class Usuarios
     Friend WithEvents LBuscarUsuario As Label
     Friend WithEvents TBuscarUsuario As TextBox
     Friend WithEvents DGUsuarios As DataGridView
-    Friend WithEvents BBuscarUsuario As Button
     Friend WithEvents CNombre As DataGridViewTextBoxColumn
     Friend WithEvents CApellido As DataGridViewTextBoxColumn
     Friend WithEvents CDni As DataGridViewTextBoxColumn
     Friend WithEvents CTelefono As DataGridViewTextBoxColumn
     Friend WithEvents CDireccion As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

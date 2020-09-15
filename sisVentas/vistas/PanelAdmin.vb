@@ -83,4 +83,11 @@ Public Class PanelAdmin
     Private Sub BtnClientes_Click(sender As Object, e As EventArgs) Handles BtnClientes.Click
         abrirFormHijo(New Clientes)
     End Sub
+    Private Sub BtnPagos_Click(sender As Object, e As EventArgs) Handles BtnPagos.Click
+        abrirFormHijo(New Pagos)
+    End Sub
+
+    Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles BtnUsuarios.Click
+        abrirFormHijo(New Usuarios)
+    End Sub
 End Class
