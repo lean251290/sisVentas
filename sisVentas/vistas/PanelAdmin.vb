@@ -17,6 +17,8 @@ Public Class PanelAdmin
         Me.BtnMaximizar.Visible = False
         BtnRestaurar.Visible = True
         Me.WindowState = FormWindowState.Maximized
+        'TNombreUsuario.AutoSize = False
+        'TNombreUsuario.Size = New Size(250, 250)
     End Sub
 
     Private Sub BtnRestaurar_Click(sender As Object, e As EventArgs) Handles BtnRestaurar.Click
@@ -62,32 +64,73 @@ Public Class PanelAdmin
         End If
     End Sub
 
+    'en este metodo escondemos los paneles que contienen los botones de los submenus
+    Private Sub esconderSubMenu()
+        PanelProductos.Visible = False
+        PanelUsuarios.Visible = False
+        PanelVentas.Visible = False
 
-    Private Sub abrirFormHijo(ByVal formHijo As Object)
-        If Me.PanelContenedor.Controls.Count > 0 Then
-            Me.PanelContenedor.Controls.RemoveAt(0)
+    End Sub
+
+    'en este metodo mostramos los paneles escondidos
+    Private Sub mostrarSubMenu(submenu As Panel)
+        If submenu.Visible = False Then
+            esconderSubMenu()
+            submenu.Visible = True
+        Else
+            submenu.Visible = False
         End If
-        Dim fh As Form = TryCast(formHijo, Form)
-        fh.TopLevel = False
-        fh.FormBorderStyle = Windows.Forms.BorderStyle.None
-        fh.Dock = DockStyle.Fill
-        Me.PanelContenedor.Controls.Add(fh)
-        Me.PanelContenedor.Tag = fh
-        fh.Show()
+    End Sub
+    Private Sub PanelAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        esconderSubMenu()
     End Sub
 
-    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
+    Private Sub BotonUsuarios_Click(sender As Object, e As EventArgs) Handles BotonUsuarios.Click
+        mostrarSubMenu(PanelUsuarios)
+    End Sub
+
+    Private Sub BotonProductos_Click(sender As Object, e As EventArgs) Handles BotonProductos.Click
+        mostrarSubMenu(PanelProductos)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles BotonModificarProd.Click
+        esconderSubMenu()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BotonVerUsuarios.Click
+        esconderSubMenu()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles BotonModificarUsuario.Click
+        esconderSubMenu()
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles BotonVerProd.Click
+        esconderSubMenu()
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles BotonNuevoProd.Click
+        esconderSubMenu()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BotonAgregarUsuario.Click
         abrirFormHijo(New Agregar_Usuario)
+        esconderSubMenu()
     End Sub
 
-    Private Sub BtnClientes_Click(sender As Object, e As EventArgs) Handles BtnClientes.Click
-        abrirFormHijo(New Clientes)
-    End Sub
-    Private Sub BtnPagos_Click(sender As Object, e As EventArgs) Handles BtnPagos.Click
-        abrirFormHijo(New Pagos)
+    Private formActual As Form = Nothing
+    Private Sub abrirFormHijo(formHijo As Form)
+        If formActual IsNot Nothing Then formActual.Close()
+        formActual = formHijo
+        formHijo.TopLevel = False
+        formHijo.FormBorderStyle = FormBorderStyle.None
+        formHijo.Dock = DockStyle.Fill
+        PanelContenedorFormHijo.Controls.Add(formHijo)
+        formHijo.BringToFront()
+        formHijo.Show()
     End Sub
 
-    Private Sub BtnUsuarios_Click(sender As Object, e As EventArgs) Handles BtnUsuarios.Click
-        abrirFormHijo(New Usuarios)
+    Private Sub BotonVentas_Click(sender As Object, e As EventArgs) Handles BotonVentas.Click
+        mostrarSubMenu(PanelVentas)
     End Sub
 End Class
