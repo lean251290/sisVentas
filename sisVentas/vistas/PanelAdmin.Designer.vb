@@ -222,11 +222,15 @@ Partial Class PanelAdmin
         Me.BotonClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BotonClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BotonClientes.ForeColor = System.Drawing.Color.White
+        Me.BotonClientes.Image = CType(resources.GetObject("BotonClientes.Image"), System.Drawing.Image)
+        Me.BotonClientes.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonClientes.Location = New System.Drawing.Point(0, 568)
         Me.BotonClientes.Name = "BotonClientes"
         Me.BotonClientes.Size = New System.Drawing.Size(203, 40)
         Me.BotonClientes.TabIndex = 26
-        Me.BotonClientes.Text = "CLIENTES"
+        Me.BotonClientes.Text = "       CLIENTES"
+        Me.BotonClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BotonClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BotonClientes.UseVisualStyleBackColor = True
         '
         'PanelReportes
@@ -266,12 +270,14 @@ Partial Class PanelAdmin
         Me.BotonReportes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BotonReportes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BotonReportes.Image = CType(resources.GetObject("BotonReportes.Image"), System.Drawing.Image)
-        Me.BotonReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BotonReportes.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonReportes.Location = New System.Drawing.Point(0, 488)
         Me.BotonReportes.Name = "BotonReportes"
         Me.BotonReportes.Size = New System.Drawing.Size(203, 40)
         Me.BotonReportes.TabIndex = 24
-        Me.BotonReportes.Text = "REPORTES"
+        Me.BotonReportes.Text = "     REPORTES"
+        Me.BotonReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BotonReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BotonReportes.UseVisualStyleBackColor = True
         '
         'PanelVentas
@@ -330,12 +336,13 @@ Partial Class PanelAdmin
         Me.BotonVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BotonVentas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BotonVentas.Image = CType(resources.GetObject("BotonVentas.Image"), System.Drawing.Image)
-        Me.BotonVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BotonVentas.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonVentas.Location = New System.Drawing.Point(0, 368)
         Me.BotonVentas.Name = "BotonVentas"
         Me.BotonVentas.Size = New System.Drawing.Size(203, 40)
         Me.BotonVentas.TabIndex = 22
-        Me.BotonVentas.Text = "VENTAS"
+        Me.BotonVentas.Text = "         VENTAS"
+        Me.BotonVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BotonVentas.UseVisualStyleBackColor = True
         '
         'PanelProductos
@@ -413,12 +420,14 @@ Partial Class PanelAdmin
         Me.BotonProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BotonProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BotonProductos.Image = CType(resources.GetObject("BotonProductos.Image"), System.Drawing.Image)
-        Me.BotonProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BotonProductos.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonProductos.Location = New System.Drawing.Point(0, 208)
         Me.BotonProductos.Name = "BotonProductos"
         Me.BotonProductos.Size = New System.Drawing.Size(203, 40)
         Me.BotonProductos.TabIndex = 20
-        Me.BotonProductos.Text = "PRODUCTOS"
+        Me.BotonProductos.Text = "     PRODUCTOS"
+        Me.BotonProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BotonProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BotonProductos.UseVisualStyleBackColor = True
         '
         'PanelUsuarios
@@ -459,13 +468,12 @@ Partial Class PanelAdmin
         Me.BotonAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BotonAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BotonAgregarUsuario.Image = CType(resources.GetObject("BotonAgregarUsuario.Image"), System.Drawing.Image)
-        Me.BotonAgregarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BotonAgregarUsuario.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonAgregarUsuario.Location = New System.Drawing.Point(0, 0)
         Me.BotonAgregarUsuario.Name = "BotonAgregarUsuario"
-        Me.BotonAgregarUsuario.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
         Me.BotonAgregarUsuario.Size = New System.Drawing.Size(203, 40)
         Me.BotonAgregarUsuario.TabIndex = 1
-        Me.BotonAgregarUsuario.Text = "NUEVO"
+        Me.BotonAgregarUsuario.Text = "  NUEVO"
         Me.BotonAgregarUsuario.UseVisualStyleBackColor = True
         '
         'BotonUsuarios
@@ -477,12 +485,15 @@ Partial Class PanelAdmin
         Me.BotonUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BotonUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BotonUsuarios.Image = CType(resources.GetObject("BotonUsuarios.Image"), System.Drawing.Image)
-        Me.BotonUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BotonUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonUsuarios.Location = New System.Drawing.Point(0, 88)
+        Me.BotonUsuarios.Margin = New System.Windows.Forms.Padding(0)
         Me.BotonUsuarios.Name = "BotonUsuarios"
         Me.BotonUsuarios.Size = New System.Drawing.Size(203, 40)
         Me.BotonUsuarios.TabIndex = 0
-        Me.BotonUsuarios.Text = "USUARIOS"
+        Me.BotonUsuarios.Text = "    USUARIOS"
+        Me.BotonUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BotonUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BotonUsuarios.UseVisualStyleBackColor = True
         '
         'Panel11
