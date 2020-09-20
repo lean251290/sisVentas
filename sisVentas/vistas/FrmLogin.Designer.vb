@@ -35,27 +35,33 @@ Partial Class Login
         Me.BtnSesion = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.BtnMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.BtnMin)
         Me.Panel1.Controls.Add(Me.BtnClose)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(285, 50)
+        Me.Panel1.Size = New System.Drawing.Size(285, 38)
         Me.Panel1.TabIndex = 0
         '
         'BtnMin
         '
         Me.BtnMin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnMin.Image = CType(resources.GetObject("BtnMin.Image"), System.Drawing.Image)
-        Me.BtnMin.Location = New System.Drawing.Point(203, 12)
+        Me.BtnMin.Location = New System.Drawing.Point(203, 3)
         Me.BtnMin.Name = "BtnMin"
         Me.BtnMin.Size = New System.Drawing.Size(32, 23)
         Me.BtnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -66,7 +72,7 @@ Partial Class Login
         '
         Me.BtnClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnClose.Image = CType(resources.GetObject("BtnClose.Image"), System.Drawing.Image)
-        Me.BtnClose.Location = New System.Drawing.Point(241, 12)
+        Me.BtnClose.Location = New System.Drawing.Point(241, 0)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(32, 32)
         Me.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -75,33 +81,36 @@ Partial Class Login
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 435)
+        Me.Panel2.Location = New System.Drawing.Point(0, 425)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(285, 15)
+        Me.Panel2.Size = New System.Drawing.Size(285, 25)
         Me.Panel2.TabIndex = 1
         '
         'LblUser
         '
         Me.LblUser.AutoSize = True
+        Me.LblUser.BackColor = System.Drawing.Color.Transparent
         Me.LblUser.ForeColor = System.Drawing.Color.Gray
-        Me.LblUser.Location = New System.Drawing.Point(27, 100)
+        Me.LblUser.Location = New System.Drawing.Point(24, 187)
         Me.LblUser.Name = "LblUser"
-        Me.LblUser.Size = New System.Drawing.Size(43, 13)
+        Me.LblUser.Size = New System.Drawing.Size(56, 13)
         Me.LblUser.TabIndex = 2
-        Me.LblUser.Text = "Usuario"
+        Me.LblUser.Text = "USUARIO"
         '
         'TxtUser
         '
-        Me.TxtUser.Location = New System.Drawing.Point(27, 116)
+        Me.TxtUser.Location = New System.Drawing.Point(27, 203)
         Me.TxtUser.Name = "TxtUser"
         Me.TxtUser.Size = New System.Drawing.Size(223, 20)
         Me.TxtUser.TabIndex = 3
         '
         'TxtPass
         '
-        Me.TxtPass.Location = New System.Drawing.Point(27, 184)
+        Me.TxtPass.Location = New System.Drawing.Point(27, 254)
         Me.TxtPass.Name = "TxtPass"
         Me.TxtPass.Size = New System.Drawing.Size(223, 20)
         Me.TxtPass.TabIndex = 5
@@ -109,41 +118,45 @@ Partial Class Login
         'LblPass
         '
         Me.LblPass.AutoSize = True
+        Me.LblPass.BackColor = System.Drawing.Color.Transparent
         Me.LblPass.ForeColor = System.Drawing.Color.Gray
-        Me.LblPass.Location = New System.Drawing.Point(27, 168)
+        Me.LblPass.Location = New System.Drawing.Point(27, 238)
         Me.LblPass.Name = "LblPass"
-        Me.LblPass.Size = New System.Drawing.Size(55, 13)
+        Me.LblPass.Size = New System.Drawing.Size(81, 13)
         Me.LblPass.TabIndex = 4
-        Me.LblPass.Text = "Contrseña"
+        Me.LblPass.Text = "CONTRASEÑA"
         '
         'ChkRecuerdame
         '
         Me.ChkRecuerdame.AutoSize = True
+        Me.ChkRecuerdame.BackColor = System.Drawing.Color.Transparent
         Me.ChkRecuerdame.ForeColor = System.Drawing.Color.Gray
-        Me.ChkRecuerdame.Location = New System.Drawing.Point(27, 237)
+        Me.ChkRecuerdame.Location = New System.Drawing.Point(27, 296)
         Me.ChkRecuerdame.Name = "ChkRecuerdame"
         Me.ChkRecuerdame.Size = New System.Drawing.Size(87, 17)
         Me.ChkRecuerdame.TabIndex = 6
         Me.ChkRecuerdame.Text = "Recuérdame"
-        Me.ChkRecuerdame.UseVisualStyleBackColor = True
+        Me.ChkRecuerdame.UseVisualStyleBackColor = False
         '
         'BtnSesion
         '
-        Me.BtnSesion.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.BtnSesion.BackColor = System.Drawing.Color.Transparent
+        Me.BtnSesion.BackgroundImage = CType(resources.GetObject("BtnSesion.BackgroundImage"), System.Drawing.Image)
+        Me.BtnSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnSesion.FlatAppearance.BorderSize = 0
         Me.BtnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSesion.ForeColor = System.Drawing.Color.White
-        Me.BtnSesion.Location = New System.Drawing.Point(30, 292)
+        Me.BtnSesion.Location = New System.Drawing.Point(30, 331)
         Me.BtnSesion.Name = "BtnSesion"
         Me.BtnSesion.Size = New System.Drawing.Size(220, 42)
         Me.BtnSesion.TabIndex = 7
-        Me.BtnSesion.Text = "Iniciar Sesión"
         Me.BtnSesion.UseVisualStyleBackColor = False
         '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.LinkColor = System.Drawing.Color.Gray
         Me.LinkLabel1.Location = New System.Drawing.Point(92, 398)
         Me.LinkLabel1.Name = "LinkLabel1"
@@ -155,19 +168,48 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(48, 360)
+        Me.Label1.Location = New System.Drawing.Point(48, 376)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(187, 13)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "______________________________"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(111, 65)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 54)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(95, 114)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(80, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.TabIndex = 10
+        Me.PictureBox2.TabStop = False
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(285, 450)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.BtnSesion)
@@ -178,6 +220,7 @@ Partial Class Login
         Me.Controls.Add(Me.LblUser)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
         Me.Text = "Login"
@@ -185,6 +228,8 @@ Partial Class Login
         Me.Panel1.PerformLayout()
         CType(Me.BtnMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -201,4 +246,6 @@ Partial Class Login
     Friend WithEvents Panel2 As Panel
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
