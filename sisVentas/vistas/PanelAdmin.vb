@@ -69,6 +69,8 @@ Public Class PanelAdmin
         PanelProductos.Visible = False
         PanelUsuarios.Visible = False
         PanelVentas.Visible = False
+        PanelClientes.Visible = False
+        PanelReportes.Visible = False
 
     End Sub
 
@@ -98,10 +100,11 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BotonVerUsuarios.Click
+        abrirFormHijo(New VerUsuarios)
         esconderSubMenu()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles BotonModificarUsuario.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
         esconderSubMenu()
     End Sub
 
@@ -132,5 +135,21 @@ Public Class PanelAdmin
 
     Private Sub BotonVentas_Click(sender As Object, e As EventArgs) Handles BotonVentas.Click
         mostrarSubMenu(PanelVentas)
+    End Sub
+
+    Private Sub BotonReportes_Click(sender As Object, e As EventArgs) Handles BotonReportes.Click
+        mostrarSubMenu(PanelReportes)
+    End Sub
+
+    Private Sub BotonClientes_Click(sender As Object, e As EventArgs) Handles BotonClientes.Click
+        mostrarSubMenu(PanelClientes)
+    End Sub
+
+    Private Sub BotonUsuarios_MouseEnter(sender As Object, e As EventArgs) Handles BotonUsuarios.MouseEnter
+        BotonUsuarios.ForeColor = Color.FromArgb(252, 54, 10)
+    End Sub
+
+    Private Sub BotonUsuarios_MouseLeave(sender As Object, e As EventArgs) Handles BotonUsuarios.MouseLeave
+        BotonUsuarios.ForeColor = Color.FromArgb(255, 255, 255)
     End Sub
 End Class
