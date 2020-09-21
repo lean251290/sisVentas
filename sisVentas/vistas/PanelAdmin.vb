@@ -116,7 +116,7 @@ Public Class PanelAdmin
         esconderSubMenu()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BotonAgregarUsuario.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) 
         abrirFormHijo(New Agregar_Usuario)
         esconderSubMenu()
     End Sub

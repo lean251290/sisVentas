@@ -22,8 +22,8 @@
         Me.Opacity -= 0.1
         If Me.Opacity = Opacity Then
             TimerBienvenidaCerrar.Stop()
-            Me.Close()
-
+            Me.Hide()
+            Login.Show()
         End If
     End Sub
 End Class
