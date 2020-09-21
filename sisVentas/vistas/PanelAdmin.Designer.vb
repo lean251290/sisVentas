@@ -42,11 +42,12 @@ Partial Class PanelAdmin
         Me.BotonVerVentas = New System.Windows.Forms.Button()
         Me.BotonVentas = New System.Windows.Forms.Button()
         Me.PanelProductos = New System.Windows.Forms.Panel()
-        Me.BotonModificarProd = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.BotonNuevoProd = New System.Windows.Forms.Button()
         Me.BotonVerProd = New System.Windows.Forms.Button()
         Me.BotonProductos = New System.Windows.Forms.Button()
         Me.PanelUsuarios = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.BotonVerUsuarios = New System.Windows.Forms.Button()
         Me.BotonUsuarios = New System.Windows.Forms.Button()
         Me.Panel11 = New System.Windows.Forms.Panel()
@@ -57,7 +58,7 @@ Partial Class PanelAdmin
         Me.TMOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.TMMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelContenedorFormHijo = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PanelAdm.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
         Me.PanelClientes.SuspendLayout()
@@ -69,11 +70,13 @@ Partial Class PanelAdmin
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         CType(Me.BtnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelAdm
         '
-        Me.PanelAdm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelAdm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PanelAdm.Controls.Add(Me.PictureBox3)
         Me.PanelAdm.Controls.Add(Me.BtnRestaurar)
         Me.PanelAdm.Controls.Add(Me.BtnMin)
         Me.PanelAdm.Controls.Add(Me.BtnMaximizar)
@@ -95,7 +98,7 @@ Partial Class PanelAdmin
         Me.BtnRestaurar.Image = CType(resources.GetObject("BtnRestaurar.Image"), System.Drawing.Image)
         Me.BtnRestaurar.Location = New System.Drawing.Point(814, 3)
         Me.BtnRestaurar.Name = "BtnRestaurar"
-        Me.BtnRestaurar.Size = New System.Drawing.Size(40, 40)
+        Me.BtnRestaurar.Size = New System.Drawing.Size(40, 34)
         Me.BtnRestaurar.TabIndex = 3
         Me.BtnRestaurar.UseVisualStyleBackColor = True
         Me.BtnRestaurar.Visible = False
@@ -111,7 +114,7 @@ Partial Class PanelAdmin
         Me.BtnMin.Image = CType(resources.GetObject("BtnMin.Image"), System.Drawing.Image)
         Me.BtnMin.Location = New System.Drawing.Point(768, 0)
         Me.BtnMin.Name = "BtnMin"
-        Me.BtnMin.Size = New System.Drawing.Size(40, 40)
+        Me.BtnMin.Size = New System.Drawing.Size(40, 37)
         Me.BtnMin.TabIndex = 2
         Me.BtnMin.UseVisualStyleBackColor = True
         '
@@ -141,14 +144,14 @@ Partial Class PanelAdmin
         Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
         Me.BtnCerrar.Location = New System.Drawing.Point(860, 0)
         Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(40, 40)
+        Me.BtnCerrar.Size = New System.Drawing.Size(37, 37)
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.UseVisualStyleBackColor = True
         '
         'PanelMenu
         '
         Me.PanelMenu.AutoScroll = True
-        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelMenu.Controls.Add(Me.PanelClientes)
         Me.PanelMenu.Controls.Add(Me.BotonClientes)
         Me.PanelMenu.Controls.Add(Me.PanelReportes)
@@ -170,7 +173,7 @@ Partial Class PanelAdmin
         '
         'PanelClientes
         '
-        Me.PanelClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.PanelClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelClientes.Controls.Add(Me.Button4)
         Me.PanelClientes.Controls.Add(Me.Button1)
         Me.PanelClientes.Dock = System.Windows.Forms.DockStyle.Top
@@ -195,7 +198,7 @@ Partial Class PanelAdmin
         Me.Button4.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
         Me.Button4.Size = New System.Drawing.Size(203, 40)
         Me.Button4.TabIndex = 5
-        Me.Button4.Text = "NUEVO"
+        Me.Button4.Text = "NUEVO "
         Me.Button4.UseVisualStyleBackColor = False
         '
         'Button1
@@ -356,7 +359,7 @@ Partial Class PanelAdmin
         'PanelProductos
         '
         Me.PanelProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.PanelProductos.Controls.Add(Me.BotonModificarProd)
+        Me.PanelProductos.Controls.Add(Me.Button5)
         Me.PanelProductos.Controls.Add(Me.BotonNuevoProd)
         Me.PanelProductos.Controls.Add(Me.BotonVerProd)
         Me.PanelProductos.Dock = System.Windows.Forms.DockStyle.Top
@@ -365,24 +368,24 @@ Partial Class PanelAdmin
         Me.PanelProductos.Size = New System.Drawing.Size(203, 120)
         Me.PanelProductos.TabIndex = 21
         '
-        'BotonModificarProd
+        'Button5
         '
-        Me.BotonModificarProd.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BotonModificarProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BotonModificarProd.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BotonModificarProd.FlatAppearance.BorderSize = 0
-        Me.BotonModificarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BotonModificarProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BotonModificarProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BotonModificarProd.Image = CType(resources.GetObject("BotonModificarProd.Image"), System.Drawing.Image)
-        Me.BotonModificarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BotonModificarProd.Location = New System.Drawing.Point(0, 80)
-        Me.BotonModificarProd.Name = "BotonModificarProd"
-        Me.BotonModificarProd.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.BotonModificarProd.Size = New System.Drawing.Size(203, 40)
-        Me.BotonModificarProd.TabIndex = 3
-        Me.BotonModificarProd.Text = "MODIFICAR"
-        Me.BotonModificarProd.UseVisualStyleBackColor = False
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(0, 80)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Me.Button5.Size = New System.Drawing.Size(203, 40)
+        Me.Button5.TabIndex = 5
+        Me.Button5.Text = "MODIFICAR"
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'BotonNuevoProd
         '
@@ -444,14 +447,33 @@ Partial Class PanelAdmin
         '
         'PanelUsuarios
         '
-        Me.PanelUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.PanelUsuarios.Controls.Add(Me.Button5)
+        Me.PanelUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.PanelUsuarios.Controls.Add(Me.Button8)
         Me.PanelUsuarios.Controls.Add(Me.BotonVerUsuarios)
         Me.PanelUsuarios.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelUsuarios.Location = New System.Drawing.Point(0, 128)
         Me.PanelUsuarios.Name = "PanelUsuarios"
         Me.PanelUsuarios.Size = New System.Drawing.Size(203, 80)
         Me.PanelUsuarios.TabIndex = 19
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
+        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button8.Location = New System.Drawing.Point(0, 40)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Me.Button8.Size = New System.Drawing.Size(203, 40)
+        Me.Button8.TabIndex = 6
+        Me.Button8.Text = "NUEVO"
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'BotonVerUsuarios
         '
@@ -478,7 +500,6 @@ Partial Class PanelAdmin
         Me.BotonUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BotonUsuarios.Dock = System.Windows.Forms.DockStyle.Top
         Me.BotonUsuarios.FlatAppearance.BorderSize = 0
-        Me.BotonUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BotonUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BotonUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BotonUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -496,7 +517,7 @@ Partial Class PanelAdmin
         '
         'Panel11
         '
-        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel11.Controls.Add(Me.PictureBox1)
         Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel11.Location = New System.Drawing.Point(0, 34)
@@ -508,7 +529,7 @@ Partial Class PanelAdmin
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(-9, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(229, 48)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -527,11 +548,11 @@ Partial Class PanelAdmin
         '
         'BtnMenu
         '
-        Me.BtnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMenu.Dock = System.Windows.Forms.DockStyle.Right
         Me.BtnMenu.Image = CType(resources.GetObject("BtnMenu.Image"), System.Drawing.Image)
-        Me.BtnMenu.Location = New System.Drawing.Point(150, 0)
+        Me.BtnMenu.Location = New System.Drawing.Point(165, 0)
         Me.BtnMenu.Name = "BtnMenu"
-        Me.BtnMenu.Size = New System.Drawing.Size(50, 34)
+        Me.BtnMenu.Size = New System.Drawing.Size(38, 34)
         Me.BtnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.BtnMenu.TabIndex = 0
         Me.BtnMenu.TabStop = False
@@ -552,30 +573,24 @@ Partial Class PanelAdmin
         'PanelContenedorFormHijo
         '
         Me.PanelContenedorFormHijo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelContenedorFormHijo.BackgroundImage = CType(resources.GetObject("PanelContenedorFormHijo.BackgroundImage"), System.Drawing.Image)
+        Me.PanelContenedorFormHijo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelContenedorFormHijo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContenedorFormHijo.Location = New System.Drawing.Point(220, 40)
         Me.PanelContenedorFormHijo.Name = "PanelContenedorFormHijo"
         Me.PanelContenedorFormHijo.Size = New System.Drawing.Size(680, 680)
         Me.PanelContenedorFormHijo.TabIndex = 2
         '
-        'Button5
+        'PictureBox3
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(0, 40)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button5.Size = New System.Drawing.Size(203, 40)
-        Me.Button5.TabIndex = 3
-        Me.Button5.Text = "VER"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(50, 40)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox3.TabIndex = 4
+        Me.PictureBox3.TabStop = False
         '
         'PanelAdmin
         '
@@ -601,6 +616,7 @@ Partial Class PanelAdmin
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         CType(Me.BtnMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -624,7 +640,6 @@ Partial Class PanelAdmin
     Friend WithEvents BotonNuevoProd As Button
     Friend WithEvents BotonVerProd As Button
     Friend WithEvents BotonProductos As Button
-    Friend WithEvents BotonModificarProd As Button
     Friend WithEvents PanelVentas As Panel
     Friend WithEvents BotonVentas As Button
     Friend WithEvents BotonVerVentas As Button
@@ -634,9 +649,11 @@ Partial Class PanelAdmin
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents PanelClientes As Panel
-    Friend WithEvents BotonClientes As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents BotonClientes As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

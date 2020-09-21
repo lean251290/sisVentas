@@ -95,7 +95,7 @@ Public Class PanelAdmin
         mostrarSubMenu(PanelProductos)
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles BotonModificarProd.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
         esconderSubMenu()
     End Sub
 
@@ -146,10 +146,15 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub BotonUsuarios_MouseEnter(sender As Object, e As EventArgs) Handles BotonUsuarios.MouseEnter
-        BotonUsuarios.ForeColor = Color.FromArgb(252, 54, 10)
+        BotonUsuarios.ForeColor = Color.FromArgb(17, 255, 141)
     End Sub
 
     Private Sub BotonUsuarios_MouseLeave(sender As Object, e As EventArgs) Handles BotonUsuarios.MouseLeave
         BotonUsuarios.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click
+        abrirFormHijo(New Agregar_Usuario)
+        esconderSubMenu()
     End Sub
 End Class

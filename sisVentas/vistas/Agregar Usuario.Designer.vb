@@ -70,27 +70,33 @@ Partial Class Agregar_Usuario
         'BtnAgregarUser
         '
         Me.BtnAgregarUser.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAgregarUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BtnAgregarUser.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAgregarUser.BackgroundImage = CType(resources.GetObject("BtnAgregarUser.BackgroundImage"), System.Drawing.Image)
+        Me.BtnAgregarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAgregarUser.FlatAppearance.BorderSize = 0
+        Me.BtnAgregarUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnAgregarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregarUser.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnAgregarUser.Location = New System.Drawing.Point(444, 645)
+        Me.BtnAgregarUser.Location = New System.Drawing.Point(339, 600)
         Me.BtnAgregarUser.Name = "BtnAgregarUser"
-        Me.BtnAgregarUser.Size = New System.Drawing.Size(109, 23)
+        Me.BtnAgregarUser.Size = New System.Drawing.Size(181, 40)
         Me.BtnAgregarUser.TabIndex = 2
-        Me.BtnAgregarUser.Text = "Agregar Usuario"
         Me.BtnAgregarUser.UseVisualStyleBackColor = False
         '
         'BtnCancelar
         '
         Me.BtnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BackgroundImage = CType(resources.GetObject("BtnCancelar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnCancelar.Location = New System.Drawing.Point(583, 645)
+        Me.BtnCancelar.Location = New System.Drawing.Point(539, 600)
         Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(85, 23)
+        Me.BtnCancelar.Size = New System.Drawing.Size(110, 40)
         Me.BtnCancelar.TabIndex = 3
-        Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseVisualStyleBackColor = False
         '
         'PanelAgregarUser
@@ -98,8 +104,7 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUser.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelAgregarUser.BackColor = System.Drawing.Color.White
-        Me.PanelAgregarUser.BackgroundImage = CType(resources.GetObject("PanelAgregarUser.BackgroundImage"), System.Drawing.Image)
+        Me.PanelAgregarUser.BackColor = System.Drawing.Color.Transparent
         Me.PanelAgregarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelAgregarUser.Controls.Add(Me.TextBox4)
         Me.PanelAgregarUser.Controls.Add(Me.TextBox3)
@@ -285,7 +290,9 @@ Partial Class Agregar_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(680, 680)
         Me.Controls.Add(Me.PanelAgregarUser)
         Me.Controls.Add(Me.BtnCancelar)
