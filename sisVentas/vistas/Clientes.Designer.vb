@@ -28,16 +28,16 @@ Partial Class Clientes
         Me.LBuscarCliente = New System.Windows.Forms.Label()
         Me.TBuscarCliente = New System.Windows.Forms.TextBox()
         Me.PanelAgregarUser = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DGClientes = New System.Windows.Forms.DataGridView()
         Me.CNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CApellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CDni = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CDireccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarUser.SuspendLayout()
-        CType(Me.DGClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblAgregarUsuario
@@ -106,6 +106,17 @@ Partial Class Clientes
         Me.PanelAgregarUser.Size = New System.Drawing.Size(627, 613)
         Me.PanelAgregarUser.TabIndex = 5
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(542, 26)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
+        '
         'DGClientes
         '
         Me.DGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -140,17 +151,6 @@ Partial Class Clientes
         Me.CDireccion.HeaderText = "Direccion"
         Me.CDireccion.Name = "CDireccion"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(542, 26)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 17
-        Me.PictureBox1.TabStop = False
-        '
         'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -166,8 +166,8 @@ Partial Class Clientes
         Me.Text = "Form1"
         Me.PanelAgregarUser.ResumeLayout(False)
         Me.PanelAgregarUser.PerformLayout()
-        CType(Me.DGClientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class VerUsuarios
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,20 @@ Partial Class VerUsuarios
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerUsuarios))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LVerUsuarios = New System.Windows.Forms.Label()
         Me.PPagos = New System.Windows.Forms.Panel()
+        Me.BtnModifcarUsuario = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
+        Me.TextBoxBuscar = New System.Windows.Forms.TextBox()
         Me.LBuscarUsuarios = New System.Windows.Forms.Label()
         Me.PPagos.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,11 +68,55 @@ Partial Class VerUsuarios
         Me.PPagos.BackColor = System.Drawing.Color.Transparent
         Me.PPagos.BackgroundImage = CType(resources.GetObject("PPagos.BackgroundImage"), System.Drawing.Image)
         Me.PPagos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PPagos.Controls.Add(Me.BtnModifcarUsuario)
+        Me.PPagos.Controls.Add(Me.DataGridView1)
+        Me.PPagos.Controls.Add(Me.PictureBuscarUsuario)
+        Me.PPagos.Controls.Add(Me.TextBoxBuscar)
         Me.PPagos.Controls.Add(Me.LBuscarUsuarios)
         Me.PPagos.Location = New System.Drawing.Point(41, 55)
         Me.PPagos.Name = "PPagos"
         Me.PPagos.Size = New System.Drawing.Size(627, 613)
         Me.PPagos.TabIndex = 7
+        '
+        'BtnModifcarUsuario
+        '
+        Me.BtnModifcarUsuario.FlatAppearance.BorderSize = 0
+        Me.BtnModifcarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnModifcarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModifcarUsuario.Image = CType(resources.GetObject("BtnModifcarUsuario.Image"), System.Drawing.Image)
+        Me.BtnModifcarUsuario.Location = New System.Drawing.Point(307, 519)
+        Me.BtnModifcarUsuario.Name = "BtnModifcarUsuario"
+        Me.BtnModifcarUsuario.Size = New System.Drawing.Size(78, 31)
+        Me.BtnModifcarUsuario.TabIndex = 12
+        Me.BtnModifcarUsuario.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(49, 101)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(485, 344)
+        Me.DataGridView1.TabIndex = 11
+        '
+        'PictureBuscarUsuario
+        '
+        Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBuscarUsuario.Image = CType(resources.GetObject("PictureBuscarUsuario.Image"), System.Drawing.Image)
+        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(548, 42)
+        Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
+        Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
+        Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBuscarUsuario.TabIndex = 10
+        Me.PictureBuscarUsuario.TabStop = False
+        '
+        'TextBoxBuscar
+        '
+        Me.TextBoxBuscar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBoxBuscar.Location = New System.Drawing.Point(129, 49)
+        Me.TextBoxBuscar.Name = "TextBoxBuscar"
+        Me.TextBoxBuscar.Size = New System.Drawing.Size(405, 20)
+        Me.TextBoxBuscar.TabIndex = 9
         '
         'LBuscarUsuarios
         '
@@ -94,6 +144,8 @@ Partial Class VerUsuarios
         Me.Text = "VerUsuario"
         Me.PPagos.ResumeLayout(False)
         Me.PPagos.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -103,4 +155,8 @@ Partial Class VerUsuarios
     Friend WithEvents LVerUsuarios As Label
     Friend WithEvents PPagos As Panel
     Friend WithEvents LBuscarUsuarios As Label
+    Friend WithEvents PictureBuscarUsuario As PictureBox
+    Friend WithEvents TextBoxBuscar As TextBox
+    Friend WithEvents BtnModifcarUsuario As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

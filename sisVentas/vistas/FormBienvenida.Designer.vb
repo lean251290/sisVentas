@@ -30,6 +30,8 @@ Partial Class FormBienvenida
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,7 +43,7 @@ Partial Class FormBienvenida
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 426)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(245, 24)
+        Me.Panel2.Size = New System.Drawing.Size(650, 24)
         Me.Panel2.TabIndex = 1
         '
         'TimerBienvenidaAbrir
@@ -57,18 +59,19 @@ Partial Class FormBienvenida
         Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(245, 29)
+        Me.Panel3.Size = New System.Drawing.Size(650, 29)
         Me.Panel3.TabIndex = 2
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(71, 143)
+        Me.PictureBox1.Location = New System.Drawing.Point(178, 47)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 88)
+        Me.PictureBox1.Size = New System.Drawing.Size(285, 181)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -83,7 +86,7 @@ Partial Class FormBienvenida
         Me.CircularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.CircularProgressBar1.InnerMargin = -15
         Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(59, 246)
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(269, 272)
         Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
         Me.CircularProgressBar1.Name = "CircularProgressBar1"
         Me.CircularProgressBar1.OuterColor = System.Drawing.Color.White
@@ -106,12 +109,24 @@ Partial Class FormBienvenida
         Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(0, 4, 0, 0)
         Me.CircularProgressBar1.Value = 68
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(199, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(243, 26)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Bienvenido a SisVentas"
+        '
         'FormBienvenida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(245, 450)
+        Me.ClientSize = New System.Drawing.Size(650, 450)
         Me.Controls.Add(Me.CircularProgressBar1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel3)
@@ -119,6 +134,8 @@ Partial Class FormBienvenida
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormBienvenida"
         Me.Text = "FormBienvenida"
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -129,4 +146,5 @@ Partial Class FormBienvenida
     Friend WithEvents Panel3 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
+    Friend WithEvents Label1 As Label
 End Class

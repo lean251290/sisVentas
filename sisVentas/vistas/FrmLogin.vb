@@ -61,6 +61,13 @@ Public Class Login
             FrmErrorLogin.Show()
         End If
     End Sub
+    <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
+    Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, He As Integer) As IntPtr
+
+    End Function
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 35, 35))
+    End Sub
 
 
 #End Region
