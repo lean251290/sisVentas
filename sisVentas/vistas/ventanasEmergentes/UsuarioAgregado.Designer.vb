@@ -27,8 +27,8 @@ Partial Class UsuarioAgregadoVista
         Me.LUsuarioAgregado = New System.Windows.Forms.Label()
         Me.BUsuarioAgregadoCerrar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BUsuarioAgregadoAceptar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PUsuarioAgregado.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -36,7 +36,7 @@ Partial Class UsuarioAgregadoVista
         'PUsuarioAgregado
         '
         Me.PUsuarioAgregado.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PUsuarioAgregado.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.PUsuarioAgregado.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PUsuarioAgregado.Controls.Add(Me.LUsuarioAgregado)
         Me.PUsuarioAgregado.Controls.Add(Me.BUsuarioAgregadoCerrar)
         Me.PUsuarioAgregado.Controls.Add(Me.PictureBox1)
@@ -72,22 +72,10 @@ Partial Class UsuarioAgregadoVista
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(47, 43)
+        Me.PictureBox1.Size = New System.Drawing.Size(47, 47)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
-        '
-        'BUsuarioAgregadoAceptar
-        '
-        Me.BUsuarioAgregadoAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.BUsuarioAgregadoAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BUsuarioAgregadoAceptar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BUsuarioAgregadoAceptar.Location = New System.Drawing.Point(322, 152)
-        Me.BUsuarioAgregadoAceptar.Name = "BUsuarioAgregadoAceptar"
-        Me.BUsuarioAgregadoAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.BUsuarioAgregadoAceptar.TabIndex = 2
-        Me.BUsuarioAgregadoAceptar.Text = "Aceptar"
-        Me.BUsuarioAgregadoAceptar.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -101,6 +89,20 @@ Partial Class UsuarioAgregadoVista
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Usuario agregado correctamente"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(290, 138)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(98, 37)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "ACEPTAR"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'UsuarioAgregadoVista
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -109,8 +111,8 @@ Partial Class UsuarioAgregadoVista
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(400, 187)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.BUsuarioAgregadoAceptar)
         Me.Controls.Add(Me.PUsuarioAgregado)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -127,7 +129,7 @@ Partial Class UsuarioAgregadoVista
     Friend WithEvents PUsuarioAgregado As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BUsuarioAgregadoCerrar As Button
-    Friend WithEvents BUsuarioAgregadoAceptar As Button
     Friend WithEvents LUsuarioAgregado As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class

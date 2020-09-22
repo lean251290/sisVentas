@@ -59,7 +59,7 @@ Partial Class VerUsuarios
         Me.PPagos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PPagos.BackColor = System.Drawing.Color.White
+        Me.PPagos.BackColor = System.Drawing.Color.Transparent
         Me.PPagos.BackgroundImage = CType(resources.GetObject("PPagos.BackgroundImage"), System.Drawing.Image)
         Me.PPagos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PPagos.Controls.Add(Me.LBuscarUsuarios)
@@ -84,7 +84,7 @@ Partial Class VerUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
         Me.Controls.Add(Me.PPagos)
         Me.Controls.Add(Me.LVerUsuarios)

@@ -33,8 +33,8 @@ Partial Class Pagos
         Me.LPagos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LPagos.AutoSize = True
         Me.LPagos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LPagos.ForeColor = System.Drawing.SystemColors.ButtonShadow
-        Me.LPagos.Location = New System.Drawing.Point(574, 9)
+        Me.LPagos.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LPagos.Location = New System.Drawing.Point(576, 9)
         Me.LPagos.Name = "LPagos"
         Me.LPagos.Size = New System.Drawing.Size(73, 25)
         Me.LPagos.TabIndex = 1
@@ -45,7 +45,7 @@ Partial Class Pagos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(26, 25)
@@ -57,7 +57,7 @@ Partial Class Pagos
         Me.PPagos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PPagos.BackColor = System.Drawing.Color.White
+        Me.PPagos.BackColor = System.Drawing.Color.Transparent
         Me.PPagos.BackgroundImage = CType(resources.GetObject("PPagos.BackgroundImage"), System.Drawing.Image)
         Me.PPagos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PPagos.Location = New System.Drawing.Point(41, 55)
@@ -69,7 +69,7 @@ Partial Class Pagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
         Me.Controls.Add(Me.LPagos)
         Me.Controls.Add(Me.Label1)

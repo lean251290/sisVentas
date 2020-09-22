@@ -49,7 +49,9 @@ Partial Class Agregar_Usuario
         '
         Me.LblAgregarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblAgregarUsuario.AutoSize = True
+        Me.LblAgregarUsuario.BackColor = System.Drawing.Color.Transparent
         Me.LblAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LblAgregarUsuario.Location = New System.Drawing.Point(512, 9)
         Me.LblAgregarUsuario.Name = "LblAgregarUsuario"
         Me.LblAgregarUsuario.Size = New System.Drawing.Size(168, 25)
@@ -60,7 +62,9 @@ Partial Class Agregar_Usuario
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(26, 25)
@@ -76,11 +80,13 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUser.FlatAppearance.BorderSize = 0
         Me.BtnAgregarUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnAgregarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregarUser.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnAgregarUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregarUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.BtnAgregarUser.Location = New System.Drawing.Point(339, 600)
         Me.BtnAgregarUser.Name = "BtnAgregarUser"
         Me.BtnAgregarUser.Size = New System.Drawing.Size(181, 40)
         Me.BtnAgregarUser.TabIndex = 2
+        Me.BtnAgregarUser.Text = "AGREGAR USUARIO"
         Me.BtnAgregarUser.UseVisualStyleBackColor = False
         '
         'BtnCancelar
@@ -92,11 +98,13 @@ Partial Class Agregar_Usuario
         Me.BtnCancelar.FlatAppearance.BorderSize = 0
         Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.BtnCancelar.Location = New System.Drawing.Point(539, 600)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(110, 40)
         Me.BtnCancelar.TabIndex = 3
+        Me.BtnCancelar.Text = "CANCELAR"
         Me.BtnCancelar.UseVisualStyleBackColor = False
         '
         'PanelAgregarUser
@@ -105,6 +113,7 @@ Partial Class Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUser.BackColor = System.Drawing.Color.Transparent
+        Me.PanelAgregarUser.BackgroundImage = CType(resources.GetObject("PanelAgregarUser.BackgroundImage"), System.Drawing.Image)
         Me.PanelAgregarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelAgregarUser.Controls.Add(Me.TextBox4)
         Me.PanelAgregarUser.Controls.Add(Me.TextBox3)
@@ -200,7 +209,7 @@ Partial Class Agregar_Usuario
         Me.Lblrepetir.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Lblrepetir.AutoSize = True
         Me.Lblrepetir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lblrepetir.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Lblrepetir.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Lblrepetir.Location = New System.Drawing.Point(13, 418)
         Me.Lblrepetir.Name = "Lblrepetir"
         Me.Lblrepetir.Size = New System.Drawing.Size(152, 20)
@@ -213,7 +222,7 @@ Partial Class Agregar_Usuario
         Me.LblPass.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.LblPass.AutoSize = True
         Me.LblPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPass.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LblPass.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LblPass.Location = New System.Drawing.Point(13, 363)
         Me.LblPass.Name = "LblPass"
         Me.LblPass.Size = New System.Drawing.Size(96, 20)
@@ -226,7 +235,7 @@ Partial Class Agregar_Usuario
         Me.LblDireccion.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.LblDireccion.AutoSize = True
         Me.LblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDireccion.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LblDireccion.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LblDireccion.Location = New System.Drawing.Point(13, 257)
         Me.LblDireccion.Name = "LblDireccion"
         Me.LblDireccion.Size = New System.Drawing.Size(79, 20)
@@ -239,7 +248,7 @@ Partial Class Agregar_Usuario
         Me.LblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.LblEmail.AutoSize = True
         Me.LblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LblEmail.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LblEmail.Location = New System.Drawing.Point(13, 314)
         Me.LblEmail.Name = "LblEmail"
         Me.LblEmail.Size = New System.Drawing.Size(57, 20)
@@ -252,7 +261,7 @@ Partial Class Agregar_Usuario
         Me.LblDNI.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.LblDNI.AutoSize = True
         Me.LblDNI.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDNI.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LblDNI.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LblDNI.Location = New System.Drawing.Point(13, 191)
         Me.LblDNI.Name = "LblDNI"
         Me.LblDNI.Size = New System.Drawing.Size(53, 20)
@@ -265,7 +274,7 @@ Partial Class Agregar_Usuario
         Me.lblApellido.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblApellido.AutoSize = True
         Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblApellido.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.lblApellido.Location = New System.Drawing.Point(13, 139)
         Me.lblApellido.Name = "lblApellido"
         Me.lblApellido.Size = New System.Drawing.Size(69, 20)
@@ -278,7 +287,7 @@ Partial Class Agregar_Usuario
         Me.LblNombre.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.LblNombre.AutoSize = True
         Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LblNombre.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LblNombre.Location = New System.Drawing.Point(13, 88)
         Me.LblNombre.Name = "LblNombre"
         Me.LblNombre.Size = New System.Drawing.Size(69, 20)
@@ -291,7 +300,6 @@ Partial Class Agregar_Usuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(680, 680)
         Me.Controls.Add(Me.PanelAgregarUser)

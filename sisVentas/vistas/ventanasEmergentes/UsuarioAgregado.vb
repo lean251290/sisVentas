@@ -1,5 +1,5 @@
 ﻿Public Class UsuarioAgregadoVista
-    Private Sub BUsuarioAgregadoAcepatar_Click(sender As Object, e As EventArgs) Handles BUsuarioAgregadoAceptar.Click
+    Private Sub BUsuarioAgregadoAcepatar_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 

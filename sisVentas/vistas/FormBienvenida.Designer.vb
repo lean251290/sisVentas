@@ -41,7 +41,7 @@ Partial Class FormBienvenida
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 426)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(800, 24)
+        Me.Panel2.Size = New System.Drawing.Size(245, 24)
         Me.Panel2.TabIndex = 1
         '
         'TimerBienvenidaAbrir
@@ -60,15 +60,15 @@ Partial Class FormBienvenida
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(800, 29)
+        Me.Panel3.Size = New System.Drawing.Size(245, 29)
         Me.Panel3.TabIndex = 2
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(330, 67)
+        Me.PictureBox1.Location = New System.Drawing.Point(71, 143)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(128, 108)
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 88)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -78,21 +78,21 @@ Partial Class FormBienvenida
         Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
         Me.CircularProgressBar1.AnimationSpeed = 500
         Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
-        Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Bold)
+        Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold)
         Me.CircularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CircularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.CircularProgressBar1.InnerMargin = 2
+        Me.CircularProgressBar1.InnerMargin = -15
         Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(313, 232)
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(59, 246)
         Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
         Me.CircularProgressBar1.Name = "CircularProgressBar1"
         Me.CircularProgressBar1.OuterColor = System.Drawing.Color.White
         Me.CircularProgressBar1.OuterMargin = -25
         Me.CircularProgressBar1.OuterWidth = 26
         Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.CircularProgressBar1.ProgressWidth = 25
+        Me.CircularProgressBar1.ProgressWidth = 26
         Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 36.0!)
-        Me.CircularProgressBar1.Size = New System.Drawing.Size(159, 151)
+        Me.CircularProgressBar1.Size = New System.Drawing.Size(102, 103)
         Me.CircularProgressBar1.StartAngle = 270
         Me.CircularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
@@ -103,7 +103,7 @@ Partial Class FormBienvenida
         Me.CircularProgressBar1.SuperscriptText = ""
         Me.CircularProgressBar1.TabIndex = 3
         Me.CircularProgressBar1.Text = "0"
-        Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(8, 8, 0, 0)
+        Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(0, 4, 0, 0)
         Me.CircularProgressBar1.Value = 68
         '
         'FormBienvenida
@@ -111,7 +111,7 @@ Partial Class FormBienvenida
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(245, 450)
         Me.Controls.Add(Me.CircularProgressBar1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel3)
