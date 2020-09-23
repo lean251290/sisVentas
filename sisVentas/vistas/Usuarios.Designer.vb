@@ -36,6 +36,7 @@ Partial Class Usuarios
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TBuscarUsuario = New System.Windows.Forms.TextBox()
         Me.LBuscarUsuario = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PanelAgregarUser.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +74,7 @@ Partial Class Usuarios
         Me.PanelAgregarUser.BackColor = System.Drawing.Color.Transparent
         Me.PanelAgregarUser.BackgroundImage = CType(resources.GetObject("PanelAgregarUser.BackgroundImage"), System.Drawing.Image)
         Me.PanelAgregarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarUser.Controls.Add(Me.Button1)
         Me.PanelAgregarUser.Controls.Add(Me.PictureBox1)
         Me.PanelAgregarUser.Controls.Add(Me.DGUsuarios)
         Me.PanelAgregarUser.Controls.Add(Me.TBuscarUsuario)
@@ -155,6 +157,15 @@ Partial Class Usuarios
         Me.LBuscarUsuario.Text = "Buscar"
         Me.LBuscarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(239, 429)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -189,4 +200,5 @@ Partial Class Usuarios
     Friend WithEvents CDireccion As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class
