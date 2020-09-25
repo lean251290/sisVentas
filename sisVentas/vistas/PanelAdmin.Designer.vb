@@ -25,6 +25,7 @@ Partial Class PanelAdmin
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PanelAdmin))
         Me.PanelAdm = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnRestaurar = New System.Windows.Forms.Button()
         Me.BtnMin = New System.Windows.Forms.Button()
         Me.BtnMaximizar = New System.Windows.Forms.Button()
@@ -58,8 +59,8 @@ Partial Class PanelAdmin
         Me.TMOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.TMMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelContenedorFormHijo = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PanelAdm.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
         Me.PanelClientes.SuspendLayout()
         Me.PanelReportes.SuspendLayout()
@@ -70,7 +71,6 @@ Partial Class PanelAdmin
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         CType(Me.BtnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelAdm
@@ -86,6 +86,17 @@ Partial Class PanelAdmin
         Me.PanelAdm.Name = "PanelAdm"
         Me.PanelAdm.Size = New System.Drawing.Size(900, 40)
         Me.PanelAdm.TabIndex = 0
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(50, 40)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox3.TabIndex = 4
+        Me.PictureBox3.TabStop = False
         '
         'BtnRestaurar
         '
@@ -573,24 +584,12 @@ Partial Class PanelAdmin
         'PanelContenedorFormHijo
         '
         Me.PanelContenedorFormHijo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.PanelContenedorFormHijo.BackgroundImage = CType(resources.GetObject("PanelContenedorFormHijo.BackgroundImage"), System.Drawing.Image)
         Me.PanelContenedorFormHijo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelContenedorFormHijo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContenedorFormHijo.Location = New System.Drawing.Point(220, 40)
         Me.PanelContenedorFormHijo.Name = "PanelContenedorFormHijo"
         Me.PanelContenedorFormHijo.Size = New System.Drawing.Size(680, 680)
         Me.PanelContenedorFormHijo.TabIndex = 2
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(50, 40)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox3.TabIndex = 4
-        Me.PictureBox3.TabStop = False
         '
         'PanelAdmin
         '
@@ -606,6 +605,7 @@ Partial Class PanelAdmin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PanelAdmin"
         Me.PanelAdm.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelClientes.ResumeLayout(False)
         Me.PanelReportes.ResumeLayout(False)
@@ -616,7 +616,6 @@ Partial Class PanelAdmin
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         CType(Me.BtnMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

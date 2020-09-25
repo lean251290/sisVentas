@@ -28,9 +28,9 @@ Partial Class FormBienvenida
         Me.TimerBienvenidaAbrir = New System.Windows.Forms.Timer(Me.components)
         Me.TimerBienvenidaCerrar = New System.Windows.Forms.Timer(Me.components)
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,6 +65,18 @@ Partial Class FormBienvenida
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(650, 29)
         Me.Panel3.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(199, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(243, 26)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Bienvenido a SisVentas"
         '
         'PictureBox1
         '
@@ -109,18 +121,6 @@ Partial Class FormBienvenida
         Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(0, 4, 0, 0)
         Me.CircularProgressBar1.Value = 68
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(199, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(243, 26)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Bienvenido a SisVentas"
-        '
         'FormBienvenida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -133,6 +133,7 @@ Partial Class FormBienvenida
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormBienvenida"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormBienvenida"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

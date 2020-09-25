@@ -10,7 +10,7 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class clientes
+Partial Public Class VerClientes
     Public Property id_cliente As Integer
     Public Property nombre As String
     Public Property apellido As String

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Clientes
+Partial Class VerClientes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,22 +22,16 @@ Partial Class Clientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clientes))
         Me.LblAgregarUsuario = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LBuscarCliente = New System.Windows.Forms.Label()
         Me.TBuscarCliente = New System.Windows.Forms.TextBox()
-        Me.PanelAgregarUser = New System.Windows.Forms.Panel()
+        Me.PanelBuscarClientes = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.DGClientes = New System.Windows.Forms.DataGridView()
-        Me.CNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CApellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CDni = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CTelefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CDireccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PanelAgregarUser.SuspendLayout()
+        Me.PanelBuscarClientes.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblAgregarUsuario
@@ -71,7 +65,7 @@ Partial Class Clientes
         Me.LBuscarCliente.AutoSize = True
         Me.LBuscarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBuscarCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LBuscarCliente.Location = New System.Drawing.Point(24, 26)
+        Me.LBuscarCliente.Location = New System.Drawing.Point(46, 46)
         Me.LBuscarCliente.Name = "LBuscarCliente"
         Me.LBuscarCliente.Size = New System.Drawing.Size(59, 20)
         Me.LBuscarCliente.TabIndex = 0
@@ -83,91 +77,67 @@ Partial Class Clientes
         Me.TBuscarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarCliente.Location = New System.Drawing.Point(89, 26)
+        Me.TBuscarCliente.Location = New System.Drawing.Point(122, 46)
         Me.TBuscarCliente.Multiline = True
         Me.TBuscarCliente.Name = "TBuscarCliente"
-        Me.TBuscarCliente.Size = New System.Drawing.Size(444, 20)
+        Me.TBuscarCliente.Size = New System.Drawing.Size(374, 20)
         Me.TBuscarCliente.TabIndex = 13
         '
-        'PanelAgregarUser
+        'PanelBuscarClientes
         '
-        Me.PanelAgregarUser.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.PanelBuscarClientes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelAgregarUser.BackColor = System.Drawing.Color.Transparent
-        Me.PanelAgregarUser.BackgroundImage = CType(resources.GetObject("PanelAgregarUser.BackgroundImage"), System.Drawing.Image)
-        Me.PanelAgregarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarUser.Controls.Add(Me.PictureBox1)
-        Me.PanelAgregarUser.Controls.Add(Me.DGClientes)
-        Me.PanelAgregarUser.Controls.Add(Me.TBuscarCliente)
-        Me.PanelAgregarUser.Controls.Add(Me.LBuscarCliente)
-        Me.PanelAgregarUser.Location = New System.Drawing.Point(41, 55)
-        Me.PanelAgregarUser.Name = "PanelAgregarUser"
-        Me.PanelAgregarUser.Size = New System.Drawing.Size(627, 613)
-        Me.PanelAgregarUser.TabIndex = 5
+        Me.PanelBuscarClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelBuscarClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelBuscarClientes.Controls.Add(Me.DataGridView1)
+        Me.PanelBuscarClientes.Controls.Add(Me.PictureBox1)
+        Me.PanelBuscarClientes.Controls.Add(Me.TBuscarCliente)
+        Me.PanelBuscarClientes.Controls.Add(Me.LBuscarCliente)
+        Me.PanelBuscarClientes.Location = New System.Drawing.Point(50, 90)
+        Me.PanelBuscarClientes.Name = "PanelBuscarClientes"
+        Me.PanelBuscarClientes.Size = New System.Drawing.Size(600, 530)
+        Me.PanelBuscarClientes.TabIndex = 5
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(50, 90)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(500, 200)
+        Me.DataGridView1.TabIndex = 18
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(542, 26)
+        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoLupa
+        Me.PictureBox1.Location = New System.Drawing.Point(509, 27)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 17
         Me.PictureBox1.TabStop = False
         '
-        'DGClientes
-        '
-        Me.DGClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CNombre, Me.CApellido, Me.CDni, Me.CTelefono, Me.CDireccion})
-        Me.DGClientes.Location = New System.Drawing.Point(39, 78)
-        Me.DGClientes.Name = "DGClientes"
-        Me.DGClientes.Size = New System.Drawing.Size(544, 274)
-        Me.DGClientes.TabIndex = 14
-        '
-        'CNombre
-        '
-        Me.CNombre.HeaderText = "Nombre"
-        Me.CNombre.Name = "CNombre"
-        '
-        'CApellido
-        '
-        Me.CApellido.HeaderText = "Apellido"
-        Me.CApellido.Name = "CApellido"
-        '
-        'CDni
-        '
-        Me.CDni.HeaderText = "DNI"
-        Me.CDni.Name = "CDni"
-        '
-        'CTelefono
-        '
-        Me.CTelefono.HeaderText = "Telefono"
-        Me.CTelefono.Name = "CTelefono"
-        '
-        'CDireccion
-        '
-        Me.CDireccion.HeaderText = "Direccion"
-        Me.CDireccion.Name = "CDireccion"
-        '
-        'Clientes
+        'VerClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(680, 680)
-        Me.Controls.Add(Me.PanelAgregarUser)
+        Me.Controls.Add(Me.PanelBuscarClientes)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LblAgregarUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Clientes"
+        Me.Name = "VerClientes"
         Me.Text = "Form1"
-        Me.PanelAgregarUser.ResumeLayout(False)
-        Me.PanelAgregarUser.PerformLayout()
+        Me.PanelBuscarClientes.ResumeLayout(False)
+        Me.PanelBuscarClientes.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -177,12 +147,7 @@ Partial Class Clientes
     Friend WithEvents Label1 As Label
     Friend WithEvents LBuscarCliente As Label
     Friend WithEvents TBuscarCliente As TextBox
-    Friend WithEvents PanelAgregarUser As Panel
-    Friend WithEvents DGClientes As DataGridView
-    Friend WithEvents CNombre As DataGridViewTextBoxColumn
-    Friend WithEvents CApellido As DataGridViewTextBoxColumn
-    Friend WithEvents CDni As DataGridViewTextBoxColumn
-    Friend WithEvents CTelefono As DataGridViewTextBoxColumn
-    Friend WithEvents CDireccion As DataGridViewTextBoxColumn
+    Friend WithEvents PanelBuscarClientes As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

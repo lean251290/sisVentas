@@ -24,7 +24,7 @@ Partial Public Class taller2Entities
 
     Public Overridable Property cabecera_venta() As DbSet(Of cabecera_venta)
     Public Overridable Property categoria() As DbSet(Of categoria)
-    Public Overridable Property clientes() As DbSet(Of clientes)
+    Public Overridable Property clientes() As DbSet(Of VerClientes)
     Public Overridable Property detalle_venta() As DbSet(Of detalle_venta)
     Public Overridable Property productos() As DbSet(Of productos)
     Public Overridable Property proveedores() As DbSet(Of proveedores)

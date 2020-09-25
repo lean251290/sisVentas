@@ -15,7 +15,7 @@ Public Class FormBienvenida
 
     Private Sub FormBienvenida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'metodo para  redondear el foumrlario
-        Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 40, 40))
+        Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 60, 60))
         'fin metodo para redondear
         CircularProgressBar1.Value = 0
         Me.Opacity = 0

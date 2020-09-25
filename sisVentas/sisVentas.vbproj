@@ -146,6 +146,11 @@
     </Compile>
     <Compile Include="usuarios.vb">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\AgregarCliente.Designer.vb">
+      <DependentUpon>AgregarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\AgregarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\FormBienvenida.Designer.vb">
@@ -160,28 +165,22 @@
     <Compile Include="vistas\VerUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Agregar Usuario.Designer.vb">
-      <DependentUpon>Agregar Usuario.vb</DependentUpon>
+    <Compile Include="vistas\AgregarUsuario.Designer.vb">
+      <DependentUpon>AgregarUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Agregar Usuario.vb">
+    <Compile Include="vistas\AgregarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
+    <Compile Include="vistas\VerClientes.Designer.vb">
+      <DependentUpon>VerClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Clientes.vb">
+    <Compile Include="vistas\VerClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Pagos.Designer.vb">
-      <DependentUpon>Pagos.vb</DependentUpon>
+    <Compile Include="vistas\Reportes.Designer.vb">
+      <DependentUpon>Reportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Pagos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\Usuarios.Designer.vb">
-      <DependentUpon>Usuarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\Usuarios.vb">
+    <Compile Include="vistas\Reportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\FrmLogin.vb">
@@ -225,23 +224,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\FormBienvenida.resx">
       <DependentUpon>FormBienvenida.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VerUsuarios.resx">
       <DependentUpon>VerUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Agregar Usuario.resx">
-      <DependentUpon>Agregar Usuario.vb</DependentUpon>
+    <EmbeddedResource Include="vistas\AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
+    <EmbeddedResource Include="vistas\VerClientes.resx">
+      <DependentUpon>VerClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Pagos.resx">
-      <DependentUpon>Pagos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Usuarios.resx">
-      <DependentUpon>Usuarios.vb</DependentUpon>
+    <EmbeddedResource Include="vistas\Reportes.resx">
+      <DependentUpon>Reportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
@@ -287,6 +286,7 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Iconos\btn122x45.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.vb</LastGenOutput>
@@ -305,22 +305,12 @@
     <None Include="Iconos\min.png" />
     <None Include="Iconos\maximizar.png" />
     <None Include="Iconos\logo.png" />
-    <None Include="Iconos\iniciar sesion.png" />
-    <None Include="Iconos\Agregar un título %281%29 - copia - copia - copia.png" />
-    <None Include="Iconos\Agregar un título %281%29 - copia - copia.png" />
-    <None Include="Iconos\Agregar un título %282%29 - copia.png" />
-    <None Include="Iconos\Agregar un título %283%29 - copia.png" />
-    <None Include="Iconos\AGREGARUSER.png" />
-    <None Include="Iconos\AGREGARUSER2.png" />
     <None Include="Iconos\borde - copia.png" />
     <None Include="Iconos\borde.png" />
-    <None Include="Iconos\BotonBuscar.png" />
-    <None Include="Iconos\CAENCEL.png" />
     <None Include="Iconos\close.png" />
     <None Include="Iconos\Dark Green Printed Old Master White Little Green Texture Backdrop.jpg" />
     <None Include="Iconos\empleados.png" />
     <None Include="Iconos\fondo.jpg" />
-    <None Include="Iconos\fondo1.png" />
     <None Include="Iconos\icoActualizar.png" />
     <None Include="Iconos\icoActualizar2.png" />
     <None Include="Iconos\icoAgregar.png" />
@@ -345,9 +335,6 @@
     <None Include="Iconos\icoVer.png" />
     <None Include="Iconos\icoVisto.png" />
     <None Include="Iconos\images %284%29.png" />
-    <None Include="Iconos\AgregarTitulo04040.png" />
-    <None Include="Iconos\agregarTitulo.png" />
-    <Content Include="Iconos\images.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

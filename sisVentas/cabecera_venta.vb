@@ -17,7 +17,7 @@ Partial Public Class cabecera_venta
     Public Property id_user As Nullable(Of Integer)
     Public Property id_cliente As Nullable(Of Integer)
 
-    Public Overridable Property clientes As clientes
+    Public Overridable Property clientes As VerClientes
     Public Overridable Property detalle_venta As ICollection(Of detalle_venta) = New HashSet(Of detalle_venta)
     Public Overridable Property usuarios As usuarios
 
