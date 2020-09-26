@@ -147,40 +147,46 @@
     <Compile Include="usuarios.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="vistas\AgregarCliente.Designer.vb">
+    <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.Designer.vb">
+      <DependentUpon>FrmErrorMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\VistaCliente\AgregarCliente.Designer.vb">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\AgregarCliente.vb">
+    <Compile Include="vistas\VistaCliente\AgregarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\VerProductos.Designer.vb">
+    <Compile Include="vistas\VistaProducto\VerProductos.Designer.vb">
       <DependentUpon>VerProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\VerProductos.vb">
+    <Compile Include="vistas\VistaProducto\VerProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\AgregarProducto.Designer.vb">
+    <Compile Include="vistas\VistaProducto\AgregarProducto.Designer.vb">
       <DependentUpon>AgregarProducto.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\AgregarProducto.vb">
+    <Compile Include="vistas\VistaProducto\AgregarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ModificarProducto.Designer.vb">
+    <Compile Include="vistas\VistaProducto\ModificarProducto.Designer.vb">
       <DependentUpon>ModificarProducto.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ModificarProducto.vb">
+    <Compile Include="vistas\VistaProducto\ModificarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\VerVentas.Designer.vb">
+    <Compile Include="vistas\VistaVentas\VerVentas.Designer.vb">
       <DependentUpon>VerVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\VerVentas.vb">
+    <Compile Include="vistas\VistaVentas\VerVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\NuevaVenta.Designer.vb">
+    <Compile Include="vistas\VistaVentas\NuevaVenta.Designer.vb">
       <DependentUpon>NuevaVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\NuevaVenta.vb">
+    <Compile Include="vistas\VistaVentas\NuevaVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\FormBienvenida.Designer.vb">
@@ -189,28 +195,28 @@
     <Compile Include="vistas\FormBienvenida.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\VerUsuarios.Designer.vb">
+    <Compile Include="vistas\VistaUsuario\VerUsuarios.Designer.vb">
       <DependentUpon>VerUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\VerUsuarios.vb">
+    <Compile Include="vistas\VistaUsuario\VerUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\AgregarUsuario.Designer.vb">
+    <Compile Include="vistas\VistaUsuario\AgregarUsuario.Designer.vb">
       <DependentUpon>AgregarUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\AgregarUsuario.vb">
+    <Compile Include="vistas\VistaUsuario\AgregarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\VerClientes.Designer.vb">
+    <Compile Include="vistas\VistaCliente\VerClientes.Designer.vb">
       <DependentUpon>VerClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\VerClientes.vb">
+    <Compile Include="vistas\VistaCliente\VerClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Reportes.Designer.vb">
+    <Compile Include="vistas\VistaReportes\Reportes.Designer.vb">
       <DependentUpon>Reportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Reportes.vb">
+    <Compile Include="vistas\VistaReportes\Reportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\FrmLogin.vb">
@@ -254,31 +260,34 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\AgregarCliente.resx">
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmErrorMail.resx">
+      <DependentUpon>FrmErrorMail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\VistaCliente\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\AgregarProducto.resx">
+    <EmbeddedResource Include="vistas\VistaProducto\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FormBienvenida.resx">
       <DependentUpon>FormBienvenida.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\NuevaVenta.resx">
+    <EmbeddedResource Include="vistas\VistaVentas\NuevaVenta.resx">
       <DependentUpon>NuevaVenta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\VerProductos.resx">
+    <EmbeddedResource Include="vistas\VistaProducto\VerProductos.resx">
       <DependentUpon>VerProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\VerUsuarios.resx">
+    <EmbeddedResource Include="vistas\VistaUsuario\VerUsuarios.resx">
       <DependentUpon>VerUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\AgregarUsuario.resx">
+    <EmbeddedResource Include="vistas\VistaUsuario\AgregarUsuario.resx">
       <DependentUpon>AgregarUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\VerClientes.resx">
+    <EmbeddedResource Include="vistas\VistaCliente\VerClientes.resx">
       <DependentUpon>VerClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Reportes.resx">
+    <EmbeddedResource Include="vistas\VistaReportes\Reportes.resx">
       <DependentUpon>Reportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmLogin.resx">
@@ -299,7 +308,7 @@
     <EmbeddedResource Include="vistas\ventanasEmergentes\UsuarioAgregado.resx">
       <DependentUpon>UsuarioAgregado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\VerVentas.resx">
+    <EmbeddedResource Include="vistas\VistaVentas\VerVentas.resx">
       <DependentUpon>VerVentas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -329,6 +338,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Iconos\btn122x45.png" />
+    <None Include="Iconos\btn201x45iniciar.png" />
+    <None Include="Iconos\btn201x45iniciar064.png" />
+    <None Include="Iconos\btn122x45Oscuro.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.vb</LastGenOutput>

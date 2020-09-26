@@ -35,38 +35,45 @@ Public Class Login
     Private Sub BtnSesion_Click(sender As Object, e As EventArgs) Handles BtnSesion.Click
         Dim mail As String
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
-        If TxtUser.Text = "" Or TxtPass.Text = "" Then
+        If TxtUser.Text = "" And TxtPass.Text = "" Then
             MsgBox("Error usuario y/o contraseña deben tener caracteres", vbOKOnly, "Error")
-        ElseIf Regex.IsMatch(TxtUser.Text, mail) Then
-            Me.Hide()
-                PanelAdmin.Show()
-            Else
-                'MsgBox("Error, el mail ingresado no es correcto!", vbOKOnly, "Error!!! ")
-                FrmErrorLogin.Show()
-            End If
-
-    End Sub
-
-
-
-    Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs) Handles TxtUser.LostFocus
-        Dim mail As String
-        mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
-        'If TextBox1
-        If Regex.IsMatch(TxtUser.Text, mail) Then
+        ElseIf Not (Regex.IsMatch(TxtUser.Text, mail)) Then
+            FrmErrorLogin.Show()
+        Else
             Me.Hide()
             PanelAdmin.Show()
-        Else
-            'MsgBox("Error, el mail ingresado no es correcto!", vbOKOnly, "Error!!! ")
-            FrmErrorLogin.Show()
         End If
+
     End Sub
+
+
+
+    'Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs) Handles TxtUser.LostFocus
+    ' Dim mail As String
+    'mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
+    'If TextBox1
+    'If Regex.IsMatch(TxtUser.Text, mail) Then
+    'Me.Hide()
+    ' PanelAdmin.Show()
+    'Else
+    'MsgBox("Error, el mail ingresado no es correcto!", vbOKOnly, "Error!!! ")
+    ' FrmErrorLogin.Show()
+    'End If
+    'End Sub
     <DllImport("Gdi32.dll", EntryPoint:="CreateRoundRectRgn")>
     Private Shared Function CreateRoundRectRgn(LR As Integer, TR As Integer, RR As Integer, BR As Integer, WE As Integer, He As Integer) As IntPtr
 
     End Function
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 35, 35))
+    End Sub
+
+    Private Sub BtnSesion_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnSesion.MouseDown
+        BtnSesion.BackgroundImage = My.Resources.btn201x45iniciar064
+    End Sub
+
+    Private Sub BtnSesion_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnSesion.MouseUp
+        BtnSesion.BackgroundImage = My.Resources.btn201x45iniciar
     End Sub
 
 

@@ -35,7 +35,7 @@ Partial Class FrmErrorLogin
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Button2)
@@ -60,13 +60,13 @@ Partial Class FrmErrorLogin
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(50, 100)
+        Me.Label1.Location = New System.Drawing.Point(12, 108)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(230, 17)
+        Me.Label1.Size = New System.Drawing.Size(278, 20)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Error!!! Dirección de e-mail inválido."
+        Me.Label1.Text = "Usuario y/o contrseña incorrectos"
         '
         'Button1
         '
@@ -76,6 +76,7 @@ Partial Class FrmErrorLogin
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(290, 151)
         Me.Button1.Name = "Button1"

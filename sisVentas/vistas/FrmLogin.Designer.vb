@@ -140,16 +140,19 @@ Partial Class Login
         'BtnSesion
         '
         Me.BtnSesion.BackColor = System.Drawing.Color.Transparent
-        Me.BtnSesion.BackgroundImage = CType(resources.GetObject("BtnSesion.BackgroundImage"), System.Drawing.Image)
+        Me.BtnSesion.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn201x45iniciar
         Me.BtnSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnSesion.FlatAppearance.BorderSize = 0
+        Me.BtnSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSesion.ForeColor = System.Drawing.Color.White
         Me.BtnSesion.Location = New System.Drawing.Point(30, 331)
         Me.BtnSesion.Name = "BtnSesion"
         Me.BtnSesion.Size = New System.Drawing.Size(220, 42)
         Me.BtnSesion.TabIndex = 7
+        Me.BtnSesion.Text = "INICIAR SESION"
         Me.BtnSesion.UseVisualStyleBackColor = False
         '
         'LinkLabel1
