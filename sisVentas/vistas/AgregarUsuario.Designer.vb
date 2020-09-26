@@ -289,6 +289,7 @@ Partial Class Agregar_Usuario
         '
         'BtnAgregarUsuario
         '
+        Me.BtnAgregarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnAgregarUsuario.BackgroundImage = CType(resources.GetObject("BtnAgregarUsuario.BackgroundImage"), System.Drawing.Image)
         Me.BtnAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnAgregarUsuario.FlatAppearance.BorderSize = 0
@@ -306,6 +307,7 @@ Partial Class Agregar_Usuario
         '
         'BtnCancelar
         '
+        Me.BtnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCancelar.BackgroundImage = CType(resources.GetObject("BtnCancelar.BackgroundImage"), System.Drawing.Image)
         Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnCancelar.FlatAppearance.BorderSize = 0
