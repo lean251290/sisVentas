@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Agregar_Usuario
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class AgregarProducto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,11 @@ Partial Class Agregar_Usuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agregar_Usuario))
-        Me.LabelAgregarUsuario = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
+        Me.LabelAgregarProducto = New System.Windows.Forms.Label()
+        Me.PanelAgregarProducto = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TRePassUsuario = New System.Windows.Forms.TextBox()
@@ -42,26 +41,9 @@ Partial Class Agregar_Usuario
         Me.LblDNI = New System.Windows.Forms.Label()
         Me.lblApellido = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
-        Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.PanelAgregarUsuario.SuspendLayout()
+        Me.PanelAgregarProducto.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'LabelAgregarUsuario
-        '
-        Me.LabelAgregarUsuario.AutoSize = True
-        Me.LabelAgregarUsuario.BackColor = System.Drawing.Color.Transparent
-        Me.LabelAgregarUsuario.Dock = System.Windows.Forms.DockStyle.Right
-        Me.LabelAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LabelAgregarUsuario.Location = New System.Drawing.Point(512, 0)
-        Me.LabelAgregarUsuario.Name = "LabelAgregarUsuario"
-        Me.LabelAgregarUsuario.Size = New System.Drawing.Size(168, 25)
-        Me.LabelAgregarUsuario.TabIndex = 0
-        Me.LabelAgregarUsuario.Text = "Agregar Usuario"
-        Me.LabelAgregarUsuario.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label1
         '
@@ -73,36 +55,50 @@ Partial Class Agregar_Usuario
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(26, 25)
-        Me.Label1.TabIndex = 1
+        Me.Label1.TabIndex = 4
         Me.Label1.Text = "X"
         '
-        'PanelAgregarUsuario
+        'LabelAgregarProducto
         '
-        Me.PanelAgregarUsuario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LabelAgregarProducto.AutoSize = True
+        Me.LabelAgregarProducto.BackColor = System.Drawing.Color.Transparent
+        Me.LabelAgregarProducto.Dock = System.Windows.Forms.DockStyle.Right
+        Me.LabelAgregarProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAgregarProducto.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LabelAgregarProducto.Location = New System.Drawing.Point(500, 0)
+        Me.LabelAgregarProducto.Name = "LabelAgregarProducto"
+        Me.LabelAgregarProducto.Size = New System.Drawing.Size(180, 25)
+        Me.LabelAgregarProducto.TabIndex = 5
+        Me.LabelAgregarProducto.Text = "Agregar Producto"
+        Me.LabelAgregarProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'PanelAgregarProducto
+        '
+        Me.PanelAgregarProducto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarUsuario.Controls.Add(Me.PictureBox1)
-        Me.PanelAgregarUsuario.Controls.Add(Me.Label2)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TRePassUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TPassUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TEmailUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TDireccionUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TNombreUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TApellidoUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TDniUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.Lblrepetir)
-        Me.PanelAgregarUsuario.Controls.Add(Me.LblPass)
-        Me.PanelAgregarUsuario.Controls.Add(Me.LblDireccion)
-        Me.PanelAgregarUsuario.Controls.Add(Me.LblEmail)
-        Me.PanelAgregarUsuario.Controls.Add(Me.LblDNI)
-        Me.PanelAgregarUsuario.Controls.Add(Me.lblApellido)
-        Me.PanelAgregarUsuario.Controls.Add(Me.LblNombre)
-        Me.PanelAgregarUsuario.Location = New System.Drawing.Point(50, 90)
-        Me.PanelAgregarUsuario.Name = "PanelAgregarUsuario"
-        Me.PanelAgregarUsuario.Size = New System.Drawing.Size(600, 530)
-        Me.PanelAgregarUsuario.TabIndex = 4
+        Me.PanelAgregarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarProducto.Controls.Add(Me.PictureBox1)
+        Me.PanelAgregarProducto.Controls.Add(Me.Label2)
+        Me.PanelAgregarProducto.Controls.Add(Me.TRePassUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.TPassUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.TEmailUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.TDireccionUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.TNombreUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.TApellidoUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.TDniUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.Lblrepetir)
+        Me.PanelAgregarProducto.Controls.Add(Me.LblPass)
+        Me.PanelAgregarProducto.Controls.Add(Me.LblDireccion)
+        Me.PanelAgregarProducto.Controls.Add(Me.LblEmail)
+        Me.PanelAgregarProducto.Controls.Add(Me.LblDNI)
+        Me.PanelAgregarProducto.Controls.Add(Me.lblApellido)
+        Me.PanelAgregarProducto.Controls.Add(Me.LblNombre)
+        Me.PanelAgregarProducto.Location = New System.Drawing.Point(50, 90)
+        Me.PanelAgregarProducto.Name = "PanelAgregarProducto"
+        Me.PanelAgregarProducto.Size = New System.Drawing.Size(600, 530)
+        Me.PanelAgregarProducto.TabIndex = 6
         '
         'PictureBox1
         '
@@ -287,88 +283,43 @@ Partial Class Agregar_Usuario
         Me.LblNombre.Text = "Nombre:"
         Me.LblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'BtnAgregarUsuario
-        '
-        Me.BtnAgregarUsuario.BackgroundImage = CType(resources.GetObject("BtnAgregarUsuario.BackgroundImage"), System.Drawing.Image)
-        Me.BtnAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAgregarUsuario.FlatAppearance.BorderSize = 0
-        Me.BtnAgregarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnAgregarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnAgregarUsuario.Location = New System.Drawing.Point(368, 625)
-        Me.BtnAgregarUsuario.Name = "BtnAgregarUsuario"
-        Me.BtnAgregarUsuario.Size = New System.Drawing.Size(110, 43)
-        Me.BtnAgregarUsuario.TabIndex = 5
-        Me.BtnAgregarUsuario.Text = "Agregar"
-        Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.BackgroundImage = CType(resources.GetObject("BtnCancelar.BackgroundImage"), System.Drawing.Image)
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCancelar.FlatAppearance.BorderSize = 0
-        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnCancelar.Location = New System.Drawing.Point(507, 625)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(110, 43)
-        Me.BtnCancelar.TabIndex = 6
-        Me.BtnCancelar.Text = "Cancelar"
-        Me.BtnCancelar.UseVisualStyleBackColor = True
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'Agregar_Usuario
+        'AgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(680, 680)
-        Me.Controls.Add(Me.BtnCancelar)
-        Me.Controls.Add(Me.BtnAgregarUsuario)
-        Me.Controls.Add(Me.PanelAgregarUsuario)
+        Me.Controls.Add(Me.PanelAgregarProducto)
+        Me.Controls.Add(Me.LabelAgregarProducto)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.LabelAgregarUsuario)
-        Me.ForeColor = System.Drawing.SystemColors.ButtonShadow
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Agregar_Usuario"
-        Me.Text = "Agregar_Usuario"
-        Me.PanelAgregarUsuario.ResumeLayout(False)
-        Me.PanelAgregarUsuario.PerformLayout()
+        Me.Name = "AgregarProducto"
+        Me.Text = "Form3"
+        Me.PanelAgregarProducto.ResumeLayout(False)
+        Me.PanelAgregarProducto.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents LabelAgregarUsuario As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents PanelAgregarUsuario As Panel
+    Friend WithEvents LabelAgregarProducto As Label
+    Friend WithEvents PanelAgregarProducto As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TRePassUsuario As TextBox
+    Friend WithEvents TPassUsuario As TextBox
+    Friend WithEvents TEmailUsuario As TextBox
+    Friend WithEvents TDireccionUsuario As TextBox
+    Friend WithEvents TNombreUsuario As TextBox
+    Friend WithEvents TApellidoUsuario As TextBox
+    Friend WithEvents TDniUsuario As TextBox
+    Friend WithEvents Lblrepetir As Label
     Friend WithEvents LblPass As Label
     Friend WithEvents LblDireccion As Label
     Friend WithEvents LblEmail As Label
     Friend WithEvents LblDNI As Label
     Friend WithEvents lblApellido As Label
     Friend WithEvents LblNombre As Label
-    Friend WithEvents Lblrepetir As Label
-    Friend WithEvents TNombreUsuario As TextBox
-    Friend WithEvents TApellidoUsuario As TextBox
-    Friend WithEvents TDniUsuario As TextBox
-    Friend WithEvents TRePassUsuario As TextBox
-    Friend WithEvents TPassUsuario As TextBox
-    Friend WithEvents TEmailUsuario As TextBox
-    Friend WithEvents TDireccionUsuario As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents BtnAgregarUsuario As Button
-    Friend WithEvents BtnCancelar As Button
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

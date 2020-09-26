@@ -24,7 +24,7 @@ Partial Class Reportes
     Private Sub InitializeComponent()
         Me.LReportes = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PPagos = New System.Windows.Forms.Panel()
+        Me.PanelReportes = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'LReportes
@@ -51,17 +51,17 @@ Partial Class Reportes
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "X"
         '
-        'PPagos
+        'PanelReportes
         '
-        Me.PPagos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.PanelReportes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PPagos.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.PPagos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PPagos.Location = New System.Drawing.Point(50, 90)
-        Me.PPagos.Name = "PPagos"
-        Me.PPagos.Size = New System.Drawing.Size(600, 530)
-        Me.PPagos.TabIndex = 6
+        Me.PanelReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportes.Location = New System.Drawing.Point(50, 90)
+        Me.PanelReportes.Name = "PanelReportes"
+        Me.PanelReportes.Size = New System.Drawing.Size(600, 530)
+        Me.PanelReportes.TabIndex = 6
         '
         'Reportes
         '
@@ -71,7 +71,7 @@ Partial Class Reportes
         Me.ClientSize = New System.Drawing.Size(680, 680)
         Me.Controls.Add(Me.LReportes)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PPagos)
+        Me.Controls.Add(Me.PanelReportes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Reportes"
         Me.Text = "Form1"
@@ -82,5 +82,5 @@ Partial Class Reportes
 
     Friend WithEvents LReportes As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents PPagos As Panel
+    Friend WithEvents PanelReportes As Panel
 End Class

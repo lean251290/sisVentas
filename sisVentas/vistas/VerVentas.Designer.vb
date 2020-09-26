@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class VerUsuarios
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class VerVentas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,18 @@ Partial Class VerUsuarios
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerUsuarios))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerVentas))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.LabelVerUsuarios = New System.Windows.Forms.Label()
-        Me.PanelVerUsuarios = New System.Windows.Forms.Panel()
+        Me.LabelVerVentas = New System.Windows.Forms.Label()
+        Me.PanelVerVentas = New System.Windows.Forms.Panel()
         Me.TBuscarUsuario = New System.Windows.Forms.TextBox()
         Me.LBuscarUsuario = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BtnModifcarUsuario = New System.Windows.Forms.Button()
         Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
-        Me.PanelVerUsuarios.SuspendLayout()
+        Me.PanelVerVentas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,38 +45,38 @@ Partial Class VerUsuarios
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(26, 25)
-        Me.Label1.TabIndex = 4
+        Me.Label1.TabIndex = 5
         Me.Label1.Text = "X"
         '
-        'LabelVerUsuarios
+        'LabelVerVentas
         '
-        Me.LabelVerUsuarios.AutoSize = True
-        Me.LabelVerUsuarios.Dock = System.Windows.Forms.DockStyle.Right
-        Me.LabelVerUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelVerUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LabelVerUsuarios.Location = New System.Drawing.Point(544, 0)
-        Me.LabelVerUsuarios.Name = "LabelVerUsuarios"
-        Me.LabelVerUsuarios.Size = New System.Drawing.Size(136, 25)
-        Me.LabelVerUsuarios.TabIndex = 5
-        Me.LabelVerUsuarios.Text = "Ver Usuarios"
-        Me.LabelVerUsuarios.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LabelVerVentas.AutoSize = True
+        Me.LabelVerVentas.Dock = System.Windows.Forms.DockStyle.Right
+        Me.LabelVerVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelVerVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LabelVerVentas.Location = New System.Drawing.Point(562, 0)
+        Me.LabelVerVentas.Name = "LabelVerVentas"
+        Me.LabelVerVentas.Size = New System.Drawing.Size(118, 25)
+        Me.LabelVerVentas.TabIndex = 6
+        Me.LabelVerVentas.Text = "Ver Ventas"
+        Me.LabelVerVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'PanelVerUsuarios
+        'PanelVerVentas
         '
-        Me.PanelVerUsuarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.PanelVerVentas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelVerUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.PanelVerUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelVerUsuarios.Controls.Add(Me.TBuscarUsuario)
-        Me.PanelVerUsuarios.Controls.Add(Me.LBuscarUsuario)
-        Me.PanelVerUsuarios.Controls.Add(Me.BtnModifcarUsuario)
-        Me.PanelVerUsuarios.Controls.Add(Me.DataGridView1)
-        Me.PanelVerUsuarios.Controls.Add(Me.PictureBuscarUsuario)
-        Me.PanelVerUsuarios.Location = New System.Drawing.Point(50, 90)
-        Me.PanelVerUsuarios.Name = "PanelVerUsuarios"
-        Me.PanelVerUsuarios.Size = New System.Drawing.Size(600, 530)
-        Me.PanelVerUsuarios.TabIndex = 7
+        Me.PanelVerVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelVerVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelVerVentas.Controls.Add(Me.TBuscarUsuario)
+        Me.PanelVerVentas.Controls.Add(Me.LBuscarUsuario)
+        Me.PanelVerVentas.Controls.Add(Me.BtnModifcarUsuario)
+        Me.PanelVerVentas.Controls.Add(Me.DataGridView1)
+        Me.PanelVerVentas.Controls.Add(Me.PictureBuscarUsuario)
+        Me.PanelVerVentas.Location = New System.Drawing.Point(50, 90)
+        Me.PanelVerVentas.Name = "PanelVerVentas"
+        Me.PanelVerVentas.Size = New System.Drawing.Size(600, 530)
+        Me.PanelVerVentas.TabIndex = 8
         '
         'TBuscarUsuario
         '
@@ -132,20 +132,20 @@ Partial Class VerUsuarios
         Me.PictureBuscarUsuario.TabIndex = 10
         Me.PictureBuscarUsuario.TabStop = False
         '
-        'VerUsuarios
+        'VerVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
-        Me.Controls.Add(Me.PanelVerUsuarios)
-        Me.Controls.Add(Me.LabelVerUsuarios)
+        Me.Controls.Add(Me.PanelVerVentas)
+        Me.Controls.Add(Me.LabelVerVentas)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "VerUsuarios"
-        Me.Text = "VerUsuario"
-        Me.PanelVerUsuarios.ResumeLayout(False)
-        Me.PanelVerUsuarios.PerformLayout()
+        Me.Name = "VerVentas"
+        Me.Text = "Form5"
+        Me.PanelVerVentas.ResumeLayout(False)
+        Me.PanelVerVentas.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -154,11 +154,11 @@ Partial Class VerUsuarios
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents LabelVerUsuarios As Label
-    Friend WithEvents PanelVerUsuarios As Panel
-    Friend WithEvents PictureBuscarUsuario As PictureBox
+    Friend WithEvents LabelVerVentas As Label
+    Friend WithEvents PanelVerVentas As Panel
+    Friend WithEvents TBuscarUsuario As TextBox
+    Friend WithEvents LBuscarUsuario As Label
     Friend WithEvents BtnModifcarUsuario As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents LBuscarUsuario As Label
-    Friend WithEvents TBuscarUsuario As TextBox
+    Friend WithEvents PictureBuscarUsuario As PictureBox
 End Class

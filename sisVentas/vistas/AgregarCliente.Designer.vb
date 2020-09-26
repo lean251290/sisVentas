@@ -23,7 +23,7 @@ Partial Class AgregarCliente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.LblAgregarCliente = New System.Windows.Forms.Label()
+        Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -49,27 +49,28 @@ Partial Class AgregarCliente
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(26, 25)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "X"
         '
-        'LblAgregarCliente
+        'LabelAgregarCliente
         '
-        Me.LblAgregarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LblAgregarCliente.AutoSize = True
-        Me.LblAgregarCliente.BackColor = System.Drawing.Color.Transparent
-        Me.LblAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAgregarCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblAgregarCliente.Location = New System.Drawing.Point(496, 9)
-        Me.LblAgregarCliente.Name = "LblAgregarCliente"
-        Me.LblAgregarCliente.Size = New System.Drawing.Size(172, 25)
-        Me.LblAgregarCliente.TabIndex = 4
-        Me.LblAgregarCliente.Text = "Agregar Clientes"
-        Me.LblAgregarCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LabelAgregarCliente.AutoSize = True
+        Me.LabelAgregarCliente.BackColor = System.Drawing.Color.Transparent
+        Me.LabelAgregarCliente.Dock = System.Windows.Forms.DockStyle.Right
+        Me.LabelAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAgregarCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LabelAgregarCliente.Location = New System.Drawing.Point(508, 0)
+        Me.LabelAgregarCliente.Name = "LabelAgregarCliente"
+        Me.LabelAgregarCliente.Size = New System.Drawing.Size(172, 25)
+        Me.LabelAgregarCliente.TabIndex = 4
+        Me.LabelAgregarCliente.Text = "Agregar Clientes"
+        Me.LabelAgregarCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'PanelAgregarCliente
         '
@@ -289,7 +290,7 @@ Partial Class AgregarCliente
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
         Me.Controls.Add(Me.PanelAgregarCliente)
-        Me.Controls.Add(Me.LblAgregarCliente)
+        Me.Controls.Add(Me.LabelAgregarCliente)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "AgregarCliente"
@@ -303,7 +304,7 @@ Partial Class AgregarCliente
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents LblAgregarCliente As Label
+    Friend WithEvents LabelAgregarCliente As Label
     Friend WithEvents PanelAgregarCliente As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
