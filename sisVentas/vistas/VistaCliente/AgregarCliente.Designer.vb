@@ -41,6 +41,8 @@ Partial Class AgregarCliente
         Me.LblDNI = New System.Windows.Forms.Label()
         Me.lblApellido = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
+        Me.BtnAgregarCliente = New System.Windows.Forms.Button()
+        Me.BtnCancelarCliente = New System.Windows.Forms.Button()
         Me.PanelAgregarCliente.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -283,12 +285,50 @@ Partial Class AgregarCliente
         Me.LblNombre.Text = "Nombre:"
         Me.LblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'BtnAgregarCliente
+        '
+        Me.BtnAgregarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAgregarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAgregarCliente.FlatAppearance.BorderSize = 0
+        Me.BtnAgregarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnAgregarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAgregarCliente.Location = New System.Drawing.Point(416, 637)
+        Me.BtnAgregarCliente.Name = "BtnAgregarCliente"
+        Me.BtnAgregarCliente.Size = New System.Drawing.Size(98, 37)
+        Me.BtnAgregarCliente.TabIndex = 6
+        Me.BtnAgregarCliente.Text = "Guardar"
+        Me.BtnAgregarCliente.UseVisualStyleBackColor = True
+        '
+        'BtnCancelarCliente
+        '
+        Me.BtnCancelarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCancelarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnCancelarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelarCliente.FlatAppearance.BorderSize = 0
+        Me.BtnCancelarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnCancelarCliente.Location = New System.Drawing.Point(552, 637)
+        Me.BtnCancelarCliente.Name = "BtnCancelarCliente"
+        Me.BtnCancelarCliente.Size = New System.Drawing.Size(98, 37)
+        Me.BtnCancelarCliente.TabIndex = 7
+        Me.BtnCancelarCliente.Text = "Cancelar"
+        Me.BtnCancelarCliente.UseVisualStyleBackColor = True
+        '
         'AgregarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnCancelarCliente)
+        Me.Controls.Add(Me.BtnAgregarCliente)
         Me.Controls.Add(Me.PanelAgregarCliente)
         Me.Controls.Add(Me.LabelAgregarCliente)
         Me.Controls.Add(Me.Label1)
@@ -322,4 +362,6 @@ Partial Class AgregarCliente
     Friend WithEvents LblDNI As Label
     Friend WithEvents lblApellido As Label
     Friend WithEvents LblNombre As Label
+    Friend WithEvents BtnAgregarCliente As Button
+    Friend WithEvents BtnCancelarCliente As Button
 End Class

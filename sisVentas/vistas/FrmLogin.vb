@@ -36,9 +36,9 @@ Public Class Login
         Dim mail As String
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
         If TxtUser.Text = "" And TxtPass.Text = "" Then
-            MsgBox("Error usuario y/o contraseña deben tener caracteres", vbOKOnly, "Error")
-        ElseIf Not (Regex.IsMatch(TxtUser.Text, mail)) Then
             FrmErrorLogin.Show()
+        ElseIf Not (Regex.IsMatch(TxtUser.Text, mail)) Then
+            FrmErrorMail.Show()
         Else
             Me.Hide()
             PanelAdmin.Show()

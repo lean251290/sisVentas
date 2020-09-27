@@ -42,7 +42,9 @@ Public Class PanelAdmin
 
     Private Sub TMOcultarMenu_Tick(sender As Object, e As EventArgs) Handles TMOcultarMenu.Tick
         If PanelMenu.Width <= 60 Then
+            esconderSubMenu()
             Me.TMOcultarMenu.Enabled = False
+
         Else
             Me.PanelMenu.Width = PanelMenu.Width - 20
         End If
@@ -50,7 +52,9 @@ Public Class PanelAdmin
 
     Private Sub TMMostrarMenu_Tick(sender As Object, e As EventArgs) Handles TMMostrarMenu.Tick
         If PanelMenu.Width >= 220 Then
+            esconderSubMenu()
             Me.TMMostrarMenu.Enabled = False
+
         Else
             Me.PanelMenu.Width = PanelMenu.Width + 20
         End If
@@ -58,9 +62,51 @@ Public Class PanelAdmin
 
     Private Sub BtnMenu_Click(sender As Object, e As EventArgs) Handles BtnMenu.Click
         If PanelMenu.Width = 220 Then
+
             TMOcultarMenu.Enabled = True
+            BotonUsuarios.Enabled = False
+            BotonUsuarios.Text = ""
+            BotonVerUsuarios.Enabled = False
+            Button8.Enabled = False
+            BotonProductos.Enabled = False
+            BotonProductos.Text = ""
+            BotonVerProd.Enabled = False
+            BotonNuevoProd.Enabled = False
+            BotonReportes.Enabled = False
+            BotonReportes.Text = ""
+            Button2.Enabled = False
+            BotonVentas.Enabled = False
+            BotonVentas.Text = ""
+            BotonVerVentas.Enabled = False
+            Button3.Enabled = False
+            BotonClientes.Enabled = False
+            BotonClientes.Text = ""
+            Button1.Enabled = False
+            Button4.Enabled = False
+            'esconderSubMenu()
         ElseIf PanelMenu.Width = 60 Then
+
             TMMostrarMenu.Enabled = True
+            BotonUsuarios.Enabled = True
+            BotonUsuarios.Text = "    USUARIOS"
+            BotonVerUsuarios.Enabled = True
+            Button8.Enabled = True
+            BotonProductos.Enabled = True
+            BotonProductos.Text = "     PRODUCTOS"
+            BotonVerProd.Enabled = True
+            BotonNuevoProd.Enabled = True
+            BotonReportes.Enabled = True
+            BotonReportes.Text = "     REPORTES"
+            Button2.Enabled = True
+            BotonVentas.Enabled = True
+            BotonVentas.Text = "         VENTAS"
+            BotonVerVentas.Enabled = True
+            Button3.Enabled = True
+            BotonClientes.Enabled = True
+            BotonClientes.Text = "       CLIENTES"
+            Button1.Enabled = True
+            Button4.Enabled = True
+            'esconderSubMenu()
         End If
     End Sub
 
@@ -84,6 +130,7 @@ Public Class PanelAdmin
         End If
     End Sub
     Private Sub PanelAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         esconderSubMenu()
     End Sub
 
@@ -156,5 +203,19 @@ Public Class PanelAdmin
     Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click
         abrirFormHijo(New Agregar_Usuario)
         esconderSubMenu()
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        abrirFormHijo(New AgregarCliente)
+        esconderSubMenu()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        abrirFormHijo(New VerClientes)
+        esconderSubMenu()
+    End Sub
+
+    Private Sub PanelContenedorFormHijo_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenedorFormHijo.Paint
+
     End Sub
 End Class

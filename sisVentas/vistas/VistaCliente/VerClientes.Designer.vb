@@ -27,10 +27,11 @@ Partial Class VerClientes
         Me.LBuscarCliente = New System.Windows.Forms.Label()
         Me.TBuscarCliente = New System.Windows.Forms.TextBox()
         Me.PanelVerClientes = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGVerClientes = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BtnModificarCliente = New System.Windows.Forms.Button()
         Me.PanelVerClientes.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -91,36 +92,56 @@ Partial Class VerClientes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelVerClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelVerClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelVerClientes.Controls.Add(Me.DataGridView1)
+        Me.PanelVerClientes.Controls.Add(Me.DGVerClientes)
         Me.PanelVerClientes.Controls.Add(Me.PictureBox1)
         Me.PanelVerClientes.Controls.Add(Me.TBuscarCliente)
         Me.PanelVerClientes.Controls.Add(Me.LBuscarCliente)
         Me.PanelVerClientes.Location = New System.Drawing.Point(50, 90)
         Me.PanelVerClientes.Name = "PanelVerClientes"
-        Me.PanelVerClientes.Size = New System.Drawing.Size(600, 530)
+        Me.PanelVerClientes.Size = New System.Drawing.Size(600, 495)
         Me.PanelVerClientes.TabIndex = 5
         '
-        'DataGridView1
+        'DGVerClientes
         '
-        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.DGVerClientes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(50, 90)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(500, 200)
-        Me.DataGridView1.TabIndex = 18
+        Me.DGVerClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DGVerClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVerClientes.Location = New System.Drawing.Point(50, 90)
+        Me.DGVerClientes.Name = "DGVerClientes"
+        Me.DGVerClientes.Size = New System.Drawing.Size(500, 308)
+        Me.DGVerClientes.TabIndex = 18
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBox1.Location = New System.Drawing.Point(509, 27)
+        Me.PictureBox1.Location = New System.Drawing.Point(509, 36)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 17
         Me.PictureBox1.TabStop = False
+        '
+        'BtnModificarCliente
+        '
+        Me.BtnModificarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnModificarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnModificarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificarCliente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnModificarCliente.FlatAppearance.BorderSize = 0
+        Me.BtnModificarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnModificarCliente.Location = New System.Drawing.Point(552, 631)
+        Me.BtnModificarCliente.Name = "BtnModificarCliente"
+        Me.BtnModificarCliente.Size = New System.Drawing.Size(98, 37)
+        Me.BtnModificarCliente.TabIndex = 6
+        Me.BtnModificarCliente.Text = "Modificar"
+        Me.BtnModificarCliente.UseVisualStyleBackColor = True
         '
         'VerClientes
         '
@@ -129,6 +150,7 @@ Partial Class VerClientes
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnModificarCliente)
         Me.Controls.Add(Me.PanelVerClientes)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LabelVerCliente)
@@ -137,7 +159,7 @@ Partial Class VerClientes
         Me.Text = "Form1"
         Me.PanelVerClientes.ResumeLayout(False)
         Me.PanelVerClientes.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -150,5 +172,6 @@ Partial Class VerClientes
     Friend WithEvents TBuscarCliente As TextBox
     Friend WithEvents PanelVerClientes As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGVerClientes As DataGridView
+    Friend WithEvents BtnModificarCliente As Button
 End Class
