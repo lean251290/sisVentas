@@ -83,6 +83,7 @@ Public Class PanelAdmin
             BotonClientes.Text = ""
             Button1.Enabled = False
             Button4.Enabled = False
+            BtnSalir.Text = ""
             'esconderSubMenu()
         ElseIf PanelMenu.Width = 60 Then
 
@@ -106,6 +107,7 @@ Public Class PanelAdmin
             BotonClientes.Text = "       CLIENTES"
             Button1.Enabled = True
             Button4.Enabled = True
+            BtnSalir.Text = "     SALIR"
             'esconderSubMenu()
         End If
     End Sub

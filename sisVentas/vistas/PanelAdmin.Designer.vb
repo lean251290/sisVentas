@@ -37,6 +37,7 @@ Partial Class PanelAdmin
         Me.TMOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.TMMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelContenedorFormHijo = New System.Windows.Forms.Panel()
+        Me.BtnSalir = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BotonClientes = New System.Windows.Forms.Button()
@@ -93,6 +94,7 @@ Partial Class PanelAdmin
         '
         Me.PanelMenu.AutoScroll = True
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.BtnSalir)
         Me.PanelMenu.Controls.Add(Me.PanelClientes)
         Me.PanelMenu.Controls.Add(Me.BotonClientes)
         Me.PanelMenu.Controls.Add(Me.PanelReportes)
@@ -120,7 +122,7 @@ Partial Class PanelAdmin
         Me.PanelClientes.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelClientes.Location = New System.Drawing.Point(0, 568)
         Me.PanelClientes.Name = "PanelClientes"
-        Me.PanelClientes.Size = New System.Drawing.Size(220, 80)
+        Me.PanelClientes.Size = New System.Drawing.Size(203, 80)
         Me.PanelClientes.TabIndex = 27
         '
         'PanelReportes
@@ -130,7 +132,7 @@ Partial Class PanelAdmin
         Me.PanelReportes.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelReportes.Location = New System.Drawing.Point(0, 488)
         Me.PanelReportes.Name = "PanelReportes"
-        Me.PanelReportes.Size = New System.Drawing.Size(220, 40)
+        Me.PanelReportes.Size = New System.Drawing.Size(203, 40)
         Me.PanelReportes.TabIndex = 25
         '
         'PanelVentas
@@ -141,7 +143,7 @@ Partial Class PanelAdmin
         Me.PanelVentas.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelVentas.Location = New System.Drawing.Point(0, 368)
         Me.PanelVentas.Name = "PanelVentas"
-        Me.PanelVentas.Size = New System.Drawing.Size(220, 80)
+        Me.PanelVentas.Size = New System.Drawing.Size(203, 80)
         Me.PanelVentas.TabIndex = 23
         '
         'PanelProductos
@@ -152,7 +154,7 @@ Partial Class PanelAdmin
         Me.PanelProductos.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelProductos.Location = New System.Drawing.Point(0, 248)
         Me.PanelProductos.Name = "PanelProductos"
-        Me.PanelProductos.Size = New System.Drawing.Size(220, 80)
+        Me.PanelProductos.Size = New System.Drawing.Size(203, 80)
         Me.PanelProductos.TabIndex = 21
         '
         'PanelUsuarios
@@ -163,7 +165,7 @@ Partial Class PanelAdmin
         Me.PanelUsuarios.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelUsuarios.Location = New System.Drawing.Point(0, 128)
         Me.PanelUsuarios.Name = "PanelUsuarios"
-        Me.PanelUsuarios.Size = New System.Drawing.Size(220, 80)
+        Me.PanelUsuarios.Size = New System.Drawing.Size(203, 80)
         Me.PanelUsuarios.TabIndex = 19
         '
         'Panel11
@@ -173,7 +175,7 @@ Partial Class PanelAdmin
         Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel11.Location = New System.Drawing.Point(0, 34)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(220, 54)
+        Me.Panel11.Size = New System.Drawing.Size(203, 54)
         Me.Panel11.TabIndex = 17
         '
         'Panel10
@@ -183,7 +185,7 @@ Partial Class PanelAdmin
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel10.Location = New System.Drawing.Point(0, 0)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(220, 34)
+        Me.Panel10.Size = New System.Drawing.Size(203, 34)
         Me.Panel10.TabIndex = 17
         '
         'Panel1
@@ -209,6 +211,26 @@ Partial Class PanelAdmin
         Me.PanelContenedorFormHijo.Size = New System.Drawing.Size(680, 680)
         Me.PanelContenedorFormHijo.TabIndex = 2
         '
+        'BtnSalir
+        '
+        Me.BtnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnSalir.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnSalir.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnSalir.Location = New System.Drawing.Point(0, 648)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(203, 40)
+        Me.BtnSalir.TabIndex = 25
+        Me.BtnSalir.Text = "     SALIR"
+        Me.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnSalir.UseVisualStyleBackColor = False
+        '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
@@ -223,7 +245,7 @@ Partial Class PanelAdmin
         Me.Button4.Location = New System.Drawing.Point(0, 40)
         Me.Button4.Name = "Button4"
         Me.Button4.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button4.Size = New System.Drawing.Size(220, 40)
+        Me.Button4.Size = New System.Drawing.Size(203, 40)
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "NUEVO "
         Me.Button4.UseVisualStyleBackColor = False
@@ -242,7 +264,7 @@ Partial Class PanelAdmin
         Me.Button1.Location = New System.Drawing.Point(0, 0)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(220, 40)
+        Me.Button1.Size = New System.Drawing.Size(203, 40)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "VER"
         Me.Button1.UseVisualStyleBackColor = False
@@ -259,7 +281,7 @@ Partial Class PanelAdmin
         Me.BotonClientes.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonClientes.Location = New System.Drawing.Point(0, 528)
         Me.BotonClientes.Name = "BotonClientes"
-        Me.BotonClientes.Size = New System.Drawing.Size(220, 40)
+        Me.BotonClientes.Size = New System.Drawing.Size(203, 40)
         Me.BotonClientes.TabIndex = 26
         Me.BotonClientes.Text = "       CLIENTES"
         Me.BotonClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -280,7 +302,7 @@ Partial Class PanelAdmin
         Me.Button2.Location = New System.Drawing.Point(0, 0)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button2.Size = New System.Drawing.Size(220, 40)
+        Me.Button2.Size = New System.Drawing.Size(203, 40)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "VER"
         Me.Button2.UseVisualStyleBackColor = False
@@ -298,7 +320,7 @@ Partial Class PanelAdmin
         Me.BotonReportes.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonReportes.Location = New System.Drawing.Point(0, 448)
         Me.BotonReportes.Name = "BotonReportes"
-        Me.BotonReportes.Size = New System.Drawing.Size(220, 40)
+        Me.BotonReportes.Size = New System.Drawing.Size(203, 40)
         Me.BotonReportes.TabIndex = 24
         Me.BotonReportes.Text = "     REPORTES"
         Me.BotonReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -319,7 +341,7 @@ Partial Class PanelAdmin
         Me.Button3.Location = New System.Drawing.Point(0, 40)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button3.Size = New System.Drawing.Size(220, 40)
+        Me.Button3.Size = New System.Drawing.Size(203, 40)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "NUEVA"
         Me.Button3.UseVisualStyleBackColor = False
@@ -338,7 +360,7 @@ Partial Class PanelAdmin
         Me.BotonVerVentas.Location = New System.Drawing.Point(0, 0)
         Me.BotonVerVentas.Name = "BotonVerVentas"
         Me.BotonVerVentas.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.BotonVerVentas.Size = New System.Drawing.Size(220, 40)
+        Me.BotonVerVentas.Size = New System.Drawing.Size(203, 40)
         Me.BotonVerVentas.TabIndex = 2
         Me.BotonVerVentas.Text = "VER"
         Me.BotonVerVentas.UseVisualStyleBackColor = False
@@ -356,7 +378,7 @@ Partial Class PanelAdmin
         Me.BotonVentas.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonVentas.Location = New System.Drawing.Point(0, 328)
         Me.BotonVentas.Name = "BotonVentas"
-        Me.BotonVentas.Size = New System.Drawing.Size(220, 40)
+        Me.BotonVentas.Size = New System.Drawing.Size(203, 40)
         Me.BotonVentas.TabIndex = 22
         Me.BotonVentas.Text = "         VENTAS"
         Me.BotonVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -376,7 +398,7 @@ Partial Class PanelAdmin
         Me.BotonNuevoProd.Location = New System.Drawing.Point(0, 40)
         Me.BotonNuevoProd.Name = "BotonNuevoProd"
         Me.BotonNuevoProd.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.BotonNuevoProd.Size = New System.Drawing.Size(220, 40)
+        Me.BotonNuevoProd.Size = New System.Drawing.Size(203, 40)
         Me.BotonNuevoProd.TabIndex = 2
         Me.BotonNuevoProd.Text = "NUEVO"
         Me.BotonNuevoProd.UseVisualStyleBackColor = False
@@ -395,7 +417,7 @@ Partial Class PanelAdmin
         Me.BotonVerProd.Location = New System.Drawing.Point(0, 0)
         Me.BotonVerProd.Name = "BotonVerProd"
         Me.BotonVerProd.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.BotonVerProd.Size = New System.Drawing.Size(220, 40)
+        Me.BotonVerProd.Size = New System.Drawing.Size(203, 40)
         Me.BotonVerProd.TabIndex = 1
         Me.BotonVerProd.Text = "VER"
         Me.BotonVerProd.UseVisualStyleBackColor = False
@@ -413,7 +435,7 @@ Partial Class PanelAdmin
         Me.BotonProductos.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BotonProductos.Location = New System.Drawing.Point(0, 208)
         Me.BotonProductos.Name = "BotonProductos"
-        Me.BotonProductos.Size = New System.Drawing.Size(220, 40)
+        Me.BotonProductos.Size = New System.Drawing.Size(203, 40)
         Me.BotonProductos.TabIndex = 20
         Me.BotonProductos.Text = "     PRODUCTOS"
         Me.BotonProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -434,7 +456,7 @@ Partial Class PanelAdmin
         Me.Button8.Location = New System.Drawing.Point(0, 40)
         Me.Button8.Name = "Button8"
         Me.Button8.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button8.Size = New System.Drawing.Size(220, 40)
+        Me.Button8.Size = New System.Drawing.Size(203, 40)
         Me.Button8.TabIndex = 6
         Me.Button8.Text = "NUEVO"
         Me.Button8.UseVisualStyleBackColor = False
@@ -453,7 +475,7 @@ Partial Class PanelAdmin
         Me.BotonVerUsuarios.Location = New System.Drawing.Point(0, 0)
         Me.BotonVerUsuarios.Name = "BotonVerUsuarios"
         Me.BotonVerUsuarios.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.BotonVerUsuarios.Size = New System.Drawing.Size(220, 40)
+        Me.BotonVerUsuarios.Size = New System.Drawing.Size(203, 40)
         Me.BotonVerUsuarios.TabIndex = 2
         Me.BotonVerUsuarios.Text = "VER"
         Me.BotonVerUsuarios.UseVisualStyleBackColor = False
@@ -472,7 +494,7 @@ Partial Class PanelAdmin
         Me.BotonUsuarios.Location = New System.Drawing.Point(0, 88)
         Me.BotonUsuarios.Margin = New System.Windows.Forms.Padding(0)
         Me.BotonUsuarios.Name = "BotonUsuarios"
-        Me.BotonUsuarios.Size = New System.Drawing.Size(220, 40)
+        Me.BotonUsuarios.Size = New System.Drawing.Size(203, 40)
         Me.BotonUsuarios.TabIndex = 0
         Me.BotonUsuarios.Text = "    USUARIOS"
         Me.BotonUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -494,7 +516,7 @@ Partial Class PanelAdmin
         '
         Me.BtnMenu.Dock = System.Windows.Forms.DockStyle.Right
         Me.BtnMenu.Image = CType(resources.GetObject("BtnMenu.Image"), System.Drawing.Image)
-        Me.BtnMenu.Location = New System.Drawing.Point(182, 0)
+        Me.BtnMenu.Location = New System.Drawing.Point(165, 0)
         Me.BtnMenu.Name = "BtnMenu"
         Me.BtnMenu.Size = New System.Drawing.Size(38, 34)
         Me.BtnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -649,4 +671,5 @@ Partial Class PanelAdmin
     Friend WithEvents Button8 As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents BtnSalir As Button
 End Class

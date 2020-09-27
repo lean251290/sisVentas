@@ -342,6 +342,8 @@
     <None Include="Iconos\btn201x45iniciar064.png" />
     <None Include="Iconos\btn122x45Oscuro.png" />
     <None Include="Iconos\btn122x45Rojo.png" />
+    <None Include="Iconos\Salir.png" />
+    <None Include="Iconos\Salir30px.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.vb</LastGenOutput>
