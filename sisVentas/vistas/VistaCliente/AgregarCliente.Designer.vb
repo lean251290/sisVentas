@@ -22,43 +22,29 @@ Partial Class AgregarCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TRePassUsuario = New System.Windows.Forms.TextBox()
-        Me.TPassUsuario = New System.Windows.Forms.TextBox()
         Me.TEmailUsuario = New System.Windows.Forms.TextBox()
         Me.TDireccionUsuario = New System.Windows.Forms.TextBox()
         Me.TNombreUsuario = New System.Windows.Forms.TextBox()
         Me.TApellidoUsuario = New System.Windows.Forms.TextBox()
         Me.TDniUsuario = New System.Windows.Forms.TextBox()
-        Me.Lblrepetir = New System.Windows.Forms.Label()
-        Me.LblPass = New System.Windows.Forms.Label()
         Me.LblDireccion = New System.Windows.Forms.Label()
         Me.LblEmail = New System.Windows.Forms.Label()
         Me.LblDNI = New System.Windows.Forms.Label()
         Me.lblApellido = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
-        Me.BtnAgregarCliente = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnCancelarCliente = New System.Windows.Forms.Button()
+        Me.BtnAgregarCliente = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarCliente.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(26, 25)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "X"
         '
         'LabelAgregarCliente
         '
@@ -83,15 +69,11 @@ Partial Class AgregarCliente
         Me.PanelAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelAgregarCliente.Controls.Add(Me.PictureBox1)
         Me.PanelAgregarCliente.Controls.Add(Me.Label2)
-        Me.PanelAgregarCliente.Controls.Add(Me.TRePassUsuario)
-        Me.PanelAgregarCliente.Controls.Add(Me.TPassUsuario)
         Me.PanelAgregarCliente.Controls.Add(Me.TEmailUsuario)
         Me.PanelAgregarCliente.Controls.Add(Me.TDireccionUsuario)
         Me.PanelAgregarCliente.Controls.Add(Me.TNombreUsuario)
         Me.PanelAgregarCliente.Controls.Add(Me.TApellidoUsuario)
         Me.PanelAgregarCliente.Controls.Add(Me.TDniUsuario)
-        Me.PanelAgregarCliente.Controls.Add(Me.Lblrepetir)
-        Me.PanelAgregarCliente.Controls.Add(Me.LblPass)
         Me.PanelAgregarCliente.Controls.Add(Me.LblDireccion)
         Me.PanelAgregarCliente.Controls.Add(Me.LblEmail)
         Me.PanelAgregarCliente.Controls.Add(Me.LblDNI)
@@ -102,47 +84,18 @@ Partial Class AgregarCliente
         Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarCliente.TabIndex = 5
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox1.Location = New System.Drawing.Point(193, 428)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(119, 94)
-        Me.PictureBox1.TabIndex = 19
-        Me.PictureBox1.TabStop = False
-        '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(30, 429)
+        Me.Label2.Location = New System.Drawing.Point(30, 321)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 20)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Foto:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TRePassUsuario
-        '
-        Me.TRePassUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TRePassUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TRePassUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TRePassUsuario.Location = New System.Drawing.Point(193, 381)
-        Me.TRePassUsuario.Name = "TRePassUsuario"
-        Me.TRePassUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TRePassUsuario.TabIndex = 17
-        '
-        'TPassUsuario
-        '
-        Me.TPassUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TPassUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TPassUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TPassUsuario.Location = New System.Drawing.Point(193, 321)
-        Me.TPassUsuario.Name = "TPassUsuario"
-        Me.TPassUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TPassUsuario.TabIndex = 16
         '
         'TEmailUsuario
         '
@@ -193,32 +146,6 @@ Partial Class AgregarCliente
         Me.TDniUsuario.Name = "TDniUsuario"
         Me.TDniUsuario.Size = New System.Drawing.Size(321, 13)
         Me.TDniUsuario.TabIndex = 11
-        '
-        'Lblrepetir
-        '
-        Me.Lblrepetir.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Lblrepetir.AutoSize = True
-        Me.Lblrepetir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lblrepetir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Lblrepetir.Location = New System.Drawing.Point(30, 381)
-        Me.Lblrepetir.Name = "Lblrepetir"
-        Me.Lblrepetir.Size = New System.Drawing.Size(152, 20)
-        Me.Lblrepetir.TabIndex = 6
-        Me.Lblrepetir.Text = "Repetir Contraseña:"
-        Me.Lblrepetir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LblPass
-        '
-        Me.LblPass.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblPass.AutoSize = True
-        Me.LblPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPass.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblPass.Location = New System.Drawing.Point(30, 321)
-        Me.LblPass.Name = "LblPass"
-        Me.LblPass.Size = New System.Drawing.Size(96, 20)
-        Me.LblPass.TabIndex = 5
-        Me.LblPass.Text = "Contraseña:"
-        Me.LblPass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblDireccion
         '
@@ -285,23 +212,26 @@ Partial Class AgregarCliente
         Me.LblNombre.Text = "Nombre:"
         Me.LblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'BtnAgregarCliente
+        'Panel1
         '
-        Me.BtnAgregarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAgregarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
-        Me.BtnAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAgregarCliente.FlatAppearance.BorderSize = 0
-        Me.BtnAgregarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnAgregarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnAgregarCliente.Location = New System.Drawing.Point(416, 637)
-        Me.BtnAgregarCliente.Name = "BtnAgregarCliente"
-        Me.BtnAgregarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnAgregarCliente.TabIndex = 6
-        Me.BtnAgregarCliente.Text = "Guardar"
-        Me.BtnAgregarCliente.UseVisualStyleBackColor = True
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.LabelAgregarCliente)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(680, 50)
+        Me.Panel1.TabIndex = 8
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(55, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
         '
         'BtnCancelarCliente
         '
@@ -321,42 +251,64 @@ Partial Class AgregarCliente
         Me.BtnCancelarCliente.Text = "Cancelar"
         Me.BtnCancelarCliente.UseVisualStyleBackColor = True
         '
+        'BtnAgregarCliente
+        '
+        Me.BtnAgregarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAgregarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAgregarCliente.FlatAppearance.BorderSize = 0
+        Me.BtnAgregarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnAgregarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAgregarCliente.Location = New System.Drawing.Point(448, 637)
+        Me.BtnAgregarCliente.Name = "BtnAgregarCliente"
+        Me.BtnAgregarCliente.Size = New System.Drawing.Size(98, 37)
+        Me.BtnAgregarCliente.TabIndex = 6
+        Me.BtnAgregarCliente.Text = "Guardar"
+        Me.BtnAgregarCliente.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.PictureBox1.Location = New System.Drawing.Point(193, 321)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(240, 177)
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
+        '
         'AgregarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnCancelarCliente)
         Me.Controls.Add(Me.BtnAgregarCliente)
         Me.Controls.Add(Me.PanelAgregarCliente)
-        Me.Controls.Add(Me.LabelAgregarCliente)
-        Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "AgregarCliente"
         Me.Text = "Form2"
         Me.PanelAgregarCliente.ResumeLayout(False)
         Me.PanelAgregarCliente.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents LabelAgregarCliente As Label
     Friend WithEvents PanelAgregarCliente As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TRePassUsuario As TextBox
-    Friend WithEvents TPassUsuario As TextBox
     Friend WithEvents TEmailUsuario As TextBox
     Friend WithEvents TDireccionUsuario As TextBox
     Friend WithEvents TNombreUsuario As TextBox
     Friend WithEvents TApellidoUsuario As TextBox
     Friend WithEvents TDniUsuario As TextBox
-    Friend WithEvents Lblrepetir As Label
-    Friend WithEvents LblPass As Label
     Friend WithEvents LblDireccion As Label
     Friend WithEvents LblEmail As Label
     Friend WithEvents LblDNI As Label
@@ -364,4 +316,6 @@ Partial Class AgregarCliente
     Friend WithEvents LblNombre As Label
     Friend WithEvents BtnAgregarCliente As Button
     Friend WithEvents BtnCancelarCliente As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

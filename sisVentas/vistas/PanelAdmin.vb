@@ -324,7 +324,8 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub BotonVerVentas_Click(sender As Object, e As EventArgs) Handles BotonVerVentas.Click
-
+        esconderSubMenu()
+        abrirFormHijo(New VerVentas)
     End Sub
 
     Private Sub BotonVerVentas_MouseEnter(sender As Object, e As EventArgs) Handles BotonVerVentas.MouseEnter
@@ -345,5 +346,10 @@ Public Class PanelAdmin
 
     Private Sub Button2_MouseLeave(sender As Object, e As EventArgs) Handles Button2.MouseLeave
         Button2.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        esconderSubMenu()
+        abrirFormHijo(New NuevaVenta)
     End Sub
 End Class

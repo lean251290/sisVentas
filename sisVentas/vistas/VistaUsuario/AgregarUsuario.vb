@@ -37,7 +37,8 @@
     End Sub
 
     Private Sub BtnCancelar_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnCancelar.MouseDown
-        BtnCancelar.BackgroundImage = My.Resources.btn122x45Oscuro
+        BtnCancelar.BackgroundImage = My.Resources.btn122x45Rojo
+
     End Sub
 
     Private Sub BtnCancelar_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnCancelar.MouseUp

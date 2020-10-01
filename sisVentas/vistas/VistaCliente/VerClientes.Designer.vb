@@ -23,16 +23,20 @@ Partial Class VerClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.LabelVerCliente = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.LBuscarCliente = New System.Windows.Forms.Label()
         Me.TBuscarCliente = New System.Windows.Forms.TextBox()
         Me.PanelVerClientes = New System.Windows.Forms.Panel()
         Me.DGVerClientes = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnModificarCliente = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.BtnEliminarCliente = New System.Windows.Forms.Button()
         Me.PanelVerClientes.SuspendLayout()
         CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelVerCliente
@@ -42,25 +46,12 @@ Partial Class VerClientes
         Me.LabelVerCliente.Dock = System.Windows.Forms.DockStyle.Right
         Me.LabelVerCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelVerCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LabelVerCliente.Location = New System.Drawing.Point(584, 0)
+        Me.LabelVerCliente.Location = New System.Drawing.Point(545, 0)
         Me.LabelVerCliente.Name = "LabelVerCliente"
-        Me.LabelVerCliente.Size = New System.Drawing.Size(96, 25)
+        Me.LabelVerCliente.Size = New System.Drawing.Size(135, 25)
         Me.LabelVerCliente.TabIndex = 1
-        Me.LabelVerCliente.Text = "Clientes "
+        Me.LabelVerCliente.Text = "Ver Clientes "
         Me.LabelVerCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(26, 25)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "X"
         '
         'LBuscarCliente
         '
@@ -76,7 +67,8 @@ Partial Class VerClientes
         '
         'TBuscarCliente
         '
-        Me.TBuscarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TBuscarCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TBuscarCliente.Location = New System.Drawing.Point(122, 46)
@@ -136,12 +128,52 @@ Partial Class VerClientes
         Me.BtnModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnModificarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModificarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnModificarCliente.Location = New System.Drawing.Point(552, 631)
+        Me.BtnModificarCliente.Location = New System.Drawing.Point(448, 631)
         Me.BtnModificarCliente.Name = "BtnModificarCliente"
         Me.BtnModificarCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnModificarCliente.TabIndex = 6
         Me.BtnModificarCliente.Text = "Modificar"
         Me.BtnModificarCliente.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.LabelVerCliente)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(680, 50)
+        Me.Panel1.TabIndex = 7
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(55, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
+        'BtnEliminarCliente
+        '
+        Me.BtnEliminarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnEliminarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnEliminarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnEliminarCliente.FlatAppearance.BorderSize = 0
+        Me.BtnEliminarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnEliminarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnEliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEliminarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnEliminarCliente.Location = New System.Drawing.Point(552, 631)
+        Me.BtnEliminarCliente.Name = "BtnEliminarCliente"
+        Me.BtnEliminarCliente.Size = New System.Drawing.Size(98, 37)
+        Me.BtnEliminarCliente.TabIndex = 8
+        Me.BtnEliminarCliente.Text = "Eliminar"
+        Me.BtnEliminarCliente.UseVisualStyleBackColor = True
         '
         'VerClientes
         '
@@ -150,10 +182,10 @@ Partial Class VerClientes
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnEliminarCliente)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnModificarCliente)
         Me.Controls.Add(Me.PanelVerClientes)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.LabelVerCliente)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "VerClientes"
         Me.Text = "Form1"
@@ -161,17 +193,21 @@ Partial Class VerClientes
         Me.PanelVerClientes.PerformLayout()
         CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents LabelVerCliente As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents LBuscarCliente As Label
     Friend WithEvents TBuscarCliente As TextBox
     Friend WithEvents PanelVerClientes As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DGVerClientes As DataGridView
     Friend WithEvents BtnModificarCliente As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents BtnEliminarCliente As Button
 End Class

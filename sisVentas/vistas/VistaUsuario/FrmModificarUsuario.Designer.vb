@@ -341,6 +341,7 @@ Partial Class FrmModificarUsuario
         Me.Controls.Add(Me.PanelAgregarUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmModificarUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmModificarUsuario"
         Me.PanelAgregarUsuario.ResumeLayout(False)
         Me.PanelAgregarUsuario.PerformLayout()

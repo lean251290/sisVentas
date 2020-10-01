@@ -22,31 +22,20 @@ Partial Class VerVentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerVentas))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelVerVentas = New System.Windows.Forms.Label()
         Me.PanelVerVentas = New System.Windows.Forms.Panel()
         Me.TBuscarUsuario = New System.Windows.Forms.TextBox()
         Me.LBuscarUsuario = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnModifcarUsuario = New System.Windows.Forms.Button()
         Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelVerVentas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(26, 25)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "X"
         '
         'LabelVerVentas
         '
@@ -70,7 +59,6 @@ Partial Class VerVentas
         Me.PanelVerVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelVerVentas.Controls.Add(Me.TBuscarUsuario)
         Me.PanelVerVentas.Controls.Add(Me.LBuscarUsuario)
-        Me.PanelVerVentas.Controls.Add(Me.BtnModifcarUsuario)
         Me.PanelVerVentas.Controls.Add(Me.DataGridView1)
         Me.PanelVerVentas.Controls.Add(Me.PictureBuscarUsuario)
         Me.PanelVerVentas.Location = New System.Drawing.Point(50, 90)
@@ -110,18 +98,6 @@ Partial Class VerVentas
         Me.DataGridView1.Size = New System.Drawing.Size(500, 200)
         Me.DataGridView1.TabIndex = 11
         '
-        'BtnModifcarUsuario
-        '
-        Me.BtnModifcarUsuario.FlatAppearance.BorderSize = 0
-        Me.BtnModifcarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnModifcarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnModifcarUsuario.Image = CType(resources.GetObject("BtnModifcarUsuario.Image"), System.Drawing.Image)
-        Me.BtnModifcarUsuario.Location = New System.Drawing.Point(307, 519)
-        Me.BtnModifcarUsuario.Name = "BtnModifcarUsuario"
-        Me.BtnModifcarUsuario.Size = New System.Drawing.Size(78, 31)
-        Me.BtnModifcarUsuario.TabIndex = 12
-        Me.BtnModifcarUsuario.UseVisualStyleBackColor = True
-        '
         'PictureBuscarUsuario
         '
         Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
@@ -132,15 +108,35 @@ Partial Class VerVentas
         Me.PictureBuscarUsuario.TabIndex = 10
         Me.PictureBuscarUsuario.TabStop = False
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.LabelVerVentas)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(680, 50)
+        Me.Panel1.TabIndex = 9
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(56, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
         'VerVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelVerVentas)
-        Me.Controls.Add(Me.LabelVerVentas)
-        Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "VerVentas"
         Me.Text = "Form5"
@@ -148,17 +144,18 @@ Partial Class VerVentas
         Me.PanelVerVentas.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents LabelVerVentas As Label
     Friend WithEvents PanelVerVentas As Panel
     Friend WithEvents TBuscarUsuario As TextBox
     Friend WithEvents LBuscarUsuario As Label
-    Friend WithEvents BtnModifcarUsuario As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents PictureBuscarUsuario As PictureBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
