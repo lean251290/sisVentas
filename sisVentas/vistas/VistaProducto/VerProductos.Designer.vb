@@ -24,14 +24,19 @@ Partial Class VerProductos
     Private Sub InitializeComponent()
         Me.PanelVerProductos = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TBuscarCliente = New System.Windows.Forms.TextBox()
         Me.LBuscarCliente = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelVerProducto = New System.Windows.Forms.Label()
+        Me.BtnModificarProducto = New System.Windows.Forms.Button()
+        Me.BtnEliminarProducto = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelVerProductos.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelVerProductos
@@ -61,9 +66,22 @@ Partial Class VerProductos
         Me.DataGridView1.Size = New System.Drawing.Size(500, 200)
         Me.DataGridView1.TabIndex = 18
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoLupa
+        Me.PictureBox1.Location = New System.Drawing.Point(509, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
+        '
         'TBuscarCliente
         '
-        Me.TBuscarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TBuscarCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TBuscarCliente.Location = New System.Drawing.Point(122, 46)
@@ -84,30 +102,6 @@ Partial Class VerProductos
         Me.LBuscarCliente.Text = "Buscar"
         Me.LBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBox1.Location = New System.Drawing.Point(509, 27)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 17
-        Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(26, 25)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "X"
-        '
         'LabelVerProducto
         '
         Me.LabelVerProducto.AutoSize = True
@@ -115,12 +109,72 @@ Partial Class VerProductos
         Me.LabelVerProducto.Dock = System.Windows.Forms.DockStyle.Right
         Me.LabelVerProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelVerProducto.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LabelVerProducto.Location = New System.Drawing.Point(571, 0)
+        Me.LabelVerProducto.Location = New System.Drawing.Point(532, 0)
         Me.LabelVerProducto.Name = "LabelVerProducto"
-        Me.LabelVerProducto.Size = New System.Drawing.Size(109, 25)
+        Me.LabelVerProducto.Size = New System.Drawing.Size(148, 25)
         Me.LabelVerProducto.TabIndex = 8
-        Me.LabelVerProducto.Text = "Productos"
+        Me.LabelVerProducto.Text = "Ver Productos"
         Me.LabelVerProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'BtnModificarProducto
+        '
+        Me.BtnModificarProducto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnModificarProducto.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnModificarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificarProducto.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnModificarProducto.FlatAppearance.BorderSize = 0
+        Me.BtnModificarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificarProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificarProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnModificarProducto.Location = New System.Drawing.Point(448, 631)
+        Me.BtnModificarProducto.Name = "BtnModificarProducto"
+        Me.BtnModificarProducto.Size = New System.Drawing.Size(98, 37)
+        Me.BtnModificarProducto.TabIndex = 9
+        Me.BtnModificarProducto.Text = "Modificar"
+        Me.BtnModificarProducto.UseVisualStyleBackColor = True
+        '
+        'BtnEliminarProducto
+        '
+        Me.BtnEliminarProducto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnEliminarProducto.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnEliminarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEliminarProducto.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnEliminarProducto.FlatAppearance.BorderSize = 0
+        Me.BtnEliminarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnEliminarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEliminarProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminarProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnEliminarProducto.Location = New System.Drawing.Point(552, 631)
+        Me.BtnEliminarProducto.Name = "BtnEliminarProducto"
+        Me.BtnEliminarProducto.Size = New System.Drawing.Size(98, 37)
+        Me.BtnEliminarProducto.TabIndex = 10
+        Me.BtnEliminarProducto.Text = "Eliminar"
+        Me.BtnEliminarProducto.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.LabelVerProducto)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(680, 50)
+        Me.Panel1.TabIndex = 11
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(55, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
         '
         'VerProductos
         '
@@ -128,8 +182,9 @@ Partial Class VerProductos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
-        Me.Controls.Add(Me.LabelVerProducto)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.BtnEliminarProducto)
+        Me.Controls.Add(Me.BtnModificarProducto)
         Me.Controls.Add(Me.PanelVerProductos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "VerProductos"
@@ -138,8 +193,10 @@ Partial Class VerProductos
         Me.PanelVerProductos.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -148,6 +205,9 @@ Partial Class VerProductos
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TBuscarCliente As TextBox
     Friend WithEvents LBuscarCliente As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents LabelVerProducto As Label
+    Friend WithEvents BtnModificarProducto As Button
+    Friend WithEvents BtnEliminarProducto As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

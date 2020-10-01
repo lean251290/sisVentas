@@ -1,9 +1,9 @@
 ﻿Public Class Agregar_Usuario
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
-    Private Sub BtnAgregarUser_Click(sender As Object, e As EventArgs) 
+    Private Sub BtnAgregarUser_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -24,12 +24,28 @@
 
 
     Private Sub BtnAgregarUsuario_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnAgregarUsuario.MouseUp
-        BtnAgregarUsuario.ForeColor = Color.FromArgb(250, 250, 250)
-        'BtnAgregarUsuario.Image = Image.FromFile(".\sisVentas\Iconos\AgregarTiulo.png")
+        BtnAgregarUsuario.BackgroundImage = My.Resources.btn122x45Oscuro
     End Sub
 
     Private Sub BtnAgregarUsuario_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnAgregarUsuario.MouseDown
-        BtnAgregarUsuario.ForeColor = Color.FromArgb(0, 40, 40)
-        'BtnAgregarUsuario.Image = Image.FromFile(".\sisVentas\Iconos\AgregarTiulo04040.png")
+        BtnAgregarUsuario.BackgroundImage = My.Resources.btn122x45
+    End Sub
+
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+
+
+    End Sub
+
+    Private Sub BtnCancelar_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnCancelar.MouseDown
+        BtnCancelar.BackgroundImage = My.Resources.btn122x45Oscuro
+    End Sub
+
+    Private Sub BtnCancelar_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnCancelar.MouseUp
+        BtnCancelar.BackgroundImage = My.Resources.btn122x45
+
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.Close()
     End Sub
 End Class

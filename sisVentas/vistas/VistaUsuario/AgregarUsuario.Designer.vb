@@ -24,7 +24,6 @@ Partial Class Agregar_Usuario
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agregar_Usuario))
         Me.LabelAgregarUsuario = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -45,8 +44,12 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelAgregarUsuario
@@ -62,19 +65,6 @@ Partial Class Agregar_Usuario
         Me.LabelAgregarUsuario.TabIndex = 0
         Me.LabelAgregarUsuario.Text = "Agregar Usuario"
         Me.LabelAgregarUsuario.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(26, 25)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "X"
         '
         'PanelAgregarUsuario
         '
@@ -292,13 +282,14 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnAgregarUsuario.BackgroundImage = CType(resources.GetObject("BtnAgregarUsuario.BackgroundImage"), System.Drawing.Image)
         Me.BtnAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnAgregarUsuario.FlatAppearance.BorderSize = 0
         Me.BtnAgregarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnAgregarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnAgregarUsuario.Location = New System.Drawing.Point(368, 625)
+        Me.BtnAgregarUsuario.Location = New System.Drawing.Point(424, 626)
         Me.BtnAgregarUsuario.Name = "BtnAgregarUsuario"
         Me.BtnAgregarUsuario.Size = New System.Drawing.Size(110, 43)
         Me.BtnAgregarUsuario.TabIndex = 5
@@ -310,13 +301,14 @@ Partial Class Agregar_Usuario
         Me.BtnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCancelar.BackgroundImage = CType(resources.GetObject("BtnCancelar.BackgroundImage"), System.Drawing.Image)
         Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCancelar.FlatAppearance.BorderSize = 0
         Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnCancelar.Location = New System.Drawing.Point(507, 625)
+        Me.BtnCancelar.Location = New System.Drawing.Point(540, 626)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(110, 43)
         Me.BtnCancelar.TabIndex = 6
@@ -327,6 +319,27 @@ Partial Class Agregar_Usuario
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.LabelAgregarUsuario)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(680, 50)
+        Me.Panel1.TabIndex = 7
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(53, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
         'Agregar_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -334,25 +347,26 @@ Partial Class Agregar_Usuario
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnAgregarUsuario)
         Me.Controls.Add(Me.PanelAgregarUsuario)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.LabelAgregarUsuario)
         Me.ForeColor = System.Drawing.SystemColors.ButtonShadow
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Agregar_Usuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar_Usuario"
         Me.PanelAgregarUsuario.ResumeLayout(False)
         Me.PanelAgregarUsuario.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents LabelAgregarUsuario As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents PanelAgregarUsuario As Panel
     Friend WithEvents LblPass As Label
     Friend WithEvents LblDireccion As Label
@@ -373,4 +387,6 @@ Partial Class Agregar_Usuario
     Friend WithEvents BtnAgregarUsuario As Button
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

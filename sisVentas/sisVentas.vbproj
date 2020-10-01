@@ -278,6 +278,9 @@
     <EmbeddedResource Include="vistas\FormBienvenida.resx">
       <DependentUpon>FormBienvenida.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\VistaProducto\ModificarProducto.resx">
+      <DependentUpon>ModificarProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaUsuario\FrmModificarUsuario.resx">
       <DependentUpon>FrmModificarUsuario.vb</DependentUpon>
     </EmbeddedResource>

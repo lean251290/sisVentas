@@ -1,5 +1,5 @@
 ﻿Public Class VerUsuarios
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -29,5 +29,9 @@
     Private Sub BtnEliminarUsusario_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnEliminarUsusario.MouseUp
         BtnEliminarUsusario.BackgroundImage = My.Resources.btn122x45
 
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Close()
     End Sub
 End Class

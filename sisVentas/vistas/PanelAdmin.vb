@@ -159,10 +159,12 @@ Public Class PanelAdmin
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles BotonVerProd.Click
         esconderSubMenu()
+        abrirFormHijo(New VerProductos)
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles BotonNuevoProd.Click
         esconderSubMenu()
+        abrirFormHijo(New AgregarProducto)
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) 
@@ -219,5 +221,129 @@ Public Class PanelAdmin
 
     Private Sub PanelContenedorFormHijo_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenedorFormHijo.Paint
 
+    End Sub
+
+    Private Sub BotonProductos_MouseEnter(sender As Object, e As EventArgs) Handles BotonProductos.MouseEnter
+        BotonProductos.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BotonProductos_MouseLeave(sender As Object, e As EventArgs) Handles BotonProductos.MouseLeave
+        BotonProductos.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BotonVentas_MouseLeave(sender As Object, e As EventArgs) Handles BotonVentas.MouseLeave
+        BotonVentas.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BotonVentas_MouseEnter(sender As Object, e As EventArgs) Handles BotonVentas.MouseEnter
+        BotonVentas.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BotonReportes_MouseEnter(sender As Object, e As EventArgs) Handles BotonReportes.MouseEnter
+        BotonReportes.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BotonReportes_MouseLeave(sender As Object, e As EventArgs) Handles BotonReportes.MouseLeave
+        BotonReportes.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BotonClientes_MouseEnter(sender As Object, e As EventArgs) Handles BotonClientes.MouseEnter
+        BotonClientes.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BotonClientes_MouseLeave(sender As Object, e As EventArgs) Handles BotonClientes.MouseLeave
+        BotonClientes.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+
+    End Sub
+
+    Private Sub BtnSalir_MouseEnter(sender As Object, e As EventArgs) Handles BtnSalir.MouseEnter
+        BtnSalir.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnSalir_MouseLeave(sender As Object, e As EventArgs) Handles BtnSalir.MouseLeave
+        BtnSalir.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button8_MouseEnter(sender As Object, e As EventArgs) Handles Button8.MouseEnter
+        Button8.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub Button8_MouseLeave(sender As Object, e As EventArgs) Handles Button8.MouseLeave
+        Button8.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button4_MouseEnter(sender As Object, e As EventArgs) Handles Button4.MouseEnter
+        Button4.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub Button4_MouseLeave(sender As Object, e As EventArgs) Handles Button4.MouseLeave
+        Button4.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button3_MouseEnter(sender As Object, e As EventArgs) Handles Button3.MouseEnter
+        Button3.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub Button3_MouseLeave(sender As Object, e As EventArgs) Handles Button3.MouseLeave
+        Button3.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button1_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter
+        Button1.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
+        Button1.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BotonVerUsuarios_MouseEnter(sender As Object, e As EventArgs) Handles BotonVerUsuarios.MouseEnter
+        BotonVerUsuarios.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BotonVerUsuarios_MouseLeave(sender As Object, e As EventArgs) Handles BotonVerUsuarios.MouseLeave
+        BotonVerUsuarios.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BotonVerProd_MouseEnter(sender As Object, e As EventArgs) Handles BotonVerProd.MouseEnter
+        BotonVerProd.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BotonVerProd_MouseLeave(sender As Object, e As EventArgs) Handles BotonVerProd.MouseLeave
+        BotonVerProd.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BotonNuevoProd_MouseEnter(sender As Object, e As EventArgs) Handles BotonNuevoProd.MouseEnter
+        BotonNuevoProd.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BotonNuevoProd_MouseLeave(sender As Object, e As EventArgs) Handles BotonNuevoProd.MouseLeave
+        BotonNuevoProd.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BotonVerVentas_Click(sender As Object, e As EventArgs) Handles BotonVerVentas.Click
+
+    End Sub
+
+    Private Sub BotonVerVentas_MouseEnter(sender As Object, e As EventArgs) Handles BotonVerVentas.MouseEnter
+        BotonVerVentas.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BotonVerVentas_MouseLeave(sender As Object, e As EventArgs) Handles BotonVerVentas.MouseLeave
+        BotonVerVentas.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
+
+    Private Sub Button2_MouseEnter(sender As Object, e As EventArgs) Handles Button2.MouseEnter
+        Button2.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub Button2_MouseLeave(sender As Object, e As EventArgs) Handles Button2.MouseLeave
+        Button2.ForeColor = Color.FromArgb(255, 255, 255)
     End Sub
 End Class
