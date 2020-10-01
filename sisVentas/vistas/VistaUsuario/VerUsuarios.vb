@@ -4,7 +4,9 @@
     End Sub
 
     Private Sub BtnModificarUsuario_Click(sender As Object, e As EventArgs) Handles BtnModificarUsuario.Click
-
+        PanelAdmin.Enabled = False
+        PanelAdmin.Hide()
+        FrmModificarUsuario.Show()
     End Sub
 
     Private Sub BtnModificarUsuario_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnModificarUsuario.MouseDown
@@ -17,9 +19,7 @@
 
     End Sub
 
-    Private Sub BtnEliminarUsusario_Click(sender As Object, e As EventArgs) Handles BtnEliminarUsusario.Click
 
-    End Sub
 
     Private Sub BtnEliminarUsusario_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnEliminarUsusario.MouseDown
         BtnEliminarUsusario.BackgroundImage = My.Resources.btn122x45Rojo

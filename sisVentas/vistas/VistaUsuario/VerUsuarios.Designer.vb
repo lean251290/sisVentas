@@ -28,9 +28,9 @@ Partial Class VerUsuarios
         Me.TBuscarUsuario = New System.Windows.Forms.TextBox()
         Me.LBuscarUsuario = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
         Me.BtnEliminarUsusario = New System.Windows.Forms.Button()
         Me.BtnModificarUsuario = New System.Windows.Forms.Button()
-        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
         Me.PanelVerUsuarios.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,7 +79,8 @@ Partial Class VerUsuarios
         '
         'TBuscarUsuario
         '
-        Me.TBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TBuscarUsuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TBuscarUsuario.Location = New System.Drawing.Point(122, 46)
@@ -102,6 +103,7 @@ Partial Class VerUsuarios
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(50, 90)
@@ -109,8 +111,20 @@ Partial Class VerUsuarios
         Me.DataGridView1.Size = New System.Drawing.Size(500, 381)
         Me.DataGridView1.TabIndex = 11
         '
+        'PictureBuscarUsuario
+        '
+        Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
+        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(514, 31)
+        Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
+        Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
+        Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBuscarUsuario.TabIndex = 10
+        Me.PictureBuscarUsuario.TabStop = False
+        '
         'BtnEliminarUsusario
         '
+        Me.BtnEliminarUsusario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnEliminarUsusario.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
         Me.BtnEliminarUsusario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnEliminarUsusario.FlatAppearance.BorderSize = 0
@@ -128,6 +142,7 @@ Partial Class VerUsuarios
         '
         'BtnModificarUsuario
         '
+        Me.BtnModificarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnModificarUsuario.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
         Me.BtnModificarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnModificarUsuario.FlatAppearance.BorderSize = 0
@@ -142,16 +157,6 @@ Partial Class VerUsuarios
         Me.BtnModificarUsuario.TabIndex = 8
         Me.BtnModificarUsuario.Text = "Modificar"
         Me.BtnModificarUsuario.UseVisualStyleBackColor = True
-        '
-        'PictureBuscarUsuario
-        '
-        Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(514, 31)
-        Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
-        Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
-        Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBuscarUsuario.TabIndex = 10
-        Me.PictureBuscarUsuario.TabStop = False
         '
         'VerUsuarios
         '

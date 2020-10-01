@@ -40,8 +40,10 @@ Partial Class FrmModificarUsuario
         Me.lblApellido = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.LabelModificarUsuarios = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.LabelModificarUsuarios = New System.Windows.Forms.Label()
+        Me.BtnActualizarUser = New System.Windows.Forms.Button()
+        Me.BtnCancelarUser = New System.Windows.Forms.Button()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -269,19 +271,6 @@ Partial Class FrmModificarUsuario
         Me.Panel1.Size = New System.Drawing.Size(680, 49)
         Me.Panel1.TabIndex = 6
         '
-        'LabelModificarUsuarios
-        '
-        Me.LabelModificarUsuarios.AutoSize = True
-        Me.LabelModificarUsuarios.Dock = System.Windows.Forms.DockStyle.Right
-        Me.LabelModificarUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelModificarUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LabelModificarUsuarios.Location = New System.Drawing.Point(544, 0)
-        Me.LabelModificarUsuarios.Name = "LabelModificarUsuarios"
-        Me.LabelModificarUsuarios.Size = New System.Drawing.Size(136, 25)
-        Me.LabelModificarUsuarios.TabIndex = 6
-        Me.LabelModificarUsuarios.Text = "Ver Usuarios"
-        Me.LabelModificarUsuarios.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'PictureBox2
         '
         Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
@@ -293,12 +282,61 @@ Partial Class FrmModificarUsuario
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False
         '
+        'LabelModificarUsuarios
+        '
+        Me.LabelModificarUsuarios.AutoSize = True
+        Me.LabelModificarUsuarios.Dock = System.Windows.Forms.DockStyle.Right
+        Me.LabelModificarUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelModificarUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LabelModificarUsuarios.Location = New System.Drawing.Point(500, 0)
+        Me.LabelModificarUsuarios.Name = "LabelModificarUsuarios"
+        Me.LabelModificarUsuarios.Size = New System.Drawing.Size(180, 25)
+        Me.LabelModificarUsuarios.TabIndex = 6
+        Me.LabelModificarUsuarios.Text = "Modificar Usuario"
+        Me.LabelModificarUsuarios.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'BtnActualizarUser
+        '
+        Me.BtnActualizarUser.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnActualizarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnActualizarUser.FlatAppearance.BorderSize = 0
+        Me.BtnActualizarUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnActualizarUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnActualizarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnActualizarUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnActualizarUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnActualizarUser.Location = New System.Drawing.Point(436, 632)
+        Me.BtnActualizarUser.Name = "BtnActualizarUser"
+        Me.BtnActualizarUser.Size = New System.Drawing.Size(98, 37)
+        Me.BtnActualizarUser.TabIndex = 7
+        Me.BtnActualizarUser.Text = "Actualizar"
+        Me.BtnActualizarUser.UseVisualStyleBackColor = True
+        '
+        'BtnCancelarUser
+        '
+        Me.BtnCancelarUser.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnCancelarUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelarUser.FlatAppearance.BorderSize = 0
+        Me.BtnCancelarUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelarUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelarUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelarUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelarUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnCancelarUser.Location = New System.Drawing.Point(542, 632)
+        Me.BtnCancelarUser.Name = "BtnCancelarUser"
+        Me.BtnCancelarUser.Size = New System.Drawing.Size(98, 37)
+        Me.BtnCancelarUser.TabIndex = 8
+        Me.BtnCancelarUser.Text = "Cancelar"
+        Me.BtnCancelarUser.UseVisualStyleBackColor = True
+        '
         'FrmModificarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnCancelarUser)
+        Me.Controls.Add(Me.BtnActualizarUser)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelAgregarUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -334,4 +372,6 @@ Partial Class FrmModificarUsuario
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LabelModificarUsuarios As Label
+    Friend WithEvents BtnActualizarUser As Button
+    Friend WithEvents BtnCancelarUser As Button
 End Class
