@@ -24,6 +24,7 @@ Partial Class AgregarCliente
     Private Sub InitializeComponent()
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TEmailUsuario = New System.Windows.Forms.TextBox()
         Me.TDireccionUsuario = New System.Windows.Forms.TextBox()
@@ -39,11 +40,10 @@ Partial Class AgregarCliente
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnCancelarCliente = New System.Windows.Forms.Button()
         Me.BtnAgregarCliente = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarCliente.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelAgregarCliente
@@ -83,6 +83,15 @@ Partial Class AgregarCliente
         Me.PanelAgregarCliente.Name = "PanelAgregarCliente"
         Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarCliente.TabIndex = 5
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.PictureBox1.Location = New System.Drawing.Point(193, 321)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(240, 177)
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
         '
         'Label2
         '
@@ -269,15 +278,6 @@ Partial Class AgregarCliente
         Me.BtnAgregarCliente.Text = "Guardar"
         Me.BtnAgregarCliente.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox1.Location = New System.Drawing.Point(193, 321)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(240, 177)
-        Me.PictureBox1.TabIndex = 19
-        Me.PictureBox1.TabStop = False
-        '
         'AgregarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -293,10 +293,10 @@ Partial Class AgregarCliente
         Me.Text = "Form2"
         Me.PanelAgregarCliente.ResumeLayout(False)
         Me.PanelAgregarCliente.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
