@@ -189,6 +189,12 @@
     <Compile Include="vistas\VistaUsuario\FrmModificarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\VistaVentas\ejmplo.Designer.vb">
+      <DependentUpon>ejmplo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\VistaVentas\ejmplo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\VistaVentas\VerVentas.Designer.vb">
       <DependentUpon>VerVentas.vb</DependentUpon>
     </Compile>
