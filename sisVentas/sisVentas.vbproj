@@ -147,12 +147,6 @@
     <Compile Include="usuarios.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ventanasEmergentes\Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\ventanasEmergentes\Form2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.Designer.vb">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
     </Compile>
@@ -193,12 +187,6 @@
       <DependentUpon>FrmModificarUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\VistaUsuario\FrmModificarUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\VistaVentas\ejemplo3.Designer.vb">
-      <DependentUpon>ejemplo3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\VistaVentas\ejemplo3.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\VistaVentas\VerVentas.Designer.vb">
@@ -283,9 +271,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ventanasEmergentes\Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmErrorMail.resx">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
