@@ -153,6 +153,12 @@
     <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSiNoUser.Designer.vb">
+      <DependentUpon>FrmSiNoUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSiNoUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\VistaCliente\AgregarCliente.Designer.vb">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmErrorMail.resx">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSiNoUser.resx">
+      <DependentUpon>FrmSiNoUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaCliente\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
