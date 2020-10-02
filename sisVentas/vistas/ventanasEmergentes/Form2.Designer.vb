@@ -30,7 +30,7 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(512, 258)
         Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Text = "Lean cornudo"
         Me.ResumeLayout(False)
 
     End Sub
