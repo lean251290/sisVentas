@@ -24,9 +24,14 @@ Partial Class ReporteUsuarios
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelReportes = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblNombre = New System.Windows.Forms.Label()
+        Me.PanelReporteUsuarios = New System.Windows.Forms.Panel()
+        Me.TexBoxTotalUsuarios = New System.Windows.Forms.TextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        Me.PanelReportes.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,6 +59,67 @@ Partial Class ReporteUsuarios
         Me.LabelAgregarCliente.Text = "Reportes Usuarios"
         Me.LabelAgregarCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'PanelReportes
+        '
+        Me.PanelReportes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportes.Controls.Add(Me.TexBoxTotalUsuarios)
+        Me.PanelReportes.Controls.Add(Me.Label1)
+        Me.PanelReportes.Controls.Add(Me.LblNombre)
+        Me.PanelReportes.Controls.Add(Me.PanelReporteUsuarios)
+        Me.PanelReportes.Location = New System.Drawing.Point(39, 107)
+        Me.PanelReportes.Name = "PanelReportes"
+        Me.PanelReportes.Size = New System.Drawing.Size(600, 530)
+        Me.PanelReportes.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label1.Location = New System.Drawing.Point(34, 484)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(134, 20)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Total de usuarios:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblNombre
+        '
+        Me.LblNombre.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.LblNombre.AutoSize = True
+        Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNombre.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LblNombre.Location = New System.Drawing.Point(50, 17)
+        Me.LblNombre.Name = "LblNombre"
+        Me.LblNombre.Size = New System.Drawing.Size(76, 20)
+        Me.LblNombre.TabIndex = 1
+        Me.LblNombre.Text = "Usuarios:"
+        Me.LblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PanelReporteUsuarios
+        '
+        Me.PanelReporteUsuarios.BackColor = System.Drawing.Color.White
+        Me.PanelReporteUsuarios.ForeColor = System.Drawing.Color.Black
+        Me.PanelReporteUsuarios.Location = New System.Drawing.Point(54, 52)
+        Me.PanelReporteUsuarios.Name = "PanelReporteUsuarios"
+        Me.PanelReporteUsuarios.Size = New System.Drawing.Size(500, 400)
+        Me.PanelReporteUsuarios.TabIndex = 0
+        '
+        'TexBoxTotalUsuarios
+        '
+        Me.TexBoxTotalUsuarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TexBoxTotalUsuarios.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TexBoxTotalUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TexBoxTotalUsuarios.Location = New System.Drawing.Point(174, 489)
+        Me.TexBoxTotalUsuarios.Name = "TexBoxTotalUsuarios"
+        Me.TexBoxTotalUsuarios.Size = New System.Drawing.Size(120, 13)
+        Me.TexBoxTotalUsuarios.TabIndex = 14
+        '
         'PictureBox2
         '
         Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
@@ -64,18 +130,6 @@ Partial Class ReporteUsuarios
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
-        '
-        'PanelReportes
-        '
-        Me.PanelReportes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.PanelReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelReportes.Location = New System.Drawing.Point(39, 107)
-        Me.PanelReportes.Name = "PanelReportes"
-        Me.PanelReportes.Size = New System.Drawing.Size(600, 530)
-        Me.PanelReportes.TabIndex = 7
         '
         'ReporteUsuarios
         '
@@ -90,6 +144,8 @@ Partial Class ReporteUsuarios
         Me.Text = "Form3"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PanelReportes.ResumeLayout(False)
+        Me.PanelReportes.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -99,4 +155,8 @@ Partial Class ReporteUsuarios
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LabelAgregarCliente As Label
     Friend WithEvents PanelReportes As Panel
+    Friend WithEvents PanelReporteUsuarios As Panel
+    Friend WithEvents LblNombre As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TexBoxTotalUsuarios As TextBox
 End Class

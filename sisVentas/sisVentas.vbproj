@@ -189,6 +189,12 @@
     <Compile Include="vistas\VistaProducto\ModificarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\VistaReportes\ReporteVentas.Designer.vb">
+      <DependentUpon>ReporteVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\VistaReportes\ReporteVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\VistaReportes\ReporteUsuarios.Designer.vb">
       <DependentUpon>ReporteUsuarios.vb</DependentUpon>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaReportes\ReporteUsuarios.resx">
       <DependentUpon>ReporteUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\VistaReportes\ReporteVentas.resx">
+      <DependentUpon>ReporteVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaUsuario\FrmModificarUsuario.resx">
       <DependentUpon>FrmModificarUsuario.vb</DependentUpon>

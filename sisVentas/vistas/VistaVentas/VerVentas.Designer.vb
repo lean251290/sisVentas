@@ -72,10 +72,9 @@ Partial Class VerVentas
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarUsuario.Location = New System.Drawing.Point(111, 46)
-        Me.TBuscarUsuario.Multiline = True
+        Me.TBuscarUsuario.Location = New System.Drawing.Point(111, 51)
         Me.TBuscarUsuario.Name = "TBuscarUsuario"
-        Me.TBuscarUsuario.Size = New System.Drawing.Size(414, 20)
+        Me.TBuscarUsuario.Size = New System.Drawing.Size(389, 13)
         Me.TBuscarUsuario.TabIndex = 15
         '
         'LBuscarUsuario
