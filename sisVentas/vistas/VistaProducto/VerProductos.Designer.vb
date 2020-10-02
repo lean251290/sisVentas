@@ -84,10 +84,9 @@ Partial Class VerProductos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarCliente.Location = New System.Drawing.Point(122, 46)
-        Me.TBuscarCliente.Multiline = True
+        Me.TBuscarCliente.Location = New System.Drawing.Point(122, 51)
         Me.TBuscarCliente.Name = "TBuscarCliente"
-        Me.TBuscarCliente.Size = New System.Drawing.Size(374, 20)
+        Me.TBuscarCliente.Size = New System.Drawing.Size(374, 13)
         Me.TBuscarCliente.TabIndex = 13
         '
         'LBuscarCliente

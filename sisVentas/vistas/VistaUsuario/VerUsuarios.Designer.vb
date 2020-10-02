@@ -75,9 +75,8 @@ Partial Class VerUsuarios
         Me.TBuscarUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TBuscarUsuario.Location = New System.Drawing.Point(122, 46)
-        Me.TBuscarUsuario.Multiline = True
         Me.TBuscarUsuario.Name = "TBuscarUsuario"
-        Me.TBuscarUsuario.Size = New System.Drawing.Size(372, 20)
+        Me.TBuscarUsuario.Size = New System.Drawing.Size(372, 13)
         Me.TBuscarUsuario.TabIndex = 15
         '
         'LBuscarUsuario
@@ -85,7 +84,7 @@ Partial Class VerUsuarios
         Me.LBuscarUsuario.AutoSize = True
         Me.LBuscarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBuscarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LBuscarUsuario.Location = New System.Drawing.Point(46, 46)
+        Me.LBuscarUsuario.Location = New System.Drawing.Point(46, 41)
         Me.LBuscarUsuario.Name = "LBuscarUsuario"
         Me.LBuscarUsuario.Size = New System.Drawing.Size(59, 20)
         Me.LBuscarUsuario.TabIndex = 13

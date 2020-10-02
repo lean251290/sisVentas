@@ -130,10 +130,9 @@ Partial Class NuevaVenta
         Me.Button1.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button1.Location = New System.Drawing.Point(445, 264)
         Me.Button1.Name = "Button1"
@@ -148,10 +147,9 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Location = New System.Drawing.Point(360, 270)
-        Me.TextBox2.Multiline = True
+        Me.TextBox2.Location = New System.Drawing.Point(360, 275)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(60, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(60, 13)
         Me.TextBox2.TabIndex = 28
         '
         'Label4
@@ -208,10 +206,9 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(174, 71)
-        Me.TextBox1.Multiline = True
+        Me.TextBox1.Location = New System.Drawing.Point(174, 76)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(322, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(322, 13)
         Me.TextBox1.TabIndex = 20
         '
         'LblBuscarProd
@@ -244,10 +241,9 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarCliente.Location = New System.Drawing.Point(174, 26)
-        Me.TBuscarCliente.Multiline = True
+        Me.TBuscarCliente.Location = New System.Drawing.Point(174, 31)
         Me.TBuscarCliente.Name = "TBuscarCliente"
-        Me.TBuscarCliente.Size = New System.Drawing.Size(322, 20)
+        Me.TBuscarCliente.Size = New System.Drawing.Size(322, 13)
         Me.TBuscarCliente.TabIndex = 13
         '
         'LBuscarCliente
@@ -290,10 +286,9 @@ Partial Class NuevaVenta
         Me.BtnVender.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
         Me.BtnVender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnVender.FlatAppearance.BorderSize = 0
-        Me.BtnVender.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVender.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVender.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVender.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnVender.Location = New System.Drawing.Point(445, 631)
         Me.BtnVender.Name = "BtnVender"
@@ -309,10 +304,9 @@ Partial Class NuevaVenta
         Me.BtnCancelarVenta.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
         Me.BtnCancelarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnCancelarVenta.FlatAppearance.BorderSize = 0
-        Me.BtnCancelarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BtnCancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelarVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelarVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnCancelarVenta.Location = New System.Drawing.Point(549, 631)
         Me.BtnCancelarVenta.Name = "BtnCancelarVenta"
