@@ -34,4 +34,8 @@
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Close()
     End Sub
+
+    Private Sub BtnEliminarUsusario_Click(sender As Object, e As EventArgs) Handles BtnEliminarUsusario.Click
+        FrmSiNoUser.Show()
+    End Sub
 End Class

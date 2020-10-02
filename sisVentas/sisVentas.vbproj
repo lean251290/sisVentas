@@ -135,6 +135,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="PanelVacio.Designer.vb">
+      <DependentUpon>PanelVacio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PanelVacio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="productos.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -151,6 +157,18 @@
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSiNoCliente.Designer.vb">
+      <DependentUpon>FrmSiNoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSiNoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSiNoProducto.Designer.vb">
+      <DependentUpon>FrmSiNoProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSiNoProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmSiNoUser.Designer.vb">
@@ -284,8 +302,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PanelVacio.resx">
+      <DependentUpon>PanelVacio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmErrorMail.resx">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSiNoCliente.resx">
+      <DependentUpon>FrmSiNoCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSiNoProducto.resx">
+      <DependentUpon>FrmSiNoProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSiNoUser.resx">
       <DependentUpon>FrmSiNoUser.vb</DependentUpon>

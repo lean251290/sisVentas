@@ -23,7 +23,7 @@
     End Sub
 
     Private Sub BtnEliminarCliente_Click(sender As Object, e As EventArgs) Handles BtnEliminarCliente.Click
-
+        FrmSiNoCliente.Show()
     End Sub
 
     Private Sub BtnEliminarCliente_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnEliminarCliente.MouseDown

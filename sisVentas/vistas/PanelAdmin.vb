@@ -156,6 +156,13 @@ Public Class PanelAdmin
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BotonVerUsuarios.Click
         abrirFormHijo(New VerUsuarios)
         esconderSubMenu()
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs)
@@ -165,11 +172,25 @@ Public Class PanelAdmin
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles BotonVerProd.Click
         esconderSubMenu()
         abrirFormHijo(New VerProductos)
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles BotonNuevoProd.Click
         esconderSubMenu()
         abrirFormHijo(New AgregarProducto)
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) 
@@ -212,16 +233,37 @@ Public Class PanelAdmin
     Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click
         abrirFormHijo(New Agregar_Usuario)
         esconderSubMenu()
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
         abrirFormHijo(New AgregarCliente)
         esconderSubMenu()
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         abrirFormHijo(New VerClientes)
         esconderSubMenu()
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 
 
@@ -329,6 +371,13 @@ Public Class PanelAdmin
     Private Sub BotonVerVentas_Click(sender As Object, e As EventArgs) Handles BotonVerVentas.Click
         esconderSubMenu()
         abrirFormHijo(New VerVentas)
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 
     Private Sub BotonVerVentas_MouseEnter(sender As Object, e As EventArgs) Handles BotonVerVentas.MouseEnter
@@ -340,6 +389,7 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        abrirFormHijo(New PanelVacio)
         If PnllReportes.Width = 5 Then
             PnllReportes.Width = 200
             PnllReportes.BackColor = Color.FromArgb(0, 40, 40)
@@ -348,6 +398,7 @@ Public Class PanelAdmin
             BtnVentas3.Show()
             BtnVentas4.Show()
             BtnVentas5.Show()
+
         Else
             PnllReportes.Width = 5
             PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
@@ -357,6 +408,7 @@ Public Class PanelAdmin
             BtnVentas4.Hide()
             BtnVentas5.Hide()
         End If
+
 
     End Sub
 
@@ -371,5 +423,12 @@ Public Class PanelAdmin
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         esconderSubMenu()
         abrirFormHijo(New NuevaVenta)
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 End Class

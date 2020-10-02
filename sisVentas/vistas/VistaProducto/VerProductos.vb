@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub BtnEliminarProducto_Click(sender As Object, e As EventArgs) Handles BtnEliminarProducto.Click
-
+        FrmSiNoProducto.Show()
     End Sub
 
     Private Sub BtnEliminarProducto_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnEliminarProducto.MouseDown
