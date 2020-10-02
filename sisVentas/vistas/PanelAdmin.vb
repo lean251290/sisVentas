@@ -84,7 +84,7 @@ Public Class PanelAdmin
             Button1.Enabled = False
             Button4.Enabled = False
             BtnSalir.Text = ""
-            'esconderSubMenu()
+            esconderSubMenu()
         ElseIf PanelMenu.Width = 60 Then
 
             TMMostrarMenu.Enabled = True
@@ -134,6 +134,11 @@ Public Class PanelAdmin
     Private Sub PanelAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         esconderSubMenu()
+        BtnVentas1.Hide()
+        BtnVentas2.Hide()
+        BtnVentas3.Hide()
+        BtnVentas4.Hide()
+        BtnVentas5.Hide()
     End Sub
 
     Private Sub BotonUsuarios_Click(sender As Object, e As EventArgs) Handles BotonUsuarios.Click
@@ -219,9 +224,7 @@ Public Class PanelAdmin
         esconderSubMenu()
     End Sub
 
-    Private Sub PanelContenedorFormHijo_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenedorFormHijo.Paint
 
-    End Sub
 
     Private Sub BotonProductos_MouseEnter(sender As Object, e As EventArgs) Handles BotonProductos.MouseEnter
         BotonProductos.ForeColor = Color.FromArgb(17, 255, 141)
@@ -337,6 +340,23 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If PnllReportes.Width = 5 Then
+            PnllReportes.Width = 200
+            PnllReportes.BackColor = Color.FromArgb(0, 40, 40)
+            BtnVentas1.Show()
+            BtnVentas2.Show()
+            BtnVentas3.Show()
+            BtnVentas4.Show()
+            BtnVentas5.Show()
+        Else
+            PnllReportes.Width = 5
+            PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+            BtnVentas1.Hide()
+            BtnVentas2.Hide()
+            BtnVentas3.Hide()
+            BtnVentas4.Hide()
+            BtnVentas5.Hide()
+        End If
 
     End Sub
 

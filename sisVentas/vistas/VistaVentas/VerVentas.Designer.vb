@@ -68,13 +68,14 @@ Partial Class VerVentas
         '
         'TBuscarUsuario
         '
-        Me.TBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TBuscarUsuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarUsuario.Location = New System.Drawing.Point(122, 46)
+        Me.TBuscarUsuario.Location = New System.Drawing.Point(111, 46)
         Me.TBuscarUsuario.Multiline = True
         Me.TBuscarUsuario.Name = "TBuscarUsuario"
-        Me.TBuscarUsuario.Size = New System.Drawing.Size(372, 20)
+        Me.TBuscarUsuario.Size = New System.Drawing.Size(414, 20)
         Me.TBuscarUsuario.TabIndex = 15
         '
         'LBuscarUsuario
@@ -91,17 +92,21 @@ Partial Class VerVentas
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(50, 90)
+        Me.DataGridView1.Location = New System.Drawing.Point(50, 97)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(500, 200)
+        Me.DataGridView1.Size = New System.Drawing.Size(517, 378)
         Me.DataGridView1.TabIndex = 11
         '
         'PictureBuscarUsuario
         '
+        Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(514, 31)
+        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(531, 31)
         Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
         Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
         Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
