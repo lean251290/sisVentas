@@ -195,10 +195,10 @@
     <Compile Include="vistas\VistaUsuario\FrmModificarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\VistaVentas\ejmplo.Designer.vb">
-      <DependentUpon>ejmplo.vb</DependentUpon>
+    <Compile Include="vistas\VistaVentas\ejemplo3.Designer.vb">
+      <DependentUpon>ejemplo3.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\VistaVentas\ejmplo.vb">
+    <Compile Include="vistas\VistaVentas\ejemplo3.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\VistaVentas\VerVentas.Designer.vb">
