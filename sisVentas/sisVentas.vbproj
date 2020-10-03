@@ -130,6 +130,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Module1.vb" />
+    <Compile Include="My Project\Efecto.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,6 +153,12 @@
     </Compile>
     <Compile Include="usuarios.vb">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmCargarImagenError.Designer.vb">
+      <DependentUpon>FrmCargarImagenError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmCargarImagenError.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.Designer.vb">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
@@ -311,6 +318,9 @@
     <EmbeddedResource Include="PanelVacio.resx">
       <DependentUpon>PanelVacio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmCargarImagenError.resx">
+      <DependentUpon>FrmCargarImagenError.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmErrorMail.resx">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
     </EmbeddedResource>
@@ -419,6 +429,7 @@
     <None Include="Iconos\btn122x45Rojo.png" />
     <None Include="Iconos\Salir.png" />
     <None Include="Iconos\Salir30px.png" />
+    <None Include="Iconos\user1.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.vb</LastGenOutput>

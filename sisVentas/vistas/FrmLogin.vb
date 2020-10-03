@@ -66,6 +66,7 @@ Public Class Login
     End Function
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 2, Height - 2, 35, 35))
+        EntradaLogin()
     End Sub
 
     Private Sub BtnSesion_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnSesion.MouseDown

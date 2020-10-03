@@ -139,6 +139,8 @@ Public Class PanelAdmin
         BtnVentas3.Hide()
         BtnVentas4.Hide()
         BtnVentas5.Hide()
+        EntradaPanelAdmin()
+
     End Sub
 
     Private Sub BotonUsuarios_Click(sender As Object, e As EventArgs) Handles BotonUsuarios.Click
@@ -430,5 +432,69 @@ Public Class PanelAdmin
         BtnVentas3.Hide()
         BtnVentas4.Hide()
         BtnVentas5.Hide()
+    End Sub
+
+    Private Sub PanelContenedorFormHijo_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenedorFormHijo.Paint
+
+    End Sub
+
+    Private Sub BtnVentas1_Click(sender As Object, e As EventArgs) Handles BtnVentas1.Click
+
+    End Sub
+
+    Private Sub BtnVentas1_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas1.MouseEnter
+        BtnVentas1.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnVentas1_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas1.MouseLeave
+        BtnVentas1.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BtnVentas2_Click(sender As Object, e As EventArgs) Handles BtnVentas2.Click
+
+    End Sub
+
+    Private Sub BtnVentas2_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas2.MouseEnter
+        BtnVentas2.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnVentas2_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas2.MouseLeave
+        BtnVentas2.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BtnVentas3_Click(sender As Object, e As EventArgs) Handles BtnVentas3.Click
+
+    End Sub
+
+    Private Sub BtnVentas3_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas3.MouseEnter
+        BtnVentas3.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnVentas3_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas3.MouseLeave
+        BtnVentas3.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BtnVentas4_Click(sender As Object, e As EventArgs) Handles BtnVentas4.Click
+
+    End Sub
+
+    Private Sub BtnVentas4_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas4.MouseEnter
+        BtnVentas4.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnVentas4_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas4.MouseLeave
+        BtnVentas4.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BtnVentas5_Click(sender As Object, e As EventArgs) Handles BtnVentas5.Click
+
+    End Sub
+
+    Private Sub BtnVentas5_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas5.MouseEnter
+        BtnVentas5.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnVentas5_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas5.MouseLeave
+        BtnVentas5.ForeColor = Color.FromArgb(255, 255, 255)
     End Sub
 End Class

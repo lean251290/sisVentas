@@ -25,7 +25,7 @@ Partial Class Agregar_Usuario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agregar_Usuario))
         Me.LabelAgregarUsuario = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PBUser = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TRePassUsuario = New System.Windows.Forms.TextBox()
         Me.TPassUsuario = New System.Windows.Forms.TextBox()
@@ -41,13 +41,13 @@ Partial Class Agregar_Usuario
         Me.LblDNI = New System.Windows.Forms.Label()
         Me.lblApellido = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
-        Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
+        Me.dialogUser = New System.Windows.Forms.OpenFileDialog()
         Me.PanelAgregarUsuario.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -73,7 +73,7 @@ Partial Class Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarUsuario.Controls.Add(Me.PictureBox1)
+        Me.PanelAgregarUsuario.Controls.Add(Me.PBUser)
         Me.PanelAgregarUsuario.Controls.Add(Me.Label2)
         Me.PanelAgregarUsuario.Controls.Add(Me.TRePassUsuario)
         Me.PanelAgregarUsuario.Controls.Add(Me.TPassUsuario)
@@ -94,14 +94,15 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUsuario.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarUsuario.TabIndex = 4
         '
-        'PictureBox1
+        'PBUser
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox1.Location = New System.Drawing.Point(193, 428)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(119, 94)
-        Me.PictureBox1.TabIndex = 19
-        Me.PictureBox1.TabStop = False
+        Me.PBUser.Image = Global.sisVentas.My.Resources.Resources.user1
+        Me.PBUser.Location = New System.Drawing.Point(193, 429)
+        Me.PBUser.Name = "PBUser"
+        Me.PBUser.Size = New System.Drawing.Size(126, 86)
+        Me.PBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PBUser.TabIndex = 19
+        Me.PBUser.TabStop = False
         '
         'Label2
         '
@@ -277,48 +278,6 @@ Partial Class Agregar_Usuario
         Me.LblNombre.Text = "Nombre:"
         Me.LblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'BtnAgregarUsuario
-        '
-        Me.BtnAgregarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAgregarUsuario.BackgroundImage = CType(resources.GetObject("BtnAgregarUsuario.BackgroundImage"), System.Drawing.Image)
-        Me.BtnAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAgregarUsuario.FlatAppearance.BorderSize = 0
-        Me.BtnAgregarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnAgregarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnAgregarUsuario.Location = New System.Drawing.Point(424, 626)
-        Me.BtnAgregarUsuario.Name = "BtnAgregarUsuario"
-        Me.BtnAgregarUsuario.Size = New System.Drawing.Size(110, 43)
-        Me.BtnAgregarUsuario.TabIndex = 5
-        Me.BtnAgregarUsuario.Text = "Agregar"
-        Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCancelar.BackgroundImage = CType(resources.GetObject("BtnCancelar.BackgroundImage"), System.Drawing.Image)
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnCancelar.FlatAppearance.BorderSize = 0
-        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnCancelar.Location = New System.Drawing.Point(540, 626)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(110, 43)
-        Me.BtnCancelar.TabIndex = 6
-        Me.BtnCancelar.Text = "Cancelar"
-        Me.BtnCancelar.UseVisualStyleBackColor = True
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.PictureBox2)
@@ -340,6 +299,48 @@ Partial Class Agregar_Usuario
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCancelar.BackgroundImage = CType(resources.GetObject("BtnCancelar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnCancelar.Location = New System.Drawing.Point(540, 626)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(110, 43)
+        Me.BtnCancelar.TabIndex = 6
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.UseVisualStyleBackColor = True
+        '
+        'BtnAgregarUsuario
+        '
+        Me.BtnAgregarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAgregarUsuario.BackgroundImage = CType(resources.GetObject("BtnAgregarUsuario.BackgroundImage"), System.Drawing.Image)
+        Me.BtnAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAgregarUsuario.FlatAppearance.BorderSize = 0
+        Me.BtnAgregarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnAgregarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAgregarUsuario.Location = New System.Drawing.Point(424, 626)
+        Me.BtnAgregarUsuario.Name = "BtnAgregarUsuario"
+        Me.BtnAgregarUsuario.Size = New System.Drawing.Size(110, 43)
+        Me.BtnAgregarUsuario.TabIndex = 5
+        Me.BtnAgregarUsuario.Text = "Agregar"
+        Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
+        '
+        'dialogUser
+        '
+        Me.dialogUser.FileName = "OpenFileDialog1"
+        '
         'Agregar_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -358,7 +359,7 @@ Partial Class Agregar_Usuario
         Me.Text = "Agregar_Usuario"
         Me.PanelAgregarUsuario.ResumeLayout(False)
         Me.PanelAgregarUsuario.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -383,10 +384,10 @@ Partial Class Agregar_Usuario
     Friend WithEvents TEmailUsuario As TextBox
     Friend WithEvents TDireccionUsuario As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BtnAgregarUsuario As Button
     Friend WithEvents BtnCancelar As Button
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PBUser As PictureBox
+    Friend WithEvents dialogUser As OpenFileDialog
 End Class

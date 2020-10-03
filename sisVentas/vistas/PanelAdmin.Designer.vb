@@ -61,17 +61,17 @@ Partial Class PanelAdmin
         Me.TMMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelContenedorFormHijo = New System.Windows.Forms.Panel()
         Me.PnllReportes = New System.Windows.Forms.Panel()
-        Me.BtnVentas1 = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.BtnVentas2 = New System.Windows.Forms.Button()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.BtnVentas3 = New System.Windows.Forms.Button()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.BtnVentas4 = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.BtnVentas5 = New System.Windows.Forms.Button()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.BtnVentas4 = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.BtnVentas3 = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.BtnVentas2 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.BtnVentas1 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PanelAdm.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,11 +87,11 @@ Partial Class PanelAdmin
         CType(Me.BtnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelContenedorFormHijo.SuspendLayout()
         Me.PnllReportes.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelAdm
@@ -640,100 +640,34 @@ Partial Class PanelAdmin
         Me.PnllReportes.Size = New System.Drawing.Size(5, 680)
         Me.PnllReportes.TabIndex = 0
         '
-        'BtnVentas1
+        'Panel7
         '
-        Me.BtnVentas1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas1.FlatAppearance.BorderSize = 0
-        Me.BtnVentas1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas1.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas1.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas1.Name = "BtnVentas1"
-        Me.BtnVentas1.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas1.TabIndex = 26
-        Me.BtnVentas1.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas1.UseVisualStyleBackColor = False
+        Me.Panel7.Controls.Add(Me.BtnVentas5)
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel7.Location = New System.Drawing.Point(0, 500)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(5, 100)
+        Me.Panel7.TabIndex = 31
         '
-        'Panel2
+        'BtnVentas5
         '
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(5, 100)
-        Me.Panel2.TabIndex = 1
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.BtnVentas1)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 100)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(5, 100)
-        Me.Panel3.TabIndex = 27
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.BtnVentas2)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 200)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(5, 100)
-        Me.Panel4.TabIndex = 28
-        '
-        'BtnVentas2
-        '
-        Me.BtnVentas2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas2.FlatAppearance.BorderSize = 0
-        Me.BtnVentas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas2.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas2.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas2.Name = "BtnVentas2"
-        Me.BtnVentas2.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas2.TabIndex = 26
-        Me.BtnVentas2.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas2.UseVisualStyleBackColor = False
-        '
-        'Panel5
-        '
-        Me.Panel5.Controls.Add(Me.BtnVentas3)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(0, 300)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(5, 100)
-        Me.Panel5.TabIndex = 29
-        '
-        'BtnVentas3
-        '
-        Me.BtnVentas3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas3.FlatAppearance.BorderSize = 0
-        Me.BtnVentas3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas3.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas3.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas3.Name = "BtnVentas3"
-        Me.BtnVentas3.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas3.TabIndex = 26
-        Me.BtnVentas3.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas3.UseVisualStyleBackColor = False
+        Me.BtnVentas5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentas5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentas5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentas5.FlatAppearance.BorderSize = 0
+        Me.BtnVentas5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentas5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentas5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentas5.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentas5.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentas5.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentas5.Name = "BtnVentas5"
+        Me.BtnVentas5.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentas5.TabIndex = 26
+        Me.BtnVentas5.Text = "       VENTAS DEL DIA"
+        Me.BtnVentas5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentas5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentas5.UseVisualStyleBackColor = False
         '
         'Panel6
         '
@@ -764,34 +698,100 @@ Partial Class PanelAdmin
         Me.BtnVentas4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnVentas4.UseVisualStyleBackColor = False
         '
-        'Panel7
+        'Panel5
         '
-        Me.Panel7.Controls.Add(Me.BtnVentas5)
-        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel7.Location = New System.Drawing.Point(0, 500)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(5, 100)
-        Me.Panel7.TabIndex = 31
+        Me.Panel5.Controls.Add(Me.BtnVentas3)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(0, 300)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(5, 100)
+        Me.Panel5.TabIndex = 29
         '
-        'BtnVentas5
+        'BtnVentas3
         '
-        Me.BtnVentas5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas5.FlatAppearance.BorderSize = 0
-        Me.BtnVentas5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas5.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas5.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas5.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas5.Name = "BtnVentas5"
-        Me.BtnVentas5.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas5.TabIndex = 26
-        Me.BtnVentas5.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas5.UseVisualStyleBackColor = False
+        Me.BtnVentas3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentas3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentas3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentas3.FlatAppearance.BorderSize = 0
+        Me.BtnVentas3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentas3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentas3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentas3.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentas3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentas3.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentas3.Name = "BtnVentas3"
+        Me.BtnVentas3.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentas3.TabIndex = 26
+        Me.BtnVentas3.Text = "       VENTAS DEL DIA"
+        Me.BtnVentas3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentas3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentas3.UseVisualStyleBackColor = False
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.BtnVentas2)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(0, 200)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(5, 100)
+        Me.Panel4.TabIndex = 28
+        '
+        'BtnVentas2
+        '
+        Me.BtnVentas2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentas2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentas2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentas2.FlatAppearance.BorderSize = 0
+        Me.BtnVentas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentas2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentas2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentas2.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentas2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentas2.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentas2.Name = "BtnVentas2"
+        Me.BtnVentas2.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentas2.TabIndex = 26
+        Me.BtnVentas2.Text = "       VENTAS DEL DIA"
+        Me.BtnVentas2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentas2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentas2.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.BtnVentas1)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 100)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(5, 100)
+        Me.Panel3.TabIndex = 27
+        '
+        'BtnVentas1
+        '
+        Me.BtnVentas1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentas1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentas1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentas1.FlatAppearance.BorderSize = 0
+        Me.BtnVentas1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentas1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentas1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentas1.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentas1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentas1.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentas1.Name = "BtnVentas1"
+        Me.BtnVentas1.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentas1.TabIndex = 26
+        Me.BtnVentas1.Text = "       VENTAS DEL DIA"
+        Me.BtnVentas1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentas1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentas1.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(5, 100)
+        Me.Panel2.TabIndex = 1
         '
         'PanelAdmin
         '
@@ -821,11 +821,11 @@ Partial Class PanelAdmin
         CType(Me.BtnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelContenedorFormHijo.ResumeLayout(False)
         Me.PnllReportes.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

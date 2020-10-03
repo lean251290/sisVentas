@@ -25,7 +25,7 @@ Partial Class AgregarProducto
         Me.LabelAgregarProducto = New System.Windows.Forms.Label()
         Me.PanelAgregarProducto = New System.Windows.Forms.Panel()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PBAgregarProd = New System.Windows.Forms.PictureBox()
         Me.TDireccionUsuario = New System.Windows.Forms.TextBox()
         Me.TNombreProd = New System.Windows.Forms.TextBox()
         Me.TDniUsuario = New System.Windows.Forms.TextBox()
@@ -38,8 +38,9 @@ Partial Class AgregarProducto
         Me.BtnCancelarProd = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.dialogProd = New System.Windows.Forms.OpenFileDialog()
         Me.PanelAgregarProducto.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -66,7 +67,7 @@ Partial Class AgregarProducto
         Me.PanelAgregarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelAgregarProducto.Controls.Add(Me.ComboBox1)
-        Me.PanelAgregarProducto.Controls.Add(Me.PictureBox1)
+        Me.PanelAgregarProducto.Controls.Add(Me.PBAgregarProd)
         Me.PanelAgregarProducto.Controls.Add(Me.TDireccionUsuario)
         Me.PanelAgregarProducto.Controls.Add(Me.TNombreProd)
         Me.PanelAgregarProducto.Controls.Add(Me.TDniUsuario)
@@ -89,14 +90,14 @@ Partial Class AgregarProducto
         Me.ComboBox1.Size = New System.Drawing.Size(165, 21)
         Me.ComboBox1.TabIndex = 20
         '
-        'PictureBox1
+        'PBAgregarProd
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox1.Location = New System.Drawing.Point(193, 261)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(250, 182)
-        Me.PictureBox1.TabIndex = 19
-        Me.PictureBox1.TabStop = False
+        Me.PBAgregarProd.BackColor = System.Drawing.Color.Gainsboro
+        Me.PBAgregarProd.Location = New System.Drawing.Point(193, 261)
+        Me.PBAgregarProd.Name = "PBAgregarProd"
+        Me.PBAgregarProd.Size = New System.Drawing.Size(250, 182)
+        Me.PBAgregarProd.TabIndex = 19
+        Me.PBAgregarProd.TabStop = False
         '
         'TDireccionUsuario
         '
@@ -253,6 +254,10 @@ Partial Class AgregarProducto
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
         '
+        'dialogProd
+        '
+        Me.dialogProd.FileName = "OpenFileDialog1"
+        '
         'AgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -268,7 +273,7 @@ Partial Class AgregarProducto
         Me.Text = "Form3"
         Me.PanelAgregarProducto.ResumeLayout(False)
         Me.PanelAgregarProducto.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -277,7 +282,7 @@ Partial Class AgregarProducto
     End Sub
     Friend WithEvents LabelAgregarProducto As Label
     Friend WithEvents PanelAgregarProducto As Panel
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PBAgregarProd As PictureBox
     Friend WithEvents TDireccionUsuario As TextBox
     Friend WithEvents TNombreProd As TextBox
     Friend WithEvents TDniUsuario As TextBox
@@ -291,4 +296,5 @@ Partial Class AgregarProducto
     Friend WithEvents BtnCancelarProd As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents dialogProd As OpenFileDialog
 End Class

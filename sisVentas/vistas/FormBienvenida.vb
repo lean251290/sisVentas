@@ -20,6 +20,7 @@ Public Class FormBienvenida
         CircularProgressBar1.Value = 0
         Me.Opacity = 0
         TimerBienvenidaAbrir.Start()
+        Entrada()
     End Sub
 
     Private Sub TimerBienvenidaCerrar_Tick(sender As Object, e As EventArgs) Handles TimerBienvenidaCerrar.Tick

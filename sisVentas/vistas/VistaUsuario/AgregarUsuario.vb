@@ -7,13 +7,10 @@
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        OpenFileDialog1.ShowDialog()
-        PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
-    End Sub
+
 
     Private Sub BtnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles BtnAgregarUsuario.Click
-        Dim User As New UserClass(TNombreUsuario.Text, TApellidoUsuario.Text, TDniUsuario.Text, TDireccionUsuario.Text, TEmailUsuario.Text, TPassUsuario.Text, PictureBox1.Image)
+        Dim User As New UserClass(TNombreUsuario.Text, TApellidoUsuario.Text, TDniUsuario.Text, TDireccionUsuario.Text, TEmailUsuario.Text, TPassUsuario.Text, PBUser.Image)
         If User.agregarUsuario() Then
             MsgBox("correcto", vbOK, "Correcto")
         Else
@@ -48,5 +45,12 @@
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Close()
+    End Sub
+
+    Private Sub PBUser_Click(sender As Object, e As EventArgs) Handles PBUser.Click
+        dialogUser.ShowDialog()
+        If dialogUser.FileName <> "" Then
+            PBUser.ImageLocation = PBUser.ImageLocation
+        End If
     End Sub
 End Class

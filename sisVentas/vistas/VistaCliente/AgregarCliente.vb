@@ -26,4 +26,14 @@
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Close()
     End Sub
+
+    Private Sub PBAgregarCliente_Click(sender As Object, e As EventArgs) Handles PBAgregarCliente.Click
+        dialogCliente.ShowDialog()
+        If PBAgregarCliente.ImageLocation <> "" Then
+            PBAgregarCliente.ImageLocation = dialogCliente.FileName
+
+        End If
+
+
+    End Sub
 End Class
