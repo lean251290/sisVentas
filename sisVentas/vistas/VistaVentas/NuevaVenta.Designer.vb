@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class NuevaVenta
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class NuevaVenta
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.LabelNuevaVenta = New System.Windows.Forms.Label()
         Me.PanelVerClientes = New System.Windows.Forms.Panel()
@@ -130,9 +130,10 @@ Partial Class NuevaVenta
         Me.Button1.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button1.Location = New System.Drawing.Point(445, 264)
         Me.Button1.Name = "Button1"
@@ -140,17 +141,6 @@ Partial Class NuevaVenta
         Me.Button1.TabIndex = 11
         Me.Button1.Text = "Cargar"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Location = New System.Drawing.Point(360, 275)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(60, 13)
-        Me.TextBox2.TabIndex = 28
         '
         'Label4
         '
@@ -286,9 +276,10 @@ Partial Class NuevaVenta
         Me.BtnVender.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
         Me.BtnVender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnVender.FlatAppearance.BorderSize = 0
-        Me.BtnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnVender.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVender.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVender.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVender.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnVender.Location = New System.Drawing.Point(445, 631)
         Me.BtnVender.Name = "BtnVender"
@@ -304,9 +295,10 @@ Partial Class NuevaVenta
         Me.BtnCancelarVenta.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
         Me.BtnCancelarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnCancelarVenta.FlatAppearance.BorderSize = 0
-        Me.BtnCancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BtnCancelarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnCancelarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelarVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelarVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnCancelarVenta.Location = New System.Drawing.Point(549, 631)
         Me.BtnCancelarVenta.Name = "BtnCancelarVenta"
