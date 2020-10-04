@@ -62,15 +62,15 @@ Partial Class PanelAdmin
         Me.PanelContenedorFormHijo = New System.Windows.Forms.Panel()
         Me.PnllReportes = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.BtnVentas5 = New System.Windows.Forms.Button()
+        Me.BtnVentasPorProducto = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.BtnVentas4 = New System.Windows.Forms.Button()
+        Me.BtnVentasPorCliente = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.BtnVentas3 = New System.Windows.Forms.Button()
+        Me.BtnVentasPorUser = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.BtnVentas2 = New System.Windows.Forms.Button()
+        Me.BtnVentasPorFecha = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.BtnVentas1 = New System.Windows.Forms.Button()
+        Me.BtnVentasPorDia = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PanelAdm.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -642,148 +642,148 @@ Partial Class PanelAdmin
         '
         'Panel7
         '
-        Me.Panel7.Controls.Add(Me.BtnVentas5)
+        Me.Panel7.Controls.Add(Me.BtnVentasPorProducto)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 500)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(5, 100)
         Me.Panel7.TabIndex = 31
         '
-        'BtnVentas5
+        'BtnVentasPorProducto
         '
-        Me.BtnVentas5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas5.FlatAppearance.BorderSize = 0
-        Me.BtnVentas5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas5.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas5.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas5.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas5.Name = "BtnVentas5"
-        Me.BtnVentas5.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas5.TabIndex = 26
-        Me.BtnVentas5.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas5.UseVisualStyleBackColor = False
+        Me.BtnVentasPorProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentasPorProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentasPorProducto.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentasPorProducto.FlatAppearance.BorderSize = 0
+        Me.BtnVentasPorProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentasPorProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentasPorProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentasPorProducto.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentasPorProducto.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentasPorProducto.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentasPorProducto.Name = "BtnVentasPorProducto"
+        Me.BtnVentasPorProducto.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentasPorProducto.TabIndex = 26
+        Me.BtnVentasPorProducto.Text = "            PRODUCTOS"
+        Me.BtnVentasPorProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentasPorProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentasPorProducto.UseVisualStyleBackColor = False
         '
         'Panel6
         '
-        Me.Panel6.Controls.Add(Me.BtnVentas4)
+        Me.Panel6.Controls.Add(Me.BtnVentasPorCliente)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel6.Location = New System.Drawing.Point(0, 400)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(5, 100)
         Me.Panel6.TabIndex = 30
         '
-        'BtnVentas4
+        'BtnVentasPorCliente
         '
-        Me.BtnVentas4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas4.FlatAppearance.BorderSize = 0
-        Me.BtnVentas4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas4.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas4.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas4.Name = "BtnVentas4"
-        Me.BtnVentas4.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas4.TabIndex = 26
-        Me.BtnVentas4.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas4.UseVisualStyleBackColor = False
+        Me.BtnVentasPorCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentasPorCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentasPorCliente.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentasPorCliente.FlatAppearance.BorderSize = 0
+        Me.BtnVentasPorCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentasPorCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentasPorCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentasPorCliente.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentasPorCliente.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentasPorCliente.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentasPorCliente.Name = "BtnVentasPorCliente"
+        Me.BtnVentasPorCliente.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentasPorCliente.TabIndex = 26
+        Me.BtnVentasPorCliente.Text = "             CLIENTES"
+        Me.BtnVentasPorCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentasPorCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentasPorCliente.UseVisualStyleBackColor = False
         '
         'Panel5
         '
-        Me.Panel5.Controls.Add(Me.BtnVentas3)
+        Me.Panel5.Controls.Add(Me.BtnVentasPorUser)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(0, 300)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(5, 100)
         Me.Panel5.TabIndex = 29
         '
-        'BtnVentas3
+        'BtnVentasPorUser
         '
-        Me.BtnVentas3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas3.FlatAppearance.BorderSize = 0
-        Me.BtnVentas3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas3.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas3.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas3.Name = "BtnVentas3"
-        Me.BtnVentas3.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas3.TabIndex = 26
-        Me.BtnVentas3.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas3.UseVisualStyleBackColor = False
+        Me.BtnVentasPorUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentasPorUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentasPorUser.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentasPorUser.FlatAppearance.BorderSize = 0
+        Me.BtnVentasPorUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentasPorUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentasPorUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentasPorUser.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentasPorUser.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentasPorUser.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentasPorUser.Name = "BtnVentasPorUser"
+        Me.BtnVentasPorUser.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentasPorUser.TabIndex = 26
+        Me.BtnVentasPorUser.Text = "   VENTA POR USUARIO"
+        Me.BtnVentasPorUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentasPorUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentasPorUser.UseVisualStyleBackColor = False
         '
         'Panel4
         '
-        Me.Panel4.Controls.Add(Me.BtnVentas2)
+        Me.Panel4.Controls.Add(Me.BtnVentasPorFecha)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 200)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(5, 100)
         Me.Panel4.TabIndex = 28
         '
-        'BtnVentas2
+        'BtnVentasPorFecha
         '
-        Me.BtnVentas2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas2.FlatAppearance.BorderSize = 0
-        Me.BtnVentas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas2.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas2.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas2.Name = "BtnVentas2"
-        Me.BtnVentas2.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas2.TabIndex = 26
-        Me.BtnVentas2.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas2.UseVisualStyleBackColor = False
+        Me.BtnVentasPorFecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentasPorFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentasPorFecha.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentasPorFecha.FlatAppearance.BorderSize = 0
+        Me.BtnVentasPorFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentasPorFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentasPorFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentasPorFecha.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentasPorFecha.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentasPorFecha.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentasPorFecha.Name = "BtnVentasPorFecha"
+        Me.BtnVentasPorFecha.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentasPorFecha.TabIndex = 26
+        Me.BtnVentasPorFecha.Text = "     VENTAS POR FECHA"
+        Me.BtnVentasPorFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentasPorFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentasPorFecha.UseVisualStyleBackColor = False
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.BtnVentas1)
+        Me.Panel3.Controls.Add(Me.BtnVentasPorDia)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 100)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(5, 100)
         Me.Panel3.TabIndex = 27
         '
-        'BtnVentas1
+        'BtnVentasPorDia
         '
-        Me.BtnVentas1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.BtnVentas1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnVentas1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnVentas1.FlatAppearance.BorderSize = 0
-        Me.BtnVentas1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVentas1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVentas1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVentas1.Image = Global.sisVentas.My.Resources.Resources.Salir30px
-        Me.BtnVentas1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.BtnVentas1.Location = New System.Drawing.Point(0, 0)
-        Me.BtnVentas1.Name = "BtnVentas1"
-        Me.BtnVentas1.Size = New System.Drawing.Size(5, 40)
-        Me.BtnVentas1.TabIndex = 26
-        Me.BtnVentas1.Text = "       VENTAS DEL DIA"
-        Me.BtnVentas1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnVentas1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnVentas1.UseVisualStyleBackColor = False
+        Me.BtnVentasPorDia.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnVentasPorDia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnVentasPorDia.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnVentasPorDia.FlatAppearance.BorderSize = 0
+        Me.BtnVentasPorDia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVentasPorDia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVentasPorDia.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVentasPorDia.Image = Global.sisVentas.My.Resources.Resources.Salir30px
+        Me.BtnVentasPorDia.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.BtnVentasPorDia.Location = New System.Drawing.Point(0, 0)
+        Me.BtnVentasPorDia.Name = "BtnVentasPorDia"
+        Me.BtnVentasPorDia.Size = New System.Drawing.Size(5, 40)
+        Me.BtnVentasPorDia.TabIndex = 26
+        Me.BtnVentasPorDia.Text = "       VENTAS DEL DIA"
+        Me.BtnVentasPorDia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnVentasPorDia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnVentasPorDia.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -867,15 +867,15 @@ Partial Class PanelAdmin
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnSalir As Button
     Friend WithEvents PnllReportes As Panel
-    Friend WithEvents BtnVentas1 As Button
+    Friend WithEvents BtnVentasPorDia As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents BtnVentas4 As Button
+    Friend WithEvents BtnVentasPorCliente As Button
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents BtnVentas3 As Button
+    Friend WithEvents BtnVentasPorUser As Button
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents BtnVentas2 As Button
+    Friend WithEvents BtnVentasPorFecha As Button
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents BtnVentas5 As Button
+    Friend WithEvents BtnVentasPorProducto As Button
 End Class

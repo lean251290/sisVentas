@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ReporteVentas
+Partial Class ReporteVentasPorFecha
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,19 +23,20 @@ Partial Class ReporteVentas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LabelReporteVentas = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelReportesVentas = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TexBoxTotalUsuarios = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblVentas = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.LabelReporteVentas = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReportesVentas.SuspendLayout()
@@ -50,6 +51,20 @@ Partial Class ReporteVentas
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(664, 50)
         Me.Panel1.TabIndex = 0
+        '
+        'LabelReporteVentas
+        '
+        Me.LabelReporteVentas.AutoSize = True
+        Me.LabelReporteVentas.BackColor = System.Drawing.Color.Transparent
+        Me.LabelReporteVentas.Dock = System.Windows.Forms.DockStyle.Right
+        Me.LabelReporteVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelReporteVentas.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LabelReporteVentas.Location = New System.Drawing.Point(565, 0)
+        Me.LabelReporteVentas.Name = "LabelReporteVentas"
+        Me.LabelReporteVentas.Size = New System.Drawing.Size(99, 25)
+        Me.LabelReporteVentas.TabIndex = 7
+        Me.LabelReporteVentas.Text = "Reportes"
+        Me.LabelReporteVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'PictureBox2
         '
@@ -79,10 +94,62 @@ Partial Class ReporteVentas
         Me.PanelReportesVentas.Controls.Add(Me.Label1)
         Me.PanelReportesVentas.Controls.Add(Me.LblVentas)
         Me.PanelReportesVentas.Controls.Add(Me.Panel2)
-        Me.PanelReportesVentas.Location = New System.Drawing.Point(32, 55)
+        Me.PanelReportesVentas.Location = New System.Drawing.Point(30, 99)
         Me.PanelReportesVentas.Name = "PanelReportesVentas"
         Me.PanelReportesVentas.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportesVentas.TabIndex = 8
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Location = New System.Drawing.Point(414, 489)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(140, 13)
+        Me.TextBox1.TabIndex = 20
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label4.Location = New System.Drawing.Point(300, 484)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(117, 20)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "Monto vendido:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(377, 39)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
+        Me.DateTimePicker2.TabIndex = 18
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(116, 38)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
+        Me.DateTimePicker1.TabIndex = 17
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label3.Location = New System.Drawing.Point(315, 39)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 20)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Hasta:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
         '
@@ -142,82 +209,32 @@ Partial Class ReporteVentas
         Me.Panel2.Size = New System.Drawing.Size(500, 347)
         Me.Panel2.TabIndex = 0
         '
-        'Label3
+        'Label5
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(315, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 20)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "Hasta:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label5.Location = New System.Drawing.Point(0, 50)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(161, 25)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Reporte Ventas"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(116, 38)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
-        Me.DateTimePicker1.TabIndex = 17
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(377, 39)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
-        Me.DateTimePicker2.TabIndex = 18
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(300, 484)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(117, 20)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Monto vendido:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(414, 489)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(140, 13)
-        Me.TextBox1.TabIndex = 20
-        '
-        'LabelReporteVentas
-        '
-        Me.LabelReporteVentas.AutoSize = True
-        Me.LabelReporteVentas.BackColor = System.Drawing.Color.Transparent
-        Me.LabelReporteVentas.Dock = System.Windows.Forms.DockStyle.Right
-        Me.LabelReporteVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelReporteVentas.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LabelReporteVentas.Location = New System.Drawing.Point(503, 0)
-        Me.LabelReporteVentas.Name = "LabelReporteVentas"
-        Me.LabelReporteVentas.Size = New System.Drawing.Size(161, 25)
-        Me.LabelReporteVentas.TabIndex = 7
-        Me.LabelReporteVentas.Text = "Reporte Ventas"
-        Me.LabelReporteVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'ReporteVentas
+        'ReporteVentasPorFecha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(664, 641)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PanelReportesVentas)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "ReporteVentas"
+        Me.Name = "ReporteVentasPorFecha"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -225,6 +242,7 @@ Partial Class ReporteVentas
         Me.PanelReportesVentas.ResumeLayout(False)
         Me.PanelReportesVentas.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -242,4 +260,5 @@ Partial Class ReporteVentas
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents LabelReporteVentas As Label
+    Friend WithEvents Label5 As Label
 End Class

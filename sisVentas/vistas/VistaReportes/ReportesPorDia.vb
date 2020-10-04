@@ -1,4 +1,4 @@
-﻿Public Class Reportes
+﻿Public Class ReportesPorDia
     Private Sub Label1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub

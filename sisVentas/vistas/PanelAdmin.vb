@@ -134,11 +134,11 @@ Public Class PanelAdmin
     Private Sub PanelAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         esconderSubMenu()
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
         EntradaPanelAdmin()
 
     End Sub
@@ -160,11 +160,11 @@ Public Class PanelAdmin
         esconderSubMenu()
         PnllReportes.Width = 5
         PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs)
@@ -176,11 +176,11 @@ Public Class PanelAdmin
         abrirFormHijo(New VerProductos)
         PnllReportes.Width = 5
         PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles BotonNuevoProd.Click
@@ -188,11 +188,11 @@ Public Class PanelAdmin
         abrirFormHijo(New AgregarProducto)
         PnllReportes.Width = 5
         PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) 
@@ -237,11 +237,11 @@ Public Class PanelAdmin
         esconderSubMenu()
         PnllReportes.Width = 5
         PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
@@ -249,11 +249,11 @@ Public Class PanelAdmin
         esconderSubMenu()
         PnllReportes.Width = 5
         PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -261,11 +261,11 @@ Public Class PanelAdmin
         esconderSubMenu()
         PnllReportes.Width = 5
         PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
 
@@ -375,11 +375,11 @@ Public Class PanelAdmin
         abrirFormHijo(New VerVentas)
         PnllReportes.Width = 5
         PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
     Private Sub BotonVerVentas_MouseEnter(sender As Object, e As EventArgs) Handles BotonVerVentas.MouseEnter
@@ -395,20 +395,20 @@ Public Class PanelAdmin
         If PnllReportes.Width = 5 Then
             PnllReportes.Width = 200
             PnllReportes.BackColor = Color.FromArgb(0, 40, 40)
-            BtnVentas1.Show()
-            BtnVentas2.Show()
-            BtnVentas3.Show()
-            BtnVentas4.Show()
-            BtnVentas5.Show()
+            BtnVentasPorDia.Show()
+            BtnVentasPorFecha.Show()
+            BtnVentasPorUser.Show()
+            BtnVentasPorCliente.Show()
+            BtnVentasPorProducto.Show()
 
         Else
             PnllReportes.Width = 5
             PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-            BtnVentas1.Hide()
-            BtnVentas2.Hide()
-            BtnVentas3.Hide()
-            BtnVentas4.Hide()
-            BtnVentas5.Hide()
+            BtnVentasPorDia.Hide()
+            BtnVentasPorFecha.Hide()
+            BtnVentasPorUser.Hide()
+            BtnVentasPorCliente.Hide()
+            BtnVentasPorProducto.Hide()
         End If
 
 
@@ -427,74 +427,80 @@ Public Class PanelAdmin
         abrirFormHijo(New NuevaVenta)
         PnllReportes.Width = 5
         PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
-        BtnVentas1.Hide()
-        BtnVentas2.Hide()
-        BtnVentas3.Hide()
-        BtnVentas4.Hide()
-        BtnVentas5.Hide()
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
     Private Sub PanelContenedorFormHijo_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenedorFormHijo.Paint
 
     End Sub
 
-    Private Sub BtnVentas1_Click(sender As Object, e As EventArgs) Handles BtnVentas1.Click
+
+
+    Private Sub BtnVentas1_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentasPorDia.MouseEnter
+        BtnVentasPorDia.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnVentas1_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentasPorDia.MouseLeave
+        BtnVentasPorDia.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+
+
+    Private Sub BtnVentas2_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentasPorFecha.MouseEnter
+        BtnVentasPorFecha.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnVentas2_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentasPorFecha.MouseLeave
+        BtnVentasPorFecha.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+
+
+    Private Sub BtnVentas3_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentasPorUser.MouseEnter
+        BtnVentasPorUser.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnVentas3_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentasPorUser.MouseLeave
+        BtnVentasPorUser.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BtnVentas4_Click(sender As Object, e As EventArgs) Handles BtnVentasPorCliente.Click
 
     End Sub
 
-    Private Sub BtnVentas1_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas1.MouseEnter
-        BtnVentas1.ForeColor = Color.FromArgb(17, 255, 141)
+    Private Sub BtnVentas4_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentasPorCliente.MouseEnter
+        BtnVentasPorCliente.ForeColor = Color.FromArgb(17, 255, 141)
     End Sub
 
-    Private Sub BtnVentas1_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas1.MouseLeave
-        BtnVentas1.ForeColor = Color.FromArgb(255, 255, 255)
+    Private Sub BtnVentas4_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentasPorCliente.MouseLeave
+        BtnVentasPorCliente.ForeColor = Color.FromArgb(255, 255, 255)
     End Sub
 
-    Private Sub BtnVentas2_Click(sender As Object, e As EventArgs) Handles BtnVentas2.Click
-
-    End Sub
-
-    Private Sub BtnVentas2_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas2.MouseEnter
-        BtnVentas2.ForeColor = Color.FromArgb(17, 255, 141)
-    End Sub
-
-    Private Sub BtnVentas2_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas2.MouseLeave
-        BtnVentas2.ForeColor = Color.FromArgb(255, 255, 255)
-    End Sub
-
-    Private Sub BtnVentas3_Click(sender As Object, e As EventArgs) Handles BtnVentas3.Click
+    Private Sub BtnVentas5_Click(sender As Object, e As EventArgs) Handles BtnVentasPorProducto.Click
 
     End Sub
 
-    Private Sub BtnVentas3_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas3.MouseEnter
-        BtnVentas3.ForeColor = Color.FromArgb(17, 255, 141)
+    Private Sub BtnVentas5_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentasPorProducto.MouseEnter
+        BtnVentasPorProducto.ForeColor = Color.FromArgb(17, 255, 141)
     End Sub
 
-    Private Sub BtnVentas3_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas3.MouseLeave
-        BtnVentas3.ForeColor = Color.FromArgb(255, 255, 255)
+    Private Sub BtnVentas5_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentasPorProducto.MouseLeave
+        BtnVentasPorProducto.ForeColor = Color.FromArgb(255, 255, 255)
     End Sub
 
-    Private Sub BtnVentas4_Click(sender As Object, e As EventArgs) Handles BtnVentas4.Click
-
+    Private Sub BtnVentasPorDia_Click(sender As Object, e As EventArgs) Handles BtnVentasPorDia.Click
+        ReportesPorDia.Show()
     End Sub
 
-    Private Sub BtnVentas4_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas4.MouseEnter
-        BtnVentas4.ForeColor = Color.FromArgb(17, 255, 141)
+    Private Sub BtnVentasPorFecha_Click(sender As Object, e As EventArgs) Handles BtnVentasPorFecha.Click
+        ReporteVentasPorFecha.Show()
     End Sub
 
-    Private Sub BtnVentas4_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas4.MouseLeave
-        BtnVentas4.ForeColor = Color.FromArgb(255, 255, 255)
-    End Sub
-
-    Private Sub BtnVentas5_Click(sender As Object, e As EventArgs) Handles BtnVentas5.Click
-
-    End Sub
-
-    Private Sub BtnVentas5_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentas5.MouseEnter
-        BtnVentas5.ForeColor = Color.FromArgb(17, 255, 141)
-    End Sub
-
-    Private Sub BtnVentas5_MouseLeave(sender As Object, e As EventArgs) Handles BtnVentas5.MouseLeave
-        BtnVentas5.ForeColor = Color.FromArgb(255, 255, 255)
+    Private Sub BtnVentasPorUser_Click(sender As Object, e As EventArgs) Handles BtnVentasPorUser.Click
+        VentaPorUsuario.Show()
     End Sub
 End Class
