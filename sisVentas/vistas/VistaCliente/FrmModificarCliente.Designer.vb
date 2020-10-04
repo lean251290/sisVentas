@@ -26,13 +26,13 @@ Partial Class FrmModificarCliente
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.LabelModificarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
-        Me.PBModifUsuario = New System.Windows.Forms.PictureBox()
+        Me.PBModifCliente = New System.Windows.Forms.PictureBox()
         Me.LblFotoModifUsusario = New System.Windows.Forms.Label()
-        Me.TEmailUsuarioModif = New System.Windows.Forms.TextBox()
-        Me.TDireccionUsuarioModif = New System.Windows.Forms.TextBox()
-        Me.TNombreUsuarioModif = New System.Windows.Forms.TextBox()
-        Me.TApellidoUsuarioModif = New System.Windows.Forms.TextBox()
-        Me.TDniUsuarioModif = New System.Windows.Forms.TextBox()
+        Me.TEmailClienteModif = New System.Windows.Forms.TextBox()
+        Me.TDireccionClienteModif = New System.Windows.Forms.TextBox()
+        Me.TNombreClienteModif = New System.Windows.Forms.TextBox()
+        Me.TApellidoClienteModif = New System.Windows.Forms.TextBox()
+        Me.TDniClienteModif = New System.Windows.Forms.TextBox()
         Me.LblDireccionModif = New System.Windows.Forms.Label()
         Me.LblEmailModif = New System.Windows.Forms.Label()
         Me.LblDNIModif = New System.Windows.Forms.Label()
@@ -43,7 +43,7 @@ Partial Class FrmModificarCliente
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarCliente.SuspendLayout()
-        CType(Me.PBModifUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBModifCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -88,13 +88,13 @@ Partial Class FrmModificarCliente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarCliente.Controls.Add(Me.PBModifUsuario)
+        Me.PanelAgregarCliente.Controls.Add(Me.PBModifCliente)
         Me.PanelAgregarCliente.Controls.Add(Me.LblFotoModifUsusario)
-        Me.PanelAgregarCliente.Controls.Add(Me.TEmailUsuarioModif)
-        Me.PanelAgregarCliente.Controls.Add(Me.TDireccionUsuarioModif)
-        Me.PanelAgregarCliente.Controls.Add(Me.TNombreUsuarioModif)
-        Me.PanelAgregarCliente.Controls.Add(Me.TApellidoUsuarioModif)
-        Me.PanelAgregarCliente.Controls.Add(Me.TDniUsuarioModif)
+        Me.PanelAgregarCliente.Controls.Add(Me.TEmailClienteModif)
+        Me.PanelAgregarCliente.Controls.Add(Me.TDireccionClienteModif)
+        Me.PanelAgregarCliente.Controls.Add(Me.TNombreClienteModif)
+        Me.PanelAgregarCliente.Controls.Add(Me.TApellidoClienteModif)
+        Me.PanelAgregarCliente.Controls.Add(Me.TDniClienteModif)
         Me.PanelAgregarCliente.Controls.Add(Me.LblDireccionModif)
         Me.PanelAgregarCliente.Controls.Add(Me.LblEmailModif)
         Me.PanelAgregarCliente.Controls.Add(Me.LblDNIModif)
@@ -105,14 +105,14 @@ Partial Class FrmModificarCliente
         Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarCliente.TabIndex = 10
         '
-        'PBModifUsuario
+        'PBModifCliente
         '
-        Me.PBModifUsuario.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBModifUsuario.Location = New System.Drawing.Point(193, 321)
-        Me.PBModifUsuario.Name = "PBModifUsuario"
-        Me.PBModifUsuario.Size = New System.Drawing.Size(240, 177)
-        Me.PBModifUsuario.TabIndex = 19
-        Me.PBModifUsuario.TabStop = False
+        Me.PBModifCliente.BackColor = System.Drawing.Color.Gainsboro
+        Me.PBModifCliente.Location = New System.Drawing.Point(193, 321)
+        Me.PBModifCliente.Name = "PBModifCliente"
+        Me.PBModifCliente.Size = New System.Drawing.Size(240, 177)
+        Me.PBModifCliente.TabIndex = 19
+        Me.PBModifCliente.TabStop = False
         '
         'LblFotoModifUsusario
         '
@@ -127,55 +127,55 @@ Partial Class FrmModificarCliente
         Me.LblFotoModifUsusario.Text = "Foto:"
         Me.LblFotoModifUsusario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TEmailUsuarioModif
+        'TEmailClienteModif
         '
-        Me.TEmailUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TEmailUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TEmailUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEmailUsuarioModif.Location = New System.Drawing.Point(193, 261)
-        Me.TEmailUsuarioModif.Name = "TEmailUsuarioModif"
-        Me.TEmailUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailUsuarioModif.TabIndex = 15
+        Me.TEmailClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TEmailClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TEmailClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TEmailClienteModif.Location = New System.Drawing.Point(193, 261)
+        Me.TEmailClienteModif.Name = "TEmailClienteModif"
+        Me.TEmailClienteModif.Size = New System.Drawing.Size(321, 13)
+        Me.TEmailClienteModif.TabIndex = 15
         '
-        'TDireccionUsuarioModif
+        'TDireccionClienteModif
         '
-        Me.TDireccionUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TDireccionUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TDireccionUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDireccionUsuarioModif.Location = New System.Drawing.Point(193, 201)
-        Me.TDireccionUsuarioModif.Name = "TDireccionUsuarioModif"
-        Me.TDireccionUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionUsuarioModif.TabIndex = 14
+        Me.TDireccionClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TDireccionClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TDireccionClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDireccionClienteModif.Location = New System.Drawing.Point(193, 201)
+        Me.TDireccionClienteModif.Name = "TDireccionClienteModif"
+        Me.TDireccionClienteModif.Size = New System.Drawing.Size(321, 13)
+        Me.TDireccionClienteModif.TabIndex = 14
         '
-        'TNombreUsuarioModif
+        'TNombreClienteModif
         '
-        Me.TNombreUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TNombreUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TNombreUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TNombreUsuarioModif.Location = New System.Drawing.Point(193, 21)
-        Me.TNombreUsuarioModif.Name = "TNombreUsuarioModif"
-        Me.TNombreUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreUsuarioModif.TabIndex = 13
+        Me.TNombreClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TNombreClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TNombreClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TNombreClienteModif.Location = New System.Drawing.Point(193, 21)
+        Me.TNombreClienteModif.Name = "TNombreClienteModif"
+        Me.TNombreClienteModif.Size = New System.Drawing.Size(321, 13)
+        Me.TNombreClienteModif.TabIndex = 13
         '
-        'TApellidoUsuarioModif
+        'TApellidoClienteModif
         '
-        Me.TApellidoUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TApellidoUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TApellidoUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TApellidoUsuarioModif.Location = New System.Drawing.Point(193, 81)
-        Me.TApellidoUsuarioModif.Name = "TApellidoUsuarioModif"
-        Me.TApellidoUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TApellidoUsuarioModif.TabIndex = 12
+        Me.TApellidoClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TApellidoClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TApellidoClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TApellidoClienteModif.Location = New System.Drawing.Point(193, 81)
+        Me.TApellidoClienteModif.Name = "TApellidoClienteModif"
+        Me.TApellidoClienteModif.Size = New System.Drawing.Size(321, 13)
+        Me.TApellidoClienteModif.TabIndex = 12
         '
-        'TDniUsuarioModif
+        'TDniClienteModif
         '
-        Me.TDniUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TDniUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TDniUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDniUsuarioModif.Location = New System.Drawing.Point(193, 141)
-        Me.TDniUsuarioModif.Name = "TDniUsuarioModif"
-        Me.TDniUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDniUsuarioModif.TabIndex = 11
+        Me.TDniClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TDniClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TDniClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDniClienteModif.Location = New System.Drawing.Point(193, 141)
+        Me.TDniClienteModif.Name = "TDniClienteModif"
+        Me.TDniClienteModif.Size = New System.Drawing.Size(321, 13)
+        Me.TDniClienteModif.TabIndex = 11
         '
         'LblDireccionModif
         '
@@ -296,7 +296,7 @@ Partial Class FrmModificarCliente
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelAgregarCliente.ResumeLayout(False)
         Me.PanelAgregarCliente.PerformLayout()
-        CType(Me.PBModifUsuario, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBModifCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -305,13 +305,13 @@ Partial Class FrmModificarCliente
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LabelModificarCliente As Label
     Friend WithEvents PanelAgregarCliente As Panel
-    Friend WithEvents PBModifUsuario As PictureBox
+    Friend WithEvents PBModifCliente As PictureBox
     Friend WithEvents LblFotoModifUsusario As Label
-    Friend WithEvents TEmailUsuarioModif As TextBox
-    Friend WithEvents TDireccionUsuarioModif As TextBox
-    Friend WithEvents TNombreUsuarioModif As TextBox
-    Friend WithEvents TApellidoUsuarioModif As TextBox
-    Friend WithEvents TDniUsuarioModif As TextBox
+    Friend WithEvents TEmailClienteModif As TextBox
+    Friend WithEvents TDireccionClienteModif As TextBox
+    Friend WithEvents TNombreClienteModif As TextBox
+    Friend WithEvents TApellidoClienteModif As TextBox
+    Friend WithEvents TDniClienteModif As TextBox
     Friend WithEvents LblDireccionModif As Label
     Friend WithEvents LblEmailModif As Label
     Friend WithEvents LblDNIModif As Label

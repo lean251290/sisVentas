@@ -26,11 +26,11 @@ Partial Class AgregarCliente
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
         Me.PBAgregarCliente = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TEmailUsuario = New System.Windows.Forms.TextBox()
-        Me.TDireccionUsuario = New System.Windows.Forms.TextBox()
-        Me.TNombreUsuario = New System.Windows.Forms.TextBox()
-        Me.TApellidoUsuario = New System.Windows.Forms.TextBox()
-        Me.TDniUsuario = New System.Windows.Forms.TextBox()
+        Me.TEmailCliente = New System.Windows.Forms.TextBox()
+        Me.TDireccionCliente = New System.Windows.Forms.TextBox()
+        Me.TNombreCliente = New System.Windows.Forms.TextBox()
+        Me.TApellidoCliente = New System.Windows.Forms.TextBox()
+        Me.TDniCliente = New System.Windows.Forms.TextBox()
         Me.LblDireccion = New System.Windows.Forms.Label()
         Me.LblEmail = New System.Windows.Forms.Label()
         Me.LblDNI = New System.Windows.Forms.Label()
@@ -38,9 +38,9 @@ Partial Class AgregarCliente
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.dialogCliente = New System.Windows.Forms.OpenFileDialog()
         Me.BtnCancelarCliente = New System.Windows.Forms.Button()
         Me.BtnAgregarCliente = New System.Windows.Forms.Button()
-        Me.dialogCliente = New System.Windows.Forms.OpenFileDialog()
         Me.PanelAgregarCliente.SuspendLayout()
         CType(Me.PBAgregarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -70,11 +70,11 @@ Partial Class AgregarCliente
         Me.PanelAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelAgregarCliente.Controls.Add(Me.PBAgregarCliente)
         Me.PanelAgregarCliente.Controls.Add(Me.Label2)
-        Me.PanelAgregarCliente.Controls.Add(Me.TEmailUsuario)
-        Me.PanelAgregarCliente.Controls.Add(Me.TDireccionUsuario)
-        Me.PanelAgregarCliente.Controls.Add(Me.TNombreUsuario)
-        Me.PanelAgregarCliente.Controls.Add(Me.TApellidoUsuario)
-        Me.PanelAgregarCliente.Controls.Add(Me.TDniUsuario)
+        Me.PanelAgregarCliente.Controls.Add(Me.TEmailCliente)
+        Me.PanelAgregarCliente.Controls.Add(Me.TDireccionCliente)
+        Me.PanelAgregarCliente.Controls.Add(Me.TNombreCliente)
+        Me.PanelAgregarCliente.Controls.Add(Me.TApellidoCliente)
+        Me.PanelAgregarCliente.Controls.Add(Me.TDniCliente)
         Me.PanelAgregarCliente.Controls.Add(Me.LblDireccion)
         Me.PanelAgregarCliente.Controls.Add(Me.LblEmail)
         Me.PanelAgregarCliente.Controls.Add(Me.LblDNI)
@@ -88,7 +88,8 @@ Partial Class AgregarCliente
         'PBAgregarCliente
         '
         Me.PBAgregarCliente.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBAgregarCliente.Image = Global.sisVentas.My.Resources.Resources.user1
+        Me.PBAgregarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.user1
+        Me.PBAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PBAgregarCliente.Location = New System.Drawing.Point(193, 321)
         Me.PBAgregarCliente.Name = "PBAgregarCliente"
         Me.PBAgregarCliente.Size = New System.Drawing.Size(240, 177)
@@ -109,55 +110,55 @@ Partial Class AgregarCliente
         Me.Label2.Text = "Foto:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TEmailUsuario
+        'TEmailCliente
         '
-        Me.TEmailUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TEmailUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TEmailUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEmailUsuario.Location = New System.Drawing.Point(193, 261)
-        Me.TEmailUsuario.Name = "TEmailUsuario"
-        Me.TEmailUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailUsuario.TabIndex = 15
+        Me.TEmailCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TEmailCliente.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TEmailCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TEmailCliente.Location = New System.Drawing.Point(193, 261)
+        Me.TEmailCliente.Name = "TEmailCliente"
+        Me.TEmailCliente.Size = New System.Drawing.Size(321, 13)
+        Me.TEmailCliente.TabIndex = 15
         '
-        'TDireccionUsuario
+        'TDireccionCliente
         '
-        Me.TDireccionUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TDireccionUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TDireccionUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDireccionUsuario.Location = New System.Drawing.Point(193, 201)
-        Me.TDireccionUsuario.Name = "TDireccionUsuario"
-        Me.TDireccionUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionUsuario.TabIndex = 14
+        Me.TDireccionCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TDireccionCliente.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TDireccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDireccionCliente.Location = New System.Drawing.Point(193, 201)
+        Me.TDireccionCliente.Name = "TDireccionCliente"
+        Me.TDireccionCliente.Size = New System.Drawing.Size(321, 13)
+        Me.TDireccionCliente.TabIndex = 14
         '
-        'TNombreUsuario
+        'TNombreCliente
         '
-        Me.TNombreUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TNombreUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TNombreUsuario.Location = New System.Drawing.Point(193, 21)
-        Me.TNombreUsuario.Name = "TNombreUsuario"
-        Me.TNombreUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreUsuario.TabIndex = 13
+        Me.TNombreCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TNombreCliente.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TNombreCliente.Location = New System.Drawing.Point(193, 21)
+        Me.TNombreCliente.Name = "TNombreCliente"
+        Me.TNombreCliente.Size = New System.Drawing.Size(321, 13)
+        Me.TNombreCliente.TabIndex = 13
         '
-        'TApellidoUsuario
+        'TApellidoCliente
         '
-        Me.TApellidoUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TApellidoUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TApellidoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TApellidoUsuario.Location = New System.Drawing.Point(193, 81)
-        Me.TApellidoUsuario.Name = "TApellidoUsuario"
-        Me.TApellidoUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TApellidoUsuario.TabIndex = 12
+        Me.TApellidoCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TApellidoCliente.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TApellidoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TApellidoCliente.Location = New System.Drawing.Point(193, 81)
+        Me.TApellidoCliente.Name = "TApellidoCliente"
+        Me.TApellidoCliente.Size = New System.Drawing.Size(321, 13)
+        Me.TApellidoCliente.TabIndex = 12
         '
-        'TDniUsuario
+        'TDniCliente
         '
-        Me.TDniUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TDniUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TDniUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDniUsuario.Location = New System.Drawing.Point(193, 141)
-        Me.TDniUsuario.Name = "TDniUsuario"
-        Me.TDniUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDniUsuario.TabIndex = 11
+        Me.TDniCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TDniCliente.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TDniCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDniCliente.Location = New System.Drawing.Point(193, 141)
+        Me.TDniCliente.Name = "TDniCliente"
+        Me.TDniCliente.Size = New System.Drawing.Size(321, 13)
+        Me.TDniCliente.TabIndex = 11
         '
         'LblDireccion
         '
@@ -245,6 +246,10 @@ Partial Class AgregarCliente
         Me.PictureBox2.TabIndex = 5
         Me.PictureBox2.TabStop = False
         '
+        'dialogCliente
+        '
+        Me.dialogCliente.FileName = "OpenFileDialog1"
+        '
         'BtnCancelarCliente
         '
         Me.BtnCancelarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -281,10 +286,6 @@ Partial Class AgregarCliente
         Me.BtnAgregarCliente.Text = "Guardar"
         Me.BtnAgregarCliente.UseVisualStyleBackColor = True
         '
-        'dialogCliente
-        '
-        Me.dialogCliente.FileName = "OpenFileDialog1"
-        '
         'AgregarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -311,11 +312,11 @@ Partial Class AgregarCliente
     Friend WithEvents PanelAgregarCliente As Panel
     Friend WithEvents PBAgregarCliente As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TEmailUsuario As TextBox
-    Friend WithEvents TDireccionUsuario As TextBox
-    Friend WithEvents TNombreUsuario As TextBox
-    Friend WithEvents TApellidoUsuario As TextBox
-    Friend WithEvents TDniUsuario As TextBox
+    Friend WithEvents TEmailCliente As TextBox
+    Friend WithEvents TDireccionCliente As TextBox
+    Friend WithEvents TNombreCliente As TextBox
+    Friend WithEvents TApellidoCliente As TextBox
+    Friend WithEvents TDniCliente As TextBox
     Friend WithEvents LblDireccion As Label
     Friend WithEvents LblEmail As Label
     Friend WithEvents LblDNI As Label

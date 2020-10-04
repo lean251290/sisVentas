@@ -160,10 +160,22 @@
     <Compile Include="vistas\ventanasEmergentes\FrmCargarImagenError.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmDatosCargadosCorrecto.Designer.vb">
+      <DependentUpon>FrmDatosCargadosCorrecto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmDatosCargadosCorrecto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.Designer.vb">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmRellenarCampos.Designer.vb">
+      <DependentUpon>FrmRellenarCampos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmRellenarCampos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmSiNoCliente.Designer.vb">
@@ -182,6 +194,18 @@
       <DependentUpon>FrmSiNoUser.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmSiNoUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSoloLetras.Designer.vb">
+      <DependentUpon>FrmSoloLetras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSoloLetras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSoloNumeros.Designer.vb">
+      <DependentUpon>FrmSoloNumeros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSoloNumeros.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\VistaCliente\AgregarCliente.Designer.vb">
@@ -321,8 +345,14 @@
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmCargarImagenError.resx">
       <DependentUpon>FrmCargarImagenError.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmDatosCargadosCorrecto.resx">
+      <DependentUpon>FrmDatosCargadosCorrecto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmErrorMail.resx">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmRellenarCampos.resx">
+      <DependentUpon>FrmRellenarCampos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSiNoCliente.resx">
       <DependentUpon>FrmSiNoCliente.vb</DependentUpon>
@@ -332,6 +362,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSiNoUser.resx">
       <DependentUpon>FrmSiNoUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSoloLetras.resx">
+      <DependentUpon>FrmSoloLetras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSoloNumeros.resx">
+      <DependentUpon>FrmSoloNumeros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaCliente\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.vb</DependentUpon>

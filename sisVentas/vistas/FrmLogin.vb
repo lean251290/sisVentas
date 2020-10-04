@@ -77,6 +77,10 @@ Public Class Login
         BtnSesion.BackgroundImage = My.Resources.btn201x45iniciar
     End Sub
 
+    Private Sub TxtUser_TextChanged(sender As Object, e As EventArgs) Handles TxtUser.TextChanged
+
+    End Sub
+
 
 #End Region
 End Class

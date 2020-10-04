@@ -10,7 +10,7 @@
 
 
     Private Sub BtnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles BtnAgregarUsuario.Click
-        Dim User As New UserClass(TNombreUsuario.Text, TApellidoUsuario.Text, TDniUsuario.Text, TDireccionUsuario.Text, TEmailUsuario.Text, TPassUsuario.Text, PBUser.Image)
+        Dim User As New UserClass(TNombreUsuario.Text, TApellidoUsuario.Text, TDniUsuario.Text, TDireccionUsuario.Text, TEmailUsuario.Text, TPassUsuario.Text, PBUser.Image, 0, 0)
         If User.agregarUsuario() Then
             MsgBox("correcto", vbOK, "Correcto")
         Else
@@ -50,7 +50,7 @@
     Private Sub PBUser_Click(sender As Object, e As EventArgs) Handles PBUser.Click
         dialogUser.ShowDialog()
         If dialogUser.FileName <> "" Then
-            PBUser.ImageLocation = PBUser.ImageLocation
+            PBUser.ImageLocation = dialogUser.FileName
         End If
     End Sub
 End Class
