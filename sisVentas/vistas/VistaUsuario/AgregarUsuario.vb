@@ -59,15 +59,14 @@ Public Class Agregar_Usuario
         End If
     End Sub
 
-    Private Sub TEmailUsuario_TextChanged(sender As Object, e As EventArgs) Handles TEmailUsuario.TextChanged
 
-    End Sub
 
     Private Sub TEmailUsuario_LostFocus(sender As Object, e As EventArgs) Handles TEmailUsuario.LostFocus
         Dim mail As String
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
 
         If Not Regex.IsMatch(TEmailUsuario.Text, mail) Then
+
             FrmErrorMail.Show()
             TEmailUsuario.Text = ""
         End If
@@ -115,17 +114,7 @@ Public Class Agregar_Usuario
         BtnAgregarUsuario.BackgroundImage = My.Resources.btn122x45
     End Sub
 
-    Private Sub TEmailUsuario_CursorChanged(sender As Object, e As EventArgs) Handles TEmailUsuario.CursorChanged
-        Dim mail As String
-        mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
-
-        If Not Regex.IsMatch(TEmailUsuario.Text, mail) Then
-            FrmErrorMail.Show()
-            TEmailUsuario.Text = ""
-        End If
-    End Sub
-
-    Private Sub TDniUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDniUsuario.TextChanged
+    Private Sub TEmailUsuario_TextChanged(sender As Object, e As EventArgs) Handles TEmailUsuario.TextChanged
 
     End Sub
 End Class
