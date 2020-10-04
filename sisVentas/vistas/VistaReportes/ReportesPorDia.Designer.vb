@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Reportes
+Partial Class ReportesPorDia
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -85,12 +85,12 @@ Partial Class Reportes
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label1.Location = New System.Drawing.Point(0, 50)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(176, 25)
+        Me.Label1.Size = New System.Drawing.Size(151, 25)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Todas las ventas"
+        Me.Label1.Text = "Ventas por día"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'Reportes
+        'ReportesPorDia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -100,7 +100,8 @@ Partial Class Reportes
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelReportes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Reportes"
+        Me.Name = "ReportesPorDia"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

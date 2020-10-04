@@ -256,16 +256,16 @@
     <Compile Include="vistas\VistaProducto\ModificarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\VistaReportes\ReporteVentas.Designer.vb">
-      <DependentUpon>ReporteVentas.vb</DependentUpon>
+    <Compile Include="vistas\VistaReportes\ReporteVentasPorFecha.Designer.vb">
+      <DependentUpon>ReporteVentasPorFecha.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\VistaReportes\ReporteVentas.vb">
+    <Compile Include="vistas\VistaReportes\ReporteVentasPorFecha.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\VistaReportes\ReporteUsuarios.Designer.vb">
-      <DependentUpon>ReporteUsuarios.vb</DependentUpon>
+    <Compile Include="vistas\VistaReportes\VentaPorUsuario.Designer.vb">
+      <DependentUpon>VentaPorUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\VistaReportes\ReporteUsuarios.vb">
+    <Compile Include="vistas\VistaReportes\VentaPorUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\VistaUsuario\FrmModificarUsuario.Designer.vb">
@@ -310,10 +310,10 @@
     <Compile Include="vistas\VistaCliente\VerClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\VistaReportes\Reportes.Designer.vb">
-      <DependentUpon>Reportes.vb</DependentUpon>
+    <Compile Include="vistas\VistaReportes\ReportesPorDia.Designer.vb">
+      <DependentUpon>ReportesPorDia.vb</DependentUpon>
     </Compile>
-    <Compile Include="vistas\VistaReportes\Reportes.vb">
+    <Compile Include="vistas\VistaReportes\ReportesPorDia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\FrmLogin.vb">
@@ -411,11 +411,11 @@
     <EmbeddedResource Include="vistas\VistaProducto\ModificarProducto.resx">
       <DependentUpon>ModificarProducto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\VistaReportes\ReporteUsuarios.resx">
-      <DependentUpon>ReporteUsuarios.vb</DependentUpon>
+    <EmbeddedResource Include="vistas\VistaReportes\VentaPorUsuario.resx">
+      <DependentUpon>VentaPorUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\VistaReportes\ReporteVentas.resx">
-      <DependentUpon>ReporteVentas.vb</DependentUpon>
+    <EmbeddedResource Include="vistas\VistaReportes\ReporteVentasPorFecha.resx">
+      <DependentUpon>ReporteVentasPorFecha.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaUsuario\FrmModificarUsuario.resx">
       <DependentUpon>FrmModificarUsuario.vb</DependentUpon>
@@ -435,8 +435,8 @@
     <EmbeddedResource Include="vistas\VistaCliente\VerClientes.resx">
       <DependentUpon>VerClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\VistaReportes\Reportes.resx">
-      <DependentUpon>Reportes.vb</DependentUpon>
+    <EmbeddedResource Include="vistas\VistaReportes\ReportesPorDia.resx">
+      <DependentUpon>ReportesPorDia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
