@@ -23,15 +23,15 @@ Partial Class FrmModificarUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PBUserModif = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TRePassUsuario = New System.Windows.Forms.TextBox()
-        Me.TPassUsuario = New System.Windows.Forms.TextBox()
-        Me.TEmailUsuario = New System.Windows.Forms.TextBox()
-        Me.TDireccionUsuario = New System.Windows.Forms.TextBox()
-        Me.TNombreUsuario = New System.Windows.Forms.TextBox()
-        Me.TApellidoUsuario = New System.Windows.Forms.TextBox()
-        Me.TDniUsuario = New System.Windows.Forms.TextBox()
+        Me.TRePassUsuarioModif = New System.Windows.Forms.TextBox()
+        Me.TPassUsuarioModif = New System.Windows.Forms.TextBox()
+        Me.TEmailUsuarioModif = New System.Windows.Forms.TextBox()
+        Me.TDireccionUsuarioModif = New System.Windows.Forms.TextBox()
+        Me.TNombreUsuarioModif = New System.Windows.Forms.TextBox()
+        Me.TApellidoUsuarioModif = New System.Windows.Forms.TextBox()
+        Me.TDniUsuarioModif = New System.Windows.Forms.TextBox()
         Me.Lblrepetir = New System.Windows.Forms.Label()
         Me.LblPass = New System.Windows.Forms.Label()
         Me.LblDireccion = New System.Windows.Forms.Label()
@@ -45,7 +45,7 @@ Partial Class FrmModificarUsuario
         Me.BtnActualizarUser = New System.Windows.Forms.Button()
         Me.BtnCancelarUser = New System.Windows.Forms.Button()
         Me.PanelAgregarUsuario.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBUserModif, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,15 +57,15 @@ Partial Class FrmModificarUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarUsuario.Controls.Add(Me.PictureBox1)
+        Me.PanelAgregarUsuario.Controls.Add(Me.PBUserModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.Label2)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TRePassUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TPassUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TEmailUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TDireccionUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TNombreUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TApellidoUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TDniUsuario)
+        Me.PanelAgregarUsuario.Controls.Add(Me.TRePassUsuarioModif)
+        Me.PanelAgregarUsuario.Controls.Add(Me.TPassUsuarioModif)
+        Me.PanelAgregarUsuario.Controls.Add(Me.TEmailUsuarioModif)
+        Me.PanelAgregarUsuario.Controls.Add(Me.TDireccionUsuarioModif)
+        Me.PanelAgregarUsuario.Controls.Add(Me.TNombreUsuarioModif)
+        Me.PanelAgregarUsuario.Controls.Add(Me.TApellidoUsuarioModif)
+        Me.PanelAgregarUsuario.Controls.Add(Me.TDniUsuarioModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.Lblrepetir)
         Me.PanelAgregarUsuario.Controls.Add(Me.LblPass)
         Me.PanelAgregarUsuario.Controls.Add(Me.LblDireccion)
@@ -78,14 +78,14 @@ Partial Class FrmModificarUsuario
         Me.PanelAgregarUsuario.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarUsuario.TabIndex = 5
         '
-        'PictureBox1
+        'PBUserModif
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox1.Location = New System.Drawing.Point(193, 428)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(119, 94)
-        Me.PictureBox1.TabIndex = 19
-        Me.PictureBox1.TabStop = False
+        Me.PBUserModif.BackColor = System.Drawing.Color.Gainsboro
+        Me.PBUserModif.Location = New System.Drawing.Point(193, 428)
+        Me.PBUserModif.Name = "PBUserModif"
+        Me.PBUserModif.Size = New System.Drawing.Size(119, 94)
+        Me.PBUserModif.TabIndex = 19
+        Me.PBUserModif.TabStop = False
         '
         'Label2
         '
@@ -100,75 +100,75 @@ Partial Class FrmModificarUsuario
         Me.Label2.Text = "Foto:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TRePassUsuario
+        'TRePassUsuarioModif
         '
-        Me.TRePassUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TRePassUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TRePassUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TRePassUsuario.Location = New System.Drawing.Point(193, 381)
-        Me.TRePassUsuario.Name = "TRePassUsuario"
-        Me.TRePassUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TRePassUsuario.TabIndex = 17
+        Me.TRePassUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TRePassUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TRePassUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TRePassUsuarioModif.Location = New System.Drawing.Point(193, 381)
+        Me.TRePassUsuarioModif.Name = "TRePassUsuarioModif"
+        Me.TRePassUsuarioModif.Size = New System.Drawing.Size(321, 13)
+        Me.TRePassUsuarioModif.TabIndex = 17
         '
-        'TPassUsuario
+        'TPassUsuarioModif
         '
-        Me.TPassUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TPassUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TPassUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TPassUsuario.Location = New System.Drawing.Point(193, 321)
-        Me.TPassUsuario.Name = "TPassUsuario"
-        Me.TPassUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TPassUsuario.TabIndex = 16
+        Me.TPassUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TPassUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TPassUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TPassUsuarioModif.Location = New System.Drawing.Point(193, 321)
+        Me.TPassUsuarioModif.Name = "TPassUsuarioModif"
+        Me.TPassUsuarioModif.Size = New System.Drawing.Size(321, 13)
+        Me.TPassUsuarioModif.TabIndex = 16
         '
-        'TEmailUsuario
+        'TEmailUsuarioModif
         '
-        Me.TEmailUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TEmailUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TEmailUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEmailUsuario.Location = New System.Drawing.Point(193, 261)
-        Me.TEmailUsuario.Name = "TEmailUsuario"
-        Me.TEmailUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailUsuario.TabIndex = 15
+        Me.TEmailUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TEmailUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TEmailUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TEmailUsuarioModif.Location = New System.Drawing.Point(193, 261)
+        Me.TEmailUsuarioModif.Name = "TEmailUsuarioModif"
+        Me.TEmailUsuarioModif.Size = New System.Drawing.Size(321, 13)
+        Me.TEmailUsuarioModif.TabIndex = 15
         '
-        'TDireccionUsuario
+        'TDireccionUsuarioModif
         '
-        Me.TDireccionUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TDireccionUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TDireccionUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDireccionUsuario.Location = New System.Drawing.Point(193, 201)
-        Me.TDireccionUsuario.Name = "TDireccionUsuario"
-        Me.TDireccionUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionUsuario.TabIndex = 14
+        Me.TDireccionUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TDireccionUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TDireccionUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDireccionUsuarioModif.Location = New System.Drawing.Point(193, 201)
+        Me.TDireccionUsuarioModif.Name = "TDireccionUsuarioModif"
+        Me.TDireccionUsuarioModif.Size = New System.Drawing.Size(321, 13)
+        Me.TDireccionUsuarioModif.TabIndex = 14
         '
-        'TNombreUsuario
+        'TNombreUsuarioModif
         '
-        Me.TNombreUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TNombreUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TNombreUsuario.Location = New System.Drawing.Point(193, 21)
-        Me.TNombreUsuario.Name = "TNombreUsuario"
-        Me.TNombreUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreUsuario.TabIndex = 13
+        Me.TNombreUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TNombreUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TNombreUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TNombreUsuarioModif.Location = New System.Drawing.Point(193, 21)
+        Me.TNombreUsuarioModif.Name = "TNombreUsuarioModif"
+        Me.TNombreUsuarioModif.Size = New System.Drawing.Size(321, 13)
+        Me.TNombreUsuarioModif.TabIndex = 13
         '
-        'TApellidoUsuario
+        'TApellidoUsuarioModif
         '
-        Me.TApellidoUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TApellidoUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TApellidoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TApellidoUsuario.Location = New System.Drawing.Point(193, 81)
-        Me.TApellidoUsuario.Name = "TApellidoUsuario"
-        Me.TApellidoUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TApellidoUsuario.TabIndex = 12
+        Me.TApellidoUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TApellidoUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TApellidoUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TApellidoUsuarioModif.Location = New System.Drawing.Point(193, 81)
+        Me.TApellidoUsuarioModif.Name = "TApellidoUsuarioModif"
+        Me.TApellidoUsuarioModif.Size = New System.Drawing.Size(321, 13)
+        Me.TApellidoUsuarioModif.TabIndex = 12
         '
-        'TDniUsuario
+        'TDniUsuarioModif
         '
-        Me.TDniUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TDniUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TDniUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDniUsuario.Location = New System.Drawing.Point(193, 141)
-        Me.TDniUsuario.Name = "TDniUsuario"
-        Me.TDniUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDniUsuario.TabIndex = 11
+        Me.TDniUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TDniUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TDniUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDniUsuarioModif.Location = New System.Drawing.Point(193, 141)
+        Me.TDniUsuarioModif.Name = "TDniUsuarioModif"
+        Me.TDniUsuarioModif.Size = New System.Drawing.Size(321, 13)
+        Me.TDniUsuarioModif.TabIndex = 11
         '
         'Lblrepetir
         '
@@ -345,7 +345,7 @@ Partial Class FrmModificarUsuario
         Me.Text = "FrmModificarUsuario"
         Me.PanelAgregarUsuario.ResumeLayout(False)
         Me.PanelAgregarUsuario.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBUserModif, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -354,15 +354,15 @@ Partial Class FrmModificarUsuario
     End Sub
 
     Friend WithEvents PanelAgregarUsuario As Panel
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PBUserModif As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TRePassUsuario As TextBox
-    Friend WithEvents TPassUsuario As TextBox
-    Friend WithEvents TEmailUsuario As TextBox
-    Friend WithEvents TDireccionUsuario As TextBox
-    Friend WithEvents TNombreUsuario As TextBox
-    Friend WithEvents TApellidoUsuario As TextBox
-    Friend WithEvents TDniUsuario As TextBox
+    Friend WithEvents TRePassUsuarioModif As TextBox
+    Friend WithEvents TPassUsuarioModif As TextBox
+    Friend WithEvents TEmailUsuarioModif As TextBox
+    Friend WithEvents TDireccionUsuarioModif As TextBox
+    Friend WithEvents TNombreUsuarioModif As TextBox
+    Friend WithEvents TApellidoUsuarioModif As TextBox
+    Friend WithEvents TDniUsuarioModif As TextBox
     Friend WithEvents Lblrepetir As Label
     Friend WithEvents LblPass As Label
     Friend WithEvents LblDireccion As Label

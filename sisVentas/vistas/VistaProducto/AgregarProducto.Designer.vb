@@ -24,25 +24,25 @@ Partial Class AgregarProducto
     Private Sub InitializeComponent()
         Me.LabelAgregarProducto = New System.Windows.Forms.Label()
         Me.PanelAgregarProducto = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.PBAgregarProd = New System.Windows.Forms.PictureBox()
-        Me.TDireccionUsuario = New System.Windows.Forms.TextBox()
+        Me.ComboBoxCat = New System.Windows.Forms.ComboBox()
+        Me.TStockProd = New System.Windows.Forms.TextBox()
         Me.TNombreProd = New System.Windows.Forms.TextBox()
-        Me.TDniUsuario = New System.Windows.Forms.TextBox()
+        Me.TPrecioProd = New System.Windows.Forms.TextBox()
         Me.LblStock = New System.Windows.Forms.Label()
         Me.LblEmail = New System.Windows.Forms.Label()
         Me.LblPrecio = New System.Windows.Forms.Label()
         Me.LblCategoriaP = New System.Windows.Forms.Label()
         Me.LblNombreP = New System.Windows.Forms.Label()
-        Me.BtnGuardarProducto = New System.Windows.Forms.Button()
-        Me.BtnCancelarProd = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.dialogProd = New System.Windows.Forms.OpenFileDialog()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.BtnCancelarProd = New System.Windows.Forms.Button()
+        Me.BtnGuardarProducto = New System.Windows.Forms.Button()
+        Me.PBAgregarProd = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarProducto.SuspendLayout()
-        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelAgregarProducto
@@ -66,11 +66,11 @@ Partial Class AgregarProducto
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarProducto.Controls.Add(Me.ComboBox1)
+        Me.PanelAgregarProducto.Controls.Add(Me.ComboBoxCat)
         Me.PanelAgregarProducto.Controls.Add(Me.PBAgregarProd)
-        Me.PanelAgregarProducto.Controls.Add(Me.TDireccionUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.TStockProd)
         Me.PanelAgregarProducto.Controls.Add(Me.TNombreProd)
-        Me.PanelAgregarProducto.Controls.Add(Me.TDniUsuario)
+        Me.PanelAgregarProducto.Controls.Add(Me.TPrecioProd)
         Me.PanelAgregarProducto.Controls.Add(Me.LblStock)
         Me.PanelAgregarProducto.Controls.Add(Me.LblEmail)
         Me.PanelAgregarProducto.Controls.Add(Me.LblPrecio)
@@ -81,33 +81,25 @@ Partial Class AgregarProducto
         Me.PanelAgregarProducto.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarProducto.TabIndex = 6
         '
-        'ComboBox1
+        'ComboBoxCat
         '
-        Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(193, 81)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(165, 21)
-        Me.ComboBox1.TabIndex = 20
+        Me.ComboBoxCat.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboBoxCat.FormattingEnabled = True
+        Me.ComboBoxCat.Location = New System.Drawing.Point(193, 81)
+        Me.ComboBoxCat.Name = "ComboBoxCat"
+        Me.ComboBoxCat.Size = New System.Drawing.Size(165, 21)
+        Me.ComboBoxCat.TabIndex = 20
+        Me.ComboBoxCat.Text = "Selecciona un categoría"
         '
-        'PBAgregarProd
+        'TStockProd
         '
-        Me.PBAgregarProd.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBAgregarProd.Location = New System.Drawing.Point(193, 261)
-        Me.PBAgregarProd.Name = "PBAgregarProd"
-        Me.PBAgregarProd.Size = New System.Drawing.Size(250, 182)
-        Me.PBAgregarProd.TabIndex = 19
-        Me.PBAgregarProd.TabStop = False
-        '
-        'TDireccionUsuario
-        '
-        Me.TDireccionUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TDireccionUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TDireccionUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDireccionUsuario.Location = New System.Drawing.Point(193, 201)
-        Me.TDireccionUsuario.Name = "TDireccionUsuario"
-        Me.TDireccionUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionUsuario.TabIndex = 14
+        Me.TStockProd.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TStockProd.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TStockProd.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TStockProd.Location = New System.Drawing.Point(193, 201)
+        Me.TStockProd.Name = "TStockProd"
+        Me.TStockProd.Size = New System.Drawing.Size(321, 13)
+        Me.TStockProd.TabIndex = 14
         '
         'TNombreProd
         '
@@ -119,15 +111,15 @@ Partial Class AgregarProducto
         Me.TNombreProd.Size = New System.Drawing.Size(321, 13)
         Me.TNombreProd.TabIndex = 13
         '
-        'TDniUsuario
+        'TPrecioProd
         '
-        Me.TDniUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TDniUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TDniUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDniUsuario.Location = New System.Drawing.Point(193, 141)
-        Me.TDniUsuario.Name = "TDniUsuario"
-        Me.TDniUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDniUsuario.TabIndex = 11
+        Me.TPrecioProd.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TPrecioProd.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TPrecioProd.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TPrecioProd.Location = New System.Drawing.Point(193, 141)
+        Me.TPrecioProd.Name = "TPrecioProd"
+        Me.TPrecioProd.Size = New System.Drawing.Size(321, 13)
+        Me.TPrecioProd.TabIndex = 11
         '
         'LblStock
         '
@@ -194,24 +186,31 @@ Partial Class AgregarProducto
         Me.LblNombreP.Text = "Nombre:"
         Me.LblNombreP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'BtnGuardarProducto
+        'Panel1
         '
-        Me.BtnGuardarProducto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnGuardarProducto.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
-        Me.BtnGuardarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnGuardarProducto.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnGuardarProducto.FlatAppearance.BorderSize = 0
-        Me.BtnGuardarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardarProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardarProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnGuardarProducto.Location = New System.Drawing.Point(450, 631)
-        Me.BtnGuardarProducto.Name = "BtnGuardarProducto"
-        Me.BtnGuardarProducto.Size = New System.Drawing.Size(98, 37)
-        Me.BtnGuardarProducto.TabIndex = 7
-        Me.BtnGuardarProducto.Text = "Guardar"
-        Me.BtnGuardarProducto.UseVisualStyleBackColor = True
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.LabelAgregarProducto)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(680, 50)
+        Me.Panel1.TabIndex = 9
+        '
+        'dialogProd
+        '
+        Me.dialogProd.FileName = "OpenFileDialog1"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(53, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 6
+        Me.PictureBox2.TabStop = False
         '
         'BtnCancelarProd
         '
@@ -232,31 +231,36 @@ Partial Class AgregarProducto
         Me.BtnCancelarProd.Text = "Cancelar"
         Me.BtnCancelarProd.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'BtnGuardarProducto
         '
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.LabelAgregarProducto)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(680, 50)
-        Me.Panel1.TabIndex = 9
+        Me.BtnGuardarProducto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnGuardarProducto.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnGuardarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardarProducto.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnGuardarProducto.FlatAppearance.BorderSize = 0
+        Me.BtnGuardarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardarProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardarProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnGuardarProducto.Location = New System.Drawing.Point(450, 631)
+        Me.BtnGuardarProducto.Name = "BtnGuardarProducto"
+        Me.BtnGuardarProducto.Size = New System.Drawing.Size(98, 37)
+        Me.BtnGuardarProducto.TabIndex = 7
+        Me.BtnGuardarProducto.Text = "Guardar"
+        Me.BtnGuardarProducto.UseVisualStyleBackColor = True
         '
-        'PictureBox2
+        'PBAgregarProd
         '
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(53, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 6
-        Me.PictureBox2.TabStop = False
-        '
-        'dialogProd
-        '
-        Me.dialogProd.FileName = "OpenFileDialog1"
+        Me.PBAgregarProd.BackColor = System.Drawing.Color.Gainsboro
+        Me.PBAgregarProd.BackgroundImage = Global.sisVentas.My.Resources.Resources.producto
+        Me.PBAgregarProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PBAgregarProd.Location = New System.Drawing.Point(193, 261)
+        Me.PBAgregarProd.Name = "PBAgregarProd"
+        Me.PBAgregarProd.Size = New System.Drawing.Size(250, 182)
+        Me.PBAgregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PBAgregarProd.TabIndex = 19
+        Me.PBAgregarProd.TabStop = False
         '
         'AgregarProducto
         '
@@ -273,24 +277,24 @@ Partial Class AgregarProducto
         Me.Text = "Form3"
         Me.PanelAgregarProducto.ResumeLayout(False)
         Me.PanelAgregarProducto.PerformLayout()
-        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents LabelAgregarProducto As Label
     Friend WithEvents PanelAgregarProducto As Panel
     Friend WithEvents PBAgregarProd As PictureBox
-    Friend WithEvents TDireccionUsuario As TextBox
+    Friend WithEvents TStockProd As TextBox
     Friend WithEvents TNombreProd As TextBox
-    Friend WithEvents TDniUsuario As TextBox
+    Friend WithEvents TPrecioProd As TextBox
     Friend WithEvents LblStock As Label
     Friend WithEvents LblPrecio As Label
     Friend WithEvents LblCategoriaP As Label
     Friend WithEvents LblNombreP As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBoxCat As ComboBox
     Friend WithEvents LblEmail As Label
     Friend WithEvents BtnGuardarProducto As Button
     Friend WithEvents BtnCancelarProd As Button

@@ -90,6 +90,7 @@ Public Class FrmModificarCliente
 
         If Not Regex.IsMatch(TEmailClienteModif.Text, mail) Then
             FrmErrorMail.Show()
+            TEmailClienteModif.Text = ""
         End If
     End Sub
 

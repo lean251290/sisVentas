@@ -23,8 +23,10 @@ Partial Class FrmModificarCliente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.LabelModificarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
+        Me.PBModifCliente = New System.Windows.Forms.PictureBox()
         Me.LblFotoModifUsusario = New System.Windows.Forms.Label()
         Me.TEmailClienteModif = New System.Windows.Forms.TextBox()
         Me.TDireccionClienteModif = New System.Windows.Forms.TextBox()
@@ -38,13 +40,11 @@ Partial Class FrmModificarCliente
         Me.LblNombreModif = New System.Windows.Forms.Label()
         Me.BtnCancelarCliente = New System.Windows.Forms.Button()
         Me.BtnActualizarCliente = New System.Windows.Forms.Button()
-        Me.PBModifCliente = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.dialogModifCli = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarCliente.SuspendLayout()
         CType(Me.PBModifCliente, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -56,6 +56,17 @@ Partial Class FrmModificarCliente
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(680, 50)
         Me.Panel1.TabIndex = 9
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(55, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
         '
         'LabelModificarCliente
         '
@@ -94,6 +105,17 @@ Partial Class FrmModificarCliente
         Me.PanelAgregarCliente.Name = "PanelAgregarCliente"
         Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarCliente.TabIndex = 10
+        '
+        'PBModifCliente
+        '
+        Me.PBModifCliente.BackColor = System.Drawing.Color.Gainsboro
+        Me.PBModifCliente.Image = Global.sisVentas.My.Resources.Resources.user1
+        Me.PBModifCliente.Location = New System.Drawing.Point(193, 321)
+        Me.PBModifCliente.Name = "PBModifCliente"
+        Me.PBModifCliente.Size = New System.Drawing.Size(166, 134)
+        Me.PBModifCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PBModifCliente.TabIndex = 19
+        Me.PBModifCliente.TabStop = False
         '
         'LblFotoModifUsusario
         '
@@ -237,7 +259,7 @@ Partial Class FrmModificarCliente
         Me.BtnCancelarCliente.Location = New System.Drawing.Point(542, 631)
         Me.BtnCancelarCliente.Name = "BtnCancelarCliente"
         Me.BtnCancelarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnCancelarCliente.TabIndex = 13
+        Me.BtnCancelarCliente.TabIndex = 4
         Me.BtnCancelarCliente.Text = "Cancelar"
         Me.BtnCancelarCliente.UseVisualStyleBackColor = True
         '
@@ -255,31 +277,9 @@ Partial Class FrmModificarCliente
         Me.BtnActualizarCliente.Location = New System.Drawing.Point(439, 631)
         Me.BtnActualizarCliente.Name = "BtnActualizarCliente"
         Me.BtnActualizarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnActualizarCliente.TabIndex = 12
+        Me.BtnActualizarCliente.TabIndex = 5
         Me.BtnActualizarCliente.Text = "Actualizar"
         Me.BtnActualizarCliente.UseVisualStyleBackColor = True
-        '
-        'PBModifCliente
-        '
-        Me.PBModifCliente.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBModifCliente.Image = Global.sisVentas.My.Resources.Resources.user1
-        Me.PBModifCliente.Location = New System.Drawing.Point(193, 321)
-        Me.PBModifCliente.Name = "PBModifCliente"
-        Me.PBModifCliente.Size = New System.Drawing.Size(166, 134)
-        Me.PBModifCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PBModifCliente.TabIndex = 19
-        Me.PBModifCliente.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(55, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
         '
         'dialogModifCli
         '
@@ -300,10 +300,10 @@ Partial Class FrmModificarCliente
         Me.Text = "FrmModificarCliente"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelAgregarCliente.ResumeLayout(False)
         Me.PanelAgregarCliente.PerformLayout()
         CType(Me.PBModifCliente, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

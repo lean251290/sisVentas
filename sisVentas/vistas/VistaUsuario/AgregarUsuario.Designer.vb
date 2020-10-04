@@ -125,7 +125,7 @@ Partial Class Agregar_Usuario
         Me.TRePassUsuario.Location = New System.Drawing.Point(193, 381)
         Me.TRePassUsuario.Name = "TRePassUsuario"
         Me.TRePassUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TRePassUsuario.TabIndex = 17
+        Me.TRePassUsuario.TabIndex = 7
         '
         'TPassUsuario
         '
@@ -135,7 +135,7 @@ Partial Class Agregar_Usuario
         Me.TPassUsuario.Location = New System.Drawing.Point(193, 321)
         Me.TPassUsuario.Name = "TPassUsuario"
         Me.TPassUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TPassUsuario.TabIndex = 16
+        Me.TPassUsuario.TabIndex = 6
         '
         'TEmailUsuario
         '
@@ -145,7 +145,7 @@ Partial Class Agregar_Usuario
         Me.TEmailUsuario.Location = New System.Drawing.Point(193, 261)
         Me.TEmailUsuario.Name = "TEmailUsuario"
         Me.TEmailUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailUsuario.TabIndex = 15
+        Me.TEmailUsuario.TabIndex = 5
         '
         'TDireccionUsuario
         '
@@ -155,7 +155,7 @@ Partial Class Agregar_Usuario
         Me.TDireccionUsuario.Location = New System.Drawing.Point(193, 201)
         Me.TDireccionUsuario.Name = "TDireccionUsuario"
         Me.TDireccionUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionUsuario.TabIndex = 14
+        Me.TDireccionUsuario.TabIndex = 4
         '
         'TNombreUsuario
         '
@@ -165,7 +165,7 @@ Partial Class Agregar_Usuario
         Me.TNombreUsuario.Location = New System.Drawing.Point(193, 21)
         Me.TNombreUsuario.Name = "TNombreUsuario"
         Me.TNombreUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreUsuario.TabIndex = 13
+        Me.TNombreUsuario.TabIndex = 1
         '
         'TApellidoUsuario
         '
@@ -175,7 +175,7 @@ Partial Class Agregar_Usuario
         Me.TApellidoUsuario.Location = New System.Drawing.Point(193, 81)
         Me.TApellidoUsuario.Name = "TApellidoUsuario"
         Me.TApellidoUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TApellidoUsuario.TabIndex = 12
+        Me.TApellidoUsuario.TabIndex = 2
         '
         'TDniUsuario
         '
@@ -185,7 +185,7 @@ Partial Class Agregar_Usuario
         Me.TDniUsuario.Location = New System.Drawing.Point(193, 141)
         Me.TDniUsuario.Name = "TDniUsuario"
         Me.TDniUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDniUsuario.TabIndex = 11
+        Me.TDniUsuario.TabIndex = 3
         '
         'Lblrepetir
         '
@@ -314,7 +314,7 @@ Partial Class Agregar_Usuario
         Me.BtnCancelar.Location = New System.Drawing.Point(552, 631)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(98, 37)
-        Me.BtnCancelar.TabIndex = 6
+        Me.BtnCancelar.TabIndex = 10
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseVisualStyleBackColor = True
         '
@@ -336,7 +336,7 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario.Location = New System.Drawing.Point(448, 631)
         Me.BtnAgregarUsuario.Name = "BtnAgregarUsuario"
         Me.BtnAgregarUsuario.Size = New System.Drawing.Size(98, 37)
-        Me.BtnAgregarUsuario.TabIndex = 8
+        Me.BtnAgregarUsuario.TabIndex = 9
         Me.BtnAgregarUsuario.Text = "Guardar"
         Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
         '

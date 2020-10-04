@@ -1,4 +1,5 @@
-﻿Public Class FrmModificarUsuario
+﻿Imports System.Text.RegularExpressions
+Public Class FrmModificarUsuario
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
 
         PanelAdmin.Enabled = True
@@ -40,4 +41,47 @@
         Me.Close()
         PanelAdmin.Show()
     End Sub
+
+    Private Sub TApellidoUsuarioModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TApellidoUsuarioModif.KeyPress
+        If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloLetras.Show()
+        End If
+    End Sub
+
+
+    Private Sub TEmailUsuarioModif_LostFocus(sender As Object, e As EventArgs) Handles TEmailUsuarioModif.LostFocus
+        Dim mail As String
+        mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
+        If Not Regex.IsMatch(TEmailUsuarioModif.Text, mail) Then
+            FrmErrorMail.Show()
+            TEmailUsuarioModif.Text = ""
+        End If
+    End Sub
+
+
+    Private Sub TRePassUsuarioModif_LostFocus(sender As Object, e As EventArgs) Handles TRePassUsuarioModif.LostFocus
+        If TPassUsuarioModif.Text <> TRePassUsuarioModif.Text Then
+            FrmMatch.Show()
+            TPassUsuarioModif.Text = ""
+            TRePassUsuarioModif.Text = ""
+        End If
+    End Sub
+
+
+    Private Sub TNombreUsuarioModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNombreUsuarioModif.KeyPress
+        If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloLetras.Show()
+        End If
+    End Sub
+
+
+    Private Sub TDniUsuarioModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TDniUsuarioModif.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloNumeros.Show()
+        End If
+    End Sub
+
 End Class

@@ -178,6 +178,18 @@
     <Compile Include="vistas\ventanasEmergentes\FrmErrorMail.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmNoCaracteresEspeciales.Designer.vb">
+      <DependentUpon>FrmNoCaracteresEspeciales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmNoCaracteresEspeciales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmNumerosDecimales.Designer.vb">
+      <DependentUpon>FrmNumerosDecimales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmNumerosDecimales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmRellenarCampos.Designer.vb">
       <DependentUpon>FrmRellenarCampos.vb</DependentUpon>
     </Compile>
@@ -360,6 +372,12 @@
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmMatch.resx">
       <DependentUpon>FrmMatch.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmNoCaracteresEspeciales.resx">
+      <DependentUpon>FrmNoCaracteresEspeciales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmNumerosDecimales.resx">
+      <DependentUpon>FrmNumerosDecimales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmRellenarCampos.resx">
       <DependentUpon>FrmRellenarCampos.vb</DependentUpon>
     </EmbeddedResource>
@@ -475,6 +493,7 @@
     <None Include="Iconos\Salir.png" />
     <None Include="Iconos\Salir30px.png" />
     <None Include="Iconos\user1.png" />
+    <None Include="Iconos\producto.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.vb</LastGenOutput>

@@ -100,7 +100,7 @@ Partial Class FrmErrorMail
         Me.Button1.Location = New System.Drawing.Point(289, 152)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(98, 37)
-        Me.Button1.TabIndex = 0
+        Me.Button1.TabIndex = 1
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = True
         '
