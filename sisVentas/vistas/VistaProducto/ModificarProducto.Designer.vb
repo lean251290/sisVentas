@@ -38,6 +38,7 @@ Partial Class ModificarProducto
         Me.LblNombrePModif = New System.Windows.Forms.Label()
         Me.BtnActualizarProd = New System.Windows.Forms.Button()
         Me.BtnCancelarModifProd = New System.Windows.Forms.Button()
+        Me.DialogProducto = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarProducto.SuspendLayout()
@@ -251,6 +252,10 @@ Partial Class ModificarProducto
         Me.BtnCancelarModifProd.Text = "Cancelar"
         Me.BtnCancelarModifProd.UseVisualStyleBackColor = True
         '
+        'DialogProducto
+        '
+        Me.DialogProducto.FileName = "OpenFileDialog1"
+        '
         'ModificarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -291,4 +296,5 @@ Partial Class ModificarProducto
     Friend WithEvents LblNombrePModif As Label
     Friend WithEvents BtnActualizarProd As Button
     Friend WithEvents BtnCancelarModifProd As Button
+    Friend WithEvents DialogProducto As OpenFileDialog
 End Class
