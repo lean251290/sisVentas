@@ -25,6 +25,7 @@ Partial Class AgregarProducto
         Me.LabelAgregarProducto = New System.Windows.Forms.Label()
         Me.PanelAgregarProducto = New System.Windows.Forms.Panel()
         Me.ComboBoxCat = New System.Windows.Forms.ComboBox()
+        Me.PBAgregarProd = New System.Windows.Forms.PictureBox()
         Me.TStockProd = New System.Windows.Forms.TextBox()
         Me.TNombreProd = New System.Windows.Forms.TextBox()
         Me.TPrecioProd = New System.Windows.Forms.TextBox()
@@ -34,15 +35,14 @@ Partial Class AgregarProducto
         Me.LblCategoriaP = New System.Windows.Forms.Label()
         Me.LblNombreP = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dialogProd = New System.Windows.Forms.OpenFileDialog()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.dialogProd = New System.Windows.Forms.OpenFileDialog()
         Me.BtnCancelarProd = New System.Windows.Forms.Button()
         Me.BtnGuardarProducto = New System.Windows.Forms.Button()
-        Me.PBAgregarProd = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarProducto.SuspendLayout()
+        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelAgregarProducto
@@ -90,6 +90,18 @@ Partial Class AgregarProducto
         Me.ComboBoxCat.Size = New System.Drawing.Size(165, 21)
         Me.ComboBoxCat.TabIndex = 20
         Me.ComboBoxCat.Text = "Selecciona un categoría"
+        '
+        'PBAgregarProd
+        '
+        Me.PBAgregarProd.BackColor = System.Drawing.Color.Gainsboro
+        Me.PBAgregarProd.BackgroundImage = Global.sisVentas.My.Resources.Resources.producto
+        Me.PBAgregarProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PBAgregarProd.Location = New System.Drawing.Point(193, 261)
+        Me.PBAgregarProd.Name = "PBAgregarProd"
+        Me.PBAgregarProd.Size = New System.Drawing.Size(250, 182)
+        Me.PBAgregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PBAgregarProd.TabIndex = 19
+        Me.PBAgregarProd.TabStop = False
         '
         'TStockProd
         '
@@ -196,10 +208,6 @@ Partial Class AgregarProducto
         Me.Panel1.Size = New System.Drawing.Size(680, 50)
         Me.Panel1.TabIndex = 9
         '
-        'dialogProd
-        '
-        Me.dialogProd.FileName = "OpenFileDialog1"
-        '
         'PictureBox2
         '
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
@@ -211,6 +219,10 @@ Partial Class AgregarProducto
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
+        '
+        'dialogProd
+        '
+        Me.dialogProd.FileName = "OpenFileDialog1"
         '
         'BtnCancelarProd
         '
@@ -250,18 +262,6 @@ Partial Class AgregarProducto
         Me.BtnGuardarProducto.Text = "Guardar"
         Me.BtnGuardarProducto.UseVisualStyleBackColor = True
         '
-        'PBAgregarProd
-        '
-        Me.PBAgregarProd.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBAgregarProd.BackgroundImage = Global.sisVentas.My.Resources.Resources.producto
-        Me.PBAgregarProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBAgregarProd.Location = New System.Drawing.Point(193, 261)
-        Me.PBAgregarProd.Name = "PBAgregarProd"
-        Me.PBAgregarProd.Size = New System.Drawing.Size(250, 182)
-        Me.PBAgregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PBAgregarProd.TabIndex = 19
-        Me.PBAgregarProd.TabStop = False
-        '
         'AgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -277,10 +277,10 @@ Partial Class AgregarProducto
         Me.Text = "Form3"
         Me.PanelAgregarProducto.ResumeLayout(False)
         Me.PanelAgregarProducto.PerformLayout()
+        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PBAgregarProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
