@@ -154,6 +154,12 @@
     <Compile Include="usuarios.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmMatch.Designer.vb">
+      <DependentUpon>FrmMatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmMatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmCargarImagenError.Designer.vb">
       <DependentUpon>FrmCargarImagenError.vb</DependentUpon>
     </Compile>
@@ -350,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmErrorMail.resx">
       <DependentUpon>FrmErrorMail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmMatch.resx">
+      <DependentUpon>FrmMatch.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmRellenarCampos.resx">
       <DependentUpon>FrmRellenarCampos.vb</DependentUpon>

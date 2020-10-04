@@ -282,7 +282,7 @@ Partial Class AgregarCliente
         Me.BtnAgregarCliente.Location = New System.Drawing.Point(448, 637)
         Me.BtnAgregarCliente.Name = "BtnAgregarCliente"
         Me.BtnAgregarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnAgregarCliente.TabIndex = 6
+        Me.BtnAgregarCliente.TabIndex = 0
         Me.BtnAgregarCliente.Text = "Guardar"
         Me.BtnAgregarCliente.UseVisualStyleBackColor = True
         '

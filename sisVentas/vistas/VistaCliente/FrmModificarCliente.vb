@@ -2,9 +2,16 @@
 Public Class FrmModificarCliente
     Private Sub BtnActualizarCliente_Click(sender As Object, e As EventArgs) Handles BtnActualizarCliente.Click
         If (TNombreClienteModif.Text = "" Or TApellidoClienteModif.Text = "" Or TEmailClienteModif.Text = "" Or
-            TDniClienteModif.Text = "" Or TDireccionClienteModif.Text = "") Then
+            TDniClienteModif.Text = "" Or TDireccionClienteModif.Text = "" Or PBModifCliente.Image Is Nothing) Then
             FrmRellenarCampos.Show()
         Else
+            TNombreClienteModif.Text = ""
+            TApellidoClienteModif.Text = ""
+            TEmailClienteModif.Text = ""
+            TDniClienteModif.Text = ""
+            TDireccionClienteModif.Text = ""
+            PBModifCliente.Image = My.Resources.user1
+            FrmDatosCargadosCorrecto.Show()
             PanelAdmin.Enabled = True
             Me.Close()
             PanelAdmin.Show()
@@ -83,6 +90,13 @@ Public Class FrmModificarCliente
 
         If Not Regex.IsMatch(TEmailClienteModif.Text, mail) Then
             FrmErrorMail.Show()
+        End If
+    End Sub
+
+    Private Sub PBModifCliente_Click(sender As Object, e As EventArgs) Handles PBModifCliente.Click
+        dialogModifCli.ShowDialog()
+        If dialogModifCli.FileName <> "" Then
+            PBModifCliente.ImageLocation = dialogModifCli.FileName
         End If
     End Sub
 End Class

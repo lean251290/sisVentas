@@ -18,7 +18,6 @@ Public Class AgregarCliente
 
     Private Sub BtnAgregarCliente_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnAgregarCliente.MouseDown
         BtnAgregarCliente.BackgroundImage = My.Resources.btn122x45Oscuro
-
     End Sub
 
     Private Sub BtnAgregarCliente_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnAgregarCliente.MouseUp
@@ -94,5 +93,9 @@ Public Class AgregarCliente
         If Not Regex.IsMatch(TEmailCliente.Text, mail) Then
             FrmErrorMail.Show()
         End If
+    End Sub
+
+    Private Sub BtnAgregarCliente_MouseLeave(sender As Object, e As EventArgs) Handles BtnAgregarCliente.MouseLeave
+        BtnAgregarCliente.BackgroundImage = My.Resources.btn122x45
     End Sub
 End Class
