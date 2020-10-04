@@ -100,7 +100,8 @@ Partial Class FrmErrorMail
         Me.BtnEmailInvalido.Location = New System.Drawing.Point(289, 152)
         Me.BtnEmailInvalido.Name = "BtnEmailInvalido"
         Me.BtnEmailInvalido.Size = New System.Drawing.Size(98, 37)
-        Me.BtnEmailInvalido.TabIndex = 1
+        Me.BtnEmailInvalido.TabIndex = 0
+        Me.BtnEmailInvalido.TabStop = False
         Me.BtnEmailInvalido.Text = "Aceptar"
         Me.BtnEmailInvalido.UseVisualStyleBackColor = True
         '
@@ -119,6 +120,7 @@ Partial Class FrmErrorMail
         Me.Name = "FrmErrorMail"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmErrorMail"
+        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PBEmailInvalido, System.ComponentModel.ISupportInitialize).EndInit()

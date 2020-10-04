@@ -66,8 +66,8 @@ Public Class Agregar_Usuario
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
 
         If Not Regex.IsMatch(TEmailUsuario.Text, mail) Then
-
             FrmErrorMail.Show()
+
             TEmailUsuario.Text = ""
         End If
     End Sub
