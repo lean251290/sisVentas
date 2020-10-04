@@ -33,4 +33,25 @@
         PanelAdmin.Show()
         Me.Close()
     End Sub
+
+    Private Sub TbPrecioModifProd_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TbPrecioModifProd.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloNumeros.Show()
+        End If
+    End Sub
+
+    Private Sub TBStockModifPrdo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBStockModifPrdo.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloNumeros.Show()
+        End If
+    End Sub
+
+    Private Sub PBModifProd_Click(sender As Object, e As EventArgs) Handles PBModifProd.Click
+        DialogProducto.ShowDialog()
+        If DialogProducto.FileName <> "" Then
+            PBModifProd.ImageLocation = DialogProducto.FileName
+        End If
+    End Sub
 End Class
