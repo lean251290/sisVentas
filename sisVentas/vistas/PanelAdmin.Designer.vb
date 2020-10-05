@@ -60,6 +60,7 @@ Partial Class PanelAdmin
         Me.TMOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.TMMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.PanelContenedorFormHijo = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PnllReportes = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.BtnVentasPorProducto = New System.Windows.Forms.Button()
@@ -86,6 +87,7 @@ Partial Class PanelAdmin
         Me.Panel10.SuspendLayout()
         CType(Me.BtnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelContenedorFormHijo.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnllReportes.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -619,12 +621,24 @@ Partial Class PanelAdmin
         '
         Me.PanelContenedorFormHijo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PanelContenedorFormHijo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelContenedorFormHijo.Controls.Add(Me.PictureBox4)
         Me.PanelContenedorFormHijo.Controls.Add(Me.PnllReportes)
         Me.PanelContenedorFormHijo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContenedorFormHijo.Location = New System.Drawing.Point(220, 40)
         Me.PanelContenedorFormHijo.Name = "PanelContenedorFormHijo"
         Me.PanelContenedorFormHijo.Size = New System.Drawing.Size(680, 680)
         Me.PanelContenedorFormHijo.TabIndex = 2
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox4.Image = Global.sisVentas.My.Resources.Resources.fondoPanel
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(675, 680)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 1
+        Me.PictureBox4.TabStop = False
         '
         'PnllReportes
         '
@@ -820,6 +834,7 @@ Partial Class PanelAdmin
         Me.Panel10.ResumeLayout(False)
         CType(Me.BtnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelContenedorFormHijo.ResumeLayout(False)
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnllReportes.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
@@ -878,4 +893,5 @@ Partial Class PanelAdmin
     Friend WithEvents BtnVentasPorFecha As Button
     Friend WithEvents Panel7 As Panel
     Friend WithEvents BtnVentasPorProducto As Button
+    Friend WithEvents PictureBox4 As PictureBox
 End Class

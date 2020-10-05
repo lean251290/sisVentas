@@ -504,6 +504,9 @@
     <None Include="Iconos\Salir30px.png" />
     <None Include="Iconos\user1.png" />
     <None Include="Iconos\producto.png" />
+    <None Include="Iconos\GIF.gif" />
+    <None Include="Iconos\gif2.gif" />
+    <None Include="Iconos\fondoPanel.gif" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.vb</LastGenOutput>
