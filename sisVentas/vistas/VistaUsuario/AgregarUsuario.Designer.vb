@@ -29,9 +29,9 @@ Partial Class Agregar_Usuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TRePassUsuario = New System.Windows.Forms.TextBox()
         Me.TPassUsuario = New System.Windows.Forms.TextBox()
+        Me.TNombreUsuario = New System.Windows.Forms.TextBox()
         Me.TEmailUsuario = New System.Windows.Forms.TextBox()
         Me.TDireccionUsuario = New System.Windows.Forms.TextBox()
-        Me.TNombreUsuario = New System.Windows.Forms.TextBox()
         Me.TApellidoUsuario = New System.Windows.Forms.TextBox()
         Me.TDniUsuario = New System.Windows.Forms.TextBox()
         Me.Lblrepetir = New System.Windows.Forms.Label()
@@ -77,9 +77,9 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUsuario.Controls.Add(Me.Label2)
         Me.PanelAgregarUsuario.Controls.Add(Me.TRePassUsuario)
         Me.PanelAgregarUsuario.Controls.Add(Me.TPassUsuario)
+        Me.PanelAgregarUsuario.Controls.Add(Me.TNombreUsuario)
         Me.PanelAgregarUsuario.Controls.Add(Me.TEmailUsuario)
         Me.PanelAgregarUsuario.Controls.Add(Me.TDireccionUsuario)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TNombreUsuario)
         Me.PanelAgregarUsuario.Controls.Add(Me.TApellidoUsuario)
         Me.PanelAgregarUsuario.Controls.Add(Me.TDniUsuario)
         Me.PanelAgregarUsuario.Controls.Add(Me.Lblrepetir)
@@ -137,6 +137,16 @@ Partial Class Agregar_Usuario
         Me.TPassUsuario.Size = New System.Drawing.Size(321, 13)
         Me.TPassUsuario.TabIndex = 6
         '
+        'TNombreUsuario
+        '
+        Me.TNombreUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TNombreUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TNombreUsuario.Location = New System.Drawing.Point(193, 79)
+        Me.TNombreUsuario.Name = "TNombreUsuario"
+        Me.TNombreUsuario.Size = New System.Drawing.Size(321, 13)
+        Me.TNombreUsuario.TabIndex = 1
+        '
         'TEmailUsuario
         '
         Me.TEmailUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -157,22 +167,12 @@ Partial Class Agregar_Usuario
         Me.TDireccionUsuario.Size = New System.Drawing.Size(321, 13)
         Me.TDireccionUsuario.TabIndex = 4
         '
-        'TNombreUsuario
-        '
-        Me.TNombreUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TNombreUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TNombreUsuario.Location = New System.Drawing.Point(193, 21)
-        Me.TNombreUsuario.Name = "TNombreUsuario"
-        Me.TNombreUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreUsuario.TabIndex = 1
-        '
         'TApellidoUsuario
         '
         Me.TApellidoUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TApellidoUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TApellidoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TApellidoUsuario.Location = New System.Drawing.Point(193, 81)
+        Me.TApellidoUsuario.Location = New System.Drawing.Point(193, 139)
         Me.TApellidoUsuario.Name = "TApellidoUsuario"
         Me.TApellidoUsuario.Size = New System.Drawing.Size(321, 13)
         Me.TApellidoUsuario.TabIndex = 2
@@ -182,7 +182,8 @@ Partial Class Agregar_Usuario
         Me.TDniUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TDniUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TDniUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDniUsuario.Location = New System.Drawing.Point(193, 141)
+        Me.TDniUsuario.Location = New System.Drawing.Point(193, 28)
+        Me.TDniUsuario.MaxLength = 15
         Me.TDniUsuario.Name = "TDniUsuario"
         Me.TDniUsuario.Size = New System.Drawing.Size(321, 13)
         Me.TDniUsuario.TabIndex = 3
@@ -245,7 +246,7 @@ Partial Class Agregar_Usuario
         Me.LblDNI.AutoSize = True
         Me.LblDNI.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDNI.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblDNI.Location = New System.Drawing.Point(30, 141)
+        Me.LblDNI.Location = New System.Drawing.Point(30, 21)
         Me.LblDNI.Name = "LblDNI"
         Me.LblDNI.Size = New System.Drawing.Size(53, 20)
         Me.LblDNI.TabIndex = 2
@@ -258,7 +259,7 @@ Partial Class Agregar_Usuario
         Me.lblApellido.AutoSize = True
         Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblApellido.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblApellido.Location = New System.Drawing.Point(30, 81)
+        Me.lblApellido.Location = New System.Drawing.Point(30, 134)
         Me.lblApellido.Name = "lblApellido"
         Me.lblApellido.Size = New System.Drawing.Size(69, 20)
         Me.lblApellido.TabIndex = 1
@@ -271,7 +272,7 @@ Partial Class Agregar_Usuario
         Me.LblNombre.AutoSize = True
         Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNombre.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblNombre.Location = New System.Drawing.Point(30, 21)
+        Me.LblNombre.Location = New System.Drawing.Point(30, 74)
         Me.LblNombre.Name = "LblNombre"
         Me.LblNombre.Size = New System.Drawing.Size(69, 20)
         Me.LblNombre.TabIndex = 0

@@ -117,4 +117,20 @@ Public Class Agregar_Usuario
     Private Sub TEmailUsuario_TextChanged(sender As Object, e As EventArgs) Handles TEmailUsuario.TextChanged
 
     End Sub
+
+    Private Sub TDniUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDniUsuario.TextChanged
+
+    End Sub
+
+    Private Sub TDniUsuario_LostFocus(sender As Object, e As EventArgs) Handles TDniUsuario.LostFocus
+        Dim cantidad As Integer
+        cantidad = Len(TDniUsuario.Text)
+        If cantidad < 8 Then
+            MsgBox("error", vbAbort, "menor")
+            TDniUsuario.Text = ""
+        ElseIf cantidad > 8 Then
+            MsgBox("mayor", vbAbort, "mayor")
+            TDniUsuario.Text = ""
+        End If
+    End Sub
 End Class

@@ -156,7 +156,7 @@ Partial Class FrmModificarCliente
         Me.TNombreClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TNombreClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TNombreClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TNombreClienteModif.Location = New System.Drawing.Point(193, 21)
+        Me.TNombreClienteModif.Location = New System.Drawing.Point(193, 76)
         Me.TNombreClienteModif.Name = "TNombreClienteModif"
         Me.TNombreClienteModif.Size = New System.Drawing.Size(321, 13)
         Me.TNombreClienteModif.TabIndex = 13
@@ -166,7 +166,7 @@ Partial Class FrmModificarCliente
         Me.TApellidoClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TApellidoClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TApellidoClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TApellidoClienteModif.Location = New System.Drawing.Point(193, 81)
+        Me.TApellidoClienteModif.Location = New System.Drawing.Point(193, 136)
         Me.TApellidoClienteModif.Name = "TApellidoClienteModif"
         Me.TApellidoClienteModif.Size = New System.Drawing.Size(321, 13)
         Me.TApellidoClienteModif.TabIndex = 12
@@ -176,7 +176,8 @@ Partial Class FrmModificarCliente
         Me.TDniClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TDniClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TDniClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDniClienteModif.Location = New System.Drawing.Point(193, 141)
+        Me.TDniClienteModif.Location = New System.Drawing.Point(193, 21)
+        Me.TDniClienteModif.MaxLength = 15
         Me.TDniClienteModif.Name = "TDniClienteModif"
         Me.TDniClienteModif.Size = New System.Drawing.Size(321, 13)
         Me.TDniClienteModif.TabIndex = 11
@@ -213,7 +214,7 @@ Partial Class FrmModificarCliente
         Me.LblDNIModif.AutoSize = True
         Me.LblDNIModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDNIModif.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblDNIModif.Location = New System.Drawing.Point(30, 141)
+        Me.LblDNIModif.Location = New System.Drawing.Point(30, 16)
         Me.LblDNIModif.Name = "LblDNIModif"
         Me.LblDNIModif.Size = New System.Drawing.Size(53, 20)
         Me.LblDNIModif.TabIndex = 2
@@ -226,7 +227,7 @@ Partial Class FrmModificarCliente
         Me.lblApellidoModif.AutoSize = True
         Me.lblApellidoModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblApellidoModif.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblApellidoModif.Location = New System.Drawing.Point(30, 81)
+        Me.lblApellidoModif.Location = New System.Drawing.Point(30, 136)
         Me.lblApellidoModif.Name = "lblApellidoModif"
         Me.lblApellidoModif.Size = New System.Drawing.Size(69, 20)
         Me.lblApellidoModif.TabIndex = 1
@@ -239,7 +240,7 @@ Partial Class FrmModificarCliente
         Me.LblNombreModif.AutoSize = True
         Me.LblNombreModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNombreModif.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblNombreModif.Location = New System.Drawing.Point(30, 21)
+        Me.LblNombreModif.Location = New System.Drawing.Point(30, 76)
         Me.LblNombreModif.Name = "LblNombreModif"
         Me.LblNombreModif.Size = New System.Drawing.Size(69, 20)
         Me.LblNombreModif.TabIndex = 0

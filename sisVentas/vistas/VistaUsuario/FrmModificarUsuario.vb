@@ -99,4 +99,20 @@ Public Class FrmModificarUsuario
             FrmNoCaracteresEspeciales.Show()
         End If
     End Sub
+
+    Private Sub TDniUsuarioModif_TextChanged(sender As Object, e As EventArgs) Handles TDniUsuarioModif.TextChanged
+
+    End Sub
+
+    Private Sub TDniUsuarioModif_LostFocus(sender As Object, e As EventArgs) Handles TDniUsuarioModif.LostFocus
+        Dim cantidad As Integer
+        cantidad = Len(TDniUsuarioModif.Text)
+        If cantidad < 8 Then
+            MsgBox("error", vbAbort, "menor")
+            TDniUsuarioModif.Text = ""
+        ElseIf cantidad > 8 Then
+            MsgBox("mayor", vbAbort, "mayor")
+            TDniUsuarioModif.Text = ""
+        End If
+    End Sub
 End Class
