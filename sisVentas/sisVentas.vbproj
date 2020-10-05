@@ -136,6 +136,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="My Project\ValidarDecimal.vb" />
     <Compile Include="PanelVacio.Designer.vb">
       <DependentUpon>PanelVacio.vb</DependentUpon>
     </Compile>
@@ -224,6 +225,12 @@
       <DependentUpon>FrmSoloNumeros.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmSoloNumeros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSoloUnPunto.Designer.vb">
+      <DependentUpon>FrmSoloUnPunto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSoloUnPunto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\VistaCliente\AgregarCliente.Designer.vb">
@@ -395,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSoloNumeros.resx">
       <DependentUpon>FrmSoloNumeros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSoloUnPunto.resx">
+      <DependentUpon>FrmSoloUnPunto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaCliente\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
