@@ -41,6 +41,7 @@ Partial Class FrmModificarCliente
         Me.BtnCancelarCliente = New System.Windows.Forms.Button()
         Me.BtnActualizarCliente = New System.Windows.Forms.Button()
         Me.dialogModifCli = New System.Windows.Forms.OpenFileDialog()
+        Me.BtnAltaCliente = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarCliente.SuspendLayout()
@@ -285,12 +286,31 @@ Partial Class FrmModificarCliente
         '
         Me.dialogModifCli.FileName = "OpenFileDialog1"
         '
+        'BtnAltaCliente
+        '
+        Me.BtnAltaCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAltaCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnAltaCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAltaCliente.FlatAppearance.BorderSize = 0
+        Me.BtnAltaCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnAltaCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnAltaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAltaCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAltaCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAltaCliente.Location = New System.Drawing.Point(40, 631)
+        Me.BtnAltaCliente.Name = "BtnAltaCliente"
+        Me.BtnAltaCliente.Size = New System.Drawing.Size(98, 37)
+        Me.BtnAltaCliente.TabIndex = 11
+        Me.BtnAltaCliente.Text = "Alta"
+        Me.BtnAltaCliente.UseVisualStyleBackColor = True
+        '
         'FrmModificarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnAltaCliente)
         Me.Controls.Add(Me.BtnCancelarCliente)
         Me.Controls.Add(Me.BtnActualizarCliente)
         Me.Controls.Add(Me.PanelAgregarCliente)
@@ -327,4 +347,5 @@ Partial Class FrmModificarCliente
     Friend WithEvents BtnActualizarCliente As Button
     Friend WithEvents BtnCancelarCliente As Button
     Friend WithEvents dialogModifCli As OpenFileDialog
+    Friend WithEvents BtnAltaCliente As Button
 End Class

@@ -46,6 +46,7 @@ Partial Class FrmModificarUsuario
         Me.BtnCancelarUser = New System.Windows.Forms.Button()
         Me.DialogModificarUsuario = New System.Windows.Forms.OpenFileDialog()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.BtnAltaUsuario = New System.Windows.Forms.Button()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PBUserModif, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -335,12 +336,30 @@ Partial Class FrmModificarUsuario
         '
         Me.DialogModificarUsuario.FileName = "OpenFileDialog1"
         '
+        'BtnAltaUsuario
+        '
+        Me.BtnAltaUsuario.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnAltaUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAltaUsuario.FlatAppearance.BorderSize = 0
+        Me.BtnAltaUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnAltaUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnAltaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAltaUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAltaUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAltaUsuario.Location = New System.Drawing.Point(41, 632)
+        Me.BtnAltaUsuario.Name = "BtnAltaUsuario"
+        Me.BtnAltaUsuario.Size = New System.Drawing.Size(98, 37)
+        Me.BtnAltaUsuario.TabIndex = 9
+        Me.BtnAltaUsuario.Text = "Alta"
+        Me.BtnAltaUsuario.UseVisualStyleBackColor = True
+        '
         'FrmModificarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnAltaUsuario)
         Me.Controls.Add(Me.BtnCancelarUser)
         Me.Controls.Add(Me.BtnActualizarUser)
         Me.Controls.Add(Me.Panel1)
@@ -383,4 +402,5 @@ Partial Class FrmModificarUsuario
     Friend WithEvents BtnCancelarUser As Button
     Friend WithEvents DialogModificarUsuario As OpenFileDialog
     Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents BtnAltaUsuario As Button
 End Class

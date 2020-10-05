@@ -39,6 +39,7 @@ Partial Class ModificarProducto
         Me.BtnActualizarProd = New System.Windows.Forms.Button()
         Me.BtnCancelarModifProd = New System.Windows.Forms.Button()
         Me.DialogProducto = New System.Windows.Forms.OpenFileDialog()
+        Me.BtnAltaProd = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarProducto.SuspendLayout()
@@ -256,12 +257,31 @@ Partial Class ModificarProducto
         '
         Me.DialogProducto.FileName = "OpenFileDialog1"
         '
+        'BtnAltaProd
+        '
+        Me.BtnAltaProd.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnAltaProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAltaProd.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAltaProd.FlatAppearance.BorderSize = 0
+        Me.BtnAltaProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnAltaProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnAltaProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAltaProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAltaProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAltaProd.Location = New System.Drawing.Point(40, 631)
+        Me.BtnAltaProd.Name = "BtnAltaProd"
+        Me.BtnAltaProd.Size = New System.Drawing.Size(98, 37)
+        Me.BtnAltaProd.TabIndex = 10
+        Me.BtnAltaProd.Text = "Alta"
+        Me.BtnAltaProd.UseVisualStyleBackColor = True
+        '
         'ModificarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnAltaProd)
         Me.Controls.Add(Me.BtnCancelarModifProd)
         Me.Controls.Add(Me.BtnActualizarProd)
         Me.Controls.Add(Me.PanelAgregarProducto)
@@ -297,4 +317,5 @@ Partial Class ModificarProducto
     Friend WithEvents BtnActualizarProd As Button
     Friend WithEvents BtnCancelarModifProd As Button
     Friend WithEvents DialogProducto As OpenFileDialog
+    Friend WithEvents BtnAltaProd As Button
 End Class
