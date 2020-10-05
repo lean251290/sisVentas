@@ -135,7 +135,7 @@ Partial Class AgregarCliente
         Me.TNombreCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TNombreCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TNombreCliente.Location = New System.Drawing.Point(193, 21)
+        Me.TNombreCliente.Location = New System.Drawing.Point(193, 79)
         Me.TNombreCliente.Name = "TNombreCliente"
         Me.TNombreCliente.Size = New System.Drawing.Size(321, 13)
         Me.TNombreCliente.TabIndex = 13
@@ -145,7 +145,7 @@ Partial Class AgregarCliente
         Me.TApellidoCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TApellidoCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TApellidoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TApellidoCliente.Location = New System.Drawing.Point(193, 81)
+        Me.TApellidoCliente.Location = New System.Drawing.Point(193, 136)
         Me.TApellidoCliente.Name = "TApellidoCliente"
         Me.TApellidoCliente.Size = New System.Drawing.Size(321, 13)
         Me.TApellidoCliente.TabIndex = 12
@@ -155,7 +155,8 @@ Partial Class AgregarCliente
         Me.TDniCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TDniCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TDniCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDniCliente.Location = New System.Drawing.Point(193, 141)
+        Me.TDniCliente.Location = New System.Drawing.Point(193, 26)
+        Me.TDniCliente.MaxLength = 20
         Me.TDniCliente.Name = "TDniCliente"
         Me.TDniCliente.Size = New System.Drawing.Size(321, 13)
         Me.TDniCliente.TabIndex = 11
@@ -192,7 +193,7 @@ Partial Class AgregarCliente
         Me.LblDNI.AutoSize = True
         Me.LblDNI.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDNI.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblDNI.Location = New System.Drawing.Point(30, 141)
+        Me.LblDNI.Location = New System.Drawing.Point(30, 21)
         Me.LblDNI.Name = "LblDNI"
         Me.LblDNI.Size = New System.Drawing.Size(53, 20)
         Me.LblDNI.TabIndex = 2
@@ -205,7 +206,7 @@ Partial Class AgregarCliente
         Me.lblApellido.AutoSize = True
         Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblApellido.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblApellido.Location = New System.Drawing.Point(30, 81)
+        Me.lblApellido.Location = New System.Drawing.Point(30, 136)
         Me.lblApellido.Name = "lblApellido"
         Me.lblApellido.Size = New System.Drawing.Size(69, 20)
         Me.lblApellido.TabIndex = 1
@@ -218,7 +219,7 @@ Partial Class AgregarCliente
         Me.LblNombre.AutoSize = True
         Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNombre.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblNombre.Location = New System.Drawing.Point(30, 21)
+        Me.LblNombre.Location = New System.Drawing.Point(30, 74)
         Me.LblNombre.Name = "LblNombre"
         Me.LblNombre.Size = New System.Drawing.Size(69, 20)
         Me.LblNombre.TabIndex = 0
@@ -265,6 +266,7 @@ Partial Class AgregarCliente
         Me.BtnCancelarCliente.Name = "BtnCancelarCliente"
         Me.BtnCancelarCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnCancelarCliente.TabIndex = 7
+        Me.BtnCancelarCliente.TabStop = False
         Me.BtnCancelarCliente.Text = "Cancelar"
         Me.BtnCancelarCliente.UseVisualStyleBackColor = True
         '
@@ -283,6 +285,7 @@ Partial Class AgregarCliente
         Me.BtnAgregarCliente.Name = "BtnAgregarCliente"
         Me.BtnAgregarCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnAgregarCliente.TabIndex = 0
+        Me.BtnAgregarCliente.TabStop = False
         Me.BtnAgregarCliente.Text = "Guardar"
         Me.BtnAgregarCliente.UseVisualStyleBackColor = True
         '

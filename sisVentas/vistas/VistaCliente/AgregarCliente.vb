@@ -98,4 +98,16 @@ Public Class AgregarCliente
     Private Sub BtnAgregarCliente_MouseLeave(sender As Object, e As EventArgs) Handles BtnAgregarCliente.MouseLeave
         BtnAgregarCliente.BackgroundImage = My.Resources.btn122x45
     End Sub
+
+    Private Sub TDniCliente_LostFocus(sender As Object, e As EventArgs) Handles TDniCliente.LostFocus
+        Dim cantidad As Integer
+        cantidad = Len(TDniCliente.Text)
+        If cantidad < 8 Then
+            FrmValidarDni.Show()
+            TDniCliente.Text = ""
+        ElseIf cantidad > 8 Then
+            FrmValidarDni.Show()
+            TDniCliente.Text = ""
+        End If
+    End Sub
 End Class

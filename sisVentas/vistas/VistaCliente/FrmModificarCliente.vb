@@ -100,4 +100,16 @@ Public Class FrmModificarCliente
             PBModifCliente.ImageLocation = dialogModifCli.FileName
         End If
     End Sub
+
+    Private Sub TDniClienteModif_LostFocus(sender As Object, e As EventArgs) Handles TDniClienteModif.LostFocus
+        Dim cantidad As Integer
+        cantidad = Len(TDniClienteModif.Text)
+        If cantidad < 8 Then
+            FrmValidarDni.Show()
+            TDniClienteModif.Text = ""
+        ElseIf cantidad > 8 Then
+            FrmValidarDni.Show()
+            TDniClienteModif.Text = ""
+        End If
+    End Sub
 End Class

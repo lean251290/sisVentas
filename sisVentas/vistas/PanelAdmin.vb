@@ -469,7 +469,7 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub BtnVentas4_Click(sender As Object, e As EventArgs) Handles BtnVentasPorCliente.Click
-
+        FrmBackUp.Show()
     End Sub
 
     Private Sub BtnVentas4_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentasPorCliente.MouseEnter
