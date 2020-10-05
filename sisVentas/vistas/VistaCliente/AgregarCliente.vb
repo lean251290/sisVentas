@@ -103,10 +103,10 @@ Public Class AgregarCliente
         Dim cantidad As Integer
         cantidad = Len(TDniCliente.Text)
         If cantidad < 8 Then
-            MsgBox("error", vbAbort, "menor")
+            FrmValidarDni.Show()
             TDniCliente.Text = ""
         ElseIf cantidad > 8 Then
-            MsgBox("mayor", vbAbort, "mayor")
+            FrmValidarDni.Show()
             TDniCliente.Text = ""
         End If
     End Sub

@@ -22,6 +22,7 @@ Partial Class VentaPorUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -31,9 +32,13 @@ Partial Class VentaPorUsuario
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.PanelReporteUsuarios = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.TbVentaReportes = New System.Windows.Forms.TextBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.PBUsuarioReportes = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReportes.SuspendLayout()
+        CType(Me.PBUsuarioReportes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -78,6 +83,8 @@ Partial Class VentaPorUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportes.Controls.Add(Me.PBUsuarioReportes)
+        Me.PanelReportes.Controls.Add(Me.TbVentaReportes)
         Me.PanelReportes.Controls.Add(Me.TexBoxTotalUsuarios)
         Me.PanelReportes.Controls.Add(Me.Label1)
         Me.PanelReportes.Controls.Add(Me.LblNombre)
@@ -105,9 +112,9 @@ Partial Class VentaPorUsuario
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label1.Location = New System.Drawing.Point(34, 484)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 20)
+        Me.Label1.Size = New System.Drawing.Size(135, 20)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Total de usuarios:"
+        Me.Label1.Text = "Total Recaudado:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblNombre
@@ -146,6 +153,29 @@ Partial Class VentaPorUsuario
         Me.Label2.Text = "Venta Por Usuario"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'TbVentaReportes
+        '
+        Me.TbVentaReportes.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TbVentaReportes.Location = New System.Drawing.Point(132, 17)
+        Me.TbVentaReportes.Name = "TbVentaReportes"
+        Me.TbVentaReportes.Size = New System.Drawing.Size(330, 20)
+        Me.TbVentaReportes.TabIndex = 15
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'PBUsuarioReportes
+        '
+        Me.PBUsuarioReportes.Image = Global.sisVentas.My.Resources.Resources.icoLupa
+        Me.PBUsuarioReportes.Location = New System.Drawing.Point(480, 3)
+        Me.PBUsuarioReportes.Name = "PBUsuarioReportes"
+        Me.PBUsuarioReportes.Size = New System.Drawing.Size(74, 47)
+        Me.PBUsuarioReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PBUsuarioReportes.TabIndex = 16
+        Me.PBUsuarioReportes.TabStop = False
+        '
         'VentaPorUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -164,6 +194,7 @@ Partial Class VentaPorUsuario
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelReportes.ResumeLayout(False)
         Me.PanelReportes.PerformLayout()
+        CType(Me.PBUsuarioReportes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -178,4 +209,7 @@ Partial Class VentaPorUsuario
     Friend WithEvents Label1 As Label
     Friend WithEvents TexBoxTotalUsuarios As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents TbVentaReportes As TextBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents PBUsuarioReportes As PictureBox
 End Class

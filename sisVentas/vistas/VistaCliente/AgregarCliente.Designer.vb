@@ -266,6 +266,7 @@ Partial Class AgregarCliente
         Me.BtnCancelarCliente.Name = "BtnCancelarCliente"
         Me.BtnCancelarCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnCancelarCliente.TabIndex = 7
+        Me.BtnCancelarCliente.TabStop = False
         Me.BtnCancelarCliente.Text = "Cancelar"
         Me.BtnCancelarCliente.UseVisualStyleBackColor = True
         '
@@ -284,6 +285,7 @@ Partial Class AgregarCliente
         Me.BtnAgregarCliente.Name = "BtnAgregarCliente"
         Me.BtnAgregarCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnAgregarCliente.TabIndex = 0
+        Me.BtnAgregarCliente.TabStop = False
         Me.BtnAgregarCliente.Text = "Guardar"
         Me.BtnAgregarCliente.UseVisualStyleBackColor = True
         '

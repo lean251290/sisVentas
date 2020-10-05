@@ -126,10 +126,10 @@ Public Class Agregar_Usuario
         Dim cantidad As Integer
         cantidad = Len(TDniUsuario.Text)
         If cantidad < 8 Then
-            MsgBox("error", vbAbort, "menor")
+            FrmValidarDni.Show()
             TDniUsuario.Text = ""
         ElseIf cantidad > 8 Then
-            MsgBox("mayor", vbAbort, "mayor")
+            FrmValidarDni.Show()
             TDniUsuario.Text = ""
         End If
     End Sub

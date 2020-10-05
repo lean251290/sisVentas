@@ -262,6 +262,7 @@ Partial Class FrmModificarCliente
         Me.BtnCancelarCliente.Name = "BtnCancelarCliente"
         Me.BtnCancelarCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnCancelarCliente.TabIndex = 4
+        Me.BtnCancelarCliente.TabStop = False
         Me.BtnCancelarCliente.Text = "Cancelar"
         Me.BtnCancelarCliente.UseVisualStyleBackColor = True
         '
@@ -280,6 +281,7 @@ Partial Class FrmModificarCliente
         Me.BtnActualizarCliente.Name = "BtnActualizarCliente"
         Me.BtnActualizarCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnActualizarCliente.TabIndex = 5
+        Me.BtnActualizarCliente.TabStop = False
         Me.BtnActualizarCliente.Text = "Actualizar"
         Me.BtnActualizarCliente.UseVisualStyleBackColor = True
         '
@@ -302,6 +304,7 @@ Partial Class FrmModificarCliente
         Me.BtnAltaCliente.Name = "BtnAltaCliente"
         Me.BtnAltaCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnAltaCliente.TabIndex = 11
+        Me.BtnAltaCliente.TabStop = False
         Me.BtnAltaCliente.Text = "Alta"
         Me.BtnAltaCliente.UseVisualStyleBackColor = True
         '

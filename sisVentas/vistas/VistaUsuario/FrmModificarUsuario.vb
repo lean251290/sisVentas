@@ -108,10 +108,10 @@ Public Class FrmModificarUsuario
         Dim cantidad As Integer
         cantidad = Len(TDniUsuarioModif.Text)
         If cantidad < 8 Then
-            MsgBox("error", vbAbort, "menor")
+            FrmValidarDni.Show()
             TDniUsuarioModif.Text = ""
         ElseIf cantidad > 8 Then
-            MsgBox("mayor", vbAbort, "mayor")
+            FrmValidarDni.Show()
             TDniUsuarioModif.Text = ""
         End If
     End Sub

@@ -105,10 +105,10 @@ Public Class FrmModificarCliente
         Dim cantidad As Integer
         cantidad = Len(TDniClienteModif.Text)
         If cantidad < 8 Then
-            MsgBox("error", vbAbort, "menor")
+            FrmValidarDni.Show()
             TDniClienteModif.Text = ""
         ElseIf cantidad > 8 Then
-            MsgBox("mayor", vbAbort, "mayor")
+            FrmValidarDni.Show()
             TDniClienteModif.Text = ""
         End If
     End Sub
