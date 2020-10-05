@@ -84,4 +84,19 @@ Public Class FrmModificarUsuario
         End If
     End Sub
 
+    Private Sub PBUserModif_Click(sender As Object, e As EventArgs) Handles PBUserModif.Click
+        DialogModificarUsuario.ShowDialog()
+        If DialogModificarUsuario.FileName <> "" Then
+            PBUserModif.ImageLocation = DialogModificarUsuario.FileName
+        End If
+    End Sub
+
+
+    Private Sub TDireccionUsuarioModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TDireccionUsuarioModif.KeyPress
+        If Not ((Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Or
+       (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8)) Then
+            e.Handled = True
+            FrmNoCaracteresEspeciales.Show()
+        End If
+    End Sub
 End Class

@@ -44,6 +44,8 @@ Partial Class FrmModificarUsuario
         Me.LabelModificarUsuarios = New System.Windows.Forms.Label()
         Me.BtnActualizarUser = New System.Windows.Forms.Button()
         Me.BtnCancelarUser = New System.Windows.Forms.Button()
+        Me.DialogModificarUsuario = New System.Windows.Forms.OpenFileDialog()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PBUserModif, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -329,6 +331,10 @@ Partial Class FrmModificarUsuario
         Me.BtnCancelarUser.Text = "Cancelar"
         Me.BtnCancelarUser.UseVisualStyleBackColor = True
         '
+        'DialogModificarUsuario
+        '
+        Me.DialogModificarUsuario.FileName = "OpenFileDialog1"
+        '
         'FrmModificarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -375,4 +381,6 @@ Partial Class FrmModificarUsuario
     Friend WithEvents LabelModificarUsuarios As Label
     Friend WithEvents BtnActualizarUser As Button
     Friend WithEvents BtnCancelarUser As Button
+    Friend WithEvents DialogModificarUsuario As OpenFileDialog
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class
