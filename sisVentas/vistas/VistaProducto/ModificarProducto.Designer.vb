@@ -116,6 +116,8 @@ Partial Class ModificarProducto
         'PBModifProd
         '
         Me.PBModifProd.BackColor = System.Drawing.Color.Gainsboro
+        Me.PBModifProd.BackgroundImage = Global.sisVentas.My.Resources.Resources.user1
+        Me.PBModifProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PBModifProd.Location = New System.Drawing.Point(193, 261)
         Me.PBModifProd.Name = "PBModifProd"
         Me.PBModifProd.Size = New System.Drawing.Size(250, 182)

@@ -321,6 +321,7 @@ Partial Class FrmModificarCliente
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmModificarCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmModificarCliente"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

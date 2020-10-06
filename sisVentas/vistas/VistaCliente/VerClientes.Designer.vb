@@ -60,9 +60,9 @@ Partial Class VerClientes
         Me.LBuscarCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LBuscarCliente.Location = New System.Drawing.Point(46, 46)
         Me.LBuscarCliente.Name = "LBuscarCliente"
-        Me.LBuscarCliente.Size = New System.Drawing.Size(59, 20)
+        Me.LBuscarCliente.Size = New System.Drawing.Size(62, 20)
         Me.LBuscarCliente.TabIndex = 0
-        Me.LBuscarCliente.Text = "Buscar"
+        Me.LBuscarCliente.Text = "Cliente:"
         Me.LBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TBuscarCliente

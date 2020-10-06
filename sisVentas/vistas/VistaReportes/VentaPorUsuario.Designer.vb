@@ -27,14 +27,14 @@ Partial Class VentaPorUsuario
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelReportes = New System.Windows.Forms.Panel()
+        Me.PBUsuarioReportes = New System.Windows.Forms.PictureBox()
+        Me.TbVentaReportes = New System.Windows.Forms.TextBox()
         Me.TexBoxTotalUsuarios = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.PanelReporteUsuarios = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TbVentaReportes = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.PBUsuarioReportes = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReportes.SuspendLayout()
@@ -93,6 +93,24 @@ Partial Class VentaPorUsuario
         Me.PanelReportes.Name = "PanelReportes"
         Me.PanelReportes.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportes.TabIndex = 7
+        '
+        'PBUsuarioReportes
+        '
+        Me.PBUsuarioReportes.Image = Global.sisVentas.My.Resources.Resources.icoLupa
+        Me.PBUsuarioReportes.Location = New System.Drawing.Point(480, 3)
+        Me.PBUsuarioReportes.Name = "PBUsuarioReportes"
+        Me.PBUsuarioReportes.Size = New System.Drawing.Size(74, 47)
+        Me.PBUsuarioReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PBUsuarioReportes.TabIndex = 16
+        Me.PBUsuarioReportes.TabStop = False
+        '
+        'TbVentaReportes
+        '
+        Me.TbVentaReportes.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TbVentaReportes.Location = New System.Drawing.Point(132, 17)
+        Me.TbVentaReportes.Name = "TbVentaReportes"
+        Me.TbVentaReportes.Size = New System.Drawing.Size(330, 20)
+        Me.TbVentaReportes.TabIndex = 15
         '
         'TexBoxTotalUsuarios
         '
@@ -153,28 +171,10 @@ Partial Class VentaPorUsuario
         Me.Label2.Text = "Venta Por Usuario"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TbVentaReportes
-        '
-        Me.TbVentaReportes.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TbVentaReportes.Location = New System.Drawing.Point(132, 17)
-        Me.TbVentaReportes.Name = "TbVentaReportes"
-        Me.TbVentaReportes.Size = New System.Drawing.Size(330, 20)
-        Me.TbVentaReportes.TabIndex = 15
-        '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
-        '
-        'PBUsuarioReportes
-        '
-        Me.PBUsuarioReportes.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PBUsuarioReportes.Location = New System.Drawing.Point(480, 3)
-        Me.PBUsuarioReportes.Name = "PBUsuarioReportes"
-        Me.PBUsuarioReportes.Size = New System.Drawing.Size(74, 47)
-        Me.PBUsuarioReportes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PBUsuarioReportes.TabIndex = 16
-        Me.PBUsuarioReportes.TabStop = False
         '
         'VentaPorUsuario
         '

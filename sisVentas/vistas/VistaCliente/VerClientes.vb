@@ -33,4 +33,13 @@
     Private Sub BtnEliminarCliente_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnEliminarCliente.MouseUp
         BtnEliminarCliente.BackgroundImage = My.Resources.btn122x45
     End Sub
+
+
+
+    Private Sub TBuscarCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBuscarCliente.KeyPress
+        If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloLetras.Show()
+        End If
+    End Sub
 End Class

@@ -112,4 +112,6 @@ Public Class FrmModificarCliente
             TDniClienteModif.Text = ""
         End If
     End Sub
+
+
 End Class
