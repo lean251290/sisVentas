@@ -112,6 +112,7 @@ Partial Class ModificarProducto
         Me.CMBModifProd.Name = "CMBModifProd"
         Me.CMBModifProd.Size = New System.Drawing.Size(165, 21)
         Me.CMBModifProd.TabIndex = 20
+        Me.CMBModifProd.Text = "Seleccione una categoría"
         '
         'PBModifProd
         '

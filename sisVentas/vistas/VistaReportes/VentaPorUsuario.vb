@@ -3,7 +3,7 @@
         Me.Close()
     End Sub
 
-s
+
 
     Private Sub TbVentaReportes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TbVentaReportes.KeyPress
         If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then

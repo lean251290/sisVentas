@@ -89,7 +89,7 @@ Partial Class AgregarProducto
         Me.ComboBoxCat.Name = "ComboBoxCat"
         Me.ComboBoxCat.Size = New System.Drawing.Size(165, 21)
         Me.ComboBoxCat.TabIndex = 20
-        Me.ComboBoxCat.Text = "Selecciona un categoría"
+        Me.ComboBoxCat.Text = "Seleccione una categoría"
         '
         'PBAgregarProd
         '

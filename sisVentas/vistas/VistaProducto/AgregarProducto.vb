@@ -39,9 +39,6 @@
 
     End Sub
 
-    Private Sub TNombreProd_TextChanged(sender As Object, e As EventArgs) Handles TNombreProd.TextChanged
-
-    End Sub
 
     Private Sub TNombreProd_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNombreProd.KeyPress
         If Not ((Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Or
@@ -80,5 +77,6 @@
 
 
     End Sub
+
 
 End Class
