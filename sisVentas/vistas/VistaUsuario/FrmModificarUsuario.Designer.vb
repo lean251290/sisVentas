@@ -138,9 +138,11 @@ Partial Class FrmModificarUsuario
         Me.TDniUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TDniUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TDniUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDniUsuarioModif.Cursor = System.Windows.Forms.Cursors.No
         Me.TDniUsuarioModif.Location = New System.Drawing.Point(193, 21)
         Me.TDniUsuarioModif.MaxLength = 15
         Me.TDniUsuarioModif.Name = "TDniUsuarioModif"
+        Me.TDniUsuarioModif.ReadOnly = True
         Me.TDniUsuarioModif.Size = New System.Drawing.Size(321, 13)
         Me.TDniUsuarioModif.TabIndex = 11
         '
@@ -159,8 +161,10 @@ Partial Class FrmModificarUsuario
         Me.TNombreUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TNombreUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TNombreUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TNombreUsuarioModif.Cursor = System.Windows.Forms.Cursors.No
         Me.TNombreUsuarioModif.Location = New System.Drawing.Point(193, 76)
         Me.TNombreUsuarioModif.Name = "TNombreUsuarioModif"
+        Me.TNombreUsuarioModif.ReadOnly = True
         Me.TNombreUsuarioModif.Size = New System.Drawing.Size(321, 13)
         Me.TNombreUsuarioModif.TabIndex = 13
         '
@@ -169,8 +173,10 @@ Partial Class FrmModificarUsuario
         Me.TApellidoUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TApellidoUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TApellidoUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TApellidoUsuarioModif.Location = New System.Drawing.Point(193, 136)
+        Me.TApellidoUsuarioModif.Cursor = System.Windows.Forms.Cursors.No
+        Me.TApellidoUsuarioModif.Location = New System.Drawing.Point(193, 141)
         Me.TApellidoUsuarioModif.Name = "TApellidoUsuarioModif"
+        Me.TApellidoUsuarioModif.ReadOnly = True
         Me.TApellidoUsuarioModif.Size = New System.Drawing.Size(321, 13)
         Me.TApellidoUsuarioModif.TabIndex = 12
         '

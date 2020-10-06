@@ -47,42 +47,31 @@ Public Class FrmModificarCliente
         PanelAdmin.Show()
     End Sub
 
-    Private Sub TNombreClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TNombreClienteModif.TextChanged
 
-    End Sub
+    '' Private Sub TNombreClienteModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNombreClienteModif.KeyPress
+    '' If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
+    ''   e.Handled = True
+    ''    FrmSoloLetras.Show()
+    ''  End If
+    '' End Sub
 
-    Private Sub TNombreClienteModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNombreClienteModif.KeyPress
-        If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
-            e.Handled = True
-            FrmSoloLetras.Show()
-        End If
-    End Sub
 
-    Private Sub TApellidoClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TApellidoClienteModif.TextChanged
+    '' Private Sub TApellidoClienteModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TApellidoClienteModif.KeyPress
+    ''If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
+    ''  e.Handled = True
+    '' FrmSoloLetras.Show()
+    ''End If
+    '' End Sub
 
-    End Sub
 
-    Private Sub TApellidoClienteModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TApellidoClienteModif.KeyPress
-        If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
-            e.Handled = True
-            FrmSoloLetras.Show()
-        End If
-    End Sub
+    ''Private Sub TDniClienteModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TDniClienteModif.KeyPress
+    ''If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
+    ''  e.Handled = True
+    ''  FrmSoloNumeros.Show()
+    ''End If
+    '' End Sub
 
-    Private Sub TDniClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TDniClienteModif.TextChanged
 
-    End Sub
-
-    Private Sub TDniClienteModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TDniClienteModif.KeyPress
-        If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
-            e.Handled = True
-            FrmSoloNumeros.Show()
-        End If
-    End Sub
-
-    Private Sub TEmailClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TEmailClienteModif.TextChanged
-
-    End Sub
 
     Private Sub TEmailClienteModif_LostFocus(sender As Object, e As EventArgs) Handles TEmailClienteModif.LostFocus
         Dim mail As String
@@ -102,16 +91,18 @@ Public Class FrmModificarCliente
     End Sub
 
     Private Sub TDniClienteModif_LostFocus(sender As Object, e As EventArgs) Handles TDniClienteModif.LostFocus
-        Dim cantidad As Integer
-        cantidad = Len(TDniClienteModif.Text)
-        If cantidad < 8 Then
-            FrmValidarDni.Show()
-            TDniClienteModif.Text = ""
-        ElseIf cantidad > 8 Then
-            FrmValidarDni.Show()
-            TDniClienteModif.Text = ""
-        End If
+        'Dim cantidad As Integer
+        'cantidad = Len(TDniClienteModif.Text)
+        'If cantidad < 8 Then
+        'FrmValidarDni.Show()
+        'TDniClienteModif.Text = ""
+        ' ElseIf cantidad > 8 Then
+        'FrmValidarDni.Show()
+        'DniClienteModif.Text = ""
+        'End If
     End Sub
 
+    Private Sub TDniClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TDniClienteModif.TextChanged
 
+    End Sub
 End Class

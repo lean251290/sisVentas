@@ -105,15 +105,15 @@ Public Class FrmModificarUsuario
     End Sub
 
     Private Sub TDniUsuarioModif_LostFocus(sender As Object, e As EventArgs) Handles TDniUsuarioModif.LostFocus
-        Dim cantidad As Integer
-        cantidad = Len(TDniUsuarioModif.Text)
-        If cantidad < 8 Then
-            FrmValidarDni.Show()
-            TDniUsuarioModif.Text = ""
-        ElseIf cantidad > 8 Then
-            FrmValidarDni.Show()
-            TDniUsuarioModif.Text = ""
-        End If
+        'Dim cantidad As Integer
+        '  cantidad = Len(TDniUsuarioModif.Text)
+        '  If cantidad < 8 Then
+        ' FrmValidarDni.Show()
+        '  TDniUsuarioModif.Text = ""
+        ' ElseIf cantidad > 8 Then
+        ' FrmValidarDni.Show()
+        ' TDniUsuarioModif.Text = ""
+        ' End If
     End Sub
 
 End Class

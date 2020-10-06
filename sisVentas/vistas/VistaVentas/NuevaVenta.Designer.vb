@@ -94,6 +94,7 @@ Partial Class NuevaVenta
         'DateTimePicker1
         '
         Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.DateTimePicker1.Cursor = System.Windows.Forms.Cursors.No
         Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.Location = New System.Drawing.Point(103, 264)

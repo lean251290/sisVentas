@@ -139,7 +139,7 @@ Partial Class FrmModificarCliente
         Me.TEmailClienteModif.Location = New System.Drawing.Point(193, 261)
         Me.TEmailClienteModif.Name = "TEmailClienteModif"
         Me.TEmailClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailClienteModif.TabIndex = 15
+        Me.TEmailClienteModif.TabIndex = 7
         '
         'TDireccionClienteModif
         '
@@ -149,38 +149,44 @@ Partial Class FrmModificarCliente
         Me.TDireccionClienteModif.Location = New System.Drawing.Point(193, 201)
         Me.TDireccionClienteModif.Name = "TDireccionClienteModif"
         Me.TDireccionClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionClienteModif.TabIndex = 14
+        Me.TDireccionClienteModif.TabIndex = 6
         '
         'TNombreClienteModif
         '
         Me.TNombreClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TNombreClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TNombreClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TNombreClienteModif.Cursor = System.Windows.Forms.Cursors.No
         Me.TNombreClienteModif.Location = New System.Drawing.Point(193, 76)
         Me.TNombreClienteModif.Name = "TNombreClienteModif"
+        Me.TNombreClienteModif.ReadOnly = True
         Me.TNombreClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreClienteModif.TabIndex = 13
+        Me.TNombreClienteModif.TabIndex = 4
         '
         'TApellidoClienteModif
         '
         Me.TApellidoClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TApellidoClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TApellidoClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TApellidoClienteModif.Cursor = System.Windows.Forms.Cursors.No
         Me.TApellidoClienteModif.Location = New System.Drawing.Point(193, 136)
         Me.TApellidoClienteModif.Name = "TApellidoClienteModif"
+        Me.TApellidoClienteModif.ReadOnly = True
         Me.TApellidoClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TApellidoClienteModif.TabIndex = 12
+        Me.TApellidoClienteModif.TabIndex = 5
         '
         'TDniClienteModif
         '
         Me.TDniClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TDniClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TDniClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TDniClienteModif.Cursor = System.Windows.Forms.Cursors.No
         Me.TDniClienteModif.Location = New System.Drawing.Point(193, 21)
         Me.TDniClienteModif.MaxLength = 15
         Me.TDniClienteModif.Name = "TDniClienteModif"
+        Me.TDniClienteModif.ReadOnly = True
         Me.TDniClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDniClienteModif.TabIndex = 11
+        Me.TDniClienteModif.TabIndex = 3
         '
         'LblDireccionModif
         '
@@ -261,7 +267,7 @@ Partial Class FrmModificarCliente
         Me.BtnCancelarCliente.Location = New System.Drawing.Point(542, 631)
         Me.BtnCancelarCliente.Name = "BtnCancelarCliente"
         Me.BtnCancelarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnCancelarCliente.TabIndex = 4
+        Me.BtnCancelarCliente.TabIndex = 1
         Me.BtnCancelarCliente.TabStop = False
         Me.BtnCancelarCliente.Text = "Cancelar"
         Me.BtnCancelarCliente.UseVisualStyleBackColor = True
@@ -280,7 +286,7 @@ Partial Class FrmModificarCliente
         Me.BtnActualizarCliente.Location = New System.Drawing.Point(439, 631)
         Me.BtnActualizarCliente.Name = "BtnActualizarCliente"
         Me.BtnActualizarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnActualizarCliente.TabIndex = 5
+        Me.BtnActualizarCliente.TabIndex = 0
         Me.BtnActualizarCliente.TabStop = False
         Me.BtnActualizarCliente.Text = "Actualizar"
         Me.BtnActualizarCliente.UseVisualStyleBackColor = True
@@ -303,7 +309,7 @@ Partial Class FrmModificarCliente
         Me.BtnAltaCliente.Location = New System.Drawing.Point(40, 631)
         Me.BtnAltaCliente.Name = "BtnAltaCliente"
         Me.BtnAltaCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnAltaCliente.TabIndex = 11
+        Me.BtnAltaCliente.TabIndex = 2
         Me.BtnAltaCliente.TabStop = False
         Me.BtnAltaCliente.Text = "Alta"
         Me.BtnAltaCliente.UseVisualStyleBackColor = True
