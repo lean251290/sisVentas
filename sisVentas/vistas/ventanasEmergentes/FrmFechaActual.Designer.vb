@@ -24,10 +24,10 @@ Partial Class FrmFechaActual
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PbFechaError = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnErroFecha = New System.Windows.Forms.Button()
+        Me.PbFechaError = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PbFechaError, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,28 +56,6 @@ Partial Class FrmFechaActual
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(400, 50)
         Me.Panel1.TabIndex = 4
-        '
-        'PbFechaError
-        '
-        Me.PbFechaError.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PbFechaError.Image = Global.sisVentas.My.Resources.Resources.close
-        Me.PbFechaError.Location = New System.Drawing.Point(353, 0)
-        Me.PbFechaError.Name = "PbFechaError"
-        Me.PbFechaError.Size = New System.Drawing.Size(47, 50)
-        Me.PbFechaError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PbFechaError.TabIndex = 4
-        Me.PbFechaError.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoAlerta
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(47, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
         '
         'Label2
         '
@@ -108,7 +86,29 @@ Partial Class FrmFechaActual
         Me.BtnErroFecha.Text = "Aceptar"
         Me.BtnErroFecha.UseVisualStyleBackColor = False
         '
-        'Form2
+        'PbFechaError
+        '
+        Me.PbFechaError.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PbFechaError.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PbFechaError.Location = New System.Drawing.Point(353, 0)
+        Me.PbFechaError.Name = "PbFechaError"
+        Me.PbFechaError.Size = New System.Drawing.Size(47, 50)
+        Me.PbFechaError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PbFechaError.TabIndex = 4
+        Me.PbFechaError.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoAlerta
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(47, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
+        'FrmFechaActual
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -118,8 +118,10 @@ Partial Class FrmFechaActual
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form2"
+        Me.Name = "FrmFechaActual"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
+        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PbFechaError, System.ComponentModel.ISupportInitialize).EndInit()

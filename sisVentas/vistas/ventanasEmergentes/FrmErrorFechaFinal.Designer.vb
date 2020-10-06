@@ -23,11 +23,11 @@ Partial Class FrmErrorFechaFinal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PbFechaErrorFinal = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnErroFechaFinal = New System.Windows.Forms.Button()
-        Me.PbFechaErrorFinal = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PbFechaErrorFinal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,6 +44,28 @@ Partial Class FrmErrorFechaFinal
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(400, 50)
         Me.Panel1.TabIndex = 7
+        '
+        'PbFechaErrorFinal
+        '
+        Me.PbFechaErrorFinal.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PbFechaErrorFinal.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PbFechaErrorFinal.Location = New System.Drawing.Point(353, 0)
+        Me.PbFechaErrorFinal.Name = "PbFechaErrorFinal"
+        Me.PbFechaErrorFinal.Size = New System.Drawing.Size(47, 50)
+        Me.PbFechaErrorFinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PbFechaErrorFinal.TabIndex = 4
+        Me.PbFechaErrorFinal.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoAlerta
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(47, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
         '
         'Label2
         '
@@ -86,29 +108,7 @@ Partial Class FrmErrorFechaFinal
         Me.BtnErroFechaFinal.Text = "Aceptar"
         Me.BtnErroFechaFinal.UseVisualStyleBackColor = False
         '
-        'PbFechaErrorFinal
-        '
-        Me.PbFechaErrorFinal.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PbFechaErrorFinal.Image = Global.sisVentas.My.Resources.Resources.close
-        Me.PbFechaErrorFinal.Location = New System.Drawing.Point(353, 0)
-        Me.PbFechaErrorFinal.Name = "PbFechaErrorFinal"
-        Me.PbFechaErrorFinal.Size = New System.Drawing.Size(47, 50)
-        Me.PbFechaErrorFinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PbFechaErrorFinal.TabIndex = 4
-        Me.PbFechaErrorFinal.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoAlerta
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(47, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
-        'Form2
+        'FrmErrorFechaFinal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -118,8 +118,10 @@ Partial Class FrmErrorFechaFinal
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form2"
+        Me.Name = "FrmErrorFechaFinal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
+        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PbFechaErrorFinal, System.ComponentModel.ISupportInitialize).EndInit()
