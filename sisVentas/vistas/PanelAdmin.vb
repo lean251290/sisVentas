@@ -481,7 +481,7 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub BtnVentas5_Click(sender As Object, e As EventArgs) Handles BtnVentasPorProducto.Click
-
+        ReporteVentaPorCliente.Show()
     End Sub
 
     Private Sub BtnVentas5_MouseEnter(sender As Object, e As EventArgs) Handles BtnVentasPorProducto.MouseEnter
