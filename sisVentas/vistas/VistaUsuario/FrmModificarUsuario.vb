@@ -115,4 +115,5 @@ Public Class FrmModificarUsuario
             TDniUsuarioModif.Text = ""
         End If
     End Sub
+
 End Class

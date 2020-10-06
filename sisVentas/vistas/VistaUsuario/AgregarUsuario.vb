@@ -133,4 +133,12 @@ Public Class Agregar_Usuario
             TDniUsuario.Text = ""
         End If
     End Sub
+
+    Private Sub TDireccionUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TDireccionUsuario.KeyPress
+        If Not ((Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Or
+           (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8)) Then
+            e.Handled = True
+            FrmNoCaracteresEspeciales.Show()
+        End If
+    End Sub
 End Class

@@ -38,4 +38,13 @@
     Private Sub BtnEliminarUsusario_Click(sender As Object, e As EventArgs) Handles BtnEliminarUsusario.Click
         FrmSiNoUser.Show()
     End Sub
+
+
+
+    Private Sub TBuscarUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBuscarUsuario.KeyPress
+        If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloLetras.Show()
+        End If
+    End Sub
 End Class

@@ -51,12 +51,8 @@
         End If
     End Sub
 
-    Private Sub TStockProd_TextChanged(sender As Object, e As EventArgs) Handles TStockProd.TextChanged
-
-    End Sub
-
     Private Sub TStockProd_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TStockProd.KeyPress
-        If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
+        If Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8) Then
             e.Handled = True
             FrmSoloNumeros.Show()
         End If

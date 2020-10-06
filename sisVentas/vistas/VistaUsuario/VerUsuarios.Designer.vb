@@ -86,9 +86,9 @@ Partial Class VerUsuarios
         Me.LBuscarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LBuscarUsuario.Location = New System.Drawing.Point(46, 41)
         Me.LBuscarUsuario.Name = "LBuscarUsuario"
-        Me.LBuscarUsuario.Size = New System.Drawing.Size(59, 20)
+        Me.LBuscarUsuario.Size = New System.Drawing.Size(68, 20)
         Me.LBuscarUsuario.TabIndex = 13
-        Me.LBuscarUsuario.Text = "Buscar"
+        Me.LBuscarUsuario.Text = "Usuario:"
         Me.LBuscarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DataGridView1

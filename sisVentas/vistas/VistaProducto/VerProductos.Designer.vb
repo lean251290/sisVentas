@@ -96,9 +96,9 @@ Partial Class VerProductos
         Me.LBuscarCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.LBuscarCliente.Location = New System.Drawing.Point(46, 46)
         Me.LBuscarCliente.Name = "LBuscarCliente"
-        Me.LBuscarCliente.Size = New System.Drawing.Size(59, 20)
+        Me.LBuscarCliente.Size = New System.Drawing.Size(77, 20)
         Me.LBuscarCliente.TabIndex = 0
-        Me.LBuscarCliente.Text = "Buscar"
+        Me.LBuscarCliente.Text = "Producto:"
         Me.LBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelVerProducto
