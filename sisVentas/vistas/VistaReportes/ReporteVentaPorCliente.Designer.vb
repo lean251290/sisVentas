@@ -234,6 +234,7 @@ Partial Class ReporteVentaPorCliente
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
+        Me.TopMost = True
         Me.PanelReportes.ResumeLayout(False)
         Me.PanelReportes.PerformLayout()
         CType(Me.PBReporteVentaXCliente, System.ComponentModel.ISupportInitialize).EndInit()

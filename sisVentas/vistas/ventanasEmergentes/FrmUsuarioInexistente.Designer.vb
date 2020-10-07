@@ -119,7 +119,9 @@ Partial Class FrmUsuarioInexistente
         Me.Controls.Add(Me.PnlUsuarioInexistente)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmUsuarioInexistente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
+        Me.TopMost = True
         Me.PnlUsuarioInexistente.ResumeLayout(False)
         Me.PnlUsuarioInexistente.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

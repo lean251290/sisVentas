@@ -26,6 +26,7 @@ Partial Class ReporteVentasPorFecha
         Me.LabelReporteVentas = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelReportesVentas = New System.Windows.Forms.Panel()
+        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -37,7 +38,6 @@ Partial Class ReporteVentasPorFecha
         Me.LblVentas = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReportesVentas.SuspendLayout()
@@ -101,6 +101,17 @@ Partial Class ReporteVentasPorFecha
         Me.PanelReportesVentas.Name = "PanelReportesVentas"
         Me.PanelReportesVentas.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportesVentas.TabIndex = 8
+        '
+        'PictureBuscarUsuario
+        '
+        Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
+        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(540, 23)
+        Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
+        Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
+        Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBuscarUsuario.TabIndex = 21
+        Me.PictureBuscarUsuario.TabStop = False
         '
         'TextBox1
         '
@@ -226,17 +237,6 @@ Partial Class ReporteVentasPorFecha
         Me.Label5.Text = "Reporte Ventas"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'PictureBuscarUsuario
-        '
-        Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(540, 23)
-        Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
-        Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
-        Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBuscarUsuario.TabIndex = 21
-        Me.PictureBuscarUsuario.TabStop = False
-        '
         'ReporteVentasPorFecha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -250,6 +250,7 @@ Partial Class ReporteVentasPorFecha
         Me.Name = "ReporteVentasPorFecha"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
+        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

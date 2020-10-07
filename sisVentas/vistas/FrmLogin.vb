@@ -64,7 +64,7 @@ Public Class Login
             PanelAdmin.BotonClientes.Hide()
             PanelAdmin.Show()
         Else
-            MsgBox("no existen usuarios", vbOK, "error")
+            FrmUsuarioInexistente.Show()
         End If
 
     End Sub

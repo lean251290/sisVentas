@@ -148,7 +148,7 @@ Partial Class Login
         Me.BtnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSesion.ForeColor = System.Drawing.Color.White
-        Me.BtnSesion.Location = New System.Drawing.Point(30, 331)
+        Me.BtnSesion.Location = New System.Drawing.Point(27, 331)
         Me.BtnSesion.Name = "BtnSesion"
         Me.BtnSesion.Size = New System.Drawing.Size(220, 42)
         Me.BtnSesion.TabIndex = 7

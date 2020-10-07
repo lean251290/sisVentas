@@ -303,7 +303,7 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
-
+        Me.Close()
     End Sub
 
     Private Sub BtnSalir_MouseEnter(sender As Object, e As EventArgs) Handles BtnSalir.MouseEnter

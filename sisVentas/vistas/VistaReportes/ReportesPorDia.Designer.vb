@@ -24,12 +24,12 @@ Partial Class ReportesPorDia
     Private Sub InitializeComponent()
         Me.LReportes = New System.Windows.Forms.Label()
         Me.PanelReportesVentasXdia = New System.Windows.Forms.Panel()
+        Me.PanelVentasXDia = New System.Windows.Forms.Panel()
+        Me.DTPVentasXDia = New System.Windows.Forms.DateTimePicker()
+        Me.LblVentasXdia = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PBVentasXDia = New System.Windows.Forms.PictureBox()
         Me.LabelVentasXdia = New System.Windows.Forms.Label()
-        Me.LblVentasXdia = New System.Windows.Forms.Label()
-        Me.DTPVentasXDia = New System.Windows.Forms.DateTimePicker()
-        Me.PanelVentasXDia = New System.Windows.Forms.Panel()
         Me.PanelReportesVentasXdia.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PBVentasXDia, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,6 +62,36 @@ Partial Class ReportesPorDia
         Me.PanelReportesVentasXdia.Name = "PanelReportesVentasXdia"
         Me.PanelReportesVentasXdia.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportesVentasXdia.TabIndex = 6
+        '
+        'PanelVentasXDia
+        '
+        Me.PanelVentasXDia.BackColor = System.Drawing.Color.White
+        Me.PanelVentasXDia.ForeColor = System.Drawing.Color.Black
+        Me.PanelVentasXDia.Location = New System.Drawing.Point(50, 92)
+        Me.PanelVentasXDia.Name = "PanelVentasXDia"
+        Me.PanelVentasXDia.Size = New System.Drawing.Size(500, 347)
+        Me.PanelVentasXDia.TabIndex = 19
+        '
+        'DTPVentasXDia
+        '
+        Me.DTPVentasXDia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPVentasXDia.Location = New System.Drawing.Point(88, 39)
+        Me.DTPVentasXDia.Name = "DTPVentasXDia"
+        Me.DTPVentasXDia.Size = New System.Drawing.Size(99, 20)
+        Me.DTPVentasXDia.TabIndex = 18
+        '
+        'LblVentasXdia
+        '
+        Me.LblVentasXdia.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.LblVentasXdia.AutoSize = True
+        Me.LblVentasXdia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVentasXdia.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LblVentasXdia.Location = New System.Drawing.Point(41, 40)
+        Me.LblVentasXdia.Name = "LblVentasXdia"
+        Me.LblVentasXdia.Size = New System.Drawing.Size(41, 20)
+        Me.LblVentasXdia.TabIndex = 16
+        Me.LblVentasXdia.Text = "Día :"
+        Me.LblVentasXdia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel1
         '
@@ -97,36 +127,6 @@ Partial Class ReportesPorDia
         Me.LabelVentasXdia.Text = "Ventas por día"
         Me.LabelVentasXdia.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'LblVentasXdia
-        '
-        Me.LblVentasXdia.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblVentasXdia.AutoSize = True
-        Me.LblVentasXdia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblVentasXdia.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblVentasXdia.Location = New System.Drawing.Point(41, 40)
-        Me.LblVentasXdia.Name = "LblVentasXdia"
-        Me.LblVentasXdia.Size = New System.Drawing.Size(41, 20)
-        Me.LblVentasXdia.TabIndex = 16
-        Me.LblVentasXdia.Text = "Día :"
-        Me.LblVentasXdia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'DTPVentasXDia
-        '
-        Me.DTPVentasXDia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPVentasXDia.Location = New System.Drawing.Point(88, 39)
-        Me.DTPVentasXDia.Name = "DTPVentasXDia"
-        Me.DTPVentasXDia.Size = New System.Drawing.Size(99, 20)
-        Me.DTPVentasXDia.TabIndex = 18
-        '
-        'PanelVentasXDia
-        '
-        Me.PanelVentasXDia.BackColor = System.Drawing.Color.White
-        Me.PanelVentasXDia.ForeColor = System.Drawing.Color.Black
-        Me.PanelVentasXDia.Location = New System.Drawing.Point(50, 92)
-        Me.PanelVentasXDia.Name = "PanelVentasXDia"
-        Me.PanelVentasXDia.Size = New System.Drawing.Size(500, 347)
-        Me.PanelVentasXDia.TabIndex = 19
-        '
         'ReportesPorDia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -140,6 +140,7 @@ Partial Class ReportesPorDia
         Me.Name = "ReportesPorDia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
+        Me.TopMost = True
         Me.PanelReportesVentasXdia.ResumeLayout(False)
         Me.PanelReportesVentasXdia.PerformLayout()
         Me.Panel1.ResumeLayout(False)
