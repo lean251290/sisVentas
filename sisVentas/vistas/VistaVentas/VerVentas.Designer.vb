@@ -24,14 +24,14 @@ Partial Class VerVentas
     Private Sub InitializeComponent()
         Me.LabelVerVentas = New System.Windows.Forms.Label()
         Me.PanelVerVentas = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DTPVentasVerHasta = New System.Windows.Forms.DateTimePicker()
         Me.DTPVentasVerDesde = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelVerVentas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +69,48 @@ Partial Class VerVentas
         Me.PanelVerVentas.Name = "PanelVerVentas"
         Me.PanelVerVentas.Size = New System.Drawing.Size(600, 530)
         Me.PanelVerVentas.TabIndex = 8
+        '
+        'DTPVentasVerHasta
+        '
+        Me.DTPVentasVerHasta.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DTPVentasVerHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPVentasVerHasta.Location = New System.Drawing.Point(359, 47)
+        Me.DTPVentasVerHasta.Name = "DTPVentasVerHasta"
+        Me.DTPVentasVerHasta.Size = New System.Drawing.Size(99, 20)
+        Me.DTPVentasVerHasta.TabIndex = 22
+        '
+        'DTPVentasVerDesde
+        '
+        Me.DTPVentasVerDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPVentasVerDesde.Location = New System.Drawing.Point(112, 47)
+        Me.DTPVentasVerDesde.Name = "DTPVentasVerDesde"
+        Me.DTPVentasVerDesde.Size = New System.Drawing.Size(99, 20)
+        Me.DTPVentasVerDesde.TabIndex = 21
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label3.Location = New System.Drawing.Point(297, 47)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 20)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "Hasta:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label2.Location = New System.Drawing.Point(46, 47)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(60, 20)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Desde:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DataGridView1
         '
@@ -113,48 +155,6 @@ Partial Class VerVentas
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
-        '
-        'DTPVentasVerHasta
-        '
-        Me.DTPVentasVerHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPVentasVerHasta.Location = New System.Drawing.Point(359, 47)
-        Me.DTPVentasVerHasta.Name = "DTPVentasVerHasta"
-        Me.DTPVentasVerHasta.Size = New System.Drawing.Size(99, 20)
-        Me.DTPVentasVerHasta.TabIndex = 22
-        '
-        'DTPVentasVerDesde
-        '
-        Me.DTPVentasVerDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPVentasVerDesde.Location = New System.Drawing.Point(112, 47)
-        Me.DTPVentasVerDesde.Name = "DTPVentasVerDesde"
-        Me.DTPVentasVerDesde.Size = New System.Drawing.Size(99, 20)
-        Me.DTPVentasVerDesde.TabIndex = 21
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(297, 47)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 20)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = "Hasta:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(46, 47)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 20)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Desde:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'VerVentas
         '
