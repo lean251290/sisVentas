@@ -37,9 +37,11 @@ Partial Class ReporteVentasPorFecha
         Me.LblVentas = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReportesVentas.SuspendLayout()
+        CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -84,6 +86,7 @@ Partial Class ReporteVentasPorFecha
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportesVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportesVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportesVentas.Controls.Add(Me.PictureBuscarUsuario)
         Me.PanelReportesVentas.Controls.Add(Me.TextBox1)
         Me.PanelReportesVentas.Controls.Add(Me.Label4)
         Me.PanelReportesVentas.Controls.Add(Me.DateTimePicker2)
@@ -125,7 +128,7 @@ Partial Class ReporteVentasPorFecha
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(377, 39)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(383, 38)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
         Me.DateTimePicker2.TabIndex = 18
@@ -133,7 +136,7 @@ Partial Class ReporteVentasPorFecha
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(116, 38)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(122, 37)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
         Me.DateTimePicker1.TabIndex = 17
@@ -144,7 +147,7 @@ Partial Class ReporteVentasPorFecha
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(315, 39)
+        Me.Label3.Location = New System.Drawing.Point(321, 38)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 20)
         Me.Label3.TabIndex = 16
@@ -157,7 +160,7 @@ Partial Class ReporteVentasPorFecha
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(54, 38)
+        Me.Label2.Location = New System.Drawing.Point(60, 37)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(60, 20)
         Me.Label2.TabIndex = 15
@@ -223,6 +226,17 @@ Partial Class ReporteVentasPorFecha
         Me.Label5.Text = "Reporte Ventas"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'PictureBuscarUsuario
+        '
+        Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
+        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(540, 23)
+        Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
+        Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
+        Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBuscarUsuario.TabIndex = 21
+        Me.PictureBuscarUsuario.TabStop = False
+        '
         'ReporteVentasPorFecha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -241,6 +255,7 @@ Partial Class ReporteVentasPorFecha
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelReportesVentas.ResumeLayout(False)
         Me.PanelReportesVentas.PerformLayout()
+        CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -261,4 +276,5 @@ Partial Class ReporteVentasPorFecha
     Friend WithEvents Label4 As Label
     Friend WithEvents LabelReporteVentas As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents PictureBuscarUsuario As PictureBox
 End Class

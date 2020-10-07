@@ -23,12 +23,16 @@ Partial Class ReportesPorDia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.LReportes = New System.Windows.Forms.Label()
-        Me.PanelReportes = New System.Windows.Forms.Panel()
+        Me.PanelReportesVentasXdia = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PBVentasXDia = New System.Windows.Forms.PictureBox()
+        Me.LabelVentasXdia = New System.Windows.Forms.Label()
+        Me.LblVentasXdia = New System.Windows.Forms.Label()
+        Me.DTPVentasXDia = New System.Windows.Forms.DateTimePicker()
+        Me.PanelVentasXDia = New System.Windows.Forms.Panel()
+        Me.PanelReportesVentasXdia.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBVentasXDia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LReportes
@@ -44,21 +48,24 @@ Partial Class ReportesPorDia
         Me.LReportes.Text = "Reportes"
         Me.LReportes.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'PanelReportes
+        'PanelReportesVentasXdia
         '
-        Me.PanelReportes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.PanelReportesVentasXdia.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.PanelReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelReportes.Location = New System.Drawing.Point(50, 90)
-        Me.PanelReportes.Name = "PanelReportes"
-        Me.PanelReportes.Size = New System.Drawing.Size(600, 530)
-        Me.PanelReportes.TabIndex = 6
+        Me.PanelReportesVentasXdia.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelReportesVentasXdia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportesVentasXdia.Controls.Add(Me.PanelVentasXDia)
+        Me.PanelReportesVentasXdia.Controls.Add(Me.DTPVentasXDia)
+        Me.PanelReportesVentasXdia.Controls.Add(Me.LblVentasXdia)
+        Me.PanelReportesVentasXdia.Location = New System.Drawing.Point(50, 90)
+        Me.PanelReportesVentasXdia.Name = "PanelReportesVentasXdia"
+        Me.PanelReportesVentasXdia.Size = New System.Drawing.Size(600, 530)
+        Me.PanelReportesVentasXdia.TabIndex = 6
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.PBVentasXDia)
         Me.Panel1.Controls.Add(Me.LReportes)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -66,29 +73,59 @@ Partial Class ReportesPorDia
         Me.Panel1.Size = New System.Drawing.Size(680, 50)
         Me.Panel1.TabIndex = 7
         '
-        'PictureBox1
+        'PBVentasXDia
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.close
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(52, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.PBVentasXDia.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PBVentasXDia.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PBVentasXDia.Location = New System.Drawing.Point(0, 0)
+        Me.PBVentasXDia.Name = "PBVentasXDia"
+        Me.PBVentasXDia.Size = New System.Drawing.Size(52, 50)
+        Me.PBVentasXDia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PBVentasXDia.TabIndex = 2
+        Me.PBVentasXDia.TabStop = False
         '
-        'Label1
+        'LabelVentasXdia
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(0, 50)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(151, 25)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Ventas por día"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LabelVentasXdia.AutoSize = True
+        Me.LabelVentasXdia.Dock = System.Windows.Forms.DockStyle.Left
+        Me.LabelVentasXdia.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelVentasXdia.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LabelVentasXdia.Location = New System.Drawing.Point(0, 50)
+        Me.LabelVentasXdia.Name = "LabelVentasXdia"
+        Me.LabelVentasXdia.Size = New System.Drawing.Size(151, 25)
+        Me.LabelVentasXdia.TabIndex = 8
+        Me.LabelVentasXdia.Text = "Ventas por día"
+        Me.LabelVentasXdia.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LblVentasXdia
+        '
+        Me.LblVentasXdia.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.LblVentasXdia.AutoSize = True
+        Me.LblVentasXdia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVentasXdia.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LblVentasXdia.Location = New System.Drawing.Point(41, 40)
+        Me.LblVentasXdia.Name = "LblVentasXdia"
+        Me.LblVentasXdia.Size = New System.Drawing.Size(41, 20)
+        Me.LblVentasXdia.TabIndex = 16
+        Me.LblVentasXdia.Text = "Día :"
+        Me.LblVentasXdia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'DTPVentasXDia
+        '
+        Me.DTPVentasXDia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPVentasXDia.Location = New System.Drawing.Point(88, 39)
+        Me.DTPVentasXDia.Name = "DTPVentasXDia"
+        Me.DTPVentasXDia.Size = New System.Drawing.Size(99, 20)
+        Me.DTPVentasXDia.TabIndex = 18
+        '
+        'PanelVentasXDia
+        '
+        Me.PanelVentasXDia.BackColor = System.Drawing.Color.White
+        Me.PanelVentasXDia.ForeColor = System.Drawing.Color.Black
+        Me.PanelVentasXDia.Location = New System.Drawing.Point(50, 92)
+        Me.PanelVentasXDia.Name = "PanelVentasXDia"
+        Me.PanelVentasXDia.Size = New System.Drawing.Size(500, 347)
+        Me.PanelVentasXDia.TabIndex = 19
         '
         'ReportesPorDia
         '
@@ -96,24 +133,29 @@ Partial Class ReportesPorDia
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LabelVentasXdia)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.PanelReportes)
+        Me.Controls.Add(Me.PanelReportesVentasXdia)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ReportesPorDia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
+        Me.PanelReportesVentasXdia.ResumeLayout(False)
+        Me.PanelReportesVentasXdia.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBVentasXDia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents LReportes As Label
-    Friend WithEvents PanelReportes As Panel
+    Friend WithEvents PanelReportesVentasXdia As Panel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents PBVentasXDia As PictureBox
+    Friend WithEvents LabelVentasXdia As Label
+    Friend WithEvents LblVentasXdia As Label
+    Friend WithEvents DTPVentasXDia As DateTimePicker
+    Friend WithEvents PanelVentasXDia As Panel
 End Class

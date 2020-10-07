@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class VentaPorUsuario
+Partial Class PanelRepoVentaXUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -27,9 +27,13 @@ Partial Class VentaPorUsuario
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelReportesVenta = New System.Windows.Forms.Panel()
+        Me.DTPVentaXUsuarioHasta = New System.Windows.Forms.DateTimePicker()
+        Me.DTPVentaXUsuarioDesde = New System.Windows.Forms.DateTimePicker()
+        Me.LblHastaVentaXUsuario = New System.Windows.Forms.Label()
+        Me.LblDesdeVentaXUsuario = New System.Windows.Forms.Label()
         Me.PBUsuarioReportes = New System.Windows.Forms.PictureBox()
         Me.TbReporteVentaXUsuario = New System.Windows.Forms.TextBox()
-        Me.TexBoxTotalUsuarios = New System.Windows.Forms.TextBox()
+        Me.TexBoxTotalVentaXUsuarios = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.PanelReporteVentaXUsuario = New System.Windows.Forms.Panel()
@@ -83,9 +87,13 @@ Partial Class VentaPorUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportesVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportesVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportesVenta.Controls.Add(Me.DTPVentaXUsuarioHasta)
+        Me.PanelReportesVenta.Controls.Add(Me.DTPVentaXUsuarioDesde)
+        Me.PanelReportesVenta.Controls.Add(Me.LblHastaVentaXUsuario)
+        Me.PanelReportesVenta.Controls.Add(Me.LblDesdeVentaXUsuario)
         Me.PanelReportesVenta.Controls.Add(Me.PBUsuarioReportes)
         Me.PanelReportesVenta.Controls.Add(Me.TbReporteVentaXUsuario)
-        Me.PanelReportesVenta.Controls.Add(Me.TexBoxTotalUsuarios)
+        Me.PanelReportesVenta.Controls.Add(Me.TexBoxTotalVentaXUsuarios)
         Me.PanelReportesVenta.Controls.Add(Me.Label1)
         Me.PanelReportesVenta.Controls.Add(Me.LblNombre)
         Me.PanelReportesVenta.Controls.Add(Me.PanelReporteVentaXUsuario)
@@ -93,6 +101,48 @@ Partial Class VentaPorUsuario
         Me.PanelReportesVenta.Name = "PanelReportesVenta"
         Me.PanelReportesVenta.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportesVenta.TabIndex = 7
+        '
+        'DTPVentaXUsuarioHasta
+        '
+        Me.DTPVentaXUsuarioHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPVentaXUsuarioHasta.Location = New System.Drawing.Point(378, 61)
+        Me.DTPVentaXUsuarioHasta.Name = "DTPVentaXUsuarioHasta"
+        Me.DTPVentaXUsuarioHasta.Size = New System.Drawing.Size(99, 20)
+        Me.DTPVentaXUsuarioHasta.TabIndex = 22
+        '
+        'DTPVentaXUsuarioDesde
+        '
+        Me.DTPVentaXUsuarioDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPVentaXUsuarioDesde.Location = New System.Drawing.Point(117, 60)
+        Me.DTPVentaXUsuarioDesde.Name = "DTPVentaXUsuarioDesde"
+        Me.DTPVentaXUsuarioDesde.Size = New System.Drawing.Size(99, 20)
+        Me.DTPVentaXUsuarioDesde.TabIndex = 21
+        '
+        'LblHastaVentaXUsuario
+        '
+        Me.LblHastaVentaXUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.LblHastaVentaXUsuario.AutoSize = True
+        Me.LblHastaVentaXUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHastaVentaXUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LblHastaVentaXUsuario.Location = New System.Drawing.Point(316, 61)
+        Me.LblHastaVentaXUsuario.Name = "LblHastaVentaXUsuario"
+        Me.LblHastaVentaXUsuario.Size = New System.Drawing.Size(56, 20)
+        Me.LblHastaVentaXUsuario.TabIndex = 20
+        Me.LblHastaVentaXUsuario.Text = "Hasta:"
+        Me.LblHastaVentaXUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LblDesdeVentaXUsuario
+        '
+        Me.LblDesdeVentaXUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.LblDesdeVentaXUsuario.AutoSize = True
+        Me.LblDesdeVentaXUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDesdeVentaXUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.LblDesdeVentaXUsuario.Location = New System.Drawing.Point(55, 60)
+        Me.LblDesdeVentaXUsuario.Name = "LblDesdeVentaXUsuario"
+        Me.LblDesdeVentaXUsuario.Size = New System.Drawing.Size(60, 20)
+        Me.LblDesdeVentaXUsuario.TabIndex = 19
+        Me.LblDesdeVentaXUsuario.Text = "Desde:"
+        Me.LblDesdeVentaXUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PBUsuarioReportes
         '
@@ -112,15 +162,15 @@ Partial Class VentaPorUsuario
         Me.TbReporteVentaXUsuario.Size = New System.Drawing.Size(330, 20)
         Me.TbReporteVentaXUsuario.TabIndex = 15
         '
-        'TexBoxTotalUsuarios
+        'TexBoxTotalVentaXUsuarios
         '
-        Me.TexBoxTotalUsuarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TexBoxTotalUsuarios.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TexBoxTotalUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TexBoxTotalUsuarios.Location = New System.Drawing.Point(434, 484)
-        Me.TexBoxTotalUsuarios.Name = "TexBoxTotalUsuarios"
-        Me.TexBoxTotalUsuarios.Size = New System.Drawing.Size(120, 13)
-        Me.TexBoxTotalUsuarios.TabIndex = 14
+        Me.TexBoxTotalVentaXUsuarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TexBoxTotalVentaXUsuarios.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TexBoxTotalVentaXUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TexBoxTotalVentaXUsuarios.Location = New System.Drawing.Point(434, 484)
+        Me.TexBoxTotalVentaXUsuarios.Name = "TexBoxTotalVentaXUsuarios"
+        Me.TexBoxTotalVentaXUsuarios.Size = New System.Drawing.Size(120, 13)
+        Me.TexBoxTotalVentaXUsuarios.TabIndex = 14
         '
         'Label1
         '
@@ -151,9 +201,9 @@ Partial Class VentaPorUsuario
         '
         Me.PanelReporteVentaXUsuario.BackColor = System.Drawing.Color.White
         Me.PanelReporteVentaXUsuario.ForeColor = System.Drawing.Color.Black
-        Me.PanelReporteVentaXUsuario.Location = New System.Drawing.Point(54, 52)
+        Me.PanelReporteVentaXUsuario.Location = New System.Drawing.Point(54, 114)
         Me.PanelReporteVentaXUsuario.Name = "PanelReporteVentaXUsuario"
-        Me.PanelReporteVentaXUsuario.Size = New System.Drawing.Size(500, 400)
+        Me.PanelReporteVentaXUsuario.Size = New System.Drawing.Size(500, 338)
         Me.PanelReporteVentaXUsuario.TabIndex = 0
         '
         'Label2
@@ -175,7 +225,7 @@ Partial Class VentaPorUsuario
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
-        'VentaPorUsuario
+        'PanelRepoVentaXUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -185,7 +235,7 @@ Partial Class VentaPorUsuario
         Me.Controls.Add(Me.PanelReportesVenta)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "VentaPorUsuario"
+        Me.Name = "PanelRepoVentaXUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form3"
         Me.Panel1.ResumeLayout(False)
@@ -206,9 +256,13 @@ Partial Class VentaPorUsuario
     Friend WithEvents PanelReporteVentaXUsuario As Panel
     Friend WithEvents LblNombre As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TexBoxTotalUsuarios As TextBox
+    Friend WithEvents TexBoxTotalVentaXUsuarios As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TbReporteVentaXUsuario As TextBox
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents PBUsuarioReportes As PictureBox
+    Friend WithEvents DTPVentaXUsuarioHasta As DateTimePicker
+    Friend WithEvents DTPVentaXUsuarioDesde As DateTimePicker
+    Friend WithEvents LblHastaVentaXUsuario As Label
+    Friend WithEvents LblDesdeVentaXUsuario As Label
 End Class

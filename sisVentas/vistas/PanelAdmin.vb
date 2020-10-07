@@ -501,6 +501,6 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub BtnVentasPorUser_Click(sender As Object, e As EventArgs) Handles BtnVentasPorUser.Click
-        VentaPorUsuario.Show()
+        PanelRepoVentaXUsuario.Show()
     End Sub
 End Class

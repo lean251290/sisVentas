@@ -24,12 +24,14 @@ Partial Class VerVentas
     Private Sub InitializeComponent()
         Me.LabelVerVentas = New System.Windows.Forms.Label()
         Me.PanelVerVentas = New System.Windows.Forms.Panel()
-        Me.TBuscarUsuario = New System.Windows.Forms.TextBox()
-        Me.LBuscarUsuario = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DTPVentasVerHasta = New System.Windows.Forms.DateTimePicker()
+        Me.DTPVentasVerDesde = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelVerVentas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,37 +59,16 @@ Partial Class VerVentas
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelVerVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelVerVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelVerVentas.Controls.Add(Me.TBuscarUsuario)
-        Me.PanelVerVentas.Controls.Add(Me.LBuscarUsuario)
+        Me.PanelVerVentas.Controls.Add(Me.DTPVentasVerHasta)
+        Me.PanelVerVentas.Controls.Add(Me.DTPVentasVerDesde)
+        Me.PanelVerVentas.Controls.Add(Me.Label3)
+        Me.PanelVerVentas.Controls.Add(Me.Label2)
         Me.PanelVerVentas.Controls.Add(Me.DataGridView1)
         Me.PanelVerVentas.Controls.Add(Me.PictureBuscarUsuario)
         Me.PanelVerVentas.Location = New System.Drawing.Point(50, 90)
         Me.PanelVerVentas.Name = "PanelVerVentas"
         Me.PanelVerVentas.Size = New System.Drawing.Size(600, 530)
         Me.PanelVerVentas.TabIndex = 8
-        '
-        'TBuscarUsuario
-        '
-        Me.TBuscarUsuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TBuscarUsuario.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarUsuario.Location = New System.Drawing.Point(111, 51)
-        Me.TBuscarUsuario.Name = "TBuscarUsuario"
-        Me.TBuscarUsuario.Size = New System.Drawing.Size(389, 13)
-        Me.TBuscarUsuario.TabIndex = 15
-        '
-        'LBuscarUsuario
-        '
-        Me.LBuscarUsuario.AutoSize = True
-        Me.LBuscarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBuscarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LBuscarUsuario.Location = New System.Drawing.Point(46, 46)
-        Me.LBuscarUsuario.Name = "LBuscarUsuario"
-        Me.LBuscarUsuario.Size = New System.Drawing.Size(59, 20)
-        Me.LBuscarUsuario.TabIndex = 13
-        Me.LBuscarUsuario.Text = "Buscar"
-        Me.LBuscarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DataGridView1
         '
@@ -96,16 +77,16 @@ Partial Class VerVentas
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(50, 97)
+        Me.DataGridView1.Location = New System.Drawing.Point(50, 101)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(517, 378)
+        Me.DataGridView1.Size = New System.Drawing.Size(517, 386)
         Me.DataGridView1.TabIndex = 11
         '
         'PictureBuscarUsuario
         '
         Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(531, 31)
+        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(517, 32)
         Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
         Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
         Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -133,6 +114,48 @@ Partial Class VerVentas
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
+        'DTPVentasVerHasta
+        '
+        Me.DTPVentasVerHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPVentasVerHasta.Location = New System.Drawing.Point(359, 47)
+        Me.DTPVentasVerHasta.Name = "DTPVentasVerHasta"
+        Me.DTPVentasVerHasta.Size = New System.Drawing.Size(99, 20)
+        Me.DTPVentasVerHasta.TabIndex = 22
+        '
+        'DTPVentasVerDesde
+        '
+        Me.DTPVentasVerDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPVentasVerDesde.Location = New System.Drawing.Point(112, 47)
+        Me.DTPVentasVerDesde.Name = "DTPVentasVerDesde"
+        Me.DTPVentasVerDesde.Size = New System.Drawing.Size(99, 20)
+        Me.DTPVentasVerDesde.TabIndex = 21
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label3.Location = New System.Drawing.Point(297, 47)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 20)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "Hasta:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label2.Location = New System.Drawing.Point(46, 47)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(60, 20)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Desde:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'VerVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -156,10 +179,12 @@ Partial Class VerVentas
     End Sub
     Friend WithEvents LabelVerVentas As Label
     Friend WithEvents PanelVerVentas As Panel
-    Friend WithEvents TBuscarUsuario As TextBox
-    Friend WithEvents LBuscarUsuario As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents PictureBuscarUsuario As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DTPVentasVerHasta As DateTimePicker
+    Friend WithEvents DTPVentasVerDesde As DateTimePicker
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
 End Class
