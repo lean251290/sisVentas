@@ -34,14 +34,37 @@ Public Class Login
 
     Private Sub BtnSesion_Click(sender As Object, e As EventArgs) Handles BtnSesion.Click
         Dim mail As String
+        Dim admin As String
+        Dim vendedor As String
+        Dim gerente As String
+        vendedor = "vendedor@gmail.com"
+        gerente = "gerente@gmail.com"
+        admin = "admin@gmail.com"
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
         If TxtUser.Text = "" And TxtPass.Text = "" Then
             FrmErrorLogin.Show()
         ElseIf Not (Regex.IsMatch(TxtUser.Text, mail)) Then
             FrmErrorMail.Show()
-        Else
+        ElseIf TxtUser.Text = admin Then
             Me.Hide()
+            PanelAdmin.BotonClientes.Hide()
+            PanelAdmin.BotonVentas.Hide()
             PanelAdmin.Show()
+        ElseIf TxtUser.Text = vendedor Then
+            Me.Hide()
+            PanelAdmin.BotonUsuarios.Hide()
+            PanelAdmin.BotonProductos.Hide()
+            PanelAdmin.BotonReportes.Hide()
+            PanelAdmin.Show()
+        ElseIf TxtUser.Text = gerente Then
+            Me.Hide()
+            PanelAdmin.BotonUsuarios.Hide()
+            PanelAdmin.BotonProductos.Hide()
+            PanelAdmin.BotonVentas.Hide()
+            PanelAdmin.BotonClientes.Hide()
+            PanelAdmin.Show()
+        Else
+            MsgBox("no existen usuarios", vbOK, "error")
         End If
 
     End Sub
