@@ -10,18 +10,15 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class usuarios
-    Public Property id_user As Integer
+Partial Public Class tblCliente
+    Public Property id_cliente As Integer
     Public Property nombre As String
     Public Property apellido As String
-    Public Property dni As Nullable(Of Integer)
-    Public Property tipo As Nullable(Of Integer)
-    Public Property estado As Nullable(Of Integer)
+    Public Property dni As String
     Public Property correo As String
     Public Property direccion As String
-    Public Property pass As String
-    Public Property imagen As Byte()
+    Public Property telefono As String
 
-    Public Overridable Property cabecera_venta As ICollection(Of cabecera_venta) = New HashSet(Of cabecera_venta)
+    Public Overridable Property tblCabecera As ICollection(Of tblCabecera) = New HashSet(Of tblCabecera)
 
 End Class

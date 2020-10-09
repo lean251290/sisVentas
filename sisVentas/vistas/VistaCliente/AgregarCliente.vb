@@ -120,4 +120,6 @@ Public Class AgregarCliente
             FrmNoCaracteresEspeciales.Show()
         End If
     End Sub
+
+
 End Class

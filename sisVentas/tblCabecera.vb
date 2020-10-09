@@ -10,10 +10,15 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class categoria
-    Public Property id_categoria As Integer
-    Public Property descripcion As String
+Partial Public Class tblCabecera
+    Public Property id_venta As Integer
+    Public Property fecha As Nullable(Of Date)
+    Public Property total As Nullable(Of Decimal)
+    Public Property id_user As Nullable(Of Integer)
+    Public Property id_cliente As Nullable(Of Integer)
 
-    Public Overridable Property productos As ICollection(Of productos) = New HashSet(Of productos)
+    Public Overridable Property tblCliente As tblCliente
+    Public Overridable Property tblUsuarios As tblUsuarios
+    Public Overridable Property tblDetalle As ICollection(Of tblDetalle) = New HashSet(Of tblDetalle)
 
 End Class

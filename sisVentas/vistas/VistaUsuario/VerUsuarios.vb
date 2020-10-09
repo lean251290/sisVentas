@@ -47,4 +47,13 @@
             FrmSoloLetras.Show()
         End If
     End Sub
+
+    Private Sub cargarGridUser()
+        Dim users As New Usuarios()
+        users.TraerUser(DataGridView1)
+    End Sub
+
+    Private Sub VerUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarGridUser()
+    End Sub
 End Class

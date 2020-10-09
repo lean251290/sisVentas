@@ -11,24 +11,24 @@ Imports System
 Imports System.Data.Entity
 Imports System.Data.Entity.Infrastructure
 
-Partial Public Class taller2Entities
+Partial Public Class SisVentasEntities
     Inherits DbContext
 
     Public Sub New()
-        MyBase.New("name=taller2Entities")
+        MyBase.New("name=SisVentasEntities")
     End Sub
 
     Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
         Throw New UnintentionalCodeFirstException()
     End Sub
 
-    Public Overridable Property cabecera_venta() As DbSet(Of cabecera_venta)
-    Public Overridable Property categoria() As DbSet(Of categoria)
-    Public Overridable Property clientes() As DbSet(Of VerClientes)
-    Public Overridable Property detalle_venta() As DbSet(Of detalle_venta)
-    Public Overridable Property productos() As DbSet(Of productos)
-    Public Overridable Property proveedores() As DbSet(Of proveedores)
     Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
-    Public Overridable Property usuarios() As DbSet(Of usuarios)
+    Public Overridable Property tblCabecera() As DbSet(Of tblCabecera)
+    Public Overridable Property tblCategoria() As DbSet(Of tblCategoria)
+    Public Overridable Property tblCliente() As DbSet(Of tblCliente)
+    Public Overridable Property tblDetalle() As DbSet(Of tblDetalle)
+    Public Overridable Property tblProducto() As DbSet(Of tblProducto)
+    Public Overridable Property tblProveedores() As DbSet(Of tblProveedores)
+    Public Overridable Property tblUsuarios() As DbSet(Of tblUsuarios)
 
 End Class

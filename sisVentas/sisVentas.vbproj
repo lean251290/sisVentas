@@ -88,25 +88,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cabecera_venta.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="categoria.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Clases\UserClass.vb" />
-    <Compile Include="clientes.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Clases\Usuarios.vb" />
     <Compile Include="CustomControl1.Designer.vb">
       <DependentUpon>CustomControl1.vb</DependentUpon>
     </Compile>
     <Compile Include="CustomControl1.vb">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="detalle_venta.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -143,16 +130,28 @@
     <Compile Include="PanelVacio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="productos.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="proveedores.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="sysdiagrams.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="usuarios.vb">
+    <Compile Include="tblCabecera.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCategoria.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCliente.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblDetalle.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblProducto.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblProveedores.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblUsuarios.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmUsuarioInexistente.Designer.vb">
@@ -561,16 +560,6 @@
     <None Include="Iconos\GIF.gif" />
     <None Include="Iconos\gif2.gif" />
     <None Include="Iconos\fondoPanel.gif" />
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.vb</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.vb</LastGenOutput>
-    </Content>
     <None Include="Iconos\user_icon_153312.png" />
     <None Include="Iconos\sisventas label.png" />
     <None Include="Iconos\sisventa.png" />
@@ -612,6 +601,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.vb</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

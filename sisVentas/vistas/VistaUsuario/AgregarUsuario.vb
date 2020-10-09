@@ -89,25 +89,24 @@ Public Class Agregar_Usuario
            TDireccionUsuario.Text = "" Or TEmailUsuario.Text = "" Or TPassUsuario.Text = "" Or
            TRePassUsuario.Text = "" Or PBUser.Image Is Nothing Then
             FrmRellenarCampos.Show()
+            'p_dni, p_nombre, p_apellido, p_correo, p_direccion, p_pass, p_imagen, p_tipo, p_estado
         Else
-            TNombreUsuario.Text = ""
-            TApellidoUsuario.Text = ""
-            TDniUsuario.Text = ""
-            TDireccionUsuario.Text = ""
-            TEmailUsuario.Text = ""
-            TPassUsuario.Text = ""
-            TRePassUsuario.Text = ""
-            PBUser.BackgroundImage = My.Resources.user1
-            FrmDatosCargadosCorrecto.Show()
-
+            Dim User As New Usuarios(TDniUsuario.Text, TNombreUsuario.Text, TApellidoUsuario.Text, TEmailUsuario.Text, TDireccionUsuario.Text, TPassUsuario.Text, PBUser.Image, "Administrador", "Activo")
+            If User.agregarUsuario() Then
+                MsgBox("correcto", vbOK, "Correcto")
+                TNombreUsuario.Text = ""
+                TApellidoUsuario.Text = ""
+                TDniUsuario.Text = ""
+                TDireccionUsuario.Text = ""
+                TEmailUsuario.Text = ""
+                TPassUsuario.Text = ""
+                TRePassUsuario.Text = ""
+                PBUser.BackgroundImage = My.Resources.user1
+                'FrmDatosCargadosCorrecto.Show()
+            Else
+                MsgBox("error", vbCritical, "error")
+            End If
         End If
-
-        'Dim User As New UserClass(TNombreUsuario.Text, TApellidoUsuario.Text, TDniUsuario.Text, TDireccionUsuario.Text, TEmailUsuario.Text, TPassUsuario.Text, PBUser.Image, 0, 0)
-        'If User.agregarUsuario() Then
-        'MsgBox("correcto", vbOK, "Correcto")
-        'Else
-        'MsgBox("error", vbCritical, "error")
-        'End If
     End Sub
 
     Private Sub BtnAgregarUsuario_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnAgregarUsuario.MouseUp

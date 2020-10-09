@@ -1,13 +1,13 @@
-﻿Public Class UserClass
-    Private nombre As String
-    Private apellido As String
-    Private dni As Integer
-    Private tipo As Integer
-    Private estado As Integer
-    Private correo As String
-    Private direccion As String
-    Private pass As String
-    Private imagen As Image
+﻿Public Class Usuarios
+    Private nombreU As String
+    Private apellidoU As String
+    Private dniU As String
+    Private tipoU As String
+    Private estadoU As String
+    Private correoU As String
+    Private direccionU As String
+    Private passU As String
+    Private imagenU As Image
 
     'DECLARO UN CONTRUCTOR VACIO
     Public Sub New()
@@ -15,10 +15,10 @@
     End Sub
 
     'DECLARO UN CONTRUCTOR CON TODOS SUS ATRIBUTOS
-    Public Sub New(p_nombre, p_apellido, p_dni, p_correo, p_direccion, p_pass, p_imagen, p_tipo, p_estado)
+    Public Sub New(p_dni, p_nombre, p_apellido, p_correo, p_direccion, p_pass, p_imagen, p_tipo, p_estado)
+        setDni(p_dni)
         setNombre(p_nombre)
         setApellido(p_apellido)
-        setDni(p_dni)
         setCorreo(p_correo)
         setDireccion(p_direccion)
         setPass(p_pass)
@@ -28,66 +28,66 @@
     End Sub
     'DECLARACION DE SETTERS
     Public Sub setNombre(ByVal p_nombre As String)
-        nombre = p_nombre
+        nombreU = p_nombre
     End Sub
     Public Sub setApellido(ByVal p_apellido As String)
-        apellido = p_apellido
+        apellidoU = p_apellido
     End Sub
-    Public Sub setDni(ByVal p_dni As Integer)
-        dni = p_dni
+    Public Sub setDni(ByVal p_dni As String)
+        dniU = p_dni
     End Sub
-    Public Sub setTipo(ByVal p_tipo As Integer)
-        tipo = p_tipo
+    Public Sub setTipo(ByVal p_tipo As String)
+        tipoU = p_tipo
     End Sub
-    Public Sub setEstado(ByVal p_estado As Integer)
-        estado = p_estado
+    Public Sub setEstado(ByVal p_estado As String)
+        estadoU = p_estado
     End Sub
     Public Sub setCorreo(ByVal p_correo As String)
-        correo = p_correo
+        correoU = p_correo
     End Sub
     Public Sub setDireccion(ByVal p_direccion As String)
-        direccion = p_direccion
+        direccionU = p_direccion
     End Sub
     Public Sub setPass(ByVal p_pass As String)
-        pass = p_pass
+        passU = p_pass
     End Sub
     Public Sub setImagen(ByVal p_imagen As Image)
-        imagen = p_imagen
+        imagenU = p_imagen
     End Sub
     'DECLARACION DE GETTERS
     Public Function getNombre()
-        getNombre = nombre
+        getNombre = nombreU
     End Function
     Public Function getApellido()
-        getApellido = apellido
+        getApellido = ApellidoU
     End Function
     Public Function getDni()
-        getDni = dni
+        getDni = dniU
     End Function
     Public Function getTipo()
-        getTipo = tipo
+        getTipo = tipoU
     End Function
     Public Function getEstado()
-        getEstado = estado
+        getEstado = estadoU
     End Function
     Public Function getCorreo()
-        getCorreo = correo
+        getCorreo = correoU
     End Function
     Public Function getDireccion()
-        getDireccion = direccion
+        getDireccion = direccionU
     End Function
     Public Function getPass()
-        getPass = pass
+        getPass = passU
     End Function
     Public Function getImagen()
-        getImagen = imagen
+        getImagen = imagenU
     End Function
 
 
     Public Function agregarUsuario()
         Try
-            Using db As New taller2Entities
-                Dim obj As New Usuarios
+            Using db As New SisVentasEntities
+                Dim obj As New tblUsuarios
                 With obj
                     .nombre = getNombre()
                     .apellido = getApellido()
@@ -100,7 +100,7 @@
                     .imagen = ImageToByte(getImagen())
                 End With
                 'aca inserto el objeto construido en memoria
-                db.usuarios.Add(obj)
+                db.tblUsuarios.Add(obj)
                 'aca se escribe en la base de datos
                 db.SaveChanges()
 
@@ -111,8 +111,22 @@
         End Try
     End Function
 
-    Public Function verificaUser()
-
+    Public Function TraerUser(ByVal grid As DataGridView)
+        Try
+            Using MST As New SisVentasEntities
+                Dim mostrarUser = From q In MST.tblUsuarios
+                                  Select
+                                    Nombre = q.nombre,
+                                    Apellido = q.apellido,
+                                    Direccion = q.direccion,
+                                    Correo = q.correo,
+                                    Foto = q.imagen
+                grid.DataSource = mostrarUser.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
     End Function
 
 
