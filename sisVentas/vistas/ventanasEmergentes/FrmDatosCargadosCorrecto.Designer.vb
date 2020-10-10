@@ -23,13 +23,13 @@ Partial Class FrmDatosCargadosCorrecto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnDatosCargados = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PBDatosCargados = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBDatosCargados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,27 +44,27 @@ Partial Class FrmDatosCargadosCorrecto
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Datos cargados correctamente!"
         '
-        'Button1
+        'BtnDatosCargados
         '
-        Me.Button1.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(290, 151)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 37)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnDatosCargados.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnDatosCargados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnDatosCargados.FlatAppearance.BorderSize = 0
+        Me.BtnDatosCargados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnDatosCargados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnDatosCargados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDatosCargados.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDatosCargados.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnDatosCargados.Location = New System.Drawing.Point(290, 151)
+        Me.BtnDatosCargados.Name = "BtnDatosCargados"
+        Me.BtnDatosCargados.Size = New System.Drawing.Size(98, 37)
+        Me.BtnDatosCargados.TabIndex = 3
+        Me.BtnDatosCargados.Text = "Aceptar"
+        Me.BtnDatosCargados.UseVisualStyleBackColor = True
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.PBDatosCargados)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -73,16 +73,16 @@ Partial Class FrmDatosCargadosCorrecto
         Me.Panel1.Size = New System.Drawing.Size(400, 50)
         Me.Panel1.TabIndex = 4
         '
-        'PictureBox2
+        'PBDatosCargados
         '
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
-        Me.PictureBox2.Location = New System.Drawing.Point(353, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(47, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
+        Me.PBDatosCargados.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PBDatosCargados.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PBDatosCargados.Location = New System.Drawing.Point(353, 0)
+        Me.PBDatosCargados.Name = "PBDatosCargados"
+        Me.PBDatosCargados.Size = New System.Drawing.Size(47, 50)
+        Me.PBDatosCargados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PBDatosCargados.TabIndex = 2
+        Me.PBDatosCargados.TabStop = False
         '
         'Label1
         '
@@ -113,7 +113,7 @@ Partial Class FrmDatosCargadosCorrecto
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(400, 200)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnDatosCargados)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmDatosCargadosCorrecto"
@@ -121,7 +121,7 @@ Partial Class FrmDatosCargadosCorrecto
         Me.Text = "FrmDatosCargadosCorrecto"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBDatosCargados, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -129,9 +129,9 @@ Partial Class FrmDatosCargadosCorrecto
     End Sub
 
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnDatosCargados As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PBDatosCargados As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
 End Class

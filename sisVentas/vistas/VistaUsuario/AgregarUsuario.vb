@@ -85,15 +85,16 @@ Public Class Agregar_Usuario
 
 
     Private Sub BtnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles BtnAgregarUsuario.Click
+        Dim imagen As Image
+        imagen = PBUser.Image
         If TNombreUsuario.Text = "" Or TApellidoUsuario.Text = "" Or TDniUsuario.Text = "" Or
            TDireccionUsuario.Text = "" Or TEmailUsuario.Text = "" Or TPassUsuario.Text = "" Or
-           TRePassUsuario.Text = "" Or PBUser.Image Is Nothing Then
+           TRePassUsuario.Text = "" Or CMPerfil.SelectedItem Is Nothing Or PBUser.Image Is Nothing Then
             FrmRellenarCampos.Show()
             'p_dni, p_nombre, p_apellido, p_correo, p_direccion, p_pass, p_imagen, p_tipo, p_estado
         Else
-            Dim User As New Usuarios(TDniUsuario.Text, TNombreUsuario.Text, TApellidoUsuario.Text, TEmailUsuario.Text, TDireccionUsuario.Text, TPassUsuario.Text, PBUser.Image, "Administrador", "Activo")
+            Dim User As New Usuarios(TDniUsuario.Text, TNombreUsuario.Text, TApellidoUsuario.Text, TEmailUsuario.Text, TDireccionUsuario.Text, TPassUsuario.Text, PBUser.Image, CMPerfil.SelectedItem, "Activo")
             If User.agregarUsuario() Then
-                MsgBox("correcto", vbOK, "Correcto")
                 TNombreUsuario.Text = ""
                 TApellidoUsuario.Text = ""
                 TDniUsuario.Text = ""
@@ -101,8 +102,9 @@ Public Class Agregar_Usuario
                 TEmailUsuario.Text = ""
                 TPassUsuario.Text = ""
                 TRePassUsuario.Text = ""
-                PBUser.BackgroundImage = My.Resources.user1
-                'FrmDatosCargadosCorrecto.Show()
+                CMPerfil.SelectedItem = -1
+                CMPerfil.Text = "Selecciona un perfil"
+                FrmDatosCargadosCorrecto.Show()
             Else
                 MsgBox("error", vbCritical, "error")
             End If
@@ -139,5 +141,11 @@ Public Class Agregar_Usuario
             e.Handled = True
             FrmNoCaracteresEspeciales.Show()
         End If
+    End Sub
+
+    Private Sub Agregar_Usuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CMPerfil.Items.Add("Gerente")
+        Me.CMPerfil.Items.Add("Vendedor
+")
     End Sub
 End Class

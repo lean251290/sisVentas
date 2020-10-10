@@ -120,6 +120,7 @@ Partial Class FrmMatch
         Me.Name = "FrmMatch"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
+        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PBmatch, System.ComponentModel.ISupportInitialize).EndInit()

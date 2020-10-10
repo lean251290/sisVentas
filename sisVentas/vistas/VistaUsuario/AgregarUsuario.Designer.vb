@@ -46,6 +46,8 @@ Partial Class Agregar_Usuario
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.dialogUser = New System.Windows.Forms.OpenFileDialog()
         Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.CMPerfil = New System.Windows.Forms.ComboBox()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PBUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -73,6 +75,8 @@ Partial Class Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarUsuario.Controls.Add(Me.CMPerfil)
+        Me.PanelAgregarUsuario.Controls.Add(Me.Label1)
         Me.PanelAgregarUsuario.Controls.Add(Me.PBUser)
         Me.PanelAgregarUsuario.Controls.Add(Me.Label2)
         Me.PanelAgregarUsuario.Controls.Add(Me.TRePassUsuario)
@@ -126,6 +130,7 @@ Partial Class Agregar_Usuario
         Me.TRePassUsuario.Name = "TRePassUsuario"
         Me.TRePassUsuario.Size = New System.Drawing.Size(321, 13)
         Me.TRePassUsuario.TabIndex = 7
+        Me.TRePassUsuario.UseSystemPasswordChar = True
         '
         'TPassUsuario
         '
@@ -136,6 +141,7 @@ Partial Class Agregar_Usuario
         Me.TPassUsuario.Name = "TPassUsuario"
         Me.TPassUsuario.Size = New System.Drawing.Size(321, 13)
         Me.TPassUsuario.TabIndex = 6
+        Me.TPassUsuario.UseSystemPasswordChar = True
         '
         'TNombreUsuario
         '
@@ -341,6 +347,28 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario.Text = "Guardar"
         Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label1.Location = New System.Drawing.Point(325, 429)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(48, 20)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Perfil:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'CMPerfil
+        '
+        Me.CMPerfil.FormattingEnabled = True
+        Me.CMPerfil.Location = New System.Drawing.Point(393, 431)
+        Me.CMPerfil.Name = "CMPerfil"
+        Me.CMPerfil.Size = New System.Drawing.Size(121, 21)
+        Me.CMPerfil.TabIndex = 21
+        Me.CMPerfil.Text = "Selecciona un perfil"
+        '
         'Agregar_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -390,4 +418,6 @@ Partial Class Agregar_Usuario
     Friend WithEvents PBUser As PictureBox
     Friend WithEvents dialogUser As OpenFileDialog
     Friend WithEvents BtnAgregarUsuario As Button
+    Friend WithEvents CMPerfil As ComboBox
+    Friend WithEvents Label1 As Label
 End Class
