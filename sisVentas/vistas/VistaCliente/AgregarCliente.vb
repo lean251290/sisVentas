@@ -3,16 +3,19 @@ Public Class AgregarCliente
 
     Private Sub BtnAgregarCliente_Click(sender As Object, e As EventArgs) Handles BtnAgregarCliente.Click
         If (TNombreCliente.Text = "" Or TApellidoCliente.Text = "" Or TEmailCliente.Text = "" Or
-            TDniCliente.Text = "" Or TDireccionCliente.Text = "" Or PBAgregarCliente.Image Is Nothing) Then
+            TDniCliente.Text = "" Or TDireccionCliente.Text = "" Or TTelefonoCliente.Text = "") Then
             FrmRellenarCampos.Show()
         Else
-            FrmDatosCargadosCorrecto.Show()
-            TNombreCliente.Text = ""
-            TApellidoCliente.Text = ""
-            TEmailCliente.Text = ""
-            TDniCliente.Text = ""
-            TDireccionCliente.Text = ""
-            PBAgregarCliente.BackgroundImage = My.Resources.user1
+            Dim cliente As New Cliente(TDniCliente.Text, TNombreCliente.Text, TApellidoCliente.Text, TDireccionCliente.Text, TEmailCliente.Text, TTelefonoCliente.Text)
+            If cliente.AgregarCliente() Then
+                MsgBox("correcto", vbOK, "Correcto")
+                FrmDatosCargadosCorrecto.Show()
+                TNombreCliente.Text = ""
+                TApellidoCliente.Text = ""
+                TEmailCliente.Text = ""
+                TDniCliente.Text = ""
+                TDireccionCliente.Text = ""
+            End If
         End If
     End Sub
 
@@ -39,14 +42,6 @@ Public Class AgregarCliente
         Me.Close()
     End Sub
 
-    Private Sub PBAgregarCliente_Click(sender As Object, e As EventArgs) Handles PBAgregarCliente.Click
-        dialogCliente.ShowDialog()
-        If dialogCliente.FileName <> "" Then
-            PBAgregarCliente.ImageLocation = dialogCliente.FileName
-
-        End If
-
-    End Sub
 
     Private Sub TNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles TNombreCliente.TextChanged
 
@@ -122,4 +117,10 @@ Public Class AgregarCliente
     End Sub
 
 
+    Private Sub TTelefonoCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TTelefonoCliente.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloNumeros.Show()
+        End If
+    End Sub
 End Class

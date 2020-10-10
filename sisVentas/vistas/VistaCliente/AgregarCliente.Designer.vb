@@ -24,8 +24,8 @@ Partial Class AgregarCliente
     Private Sub InitializeComponent()
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
-        Me.PBAgregarCliente = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TTelefonoCliente = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TEmailCliente = New System.Windows.Forms.TextBox()
         Me.TDireccionCliente = New System.Windows.Forms.TextBox()
         Me.TNombreCliente = New System.Windows.Forms.TextBox()
@@ -42,7 +42,6 @@ Partial Class AgregarCliente
         Me.BtnCancelarCliente = New System.Windows.Forms.Button()
         Me.BtnAgregarCliente = New System.Windows.Forms.Button()
         Me.PanelAgregarCliente.SuspendLayout()
-        CType(Me.PBAgregarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -68,8 +67,8 @@ Partial Class AgregarCliente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarCliente.Controls.Add(Me.PBAgregarCliente)
-        Me.PanelAgregarCliente.Controls.Add(Me.Label2)
+        Me.PanelAgregarCliente.Controls.Add(Me.TTelefonoCliente)
+        Me.PanelAgregarCliente.Controls.Add(Me.Label1)
         Me.PanelAgregarCliente.Controls.Add(Me.TEmailCliente)
         Me.PanelAgregarCliente.Controls.Add(Me.TDireccionCliente)
         Me.PanelAgregarCliente.Controls.Add(Me.TNombreCliente)
@@ -82,40 +81,38 @@ Partial Class AgregarCliente
         Me.PanelAgregarCliente.Controls.Add(Me.LblNombre)
         Me.PanelAgregarCliente.Location = New System.Drawing.Point(50, 90)
         Me.PanelAgregarCliente.Name = "PanelAgregarCliente"
-        Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 530)
+        Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 514)
         Me.PanelAgregarCliente.TabIndex = 5
         '
-        'PBAgregarCliente
+        'TTelefonoCliente
         '
-        Me.PBAgregarCliente.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBAgregarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.user1
-        Me.PBAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBAgregarCliente.Location = New System.Drawing.Point(193, 321)
-        Me.PBAgregarCliente.Name = "PBAgregarCliente"
-        Me.PBAgregarCliente.Size = New System.Drawing.Size(240, 177)
-        Me.PBAgregarCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PBAgregarCliente.TabIndex = 19
-        Me.PBAgregarCliente.TabStop = False
+        Me.TTelefonoCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TTelefonoCliente.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TTelefonoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TTelefonoCliente.Location = New System.Drawing.Point(193, 315)
+        Me.TTelefonoCliente.Name = "TTelefonoCliente"
+        Me.TTelefonoCliente.Size = New System.Drawing.Size(321, 13)
+        Me.TTelefonoCliente.TabIndex = 17
         '
-        'Label2
+        'Label1
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(30, 321)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 20)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Foto:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label1.Location = New System.Drawing.Point(30, 308)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 20)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "Telefono:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TEmailCliente
         '
         Me.TEmailCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TEmailCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TEmailCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEmailCliente.Location = New System.Drawing.Point(193, 261)
+        Me.TEmailCliente.Location = New System.Drawing.Point(193, 253)
         Me.TEmailCliente.Name = "TEmailCliente"
         Me.TEmailCliente.Size = New System.Drawing.Size(321, 13)
         Me.TEmailCliente.TabIndex = 15
@@ -125,7 +122,7 @@ Partial Class AgregarCliente
         Me.TDireccionCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TDireccionCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TDireccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDireccionCliente.Location = New System.Drawing.Point(193, 201)
+        Me.TDireccionCliente.Location = New System.Drawing.Point(193, 193)
         Me.TDireccionCliente.Name = "TDireccionCliente"
         Me.TDireccionCliente.Size = New System.Drawing.Size(321, 13)
         Me.TDireccionCliente.TabIndex = 14
@@ -135,7 +132,7 @@ Partial Class AgregarCliente
         Me.TNombreCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TNombreCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TNombreCliente.Location = New System.Drawing.Point(193, 79)
+        Me.TNombreCliente.Location = New System.Drawing.Point(193, 71)
         Me.TNombreCliente.Name = "TNombreCliente"
         Me.TNombreCliente.Size = New System.Drawing.Size(321, 13)
         Me.TNombreCliente.TabIndex = 13
@@ -145,7 +142,7 @@ Partial Class AgregarCliente
         Me.TApellidoCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TApellidoCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TApellidoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TApellidoCliente.Location = New System.Drawing.Point(193, 136)
+        Me.TApellidoCliente.Location = New System.Drawing.Point(193, 128)
         Me.TApellidoCliente.Name = "TApellidoCliente"
         Me.TApellidoCliente.Size = New System.Drawing.Size(321, 13)
         Me.TApellidoCliente.TabIndex = 12
@@ -155,7 +152,7 @@ Partial Class AgregarCliente
         Me.TDniCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TDniCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TDniCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDniCliente.Location = New System.Drawing.Point(193, 26)
+        Me.TDniCliente.Location = New System.Drawing.Point(193, 18)
         Me.TDniCliente.MaxLength = 20
         Me.TDniCliente.Name = "TDniCliente"
         Me.TDniCliente.Size = New System.Drawing.Size(321, 13)
@@ -167,7 +164,7 @@ Partial Class AgregarCliente
         Me.LblDireccion.AutoSize = True
         Me.LblDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDireccion.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblDireccion.Location = New System.Drawing.Point(30, 201)
+        Me.LblDireccion.Location = New System.Drawing.Point(30, 193)
         Me.LblDireccion.Name = "LblDireccion"
         Me.LblDireccion.Size = New System.Drawing.Size(79, 20)
         Me.LblDireccion.TabIndex = 4
@@ -180,7 +177,7 @@ Partial Class AgregarCliente
         Me.LblEmail.AutoSize = True
         Me.LblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmail.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblEmail.Location = New System.Drawing.Point(30, 261)
+        Me.LblEmail.Location = New System.Drawing.Point(30, 253)
         Me.LblEmail.Name = "LblEmail"
         Me.LblEmail.Size = New System.Drawing.Size(57, 20)
         Me.LblEmail.TabIndex = 3
@@ -193,7 +190,7 @@ Partial Class AgregarCliente
         Me.LblDNI.AutoSize = True
         Me.LblDNI.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDNI.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblDNI.Location = New System.Drawing.Point(30, 21)
+        Me.LblDNI.Location = New System.Drawing.Point(30, 13)
         Me.LblDNI.Name = "LblDNI"
         Me.LblDNI.Size = New System.Drawing.Size(53, 20)
         Me.LblDNI.TabIndex = 2
@@ -206,7 +203,7 @@ Partial Class AgregarCliente
         Me.lblApellido.AutoSize = True
         Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblApellido.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblApellido.Location = New System.Drawing.Point(30, 136)
+        Me.lblApellido.Location = New System.Drawing.Point(30, 128)
         Me.lblApellido.Name = "lblApellido"
         Me.lblApellido.Size = New System.Drawing.Size(69, 20)
         Me.lblApellido.TabIndex = 1
@@ -219,7 +216,7 @@ Partial Class AgregarCliente
         Me.LblNombre.AutoSize = True
         Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNombre.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblNombre.Location = New System.Drawing.Point(30, 74)
+        Me.LblNombre.Location = New System.Drawing.Point(30, 66)
         Me.LblNombre.Name = "LblNombre"
         Me.LblNombre.Size = New System.Drawing.Size(69, 20)
         Me.LblNombre.TabIndex = 0
@@ -304,7 +301,6 @@ Partial Class AgregarCliente
         Me.Text = "Form2"
         Me.PanelAgregarCliente.ResumeLayout(False)
         Me.PanelAgregarCliente.PerformLayout()
-        CType(Me.PBAgregarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -313,8 +309,6 @@ Partial Class AgregarCliente
     End Sub
     Friend WithEvents LabelAgregarCliente As Label
     Friend WithEvents PanelAgregarCliente As Panel
-    Friend WithEvents PBAgregarCliente As PictureBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents TEmailCliente As TextBox
     Friend WithEvents TDireccionCliente As TextBox
     Friend WithEvents TNombreCliente As TextBox
@@ -330,4 +324,6 @@ Partial Class AgregarCliente
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents dialogCliente As OpenFileDialog
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TTelefonoCliente As TextBox
 End Class
