@@ -42,4 +42,16 @@
             FrmSoloLetras.Show()
         End If
     End Sub
+
+    'CARGAMOS EN EL DATAGRID LOS CLIENTES
+    Private Sub cargarGridCliente()
+        Dim cliente As New Cliente()
+
+        cliente.Traercliente(DGVerClientes)
+        DGVerClientes.Columns(0).Visible = False
+    End Sub
+    'CARGAMOS LOS CLIENTES
+    Private Sub VerClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarGridCliente()
+    End Sub
 End Class

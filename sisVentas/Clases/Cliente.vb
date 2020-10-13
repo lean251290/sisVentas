@@ -87,4 +87,25 @@
         End Try
     End Function
 
+    Public Function TraerCliente(ByVal grid As DataGridView)
+        Try
+            Using MST As New SisVentasEntities
+                Dim mostrarCliente = From q In MST.tblCliente
+                                     Select
+                                    Id = q.id_cliente,
+                                    Nombre = q.nombre,
+                                    Apellido = q.apellido,
+                                    Dni = q.dni,
+                                    correo = q.correo,
+                                    direccion = q.direccion,
+                                    telefono = q.telefono
+
+                grid.DataSource = mostrarCliente.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
 End Class
