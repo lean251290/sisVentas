@@ -116,6 +116,7 @@
             Using MST As New SisVentasEntities
                 Dim mostrarUser = From q In MST.tblUsuarios
                                   Select
+                                    Id = q.id_user,
                                     Nombre = q.nombre,
                                     Apellido = q.apellido,
                                     Direccion = q.direccion,

@@ -26,7 +26,7 @@ Partial Class VerUsuarios
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LabelVerUsuarios = New System.Windows.Forms.Label()
         Me.PanelVerUsuarios = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridUser = New System.Windows.Forms.DataGridView()
         Me.TBuscarUsuario = New System.Windows.Forms.TextBox()
         Me.LBuscarUsuario = New System.Windows.Forms.Label()
         Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
@@ -35,7 +35,7 @@ Partial Class VerUsuarios
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelVerUsuarios.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,7 +61,7 @@ Partial Class VerUsuarios
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelVerUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelVerUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelVerUsuarios.Controls.Add(Me.DataGridView1)
+        Me.PanelVerUsuarios.Controls.Add(Me.DataGridUser)
         Me.PanelVerUsuarios.Controls.Add(Me.TBuscarUsuario)
         Me.PanelVerUsuarios.Controls.Add(Me.LBuscarUsuario)
         Me.PanelVerUsuarios.Controls.Add(Me.PictureBuscarUsuario)
@@ -70,9 +70,9 @@ Partial Class VerUsuarios
         Me.PanelVerUsuarios.Size = New System.Drawing.Size(600, 530)
         Me.PanelVerUsuarios.TabIndex = 7
         '
-        'DataGridView1
+        'DataGridUser
         '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DataGridUser.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -82,8 +82,8 @@ Partial Class VerUsuarios
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridUser.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.Green
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -91,15 +91,15 @@ Partial Class VerUsuarios
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DataGridView1.Location = New System.Drawing.Point(50, 116)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(500, 150)
-        Me.DataGridView1.TabIndex = 16
+        Me.DataGridUser.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridUser.GridColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DataGridUser.Location = New System.Drawing.Point(50, 116)
+        Me.DataGridUser.Name = "DataGridUser"
+        Me.DataGridUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DataGridUser.RowHeadersVisible = False
+        Me.DataGridUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridUser.Size = New System.Drawing.Size(500, 150)
+        Me.DataGridUser.TabIndex = 16
         '
         'TBuscarUsuario
         '
@@ -207,7 +207,7 @@ Partial Class VerUsuarios
         Me.Text = "VerUsuario"
         Me.PanelVerUsuarios.ResumeLayout(False)
         Me.PanelVerUsuarios.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -224,5 +224,5 @@ Partial Class VerUsuarios
     Friend WithEvents BtnEliminarUsusario As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridUser As DataGridView
 End Class

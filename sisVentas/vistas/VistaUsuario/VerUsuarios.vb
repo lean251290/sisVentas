@@ -4,9 +4,16 @@
     End Sub
 
     Private Sub BtnModificarUsuario_Click(sender As Object, e As EventArgs) Handles BtnModificarUsuario.Click
-        PanelAdmin.Enabled = False
-        PanelAdmin.Hide()
-        FrmModificarUsuario.Show()
+        Dim filaseleccionada As Integer
+        'creo una variable para saber si selecciono o no alguna fila del datagrid
+        If DataGridUser.SelectedRows.Count > 0 Then
+            filaseleccionada = DataGridUser.CurrentRow.Index
+            MsgBox("debe seleccioanr algo")
+        ElseIf filaseleccionada > 0 Then
+            PanelAdmin.Enabled = False
+            PanelAdmin.Hide()
+            FrmModificarUsuario.Show()
+        End If
     End Sub
 
     Private Sub BtnModificarUsuario_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnModificarUsuario.MouseDown
@@ -50,7 +57,9 @@
 
     Private Sub cargarGridUser()
         Dim users As New Usuarios()
-        users.TraerUser(DataGridView1)
+
+        users.TraerUser(DataGridUser)
+        DataGridUser.Columns(0).Visible = False
     End Sub
 
     Private Sub VerUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
