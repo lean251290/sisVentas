@@ -100,7 +100,7 @@ Partial Class VerClientes
         Me.DGVerClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVerClientes.Location = New System.Drawing.Point(50, 90)
         Me.DGVerClientes.Name = "DGVerClientes"
-        Me.DGVerClientes.Size = New System.Drawing.Size(500, 308)
+        Me.DGVerClientes.Size = New System.Drawing.Size(500, 247)
         Me.DGVerClientes.TabIndex = 18
         '
         'PictureBox1
