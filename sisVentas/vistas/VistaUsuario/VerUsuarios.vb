@@ -60,6 +60,7 @@
 
         users.TraerUser(DataGridUser)
         DataGridUser.Columns(0).Visible = False
+        DataGridUser.Columns(5).Visible = False
     End Sub
 
     Private Sub VerUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
