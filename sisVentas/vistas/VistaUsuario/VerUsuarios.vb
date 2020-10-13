@@ -60,6 +60,9 @@
 
         users.TraerUser(DataGridUser)
         DataGridUser.Columns(0).Visible = False
+        CType(DataGridUser.Columns(5), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
+
+        'DataGridUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
 
     Private Sub VerUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
