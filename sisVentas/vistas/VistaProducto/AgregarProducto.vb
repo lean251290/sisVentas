@@ -67,16 +67,16 @@
 
         End If
     End Sub
-
+    Private Sub CargarCat()
+        Dim prod As New Categoria
+        prod.TraerCategoria(ComboBoxCat)
+    End Sub
     Private Sub AgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ComboBoxCat.Items.Add("Bebidas")
-        ComboBoxCat.Items.Add("Limpieza")
-        ComboBoxCat.Items.Add("Higiene")
-        ComboBoxCat.Items.Add("Lácteos")
-        ComboBoxCat.Items.Add("Otros")
-
 
     End Sub
 
 
+    Private Sub ComboBoxCat_Click(sender As Object, e As EventArgs) Handles ComboBoxCat.Click
+        CargarCat()
+    End Sub
 End Class

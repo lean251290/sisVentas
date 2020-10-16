@@ -66,9 +66,9 @@ Partial Class VerUsuarios
         Me.PanelVerUsuarios.Controls.Add(Me.TBuscarUsuario)
         Me.PanelVerUsuarios.Controls.Add(Me.LBuscarUsuario)
         Me.PanelVerUsuarios.Controls.Add(Me.PictureBuscarUsuario)
-        Me.PanelVerUsuarios.Location = New System.Drawing.Point(50, 90)
+        Me.PanelVerUsuarios.Location = New System.Drawing.Point(12, 66)
         Me.PanelVerUsuarios.Name = "PanelVerUsuarios"
-        Me.PanelVerUsuarios.Size = New System.Drawing.Size(600, 530)
+        Me.PanelVerUsuarios.Size = New System.Drawing.Size(656, 554)
         Me.PanelVerUsuarios.TabIndex = 7
         '
         'DataGridUser
@@ -82,7 +82,7 @@ Partial Class VerUsuarios
         Me.DataGridUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridUser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DataGridUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ScrollBar
@@ -102,17 +102,18 @@ Partial Class VerUsuarios
         Me.DataGridUser.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridUser.EnableHeadersVisualStyles = False
         Me.DataGridUser.GridColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.DataGridUser.Location = New System.Drawing.Point(50, 116)
+        Me.DataGridUser.Location = New System.Drawing.Point(17, 90)
         Me.DataGridUser.Name = "DataGridUser"
         Me.DataGridUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridUser.RowHeadersVisible = False
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Snow
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridUser.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridUser.Size = New System.Drawing.Size(500, 368)
+        Me.DataGridUser.Size = New System.Drawing.Size(621, 418)
         Me.DataGridUser.TabIndex = 16
         '
         'TBuscarUsuario
@@ -123,7 +124,7 @@ Partial Class VerUsuarios
         Me.TBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TBuscarUsuario.Location = New System.Drawing.Point(122, 46)
         Me.TBuscarUsuario.Name = "TBuscarUsuario"
-        Me.TBuscarUsuario.Size = New System.Drawing.Size(372, 13)
+        Me.TBuscarUsuario.Size = New System.Drawing.Size(428, 13)
         Me.TBuscarUsuario.TabIndex = 15
         '
         'LBuscarUsuario
@@ -142,7 +143,7 @@ Partial Class VerUsuarios
         '
         Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(514, 31)
+        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(570, 31)
         Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
         Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
         Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

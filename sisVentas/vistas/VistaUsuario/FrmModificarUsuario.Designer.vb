@@ -25,15 +25,11 @@ Partial Class FrmModificarUsuario
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
         Me.PBUserModif = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TRePassUsuarioModif = New System.Windows.Forms.TextBox()
-        Me.TPassUsuarioModif = New System.Windows.Forms.TextBox()
         Me.TEmailUsuarioModif = New System.Windows.Forms.TextBox()
         Me.TDniUsuarioModif = New System.Windows.Forms.TextBox()
         Me.TDireccionUsuarioModif = New System.Windows.Forms.TextBox()
         Me.TNombreUsuarioModif = New System.Windows.Forms.TextBox()
         Me.TApellidoUsuarioModif = New System.Windows.Forms.TextBox()
-        Me.Lblrepetir = New System.Windows.Forms.Label()
-        Me.LblPass = New System.Windows.Forms.Label()
         Me.LblDireccion = New System.Windows.Forms.Label()
         Me.LblEmail = New System.Windows.Forms.Label()
         Me.LblDNI = New System.Windows.Forms.Label()
@@ -62,15 +58,11 @@ Partial Class FrmModificarUsuario
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelAgregarUsuario.Controls.Add(Me.PBUserModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.Label2)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TRePassUsuarioModif)
-        Me.PanelAgregarUsuario.Controls.Add(Me.TPassUsuarioModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.TEmailUsuarioModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.TDniUsuarioModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.TDireccionUsuarioModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.TNombreUsuarioModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.TApellidoUsuarioModif)
-        Me.PanelAgregarUsuario.Controls.Add(Me.Lblrepetir)
-        Me.PanelAgregarUsuario.Controls.Add(Me.LblPass)
         Me.PanelAgregarUsuario.Controls.Add(Me.LblDireccion)
         Me.PanelAgregarUsuario.Controls.Add(Me.LblEmail)
         Me.PanelAgregarUsuario.Controls.Add(Me.LblDNI)
@@ -84,9 +76,9 @@ Partial Class FrmModificarUsuario
         'PBUserModif
         '
         Me.PBUserModif.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBUserModif.Location = New System.Drawing.Point(193, 428)
+        Me.PBUserModif.Location = New System.Drawing.Point(181, 321)
         Me.PBUserModif.Name = "PBUserModif"
-        Me.PBUserModif.Size = New System.Drawing.Size(119, 94)
+        Me.PBUserModif.Size = New System.Drawing.Size(238, 173)
         Me.PBUserModif.TabIndex = 19
         Me.PBUserModif.TabStop = False
         '
@@ -96,32 +88,12 @@ Partial Class FrmModificarUsuario
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(30, 429)
+        Me.Label2.Location = New System.Drawing.Point(30, 321)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 20)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Foto:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TRePassUsuarioModif
-        '
-        Me.TRePassUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TRePassUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TRePassUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TRePassUsuarioModif.Location = New System.Drawing.Point(193, 381)
-        Me.TRePassUsuarioModif.Name = "TRePassUsuarioModif"
-        Me.TRePassUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TRePassUsuarioModif.TabIndex = 17
-        '
-        'TPassUsuarioModif
-        '
-        Me.TPassUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TPassUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TPassUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TPassUsuarioModif.Location = New System.Drawing.Point(193, 321)
-        Me.TPassUsuarioModif.Name = "TPassUsuarioModif"
-        Me.TPassUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TPassUsuarioModif.TabIndex = 16
         '
         'TEmailUsuarioModif
         '
@@ -179,32 +151,6 @@ Partial Class FrmModificarUsuario
         Me.TApellidoUsuarioModif.ReadOnly = True
         Me.TApellidoUsuarioModif.Size = New System.Drawing.Size(321, 13)
         Me.TApellidoUsuarioModif.TabIndex = 12
-        '
-        'Lblrepetir
-        '
-        Me.Lblrepetir.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Lblrepetir.AutoSize = True
-        Me.Lblrepetir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lblrepetir.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Lblrepetir.Location = New System.Drawing.Point(30, 381)
-        Me.Lblrepetir.Name = "Lblrepetir"
-        Me.Lblrepetir.Size = New System.Drawing.Size(152, 20)
-        Me.Lblrepetir.TabIndex = 6
-        Me.Lblrepetir.Text = "Repetir Contraseña:"
-        Me.Lblrepetir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LblPass
-        '
-        Me.LblPass.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblPass.AutoSize = True
-        Me.LblPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPass.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblPass.Location = New System.Drawing.Point(30, 321)
-        Me.LblPass.Name = "LblPass"
-        Me.LblPass.Size = New System.Drawing.Size(96, 20)
-        Me.LblPass.TabIndex = 5
-        Me.LblPass.Text = "Contraseña:"
-        Me.LblPass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblDireccion
         '
@@ -388,15 +334,11 @@ Partial Class FrmModificarUsuario
     Friend WithEvents PanelAgregarUsuario As Panel
     Friend WithEvents PBUserModif As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TRePassUsuarioModif As TextBox
-    Friend WithEvents TPassUsuarioModif As TextBox
     Friend WithEvents TEmailUsuarioModif As TextBox
     Friend WithEvents TDireccionUsuarioModif As TextBox
     Friend WithEvents TNombreUsuarioModif As TextBox
     Friend WithEvents TApellidoUsuarioModif As TextBox
     Friend WithEvents TDniUsuarioModif As TextBox
-    Friend WithEvents Lblrepetir As Label
-    Friend WithEvents LblPass As Label
     Friend WithEvents LblDireccion As Label
     Friend WithEvents LblEmail As Label
     Friend WithEvents LblDNI As Label

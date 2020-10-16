@@ -117,10 +117,13 @@
                 Dim mostrarUser = From q In MST.tblUsuarios
                                   Select
                                     Id = q.id_user,
+                                    DNI = q.dni,
                                     Nombre = q.nombre,
                                     Apellido = q.apellido,
+                                    Estado = q.estado,
                                     Direccion = q.direccion,
                                     Correo = q.correo,
+                                    Tipo = q.tipo,
                                     Foto = q.imagen
                 grid.DataSource = mostrarUser.ToList
             End Using
@@ -128,6 +131,23 @@
         Catch ex As Exception
             Return False
         End Try
+    End Function
+
+    Public Function TraerPorDni(query As Integer)
+        Try
+            Using MST As New SisVentasEntities
+                Dim mostrarPorDni = (From q In MST.tblUsuarios
+                                     Where q.id_user = query
+                                     Select q).ToList
+                setNombre(mostrarPorDni(0).nombre)
+                setDni(mostrarPorDni(0).dni)
+                'setApellido(mostrarPorDni(0).apellido)
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
     End Function
 
 

@@ -503,4 +503,10 @@ Public Class PanelAdmin
     Private Sub BtnVentasPorUser_Click(sender As Object, e As EventArgs) Handles BtnVentasPorUser.Click
         PanelRepoVentaXUsuario.Show()
     End Sub
+
+    Private Sub BtnAgregarCategoria_Click(sender As Object, e As EventArgs) Handles BtnAgregarCategoria.Click
+        FrmAgregarCategoria.Show()
+        Me.Enabled = False
+        Me.Hide()
+    End Sub
 End Class

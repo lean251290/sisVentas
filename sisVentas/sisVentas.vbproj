@@ -88,6 +88,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Categoria.vb" />
     <Compile Include="Clases\Cliente.vb" />
     <Compile Include="Clases\Usuarios.vb" />
     <Compile Include="CustomControl1.Designer.vb">
@@ -273,6 +274,12 @@
       <DependentUpon>FrmModificarCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\VistaCliente\FrmModificarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\VistaProducto\FrmAgregarCategoria.Designer.vb">
+      <DependentUpon>FrmAgregarCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\VistaProducto\FrmAgregarCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\VistaProducto\VerProductos.Designer.vb">
@@ -469,6 +476,9 @@
     <EmbeddedResource Include="vistas\FormBienvenida.resx">
       <DependentUpon>FormBienvenida.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\VistaProducto\FrmAgregarCategoria.resx">
+      <DependentUpon>FrmAgregarCategoria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaProducto\ModificarProducto.resx">
       <DependentUpon>ModificarProducto.vb</DependentUpon>
     </EmbeddedResource>
@@ -604,6 +614,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Iconos\icoCategoria30x30.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

@@ -88,7 +88,7 @@ Partial Class AgregarProducto
         Me.ComboBoxCat.Location = New System.Drawing.Point(193, 81)
         Me.ComboBoxCat.Name = "ComboBoxCat"
         Me.ComboBoxCat.Size = New System.Drawing.Size(165, 21)
-        Me.ComboBoxCat.TabIndex = 20
+        Me.ComboBoxCat.TabIndex = 2
         Me.ComboBoxCat.Text = "Seleccione una categoría"
         '
         'PBAgregarProd
@@ -111,7 +111,7 @@ Partial Class AgregarProducto
         Me.TStockProd.Location = New System.Drawing.Point(193, 201)
         Me.TStockProd.Name = "TStockProd"
         Me.TStockProd.Size = New System.Drawing.Size(321, 13)
-        Me.TStockProd.TabIndex = 14
+        Me.TStockProd.TabIndex = 4
         '
         'TNombreProd
         '
@@ -121,7 +121,7 @@ Partial Class AgregarProducto
         Me.TNombreProd.Location = New System.Drawing.Point(193, 21)
         Me.TNombreProd.Name = "TNombreProd"
         Me.TNombreProd.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreProd.TabIndex = 13
+        Me.TNombreProd.TabIndex = 1
         '
         'TPrecioProd
         '
@@ -131,7 +131,7 @@ Partial Class AgregarProducto
         Me.TPrecioProd.Location = New System.Drawing.Point(193, 141)
         Me.TPrecioProd.Name = "TPrecioProd"
         Me.TPrecioProd.Size = New System.Drawing.Size(321, 13)
-        Me.TPrecioProd.TabIndex = 11
+        Me.TPrecioProd.TabIndex = 3
         '
         'LblStock
         '
@@ -239,7 +239,7 @@ Partial Class AgregarProducto
         Me.BtnCancelarProd.Location = New System.Drawing.Point(554, 631)
         Me.BtnCancelarProd.Name = "BtnCancelarProd"
         Me.BtnCancelarProd.Size = New System.Drawing.Size(98, 37)
-        Me.BtnCancelarProd.TabIndex = 8
+        Me.BtnCancelarProd.TabIndex = 6
         Me.BtnCancelarProd.Text = "Cancelar"
         Me.BtnCancelarProd.UseVisualStyleBackColor = True
         '
@@ -258,7 +258,7 @@ Partial Class AgregarProducto
         Me.BtnGuardarProducto.Location = New System.Drawing.Point(450, 631)
         Me.BtnGuardarProducto.Name = "BtnGuardarProducto"
         Me.BtnGuardarProducto.Size = New System.Drawing.Size(98, 37)
-        Me.BtnGuardarProducto.TabIndex = 7
+        Me.BtnGuardarProducto.TabIndex = 5
         Me.BtnGuardarProducto.Text = "Guardar"
         Me.BtnGuardarProducto.UseVisualStyleBackColor = True
         '

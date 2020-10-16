@@ -60,13 +60,6 @@ Public Class FrmModificarUsuario
     End Sub
 
 
-    Private Sub TRePassUsuarioModif_LostFocus(sender As Object, e As EventArgs) Handles TRePassUsuarioModif.LostFocus
-        If TPassUsuarioModif.Text <> TRePassUsuarioModif.Text Then
-            FrmMatch.Show()
-            TPassUsuarioModif.Text = ""
-            TRePassUsuarioModif.Text = ""
-        End If
-    End Sub
 
 
     Private Sub TNombreUsuarioModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNombreUsuarioModif.KeyPress
@@ -116,4 +109,11 @@ Public Class FrmModificarUsuario
         ' End If
     End Sub
 
+
+    Private Sub FrmModificarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim user As New Usuarios()
+        user.TraerPorDni(Tag)
+        TDniUsuarioModif.Text = user.getDni
+        TNombreUsuarioModif.Text = user.getNombre
+    End Sub
 End Class

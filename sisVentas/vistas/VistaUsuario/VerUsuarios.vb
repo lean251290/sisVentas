@@ -4,16 +4,26 @@
     End Sub
 
     Private Sub BtnModificarUsuario_Click(sender As Object, e As EventArgs) Handles BtnModificarUsuario.Click
-        Dim filaseleccionada As Integer
         'creo una variable para saber si selecciono o no alguna fila del datagrid
+        Dim NumeroDeFilaSeleccionada As Integer
+
+
         If DataGridUser.SelectedRows.Count > 0 Then
-            filaseleccionada = DataGridUser.CurrentRow.Index
-            MsgBox("debe seleccioanr algo")
-        ElseIf filaseleccionada > 0 Then
+            NumeroDeFilaSeleccionada = DataGridUser.CurrentRow.Index
+
+            'FrmModificarUsuario.TNombreUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(2).Value.ToString
+            'FrmModificarUsuario.TApellidoUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(3).Value.ToString
+            'FrmModificarUsuario.TDireccionUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(5).Value.ToString
+            'FrmModificarUsuario.TDniUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(1).Value.ToString
+            'FrmModificarUsuario.TEmailUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(6).Value.ToString
             PanelAdmin.Enabled = False
             PanelAdmin.Hide()
+            FrmModificarUsuario.Tag = DataGridUser.SelectedRows(0).Cells(0).Value.ToString
             FrmModificarUsuario.Show()
+        Else
+            MessageBox.Show("Selecciona una fila")
         End If
+
     End Sub
 
     Private Sub BtnModificarUsuario_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnModificarUsuario.MouseDown
@@ -60,8 +70,9 @@
 
         users.TraerUser(DataGridUser)
         DataGridUser.Columns(0).Visible = False
-        CType(DataGridUser.Columns(5), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
 
+        CType(DataGridUser.Columns(8), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
+        DataGridUser.Columns(8).Width = 50
         'DataGridUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
 
