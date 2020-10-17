@@ -90,6 +90,8 @@
   <ItemGroup>
     <Compile Include="Clases\Categoria.vb" />
     <Compile Include="Clases\Cliente.vb" />
+    <Compile Include="Clases\Producto.vb" />
+    <Compile Include="Clases\Proveedor.vb" />
     <Compile Include="Clases\Usuarios.vb" />
     <Compile Include="CustomControl1.Designer.vb">
       <DependentUpon>CustomControl1.vb</DependentUpon>
@@ -280,6 +282,12 @@
       <DependentUpon>FrmAgregarCategoria.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\VistaProducto\FrmAgregarCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\VistaProducto\FrmProveedor.Designer.vb">
+      <DependentUpon>FrmProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\VistaProducto\FrmProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\VistaProducto\VerProductos.Designer.vb">
@@ -479,6 +487,9 @@
     <EmbeddedResource Include="vistas\VistaProducto\FrmAgregarCategoria.resx">
       <DependentUpon>FrmAgregarCategoria.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\VistaProducto\FrmProveedor.resx">
+      <DependentUpon>FrmProveedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaProducto\ModificarProducto.resx">
       <DependentUpon>ModificarProducto.vb</DependentUpon>
     </EmbeddedResource>
@@ -615,6 +626,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Iconos\icoCategoria30x30.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

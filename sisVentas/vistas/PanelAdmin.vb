@@ -509,4 +509,24 @@ Public Class PanelAdmin
         Me.Enabled = False
         Me.Hide()
     End Sub
+
+    Private Sub BtnAgregarCategoria_MouseEnter(sender As Object, e As EventArgs) Handles BtnAgregarCategoria.MouseEnter
+        BtnAgregarCategoria.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnAgregarCategoria_MouseLeave(sender As Object, e As EventArgs) Handles BtnAgregarCategoria.MouseLeave
+        BtnAgregarCategoria.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub BtnProveedor_Click(sender As Object, e As EventArgs) Handles BtnProveedor.Click
+        abrirFormHijo(FrmProveedor)
+    End Sub
+
+    Private Sub BtnProveedor_MouseEnter(sender As Object, e As EventArgs) Handles BtnProveedor.MouseEnter
+        BtnProveedor.ForeColor = Color.FromArgb(17, 255, 141)
+    End Sub
+
+    Private Sub BtnProveedor_MouseLeave(sender As Object, e As EventArgs) Handles BtnProveedor.MouseLeave
+        BtnProveedor.ForeColor = Color.FromArgb(255, 255, 255)
+    End Sub
 End Class

@@ -1,8 +1,18 @@
 ﻿Public Class AgregarProducto
     Private Sub BtnGuardarProducto_Click(sender As Object, e As EventArgs) Handles BtnGuardarProducto.Click
+        Dim precio As Double
         If TNombreProd.Text = "" Or TPrecioProd.Text = "" Or ComboBoxCat.Text = "Selecciona un categoría" Or
-            TStockProd.Text = "" Or PBAgregarProd.Image Is Nothing Then
+         TStockProd.Text = "" Then
             FrmRellenarCampos.Show()
+        Else
+            'p_nombre, p_categoria, p_estado, p_precio, p_stock, p_stockMinimo, p_proveedor
+            precio = CType(TPrecioProd.Text, Double)
+            Dim producto As New Producto(TNombreProd.Text, ComboBoxCat.SelectedValue, "Activo", precio, TStockProd.Text, 5, ComboBoxProveedor.SelectedValue)
+            If producto.NuevoProducto() Then
+                MsgBox("agregado")
+            Else
+                MsgBox("te cabio")
+            End If
         End If
     End Sub
 
@@ -31,13 +41,7 @@
         Me.Close()
     End Sub
 
-    Private Sub PBAgregarProd_Click(sender As Object, e As EventArgs) Handles PBAgregarProd.Click
-        dialogProd.ShowDialog()
-        If dialogProd.FileName <> "" Then
-            PBAgregarProd.ImageLocation = dialogProd.FileName
-        End If
 
-    End Sub
 
 
     Private Sub TNombreProd_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNombreProd.KeyPress
@@ -72,6 +76,9 @@
         prod.TraerCategoria(ComboBoxCat)
     End Sub
     Private Sub AgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ComboBoxProveedor.Items.Add(1)
+        ComboBoxProveedor.Items.Add(2)
+        ComboBoxProveedor.Items.Add(3)
 
     End Sub
 
