@@ -157,10 +157,40 @@
     <Compile Include="tblUsuarios.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="vistas\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FmrProductoAgregado.Designer.vb">
+      <DependentUpon>FmrProductoAgregado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FmrProductoAgregado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmCategoriaAgregada.Designer.vb">
       <DependentUpon>FrmCategoriaAgregada.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmCategoriaAgregada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmDatosActualizados.Designer.vb">
+      <DependentUpon>FrmDatosActualizados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmDatosActualizados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmDebeAgregarCategoria.Designer.vb">
+      <DependentUpon>FrmDebeAgregarCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmDebeAgregarCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSeleccioneFila.Designer.vb">
+      <DependentUpon>FrmSeleccioneFila.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmSeleccioneFila.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmUpsError.Designer.vb">
@@ -429,8 +459,23 @@
     <EmbeddedResource Include="PanelVacio.resx">
       <DependentUpon>PanelVacio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FmrProductoAgregado.resx">
+      <DependentUpon>FmrProductoAgregado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmCategoriaAgregada.resx">
       <DependentUpon>FrmCategoriaAgregada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmDatosActualizados.resx">
+      <DependentUpon>FrmDatosActualizados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmDebeAgregarCategoria.resx">
+      <DependentUpon>FrmDebeAgregarCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSeleccioneFila.resx">
+      <DependentUpon>FrmSeleccioneFila.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmUpsError.resx">
       <DependentUpon>FrmUpsError.vb</DependentUpon>

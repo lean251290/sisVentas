@@ -14,7 +14,7 @@
             FrmModificarUsuario.Tag = DataGridUser.SelectedRows(0).Cells(0).Value.ToString
             FrmModificarUsuario.Show()
         Else
-            MessageBox.Show("Selecciona una fila")
+            FrmSeleccioneFila.Show()
         End If
 
     End Sub

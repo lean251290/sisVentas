@@ -4,16 +4,16 @@
     Private Sub BtnAgregarCat_Click(sender As Object, e As EventArgs) Handles BtnAgregarCat.Click
 
         If TbCategoria.Text = "" Then
-            MsgBox("debe agregar algo")
+            FrmDebeAgregarCategoria.Show()
         Else
             Dim cat As New Categoria(TbCategoria.Text)
             If cat.AgregarCategoria() Then
-                MsgBox("agregado")
+                FrmCategoriaAgregada.Show()
                 Me.Close()
                 PanelAdmin.Enabled = True
                 PanelAdmin.Show()
             Else
-                MsgBox("error")
+                FrmUpsError.Show()
             End If
 
 

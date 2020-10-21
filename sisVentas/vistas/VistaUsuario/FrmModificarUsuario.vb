@@ -7,8 +7,6 @@ Public Class FrmModificarUsuario
         PanelAdmin.Show()
     End Sub
 
-
-
     Private Sub BtnActualizarUser_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnActualizarUser.MouseDown
         BtnActualizarUser.BackgroundImage = My.Resources.btn122x45Oscuro
 
@@ -118,7 +116,7 @@ Public Class FrmModificarUsuario
         Dim user As New Usuarios(TDireccionUsuarioModif.Text, TEmailUsuarioModif.Text, PBUserModif.Image)
 
         If user.ActualizarUser(Me.Tag) Then
-            MsgBox("correcto")
+            FrmDatosActualizados.Show()
             PanelAdmin.Enabled = True
             Me.Close()
             PanelAdmin.Show()
@@ -126,7 +124,7 @@ Public Class FrmModificarUsuario
             PanelAdmin.abrirFormHijo(VerUsuarios)
             'VerUsuarios.cargarGridUser()
         Else
-            MsgBox("error")
+            FrmUpsError.Show()
         End If
 
     End Sub

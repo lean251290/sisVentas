@@ -13,9 +13,9 @@
             'Dim producto As New Producto()
 
             If producto.NuevoProducto() Then
-                MsgBox("agregado")
+                FmrProductoAgregado.Show()
             Else
-                MsgBox("te cabio")
+                FrmUpsError.Show()
             End If
         End If
     End Sub

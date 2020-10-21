@@ -101,7 +101,7 @@ Partial Class FrmCargarImagenError
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(12, 103)
+        Me.Label2.Location = New System.Drawing.Point(41, 103)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(242, 20)
         Me.Label2.TabIndex = 13
