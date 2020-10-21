@@ -133,6 +133,7 @@
                                     Tipo = q.tipo,
                                     Foto = q.imagen
                 grid.DataSource = mostrarUser.ToList
+
             End Using
             Return True
         Catch ex As Exception
@@ -141,10 +142,6 @@
     End Function
 
     Public Function TraerPorId(query As Integer)
-
-        'img = ByteToImage(getImagen)
-        'setImagen(img)
-        'setImagen(img)
         Try
             Using MST As New SisVentasEntities
                 Dim mostrarPorId = (From q In MST.tblUsuarios

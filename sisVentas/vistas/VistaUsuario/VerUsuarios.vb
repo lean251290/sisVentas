@@ -9,8 +9,8 @@
 
         If DataGridUser.SelectedRows.Count > 0 Then
             NumeroDeFilaSeleccionada = DataGridUser.CurrentRow.Index
-            'PanelAdmin.Enabled = False
-            'PanelAdmin.Hide()
+            PanelAdmin.Enabled = False
+            PanelAdmin.Hide()
             FrmModificarUsuario.Tag = DataGridUser.SelectedRows(0).Cells(0).Value.ToString
             FrmModificarUsuario.Show()
         Else
@@ -66,6 +66,7 @@
 
         CType(DataGridUser.Columns(8), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
         DataGridUser.Columns(8).Width = 50
+        DataGridUser.Refresh()
         'DataGridUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
 

@@ -119,10 +119,12 @@ Public Class FrmModificarUsuario
 
         If user.ActualizarUser(Me.Tag) Then
             MsgBox("correcto")
-            'PanelAdmin.Enabled = True
+            PanelAdmin.Enabled = True
             Me.Close()
-            'PanelAdmin.Show()
-            VerUsuarios.cargarGridUser()
+            PanelAdmin.Show()
+            PanelAdmin.cerrarFormHijo(VerUsuarios)
+            PanelAdmin.abrirFormHijo(VerUsuarios)
+            'VerUsuarios.cargarGridUser()
         Else
             MsgBox("error")
         End If

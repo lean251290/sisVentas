@@ -132,7 +132,6 @@ Public Class PanelAdmin
         End If
     End Sub
     Private Sub PanelAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         esconderSubMenu()
         BtnVentasPorDia.Hide()
         BtnVentasPorFecha.Hide()
@@ -210,6 +209,16 @@ Public Class PanelAdmin
         PanelContenedorFormHijo.Controls.Add(formHijo)
         formHijo.BringToFront()
         formHijo.Show()
+    End Sub
+    Public Sub cerrarFormHijo(formHijo As Form)
+        If formActual IsNot Nothing Then formActual.Close()
+        formActual = formHijo
+        formHijo.TopLevel = False
+        formHijo.FormBorderStyle = FormBorderStyle.None
+        formHijo.Dock = DockStyle.Fill
+        PanelContenedorFormHijo.Controls.Add(formHijo)
+        'formHijo.BringToFront()
+        formHijo.Close()
     End Sub
 
     Private Sub BotonVentas_Click(sender As Object, e As EventArgs) Handles BotonVentas.Click
