@@ -36,11 +36,7 @@ Public Class FrmModificarUsuario
         PanelAdmin.Show()
     End Sub
 
-    Private Sub BtnActualizarUser_Click(sender As Object, e As EventArgs) Handles BtnActualizarUser.Click
-        PanelAdmin.Enabled = True
-        Me.Close()
-        PanelAdmin.Show()
-    End Sub
+
 
     Private Sub TApellidoUsuarioModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TApellidoUsuarioModif.KeyPress
         If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
@@ -93,9 +89,7 @@ Public Class FrmModificarUsuario
         End If
     End Sub
 
-    Private Sub TDniUsuarioModif_TextChanged(sender As Object, e As EventArgs) Handles TDniUsuarioModif.TextChanged
 
-    End Sub
 
     Private Sub TDniUsuarioModif_LostFocus(sender As Object, e As EventArgs) Handles TDniUsuarioModif.LostFocus
         'Dim cantidad As Integer
@@ -112,8 +106,26 @@ Public Class FrmModificarUsuario
 
     Private Sub FrmModificarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim user As New Usuarios()
-        user.TraerPorDni(Tag)
+        user.TraerPorId(Me.Tag)
         TDniUsuarioModif.Text = user.getDni
         TNombreUsuarioModif.Text = user.getNombre
+        TApellidoUsuarioModif.Text = user.getApellido
+        TDireccionUsuarioModif.Text = user.getDireccion
+        TEmailUsuarioModif.Text = user.getCorreo
+        PBUserModif.Image = user.getImagen
+    End Sub
+    Private Sub BtnActualizarUser_Click(sender As Object, e As EventArgs) Handles BtnActualizarUser.Click
+        Dim user As New Usuarios(TDireccionUsuarioModif.Text, TEmailUsuarioModif.Text, PBUserModif.Image)
+
+        If user.ActualizarUser(Me.Tag) Then
+            MsgBox("correcto")
+            'PanelAdmin.Enabled = True
+            Me.Close()
+            'PanelAdmin.Show()
+            VerUsuarios.cargarGridUser()
+        Else
+            MsgBox("error")
+        End If
+
     End Sub
 End Class

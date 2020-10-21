@@ -79,6 +79,7 @@ Partial Class FrmModificarUsuario
         Me.PBUserModif.Location = New System.Drawing.Point(181, 321)
         Me.PBUserModif.Name = "PBUserModif"
         Me.PBUserModif.Size = New System.Drawing.Size(238, 173)
+        Me.PBUserModif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PBUserModif.TabIndex = 19
         Me.PBUserModif.TabStop = False
         '
@@ -103,7 +104,7 @@ Partial Class FrmModificarUsuario
         Me.TEmailUsuarioModif.Location = New System.Drawing.Point(193, 261)
         Me.TEmailUsuarioModif.Name = "TEmailUsuarioModif"
         Me.TEmailUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailUsuarioModif.TabIndex = 15
+        Me.TEmailUsuarioModif.TabIndex = 1
         '
         'TDniUsuarioModif
         '
@@ -126,7 +127,7 @@ Partial Class FrmModificarUsuario
         Me.TDireccionUsuarioModif.Location = New System.Drawing.Point(193, 201)
         Me.TDireccionUsuarioModif.Name = "TDireccionUsuarioModif"
         Me.TDireccionUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionUsuarioModif.TabIndex = 14
+        Me.TDireccionUsuarioModif.TabIndex = 0
         '
         'TNombreUsuarioModif
         '

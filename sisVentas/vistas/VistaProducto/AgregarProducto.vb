@@ -1,13 +1,17 @@
 ﻿Public Class AgregarProducto
     Private Sub BtnGuardarProducto_Click(sender As Object, e As EventArgs) Handles BtnGuardarProducto.Click
-        Dim precio As Double
+        Dim precio As Decimal
+
         If TNombreProd.Text = "" Or TPrecioProd.Text = "" Or ComboBoxCat.Text = "Selecciona un categoría" Or
          TStockProd.Text = "" Then
             FrmRellenarCampos.Show()
         Else
             'p_nombre, p_categoria, p_estado, p_precio, p_stock, p_stockMinimo, p_proveedor
-            precio = CType(TPrecioProd.Text, Double)
-            Dim producto As New Producto(TNombreProd.Text, ComboBoxCat.SelectedValue, "Activo", precio, TStockProd.Text, 5, ComboBoxProveedor.SelectedValue)
+            'precio = FormatNumber(TPrecioProd.Text, 2)
+            Decimal.TryParse(TPrecioProd.Text, precio)
+            Dim producto As New Producto(TNombreProd.Text, ComboBoxCat.SelectedValue, "Activo", precio, Val(TStockProd.Text), 5, ComboBoxProveedor.SelectedValue)
+            'Dim producto As New Producto()
+
             If producto.NuevoProducto() Then
                 MsgBox("agregado")
             Else
@@ -72,18 +76,24 @@
         End If
     End Sub
     Private Sub CargarCat()
-        Dim prod As New Categoria
-        prod.TraerCategoria(ComboBoxCat)
+        Dim cat As New Categoria
+        cat.TraerCategoria(ComboBoxCat)
     End Sub
-    Private Sub AgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ComboBoxProveedor.Items.Add(1)
-        ComboBoxProveedor.Items.Add(2)
-        ComboBoxProveedor.Items.Add(3)
-
-    End Sub
-
-
+    
     Private Sub ComboBoxCat_Click(sender As Object, e As EventArgs) Handles ComboBoxCat.Click
         CargarCat()
+    End Sub
+
+    Private Sub cargarProveedor()
+        Dim pro As New Proveedor
+        pro.TraerProveedor(ComboBoxProveedor)
+    End Sub
+
+    Private Sub ComboBoxProveedor_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBoxProveedor.MouseClick
+        CargarProveedor()
+    End Sub
+
+    Private Sub AgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

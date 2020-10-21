@@ -60,4 +60,23 @@
         End Try
     End Function
 
+    Public Function TraerProveedor(ByRef comboP As ComboBox)
+        Try
+            Using db As New SisVentasEntities
+                Dim traerProv = From p In db.tblProveedores
+                                Select
+                                    p.id_proveedor,
+                                    p.nombre,
+                                    p.direccion,
+                                    p.telefono,
+                                    p.email
+                comboP.DataSource = traerProv.ToList
+                comboP.DisplayMember = "nombre"
+                comboP.ValueMember = "id_proveedor"
+            End Using
+        Catch ex As Exception
+
+        End Try
+    End Function
+
 End Class

@@ -88,8 +88,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cabecera.vb" />
     <Compile Include="Clases\Categoria.vb" />
     <Compile Include="Clases\Cliente.vb" />
+    <Compile Include="Clases\Detalle.vb" />
     <Compile Include="Clases\Producto.vb" />
     <Compile Include="Clases\Proveedor.vb" />
     <Compile Include="Clases\Usuarios.vb" />
@@ -134,9 +136,6 @@
     <Compile Include="PanelVacio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sysdiagrams.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="tblCabecera.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -157,6 +156,18 @@
     </Compile>
     <Compile Include="tblUsuarios.vb">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmCategoriaAgregada.Designer.vb">
+      <DependentUpon>FrmCategoriaAgregada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmCategoriaAgregada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmUpsError.Designer.vb">
+      <DependentUpon>FrmUpsError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmUpsError.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmUsuarioInexistente.Designer.vb">
       <DependentUpon>FrmUsuarioInexistente.vb</DependentUpon>
@@ -417,6 +428,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelVacio.resx">
       <DependentUpon>PanelVacio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmCategoriaAgregada.resx">
+      <DependentUpon>FrmCategoriaAgregada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmUpsError.resx">
+      <DependentUpon>FrmUpsError.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmUsuarioInexistente.resx">
       <DependentUpon>FrmUsuarioInexistente.vb</DependentUpon>

@@ -7,17 +7,10 @@
         'creo una variable para saber si selecciono o no alguna fila del datagrid
         Dim NumeroDeFilaSeleccionada As Integer
 
-
         If DataGridUser.SelectedRows.Count > 0 Then
             NumeroDeFilaSeleccionada = DataGridUser.CurrentRow.Index
-
-            'FrmModificarUsuario.TNombreUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(2).Value.ToString
-            'FrmModificarUsuario.TApellidoUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(3).Value.ToString
-            'FrmModificarUsuario.TDireccionUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(5).Value.ToString
-            'FrmModificarUsuario.TDniUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(1).Value.ToString
-            'FrmModificarUsuario.TEmailUsuarioModif.Text = DataGridUser.Rows(NumeroDeFilaSeleccionada).Cells(6).Value.ToString
-            PanelAdmin.Enabled = False
-            PanelAdmin.Hide()
+            'PanelAdmin.Enabled = False
+            'PanelAdmin.Hide()
             FrmModificarUsuario.Tag = DataGridUser.SelectedRows(0).Cells(0).Value.ToString
             FrmModificarUsuario.Show()
         Else
@@ -65,7 +58,7 @@
         End If
     End Sub
 
-    Private Sub cargarGridUser()
+    Public Sub cargarGridUser()
         Dim users As New Usuarios()
 
         users.TraerUser(DataGridUser)

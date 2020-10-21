@@ -1,11 +1,11 @@
 ﻿Public Class Producto
-    Private nombre As String
-    Private categoria As Integer
-    Private estado As String
-    Private precio As Decimal
-    Private stock As Integer
-    Private stockMinimo As Integer
-    Private proveedor As Integer
+    Private nombreP As String
+    Private categoriaP As Integer
+    Private estadoP As String
+    Private precioP As Decimal
+    Private stockP As Integer
+    Private stockMinimoP As Integer
+    Private proveedorP As Integer
 
     'DECLARO UN CONTRUCTOR VACIO
     Public Sub New()
@@ -13,93 +13,97 @@
     End Sub
 
     'DECLARO UN CONSTRUCTOR CON TODOS SUS ATRIBUTOS 
-    Public Sub New(p_nombre As String, p_categoria As Integer, p_estado As String, p_precio As Double, p_stock As Integer, p_stockMinimo As Integer, p_proveedor As Integer)
-        SetNombre(p_nombre)
-        SetCategoria(p_categoria)
-        SetEstado(p_estado)
-        SetPrecio(p_precio)
-        SetStock(p_stock)
-        SetStockMinimo(p_stockMinimo)
-        SetProveedor(p_proveedor)
+    Public Sub New(p_nombre As String, p_categoria As Integer, p_estado As String, p_precio As Decimal, p_stock As Integer, p_stockMinimo As Integer, p_proveedor As Integer)
+        setNombreP(p_nombre)
+        setCategoriaP(p_categoria)
+        setEstadoP(p_estado)
+        setPrecioP(p_precio)
+        setStockP(p_stock)
+        setStockMinimoP(p_stockMinimo)
+        setProveedorP(p_proveedor)
+    End Sub
+    'declaracion de los setters 
+    Public Sub setNombreP(ByRef p_nombre As String)
+        nombreP = p_nombre
     End Sub
 
-    'DECLARACION DE LOS SETTERS
-    Public Sub SetNombre(ByVal p_nombre As String)
-        nombre = p_nombre
-    End Sub
-    Public Sub SetCategoria(ByVal p_categoria As Integer)
-        categoria = p_categoria
+    Public Sub setCategoriaP(ByRef p_categoria As Integer)
+        categoriaP = p_categoria
     End Sub
 
-    Public Sub SetEstado(ByVal p_estado As String)
-        estado = p_estado
+    Public Sub setEstadoP(ByVal p_estado As String)
+        estadoP = p_estado
     End Sub
 
-    Public Sub SetPrecio(ByVal p_precio As Decimal)
-        precio = p_precio
+    Public Sub setPrecioP(ByVal p_precio As Decimal)
+        precioP = p_precio
     End Sub
 
-    Public Sub SetStock(ByVal p_stock As Integer)
-        stock = p_stock
+    Public Sub setStockP(ByVal p_stock As Integer)
+        stockP = p_stock
     End Sub
 
-    Public Sub SetStockMinimo(ByVal p_stockMinimo As Integer)
-        stockMinimo = p_stockMinimo
-    End Sub
-    Public Sub SetProveedor(ByVal p_proveedor As Integer)
-        proveedor = p_proveedor
+    Public Sub setStockMinimoP(ByVal p_stockMinimo As Integer)
+        stockMinimoP = p_stockMinimo
     End Sub
 
-    'DECLARAION DE LOS GETTERS
-    Public Function GetNombre()
-        GetNombre = nombre
+    Public Sub setProveedorP(ByVal p_proveedor As Integer)
+        proveedorP = p_proveedor
+    End Sub
+
+    'declaracion de los getters
+    Public Function getNombreP()
+        getNombreP = nombreP
     End Function
 
-    Public Function GetCategoria()
-        GetCategoria = categoria
+    Public Function getCategoriaP()
+        getCategoriaP = categoriaP
     End Function
 
-    Public Function GetEstado()
-        GetEstado = estado
+    Public Function getEstadoP()
+        getEstadoP = estadoP
     End Function
 
-    Public Function GetPrecio()
-        GetPrecio = precio
+    Public Function getPrecioP()
+        getPrecioP = precioP
     End Function
 
-    Public Function GetStock()
-        GetStock = stock
+    Public Function getStockP()
+        getStockP = stockP
     End Function
 
-    Public Function GetStockMinimo()
-        GetStockMinimo = stockMinimo
+    Public Function getStockMinimoP()
+        getStockMinimoP = stockMinimoP
     End Function
 
-    Public Function GetProveedor()
-        GetProveedor = proveedor
+    Public Function getProveedorP()
+        getProveedorP = proveedorP
     End Function
+
 
     Public Function NuevoProducto()
         Try
             Using db As New SisVentasEntities
-                Dim obj As New tblProducto
-                With obj
-                    .nombre = GetNombre()
-                    .id_categoria = Val(GetCategoria())
-                    .estado = GetEstado()
-                    .precio = GetPrecio()
-                    .stock = GetStock()
-                    .stockminimo = GetStockMinimo()
-                    .id_proveedor = GetProveedor()
+                Dim prod As New tblProducto
+                With prod
+                    .nombre = getNombreP()
+                    .id_categoria = getCategoriaP()
+                    .estado = getEstadoP()
+                    .precio = getPrecioP()
+                    .stock = getStockP()
+                    .stockminimo = getStockMinimoP()
+                    .id_proveedor = getProveedorP()
                 End With
                 'aca inserto el objeto construido en memoria
-                db.tblProducto.Add(obj)
+                db.tblProducto.Add(prod)
                 'aca se escribe en la base de datos
                 db.SaveChanges()
             End Using
             Return True
         Catch ex As Exception
-            Return False
+            'Return False
+            MsgBox(ex.InnerException.ToString)
+            MsgBox(ex.Message)
         End Try
     End Function
 End Class

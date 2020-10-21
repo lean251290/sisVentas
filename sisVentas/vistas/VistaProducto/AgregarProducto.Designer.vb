@@ -84,8 +84,9 @@ Partial Class AgregarProducto
         Me.ComboBoxProveedor.FormattingEnabled = True
         Me.ComboBoxProveedor.Location = New System.Drawing.Point(193, 258)
         Me.ComboBoxProveedor.Name = "ComboBoxProveedor"
-        Me.ComboBoxProveedor.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxProveedor.Size = New System.Drawing.Size(165, 21)
         Me.ComboBoxProveedor.TabIndex = 21
+        Me.ComboBoxProveedor.Text = "Seleccione un proveedor "
         '
         'Label1
         '

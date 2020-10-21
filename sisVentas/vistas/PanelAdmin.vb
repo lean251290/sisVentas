@@ -201,7 +201,7 @@ Public Class PanelAdmin
     End Sub
 
     Private formActual As Form = Nothing
-    Private Sub abrirFormHijo(formHijo As Form)
+    Public Sub abrirFormHijo(formHijo As Form)
         If formActual IsNot Nothing Then formActual.Close()
         formActual = formHijo
         formHijo.TopLevel = False
@@ -519,7 +519,15 @@ Public Class PanelAdmin
     End Sub
 
     Private Sub BtnProveedor_Click(sender As Object, e As EventArgs) Handles BtnProveedor.Click
-        abrirFormHijo(FrmProveedor)
+        esconderSubMenu()
+        abrirFormHijo(New FrmProveedor)
+        PnllReportes.Width = 5
+        PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
+        BtnVentasPorDia.Hide()
+        BtnVentasPorFecha.Hide()
+        BtnVentasPorUser.Hide()
+        BtnVentasPorCliente.Hide()
+        BtnVentasPorProducto.Hide()
     End Sub
 
     Private Sub BtnProveedor_MouseEnter(sender As Object, e As EventArgs) Handles BtnProveedor.MouseEnter

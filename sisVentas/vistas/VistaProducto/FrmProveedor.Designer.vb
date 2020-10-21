@@ -28,6 +28,7 @@ Partial Class FrmProveedor
         Me.BtnCancelarProv = New System.Windows.Forms.Button()
         Me.BtnGuardarProv = New System.Windows.Forms.Button()
         Me.PanelAgregarProv = New System.Windows.Forms.Panel()
+        Me.TEmailProv = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TTelProv = New System.Windows.Forms.TextBox()
         Me.TNombreProv = New System.Windows.Forms.TextBox()
@@ -35,7 +36,6 @@ Partial Class FrmProveedor
         Me.LblStock = New System.Windows.Forms.Label()
         Me.LblPrecio = New System.Windows.Forms.Label()
         Me.LblNombreP = New System.Windows.Forms.Label()
-        Me.TEmailProv = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PBagregarProv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarProv.SuspendLayout()
@@ -135,6 +135,16 @@ Partial Class FrmProveedor
         Me.PanelAgregarProv.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarProv.TabIndex = 13
         '
+        'TEmailProv
+        '
+        Me.TEmailProv.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TEmailProv.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TEmailProv.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TEmailProv.Location = New System.Drawing.Point(219, 295)
+        Me.TEmailProv.Name = "TEmailProv"
+        Me.TEmailProv.Size = New System.Drawing.Size(321, 13)
+        Me.TEmailProv.TabIndex = 21
+        '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -216,16 +226,6 @@ Partial Class FrmProveedor
         Me.LblNombreP.TabIndex = 0
         Me.LblNombreP.Text = "Nombre:"
         Me.LblNombreP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TEmailProv
-        '
-        Me.TEmailProv.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TEmailProv.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TEmailProv.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEmailProv.Location = New System.Drawing.Point(219, 295)
-        Me.TEmailProv.Name = "TEmailProv"
-        Me.TEmailProv.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailProv.TabIndex = 21
         '
         'FrmProveedor
         '

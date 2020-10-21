@@ -13,6 +13,13 @@
     Public Sub New()
 
     End Sub
+    'declaro un contructor para poder modificar un usuario
+    Public Sub New(p_direccion, p_correo, p_imagen)
+        setCorreo(p_correo)
+        setDireccion(p_direccion)
+        setImagen(p_imagen)
+    End Sub
+
 
     'DECLARO UN CONTRUCTOR CON TODOS SUS ATRIBUTOS
     Public Sub New(p_dni, p_nombre, p_apellido, p_correo, p_direccion, p_pass, p_imagen, p_tipo, p_estado)
@@ -133,21 +140,50 @@
         End Try
     End Function
 
-    Public Function TraerPorDni(query As Integer)
+    Public Function TraerPorId(query As Integer)
+
+        'img = ByteToImage(getImagen)
+        'setImagen(img)
+        'setImagen(img)
         Try
             Using MST As New SisVentasEntities
-                Dim mostrarPorDni = (From q In MST.tblUsuarios
-                                     Where q.id_user = query
-                                     Select q).ToList
-                setNombre(mostrarPorDni(0).nombre)
-                setDni(mostrarPorDni(0).dni)
-                'setApellido(mostrarPorDni(0).apellido)
+                Dim mostrarPorId = (From q In MST.tblUsuarios
+                                    Where q.id_user = query
+                                    Select q).ToList
+                setNombre(mostrarPorId(0).nombre)
+                setDni(mostrarPorId(0).dni)
+                setApellido(mostrarPorId(0).apellido)
+                setDireccion(mostrarPorId(0).direccion)
+                setCorreo(mostrarPorId(0).correo)
+                setImagen(ByteToImage(mostrarPorId(0).imagen))
             End Using
             Return True
         Catch ex As Exception
             Return False
         End Try
 
+    End Function
+
+    Public Function ActualizarUser(ByVal p_id As String)
+        Try
+            Using db As New SisVentasEntities
+                Dim user = (From q In db.tblUsuarios
+                            Where q.id_user = p_id
+                            Select q).First
+                'firstordefault xq me arroja el error de la secuencia no tiene elementos
+                user.direccion = getDireccion()
+                user.correo = getCorreo()
+                user.imagen = ImageToByte(getImagen())
+
+                db.SaveChanges()
+
+            End Using
+
+            Return True
+        Catch ex As Exception
+            Return False
+
+        End Try
     End Function
 
 
