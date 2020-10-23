@@ -49,28 +49,42 @@
         End If
     End Sub
 
-    Private Sub PBModifProd_Click(sender As Object, e As EventArgs) Handles PBModifProd.Click
-        DialogProducto.ShowDialog()
-        If DialogProducto.FileName <> "" Then
-            PBModifProd.ImageLocation = DialogProducto.FileName
-        End If
-    End Sub
-
-    Private Sub AgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CMBModifProd.Items.Add("Bebidas")
-        CMBModifProd.Items.Add("Limpieza")
-        CMBModifProd.Items.Add("Higiene")
-        CMBModifProd.Items.Add("Lácteos")
-        CMBModifProd.Items.Add("Otros")
-    End Sub
-
-
-
     Private Sub TNombreProdModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNombreProdModif.KeyPress
         If Not ((Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Or
             (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8)) Then
             e.Handled = True
             FrmNoCaracteresEspeciales.Show()
         End If
+    End Sub
+
+    Private Sub CMBModifProdCat_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CMBModifProdCat.SelectedIndexChanged
+
+    End Sub
+    Public Sub CargarCatModifProd()
+        Dim cat As New Categoria
+        cat.TraerCategoria(CMBModifProdCat)
+        CMBModifProdCat.ValueMember = "id_categoria"
+        CMBModifProdCat.DisplayMember = "descripicion"
+    End Sub
+    Private Sub CMBModifProdCat_Click(sender As Object, e As EventArgs) Handles CMBModifProdCat.Click
+        CargarCatModifProd()
+    End Sub
+
+    Private Sub ModificarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargarCatModifProd()
+        Dim producto As New Producto()
+        Dim categoria As New Categoria()
+        Dim valor As Integer
+        producto.traerProdId(Me.Tag)
+        valor = producto.getCategoriaP
+
+        CMBModifProdCat.SelectedValue = producto.getCategoriaP
+        TNombreProdModif.Text = producto.getNombreP
+        TbPrecioModifProd.Text = producto.getPrecioP
+        TBStockModifPrdo.Text = producto.getStockP
+        CMBModifProdCat.ValueMember = "id_categoria"
+        CMBModifProdCat.DisplayMember = "descripicion"
+
+
     End Sub
 End Class

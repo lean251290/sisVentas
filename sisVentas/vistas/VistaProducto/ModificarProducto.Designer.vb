@@ -26,13 +26,11 @@ Partial Class ModificarProducto
         Me.LblModificarProducto = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarProducto = New System.Windows.Forms.Panel()
-        Me.CMBModifProd = New System.Windows.Forms.ComboBox()
-        Me.PBModifProd = New System.Windows.Forms.PictureBox()
+        Me.CMBModifProdCat = New System.Windows.Forms.ComboBox()
         Me.TBStockModifPrdo = New System.Windows.Forms.TextBox()
         Me.TNombreProdModif = New System.Windows.Forms.TextBox()
         Me.TbPrecioModifProd = New System.Windows.Forms.TextBox()
         Me.LblStockModifProd = New System.Windows.Forms.Label()
-        Me.LblFotoModifProd = New System.Windows.Forms.Label()
         Me.LblPrecioModifProd = New System.Windows.Forms.Label()
         Me.LblCategoriaPModif = New System.Windows.Forms.Label()
         Me.LblNombrePModif = New System.Windows.Forms.Label()
@@ -43,7 +41,6 @@ Partial Class ModificarProducto
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarProducto.SuspendLayout()
-        CType(Me.PBModifProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -89,13 +86,11 @@ Partial Class ModificarProducto
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarProducto.Controls.Add(Me.CMBModifProd)
-        Me.PanelAgregarProducto.Controls.Add(Me.PBModifProd)
+        Me.PanelAgregarProducto.Controls.Add(Me.CMBModifProdCat)
         Me.PanelAgregarProducto.Controls.Add(Me.TBStockModifPrdo)
         Me.PanelAgregarProducto.Controls.Add(Me.TNombreProdModif)
         Me.PanelAgregarProducto.Controls.Add(Me.TbPrecioModifProd)
         Me.PanelAgregarProducto.Controls.Add(Me.LblStockModifProd)
-        Me.PanelAgregarProducto.Controls.Add(Me.LblFotoModifProd)
         Me.PanelAgregarProducto.Controls.Add(Me.LblPrecioModifProd)
         Me.PanelAgregarProducto.Controls.Add(Me.LblCategoriaPModif)
         Me.PanelAgregarProducto.Controls.Add(Me.LblNombrePModif)
@@ -104,26 +99,15 @@ Partial Class ModificarProducto
         Me.PanelAgregarProducto.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarProducto.TabIndex = 7
         '
-        'CMBModifProd
+        'CMBModifProdCat
         '
-        Me.CMBModifProd.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CMBModifProd.FormattingEnabled = True
-        Me.CMBModifProd.Location = New System.Drawing.Point(193, 81)
-        Me.CMBModifProd.Name = "CMBModifProd"
-        Me.CMBModifProd.Size = New System.Drawing.Size(165, 21)
-        Me.CMBModifProd.TabIndex = 20
-        Me.CMBModifProd.Text = "Seleccione una categoría"
-        '
-        'PBModifProd
-        '
-        Me.PBModifProd.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBModifProd.BackgroundImage = Global.sisVentas.My.Resources.Resources.user1
-        Me.PBModifProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBModifProd.Location = New System.Drawing.Point(193, 261)
-        Me.PBModifProd.Name = "PBModifProd"
-        Me.PBModifProd.Size = New System.Drawing.Size(250, 182)
-        Me.PBModifProd.TabIndex = 19
-        Me.PBModifProd.TabStop = False
+        Me.CMBModifProdCat.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CMBModifProdCat.FormattingEnabled = True
+        Me.CMBModifProdCat.Location = New System.Drawing.Point(193, 81)
+        Me.CMBModifProdCat.Name = "CMBModifProdCat"
+        Me.CMBModifProdCat.Size = New System.Drawing.Size(165, 21)
+        Me.CMBModifProdCat.TabIndex = 20
+        Me.CMBModifProdCat.Text = "Seleccione una categoría"
         '
         'TBStockModifPrdo
         '
@@ -167,19 +151,6 @@ Partial Class ModificarProducto
         Me.LblStockModifProd.TabIndex = 4
         Me.LblStockModifProd.Text = "Stock:"
         Me.LblStockModifProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LblFotoModifProd
-        '
-        Me.LblFotoModifProd.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblFotoModifProd.AutoSize = True
-        Me.LblFotoModifProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFotoModifProd.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblFotoModifProd.Location = New System.Drawing.Point(30, 261)
-        Me.LblFotoModifProd.Name = "LblFotoModifProd"
-        Me.LblFotoModifProd.Size = New System.Drawing.Size(46, 20)
-        Me.LblFotoModifProd.TabIndex = 3
-        Me.LblFotoModifProd.Text = "Foto:"
-        Me.LblFotoModifProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblPrecioModifProd
         '
@@ -298,7 +269,6 @@ Partial Class ModificarProducto
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelAgregarProducto.ResumeLayout(False)
         Me.PanelAgregarProducto.PerformLayout()
-        CType(Me.PBModifProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -307,13 +277,11 @@ Partial Class ModificarProducto
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LblModificarProducto As Label
     Friend WithEvents PanelAgregarProducto As Panel
-    Friend WithEvents CMBModifProd As ComboBox
-    Friend WithEvents PBModifProd As PictureBox
+    Friend WithEvents CMBModifProdCat As ComboBox
     Friend WithEvents TBStockModifPrdo As TextBox
     Friend WithEvents TNombreProdModif As TextBox
     Friend WithEvents TbPrecioModifProd As TextBox
     Friend WithEvents LblStockModifProd As Label
-    Friend WithEvents LblFotoModifProd As Label
     Friend WithEvents LblPrecioModifProd As Label
     Friend WithEvents LblCategoriaPModif As Label
     Friend WithEvents LblNombrePModif As Label

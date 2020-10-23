@@ -81,12 +81,12 @@ Partial Class AgregarProducto
         '
         'ComboBoxProveedor
         '
+        Me.ComboBoxProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxProveedor.FormattingEnabled = True
         Me.ComboBoxProveedor.Location = New System.Drawing.Point(193, 258)
         Me.ComboBoxProveedor.Name = "ComboBoxProveedor"
         Me.ComboBoxProveedor.Size = New System.Drawing.Size(165, 21)
         Me.ComboBoxProveedor.TabIndex = 21
-        Me.ComboBoxProveedor.Text = "Seleccione un proveedor "
         '
         'Label1
         '
@@ -104,12 +104,12 @@ Partial Class AgregarProducto
         'ComboBoxCat
         '
         Me.ComboBoxCat.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboBoxCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxCat.FormattingEnabled = True
         Me.ComboBoxCat.Location = New System.Drawing.Point(193, 81)
         Me.ComboBoxCat.Name = "ComboBoxCat"
         Me.ComboBoxCat.Size = New System.Drawing.Size(165, 21)
         Me.ComboBoxCat.TabIndex = 2
-        Me.ComboBoxCat.Text = "Seleccione una categoría"
         '
         'TStockProd
         '

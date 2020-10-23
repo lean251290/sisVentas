@@ -44,13 +44,26 @@
                                    c.id_categoria,
                                    c.descripicion
                 combo.DataSource = traerCat.ToList
-                combo.DisplayMember = "descripicion"
-                combo.ValueMember = "id_categoria"
+                'combo.DisplayMember = "descripicion"
+                'combo.ValueMember = "id_categoria"
             End Using
             Return True
         Catch ex As Exception
             Return False
         End Try
 
+    End Function
+
+    Public Function traerCatxId(ByVal idCat As Integer)
+        Try
+            Using db As New SisVentasEntities
+                Dim categoria = From cat In db.tblCategoria
+                                Where cat.id_categoria = idCat
+                                Select cat
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
     End Function
 End Class

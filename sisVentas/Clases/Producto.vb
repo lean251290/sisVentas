@@ -101,9 +101,48 @@
             End Using
             Return True
         Catch ex As Exception
-            'Return False
-            MsgBox(ex.InnerException.ToString)
-            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
+
+    Public Function TraerProductos(ByVal gridP As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim productos = From q In db.tblProducto
+                                Select
+                                    ID = q.id_producto,
+                                    NOMBRE = q.nombre,
+                                    CATEGORÍA = q.id_categoria,
+                                    ESTADO = q.estado,
+                                    PRECIO = q.precio,
+                                    STOCK = q.stock,
+                                    STOCKMINIMO = q.stockminimo,
+                                    PROVEEDOR = q.id_proveedor
+                gridP.DataSource = productos.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Public Function traerProdId(ByVal id As Integer)
+        Try
+            Using db As New SisVentasEntities
+                Dim traerProdXId = (From p In db.tblProducto
+                                    Where p.id_producto = id
+                                    Select p.nombre,
+                                        p.precio,
+                                        p.stock,
+                                        p.id_categoria
+                                        ).ToList
+                setNombreP(traerProdXId(0).nombre)
+                setPrecioP(traerProdXId(0).precio)
+                setStockP(traerProdXId(0).stock)
+                setCategoriaP(traerProdXId(0).id_categoria)
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
         End Try
     End Function
 End Class

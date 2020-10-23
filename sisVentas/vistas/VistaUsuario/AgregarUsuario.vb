@@ -145,7 +145,7 @@ Public Class Agregar_Usuario
 
     Private Sub Agregar_Usuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CMPerfil.Items.Add("Gerente")
-        Me.CMPerfil.Items.Add("Vendedor
-")
+        Me.CMPerfil.Items.Add("Vendedor")
+        Me.CMPerfil.Items.Add("Administrador")
     End Sub
 End Class

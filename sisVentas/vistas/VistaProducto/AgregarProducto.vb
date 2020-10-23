@@ -2,7 +2,7 @@
     Private Sub BtnGuardarProducto_Click(sender As Object, e As EventArgs) Handles BtnGuardarProducto.Click
         Dim precio As Decimal
 
-        If TNombreProd.Text = "" Or TPrecioProd.Text = "" Or ComboBoxCat.Text = "Selecciona un categoría" Or
+        If TNombreProd.Text = "" Or TPrecioProd.Text = "" Or
          TStockProd.Text = "" Then
             FrmRellenarCampos.Show()
         Else
@@ -26,10 +26,6 @@
 
     Private Sub BtnGuardarProducto_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnGuardarProducto.MouseUp
         BtnGuardarProducto.BackgroundImage = My.Resources.btn122x45
-    End Sub
-
-    Private Sub BtnCancelarProd_Click(sender As Object, e As EventArgs) Handles BtnCancelarProd.Click
-
     End Sub
 
     Private Sub BtnCancelarProd_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnCancelarProd.MouseDown
@@ -63,9 +59,7 @@
         End If
     End Sub
 
-    Private Sub TPrecioProd_TextChanged(sender As Object, e As EventArgs) Handles TPrecioProd.TextChanged
 
-    End Sub
 
     Private Sub TPrecioProd_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TPrecioProd.KeyPress
         NumConFrac(Me.TPrecioProd, e)
@@ -75,25 +69,25 @@
 
         End If
     End Sub
-    Private Sub CargarCat()
+    Public Sub CargarCat()
         Dim cat As New Categoria
         cat.TraerCategoria(ComboBoxCat)
+        ComboBoxCat.DisplayMember = "descripicion"
+        ComboBoxCat.ValueMember = "id_categoria"
     End Sub
-    
-    Private Sub ComboBoxCat_Click(sender As Object, e As EventArgs) Handles ComboBoxCat.Click
-        CargarCat()
-    End Sub
+
+
 
     Private Sub cargarProveedor()
         Dim pro As New Proveedor
         pro.TraerProveedor(ComboBoxProveedor)
     End Sub
 
-    Private Sub ComboBoxProveedor_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBoxProveedor.MouseClick
-        CargarProveedor()
-    End Sub
+
 
     Private Sub AgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        CargarCat()
+        cargarProveedor()
     End Sub
+
 End Class
