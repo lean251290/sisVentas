@@ -107,5 +107,47 @@
             Return False
         End Try
     End Function
+    Public Function ActualizarCliente(ByVal p_id As String)
+        Try
+            Using db As New SisVentasEntities
+                Dim cli = (From q In db.tblCliente
+                           Where q.id_cliente = p_id
+                           Select q).First
+                'firstordefault xq me arroja el error de la secuencia no tiene elementos
+                cli.correo = getCorreo()
+                cli.direccion = getDireccion()
+                cli.telefono = getTelefono()
+
+
+                db.SaveChanges()
+
+            End Using
+
+            Return True
+        Catch ex As Exception
+            Return False
+
+        End Try
+    End Function
+
+    Public Function TraerPorIdCliente(query As Integer)
+        Try
+            Using MST As New SisVentasEntities
+                Dim mostrarPorId = (From q In MST.tblCliente
+                                    Where q.id_cliente = query
+                                    Select q).ToList
+                setNombre(mostrarPorId(0).nombre)
+                setDni(mostrarPorId(0).dni)
+                setApellido(mostrarPorId(0).apellido)
+                setDireccion(mostrarPorId(0).direccion)
+                setCorreo(mostrarPorId(0).correo)
+                setTelefono(mostrarPorId(0).telefono)
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
 
 End Class

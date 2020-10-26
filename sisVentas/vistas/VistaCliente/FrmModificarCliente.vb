@@ -1,23 +1,24 @@
 ﻿Imports System.Text.RegularExpressions
 Public Class FrmModificarCliente
     Private Sub BtnActualizarCliente_Click(sender As Object, e As EventArgs) Handles BtnActualizarCliente.Click
-        If (TNombreClienteModif.Text = "" Or TApellidoClienteModif.Text = "" Or TEmailClienteModif.Text = "" Or
-            TDniClienteModif.Text = "" Or TDireccionClienteModif.Text = "" Or PBModifCliente.Image Is Nothing) Then
-            FrmRellenarCampos.Show()
-        Else
-            TNombreClienteModif.Text = ""
-            TApellidoClienteModif.Text = ""
-            TEmailClienteModif.Text = ""
-            TDniClienteModif.Text = ""
-            TDireccionClienteModif.Text = ""
-            PBModifCliente.Image = My.Resources.user1
-            FrmDatosCargadosCorrecto.Show()
+        Dim cliente As New Cliente(TNombreClienteModif.Text, TApellidoClienteModif.Text, TEmailClienteModif.Text,
+            TDniClienteModif.Text, TDireccionClienteModif.Text, TTelefonoClienteModif.Text)
+
+        If cliente.ActualizarCliente(Me.Tag) Then
+            FrmDatosActualizados.Show()
             PanelAdmin.Enabled = True
             Me.Close()
             PanelAdmin.Show()
+            PanelAdmin.cerrarFormHijo(VerUsuarios)
+            PanelAdmin.abrirFormHijo(VerUsuarios)
+            'VerUsuarios.cargarGridUser()
+        Else
+            FrmUpsError.Show()
         End If
 
     End Sub
+
+
 
     Private Sub BtnActualizarCliente_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnActualizarCliente.MouseDown
         BtnActualizarCliente.BackgroundImage = My.Resources.btn122x45Oscuro
@@ -80,13 +81,6 @@ Public Class FrmModificarCliente
         If Not Regex.IsMatch(TEmailClienteModif.Text, mail) Then
             FrmErrorMail.Show()
             TEmailClienteModif.Text = ""
-        End If
-    End Sub
-
-    Private Sub PBModifCliente_Click(sender As Object, e As EventArgs) Handles PBModifCliente.Click
-        dialogModifCli.ShowDialog()
-        If dialogModifCli.FileName <> "" Then
-            PBModifCliente.ImageLocation = dialogModifCli.FileName
         End If
     End Sub
 

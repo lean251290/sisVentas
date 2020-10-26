@@ -26,8 +26,6 @@ Partial Class FrmModificarCliente
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.LabelModificarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
-        Me.PBModifCliente = New System.Windows.Forms.PictureBox()
-        Me.LblFotoModifUsusario = New System.Windows.Forms.Label()
         Me.TEmailClienteModif = New System.Windows.Forms.TextBox()
         Me.TDireccionClienteModif = New System.Windows.Forms.TextBox()
         Me.TNombreClienteModif = New System.Windows.Forms.TextBox()
@@ -42,10 +40,11 @@ Partial Class FrmModificarCliente
         Me.BtnActualizarCliente = New System.Windows.Forms.Button()
         Me.dialogModifCli = New System.Windows.Forms.OpenFileDialog()
         Me.BtnAltaCliente = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TTelefonoClienteModif = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarCliente.SuspendLayout()
-        CType(Me.PBModifCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -90,8 +89,8 @@ Partial Class FrmModificarCliente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelAgregarCliente.Controls.Add(Me.PBModifCliente)
-        Me.PanelAgregarCliente.Controls.Add(Me.LblFotoModifUsusario)
+        Me.PanelAgregarCliente.Controls.Add(Me.TTelefonoClienteModif)
+        Me.PanelAgregarCliente.Controls.Add(Me.Label1)
         Me.PanelAgregarCliente.Controls.Add(Me.TEmailClienteModif)
         Me.PanelAgregarCliente.Controls.Add(Me.TDireccionClienteModif)
         Me.PanelAgregarCliente.Controls.Add(Me.TNombreClienteModif)
@@ -106,30 +105,6 @@ Partial Class FrmModificarCliente
         Me.PanelAgregarCliente.Name = "PanelAgregarCliente"
         Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarCliente.TabIndex = 10
-        '
-        'PBModifCliente
-        '
-        Me.PBModifCliente.BackColor = System.Drawing.Color.Gainsboro
-        Me.PBModifCliente.Image = Global.sisVentas.My.Resources.Resources.user1
-        Me.PBModifCliente.Location = New System.Drawing.Point(193, 321)
-        Me.PBModifCliente.Name = "PBModifCliente"
-        Me.PBModifCliente.Size = New System.Drawing.Size(166, 134)
-        Me.PBModifCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PBModifCliente.TabIndex = 19
-        Me.PBModifCliente.TabStop = False
-        '
-        'LblFotoModifUsusario
-        '
-        Me.LblFotoModifUsusario.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblFotoModifUsusario.AutoSize = True
-        Me.LblFotoModifUsusario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFotoModifUsusario.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblFotoModifUsusario.Location = New System.Drawing.Point(30, 321)
-        Me.LblFotoModifUsusario.Name = "LblFotoModifUsusario"
-        Me.LblFotoModifUsusario.Size = New System.Drawing.Size(46, 20)
-        Me.LblFotoModifUsusario.TabIndex = 18
-        Me.LblFotoModifUsusario.Text = "Foto:"
-        Me.LblFotoModifUsusario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TEmailClienteModif
         '
@@ -314,6 +289,29 @@ Partial Class FrmModificarCliente
         Me.BtnAltaCliente.Text = "Alta"
         Me.BtnAltaCliente.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label1.Location = New System.Drawing.Point(30, 332)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 20)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Telefono:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TTelefonoClienteModif
+        '
+        Me.TTelefonoClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TTelefonoClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TTelefonoClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TTelefonoClienteModif.Location = New System.Drawing.Point(193, 332)
+        Me.TTelefonoClienteModif.Name = "TTelefonoClienteModif"
+        Me.TTelefonoClienteModif.Size = New System.Drawing.Size(321, 13)
+        Me.TTelefonoClienteModif.TabIndex = 9
+        '
         'FrmModificarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -334,7 +332,6 @@ Partial Class FrmModificarCliente
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelAgregarCliente.ResumeLayout(False)
         Me.PanelAgregarCliente.PerformLayout()
-        CType(Me.PBModifCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -343,8 +340,6 @@ Partial Class FrmModificarCliente
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LabelModificarCliente As Label
     Friend WithEvents PanelAgregarCliente As Panel
-    Friend WithEvents PBModifCliente As PictureBox
-    Friend WithEvents LblFotoModifUsusario As Label
     Friend WithEvents TEmailClienteModif As TextBox
     Friend WithEvents TDireccionClienteModif As TextBox
     Friend WithEvents TNombreClienteModif As TextBox
@@ -359,4 +354,6 @@ Partial Class FrmModificarCliente
     Friend WithEvents BtnCancelarCliente As Button
     Friend WithEvents dialogModifCli As OpenFileDialog
     Friend WithEvents BtnAltaCliente As Button
+    Friend WithEvents TTelefonoClienteModif As TextBox
+    Friend WithEvents Label1 As Label
 End Class

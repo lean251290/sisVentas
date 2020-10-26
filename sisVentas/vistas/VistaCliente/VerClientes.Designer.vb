@@ -22,21 +22,24 @@ Partial Class VerClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LabelVerCliente = New System.Windows.Forms.Label()
         Me.LBuscarCliente = New System.Windows.Forms.Label()
         Me.TBuscarCliente = New System.Windows.Forms.TextBox()
         Me.PanelVerClientes = New System.Windows.Forms.Panel()
-        Me.DGVerClientes = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnModificarCliente = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnEliminarCliente = New System.Windows.Forms.Button()
+        Me.DGVerClientes = New System.Windows.Forms.DataGridView()
         Me.PanelVerClientes.SuspendLayout()
-        CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelVerCliente
@@ -91,17 +94,6 @@ Partial Class VerClientes
         Me.PanelVerClientes.Name = "PanelVerClientes"
         Me.PanelVerClientes.Size = New System.Drawing.Size(600, 495)
         Me.PanelVerClientes.TabIndex = 5
-        '
-        'DGVerClientes
-        '
-        Me.DGVerClientes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DGVerClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DGVerClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVerClientes.Location = New System.Drawing.Point(50, 90)
-        Me.DGVerClientes.Name = "DGVerClientes"
-        Me.DGVerClientes.Size = New System.Drawing.Size(500, 247)
-        Me.DGVerClientes.TabIndex = 18
         '
         'PictureBox1
         '
@@ -174,6 +166,51 @@ Partial Class VerClientes
         Me.BtnEliminarCliente.Text = "Eliminar"
         Me.BtnEliminarCliente.UseVisualStyleBackColor = True
         '
+        'DGVerClientes
+        '
+        Me.DGVerClientes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DGVerClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGVerClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DGVerClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DGVerClientes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGVerClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DGVerClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGVerClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGVerClientes.ColumnHeadersHeight = 28
+        Me.DGVerClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Green
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGVerClientes.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DGVerClientes.EnableHeadersVisualStyles = False
+        Me.DGVerClientes.GridColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.DGVerClientes.Location = New System.Drawing.Point(22, 101)
+        Me.DGVerClientes.Name = "DGVerClientes"
+        Me.DGVerClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGVerClientes.RowHeadersVisible = False
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Snow
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.DGVerClientes.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.DGVerClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGVerClientes.Size = New System.Drawing.Size(560, 354)
+        Me.DGVerClientes.TabIndex = 18
+        '
         'VerClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -190,11 +227,11 @@ Partial Class VerClientes
         Me.Text = "Form1"
         Me.PanelVerClientes.ResumeLayout(False)
         Me.PanelVerClientes.PerformLayout()
-        CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -204,9 +241,9 @@ Partial Class VerClientes
     Friend WithEvents TBuscarCliente As TextBox
     Friend WithEvents PanelVerClientes As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DGVerClientes As DataGridView
     Friend WithEvents BtnModificarCliente As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents BtnEliminarCliente As Button
+    Friend WithEvents DGVerClientes As DataGridView
 End Class
