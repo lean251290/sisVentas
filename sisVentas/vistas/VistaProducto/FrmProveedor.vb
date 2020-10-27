@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub BtnGuardarProv_Click(sender As Object, e As EventArgs) Handles BtnGuardarProv.Click
-        Dim prov As New Proveedor(TDireccionProv.Text, TDireccionProv.Text, TTelProv.Text, TEmailProv.Text)
+        Dim prov As New Proveedor(TNombreProv.Text, TDireccionProv.Text, TTelProv.Text, TEmailProv.Text)
         If prov.AgregarProveedor() Then
             FrmDatosCargadosCorrecto.Show()
         Else

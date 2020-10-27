@@ -136,9 +136,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SisVentas.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.vb">
-      <DependentUpon>SisVentas.tt</DependentUpon>
-    </Compile>
     <Compile Include="tblCabecera.vb">
       <DependentUpon>SisVentas.tt</DependentUpon>
     </Compile>
