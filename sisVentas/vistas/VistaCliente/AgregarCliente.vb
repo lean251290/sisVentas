@@ -14,6 +14,7 @@ Public Class AgregarCliente
                 TEmailCliente.Text = ""
                 TDniCliente.Text = ""
                 TDireccionCliente.Text = ""
+                TTelefonoCliente.Text = ""
             End If
         End If
     End Sub

@@ -9,8 +9,8 @@ Public Class FrmModificarCliente
             PanelAdmin.Enabled = True
             Me.Close()
             PanelAdmin.Show()
-            PanelAdmin.cerrarFormHijo(VerUsuarios)
-            PanelAdmin.abrirFormHijo(VerUsuarios)
+            PanelAdmin.cerrarFormHijo(VerClientes)
+            PanelAdmin.abrirFormHijo(VerClientes)
             'VerUsuarios.cargarGridUser()
         Else
             FrmUpsError.Show()
