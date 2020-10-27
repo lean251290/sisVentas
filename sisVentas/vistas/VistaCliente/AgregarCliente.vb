@@ -6,9 +6,8 @@ Public Class AgregarCliente
             TDniCliente.Text = "" Or TDireccionCliente.Text = "" Or TTelefonoCliente.Text = "") Then
             FrmRellenarCampos.Show()
         Else
-            Dim cliente As New Cliente(TDniCliente.Text, TNombreCliente.Text, TApellidoCliente.Text, TDireccionCliente.Text, TEmailCliente.Text, TTelefonoCliente.Text)
+            Dim cliente As New Cliente(TNombreCliente.Text, TApellidoCliente.Text, TDniCliente.Text, TEmailCliente.Text, TDireccionCliente.Text, TTelefonoCliente.Text)
             If cliente.AgregarCliente() Then
-                MsgBox("correcto", vbOK, "Correcto")
                 FrmDatosCargadosCorrecto.Show()
                 TNombreCliente.Text = ""
                 TApellidoCliente.Text = ""

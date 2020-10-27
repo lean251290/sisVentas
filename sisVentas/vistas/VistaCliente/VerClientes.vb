@@ -3,12 +3,6 @@
         Me.Close()
     End Sub
 
-    Private Sub BtnModificarCliente_Click(sender As Object, e As EventArgs) Handles BtnModificarCliente.Click
-        PanelAdmin.Enabled = False
-        PanelAdmin.Hide()
-        FrmModificarCliente.Show()
-    End Sub
-
     Private Sub BtnModificarCliente_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnModificarCliente.MouseDown
         BtnModificarCliente.BackgroundImage = My.Resources.btn122x45Oscuro
 
@@ -53,5 +47,21 @@
     'CARGAMOS LOS CLIENTES
     Private Sub VerClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargarGridCliente()
+    End Sub
+
+    Private Sub BtnModificarCliente_Click(sender As Object, e As EventArgs) Handles BtnModificarCliente.Click
+        'creo una variable para saber si selecciono o no alguna fila del datagrid
+        Dim NumeroDeFilaSeleccionada As Integer
+
+        If DGVerClientes.SelectedRows.Count > 0 Then
+            NumeroDeFilaSeleccionada = DGVerClientes.CurrentRow.Index
+            PanelAdmin.Enabled = False
+            PanelAdmin.Hide()
+            FrmModificarCliente.Tag = DGVerClientes.SelectedRows(0).Cells(0).Value.ToString
+            FrmModificarCliente.Show()
+        Else
+            FrmSeleccioneFila.Show()
+        End If
+
     End Sub
 End Class
