@@ -132,6 +132,7 @@ Public Class PanelAdmin
         End If
     End Sub
     Private Sub PanelAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         esconderSubMenu()
         BtnVentasPorDia.Hide()
         BtnVentasPorFecha.Hide()

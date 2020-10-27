@@ -27,6 +27,10 @@ Partial Class VerUsuarios
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LabelVerUsuarios = New System.Windows.Forms.Label()
         Me.PanelVerUsuarios = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RBTodosLosUsuarios = New System.Windows.Forms.RadioButton()
+        Me.RBUsuariosActivos = New System.Windows.Forms.RadioButton()
+        Me.RBUsuariosBorrados = New System.Windows.Forms.RadioButton()
         Me.DataGridUser = New System.Windows.Forms.DataGridView()
         Me.TBuscarUsuario = New System.Windows.Forms.TextBox()
         Me.LBuscarUsuario = New System.Windows.Forms.Label()
@@ -36,6 +40,7 @@ Partial Class VerUsuarios
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelVerUsuarios.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -62,6 +67,7 @@ Partial Class VerUsuarios
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelVerUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelVerUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelVerUsuarios.Controls.Add(Me.GroupBox1)
         Me.PanelVerUsuarios.Controls.Add(Me.DataGridUser)
         Me.PanelVerUsuarios.Controls.Add(Me.TBuscarUsuario)
         Me.PanelVerUsuarios.Controls.Add(Me.LBuscarUsuario)
@@ -70,6 +76,55 @@ Partial Class VerUsuarios
         Me.PanelVerUsuarios.Name = "PanelVerUsuarios"
         Me.PanelVerUsuarios.Size = New System.Drawing.Size(656, 554)
         Me.PanelVerUsuarios.TabIndex = 7
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RBTodosLosUsuarios)
+        Me.GroupBox1.Controls.Add(Me.RBUsuariosActivos)
+        Me.GroupBox1.Controls.Add(Me.RBUsuariosBorrados)
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox1.Location = New System.Drawing.Point(324, 107)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(308, 53)
+        Me.GroupBox1.TabIndex = 20
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Ver Por:"
+        '
+        'RBTodosLosUsuarios
+        '
+        Me.RBTodosLosUsuarios.AutoSize = True
+        Me.RBTodosLosUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.RBTodosLosUsuarios.Location = New System.Drawing.Point(246, 30)
+        Me.RBTodosLosUsuarios.Name = "RBTodosLosUsuarios"
+        Me.RBTodosLosUsuarios.Size = New System.Drawing.Size(55, 17)
+        Me.RBTodosLosUsuarios.TabIndex = 17
+        Me.RBTodosLosUsuarios.TabStop = True
+        Me.RBTodosLosUsuarios.Text = "Todos"
+        Me.RBTodosLosUsuarios.UseVisualStyleBackColor = True
+        '
+        'RBUsuariosActivos
+        '
+        Me.RBUsuariosActivos.AutoSize = True
+        Me.RBUsuariosActivos.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.RBUsuariosActivos.Location = New System.Drawing.Point(6, 30)
+        Me.RBUsuariosActivos.Name = "RBUsuariosActivos"
+        Me.RBUsuariosActivos.Size = New System.Drawing.Size(60, 17)
+        Me.RBUsuariosActivos.TabIndex = 19
+        Me.RBUsuariosActivos.TabStop = True
+        Me.RBUsuariosActivos.Text = "Activos"
+        Me.RBUsuariosActivos.UseVisualStyleBackColor = True
+        '
+        'RBUsuariosBorrados
+        '
+        Me.RBUsuariosBorrados.AutoSize = True
+        Me.RBUsuariosBorrados.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.RBUsuariosBorrados.Location = New System.Drawing.Point(120, 30)
+        Me.RBUsuariosBorrados.Name = "RBUsuariosBorrados"
+        Me.RBUsuariosBorrados.Size = New System.Drawing.Size(75, 17)
+        Me.RBUsuariosBorrados.TabIndex = 18
+        Me.RBUsuariosBorrados.TabStop = True
+        Me.RBUsuariosBorrados.Text = "Eliminados"
+        Me.RBUsuariosBorrados.UseVisualStyleBackColor = True
         '
         'DataGridUser
         '
@@ -102,7 +157,7 @@ Partial Class VerUsuarios
         Me.DataGridUser.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridUser.EnableHeadersVisualStyles = False
         Me.DataGridUser.GridColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.DataGridUser.Location = New System.Drawing.Point(17, 90)
+        Me.DataGridUser.Location = New System.Drawing.Point(24, 166)
         Me.DataGridUser.Name = "DataGridUser"
         Me.DataGridUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridUser.RowHeadersVisible = False
@@ -113,7 +168,7 @@ Partial Class VerUsuarios
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridUser.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridUser.Size = New System.Drawing.Size(621, 418)
+        Me.DataGridUser.Size = New System.Drawing.Size(608, 342)
         Me.DataGridUser.TabIndex = 16
         '
         'TBuscarUsuario
@@ -222,6 +277,8 @@ Partial Class VerUsuarios
         Me.Text = "VerUsuario"
         Me.PanelVerUsuarios.ResumeLayout(False)
         Me.PanelVerUsuarios.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DataGridUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -240,4 +297,8 @@ Partial Class VerUsuarios
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DataGridUser As DataGridView
+    Friend WithEvents RBUsuariosActivos As RadioButton
+    Friend WithEvents RBUsuariosBorrados As RadioButton
+    Friend WithEvents RBTodosLosUsuarios As RadioButton
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

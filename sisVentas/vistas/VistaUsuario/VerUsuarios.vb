@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub BtnModificarUsuario_Click(sender As Object, e As EventArgs) Handles BtnModificarUsuario.Click
-        'creo una variable para saber si selecciono o no alguna fila del datagrid
+        
         Dim NumeroDeFilaSeleccionada As Integer
 
         If DataGridUser.SelectedRows.Count > 0 Then
@@ -46,7 +46,17 @@
     End Sub
 
     Private Sub BtnEliminarUsusario_Click(sender As Object, e As EventArgs) Handles BtnEliminarUsusario.Click
-        FrmSiNoUser.Show()
+        Dim NumeroDeFilaSeleccionada As Integer
+        Dim id As Integer
+        Dim user As New Usuarios
+        If DataGridUser.SelectedRows.Count > 0 Then
+            NumeroDeFilaSeleccionada = DataGridUser.CurrentRow.Index
+            id = Val(DataGridUser.SelectedRows(0).Cells(0).Value.ToString)
+            user.BorrarUser(id)
+            Me.Refresh()
+        Else
+            FrmSeleccioneFila.Show()
+        End If
     End Sub
 
 
@@ -67,10 +77,54 @@
         CType(DataGridUser.Columns(8), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
         DataGridUser.Columns(8).Width = 50
         DataGridUser.Refresh()
-        'DataGridUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
+    End Sub
+    Public Sub cargarGridUserBorrados()
+        Dim users As New Usuarios()
+
+        users.TraerUserBorrados(DataGridUser)
+        DataGridUser.Columns(0).Visible = False
+
+        CType(DataGridUser.Columns(8), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
+        DataGridUser.Columns(8).Width = 50
+        'DataGridUser.Refresh()
+
+    End Sub
+    Public Sub cargarGridUserActivo()
+        Dim users As New Usuarios()
+
+        users.TraerUserActivos(DataGridUser)
+        DataGridUser.Columns(0).Visible = False
+
+        CType(DataGridUser.Columns(8), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
+        DataGridUser.Columns(8).Width = 50
+        'DataGridUser.Refresh()
+
     End Sub
 
     Private Sub VerUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'FUNCION PARA CARGAR EL FORMULARIO DE COSTADO
+        'Dim i As Integer
+        ' For i = 50 To 679
+        'Me.ClientSize = New System.Drawing.Size(i, i)
+        'Me.Show()
+        'Next
+        cargarGridUserActivo()
+        RBUsuariosActivos.Checked = True
+    End Sub
+
+    Private Sub RBUsuariosBorrados_CheckedChanged(sender As Object, e As EventArgs) Handles RBUsuariosBorrados.CheckedChanged
+        Me.Refresh()
+        cargarGridUserBorrados()
+    End Sub
+
+    Private Sub RBTodosLosUsuarios_CheckedChanged(sender As Object, e As EventArgs) Handles RBTodosLosUsuarios.CheckedChanged
+        Me.Refresh()
         cargarGridUser()
+    End Sub
+
+    Private Sub RBUsuariosActivos_CheckedChanged(sender As Object, e As EventArgs) Handles RBUsuariosActivos.CheckedChanged
+        cargarGridUserActivo()
+        Me.Refresh()
     End Sub
 End Class

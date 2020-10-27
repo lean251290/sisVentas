@@ -22,4 +22,10 @@
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Close()
     End Sub
+
+    Private Sub BtnSiUser_Click(sender As Object, e As EventArgs) Handles BtnSiUser.Click
+        Dim user As New Usuarios()
+        user.BorrarUser(Me.Tag)
+        VerUsuarios.Refresh()
+    End Sub
 End Class

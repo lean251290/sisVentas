@@ -183,6 +183,68 @@
         End Try
     End Function
 
+    Public Function TraerUserBorrados(grid As DataGridView)
+        Try
+            Using MST As New SisVentasEntities
+                Dim mostrarUserBorrado = From q In MST.tblUsuarios
+                                         Where q.estado = "Eliminado"
+                                         Select
+                                    Id = q.id_user,
+                                    DNI = q.dni,
+                                    Nombre = q.nombre,
+                                    Apellido = q.apellido,
+                                    Estado = q.estado,
+                                    Direccion = q.direccion,
+                                    Correo = q.correo,
+                                    Tipo = q.tipo,
+                                    Foto = q.imagen
+                grid.DataSource = mostrarUserBorrado.ToList
+
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function TraerUserActivos(grid As DataGridView)
+        Try
+            Using MST As New SisVentasEntities
+                Dim mostrarUserActivo = From q In MST.tblUsuarios
+                                        Where q.estado = "Activo"
+                                        Select
+                                    Id = q.id_user,
+                                    DNI = q.dni,
+                                    Nombre = q.nombre,
+                                    Apellido = q.apellido,
+                                    Estado = q.estado,
+                                    Direccion = q.direccion,
+                                    Correo = q.correo,
+                                    Tipo = q.tipo,
+                                    Foto = q.imagen
+                grid.DataSource = mostrarUserActivo.ToList
+
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function BorrarUser(id As Integer)
+        Try
+            Using MST As New SisVentasEntities
+                Dim borrar = (From q In MST.tblUsuarios
+                              Where q.id_user = id
+                              Select q).First
+                borrar.estado = "Eliminado"
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
 
 End Class
 
