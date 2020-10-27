@@ -22,6 +22,7 @@ Partial Public Class SisVentasEntities
         Throw New UnintentionalCodeFirstException()
     End Sub
 
+    Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property tblCabecera() As DbSet(Of tblCabecera)
     Public Overridable Property tblCategoria() As DbSet(Of tblCategoria)
     Public Overridable Property tblCliente() As DbSet(Of tblCliente)

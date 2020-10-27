@@ -26,6 +26,8 @@ Partial Class FrmModificarCliente
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.LabelModificarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
+        Me.TTelefonoClienteModif = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TEmailClienteModif = New System.Windows.Forms.TextBox()
         Me.TDireccionClienteModif = New System.Windows.Forms.TextBox()
         Me.TNombreClienteModif = New System.Windows.Forms.TextBox()
@@ -40,8 +42,6 @@ Partial Class FrmModificarCliente
         Me.BtnActualizarCliente = New System.Windows.Forms.Button()
         Me.dialogModifCli = New System.Windows.Forms.OpenFileDialog()
         Me.BtnAltaCliente = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TTelefonoClienteModif = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarCliente.SuspendLayout()
@@ -106,12 +106,35 @@ Partial Class FrmModificarCliente
         Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarCliente.TabIndex = 10
         '
+        'TTelefonoClienteModif
+        '
+        Me.TTelefonoClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TTelefonoClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TTelefonoClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TTelefonoClienteModif.Location = New System.Drawing.Point(193, 332)
+        Me.TTelefonoClienteModif.Name = "TTelefonoClienteModif"
+        Me.TTelefonoClienteModif.Size = New System.Drawing.Size(321, 13)
+        Me.TTelefonoClienteModif.TabIndex = 9
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label1.Location = New System.Drawing.Point(30, 332)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 20)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Telefono:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'TEmailClienteModif
         '
         Me.TEmailClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TEmailClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TEmailClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEmailClienteModif.Location = New System.Drawing.Point(193, 261)
+        Me.TEmailClienteModif.Location = New System.Drawing.Point(193, 196)
         Me.TEmailClienteModif.Name = "TEmailClienteModif"
         Me.TEmailClienteModif.Size = New System.Drawing.Size(321, 13)
         Me.TEmailClienteModif.TabIndex = 7
@@ -121,7 +144,7 @@ Partial Class FrmModificarCliente
         Me.TDireccionClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TDireccionClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TDireccionClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TDireccionClienteModif.Location = New System.Drawing.Point(193, 201)
+        Me.TDireccionClienteModif.Location = New System.Drawing.Point(193, 254)
         Me.TDireccionClienteModif.Name = "TDireccionClienteModif"
         Me.TDireccionClienteModif.Size = New System.Drawing.Size(321, 13)
         Me.TDireccionClienteModif.TabIndex = 6
@@ -169,7 +192,7 @@ Partial Class FrmModificarCliente
         Me.LblDireccionModif.AutoSize = True
         Me.LblDireccionModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDireccionModif.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblDireccionModif.Location = New System.Drawing.Point(30, 201)
+        Me.LblDireccionModif.Location = New System.Drawing.Point(30, 254)
         Me.LblDireccionModif.Name = "LblDireccionModif"
         Me.LblDireccionModif.Size = New System.Drawing.Size(79, 20)
         Me.LblDireccionModif.TabIndex = 4
@@ -182,7 +205,7 @@ Partial Class FrmModificarCliente
         Me.LblEmailModif.AutoSize = True
         Me.LblEmailModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmailModif.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblEmailModif.Location = New System.Drawing.Point(30, 261)
+        Me.LblEmailModif.Location = New System.Drawing.Point(30, 196)
         Me.LblEmailModif.Name = "LblEmailModif"
         Me.LblEmailModif.Size = New System.Drawing.Size(57, 20)
         Me.LblEmailModif.TabIndex = 3
@@ -288,29 +311,6 @@ Partial Class FrmModificarCliente
         Me.BtnAltaCliente.TabStop = False
         Me.BtnAltaCliente.Text = "Alta"
         Me.BtnAltaCliente.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(30, 332)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 20)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Telefono:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TTelefonoClienteModif
-        '
-        Me.TTelefonoClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TTelefonoClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TTelefonoClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TTelefonoClienteModif.Location = New System.Drawing.Point(193, 332)
-        Me.TTelefonoClienteModif.Name = "TTelefonoClienteModif"
-        Me.TTelefonoClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TTelefonoClienteModif.TabIndex = 9
         '
         'FrmModificarCliente
         '

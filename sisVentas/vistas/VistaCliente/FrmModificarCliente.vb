@@ -1,8 +1,8 @@
 ﻿Imports System.Text.RegularExpressions
 Public Class FrmModificarCliente
     Private Sub BtnActualizarCliente_Click(sender As Object, e As EventArgs) Handles BtnActualizarCliente.Click
-        Dim cliente As New Cliente(TNombreClienteModif.Text, TApellidoClienteModif.Text, TEmailClienteModif.Text,
-            TDniClienteModif.Text, TDireccionClienteModif.Text, TTelefonoClienteModif.Text)
+        Dim cliente As New Cliente(TNombreClienteModif.Text, TApellidoClienteModif.Text, TDniClienteModif.Text, TEmailClienteModif.Text,
+         TDireccionClienteModif.Text, TTelefonoClienteModif.Text)
 
         If cliente.ActualizarCliente(Me.Tag) Then
             FrmDatosActualizados.Show()
@@ -18,7 +18,17 @@ Public Class FrmModificarCliente
 
     End Sub
 
+    Private Sub FrmModificarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim cli As New Cliente()
+        cli.TraerPorIdCliente(Me.Tag)
+        TDniClienteModif.Text = cli.getDni
+        TNombreClienteModif.Text = cli.getNombre
+        TApellidoClienteModif.Text = cli.getApellido
+        TDireccionClienteModif.Text = cli.getDireccion
+        TEmailClienteModif.Text = cli.getCorreo
+        TTelefonoClienteModif.Text = cli.getTelefono
 
+    End Sub
 
     Private Sub BtnActualizarCliente_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnActualizarCliente.MouseDown
         BtnActualizarCliente.BackgroundImage = My.Resources.btn122x45Oscuro
