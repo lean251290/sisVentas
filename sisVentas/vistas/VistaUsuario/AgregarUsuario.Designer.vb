@@ -25,6 +25,11 @@ Partial Class Agregar_Usuario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agregar_Usuario))
         Me.LabelAgregarUsuario = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
+        Me.LabelDniNumeros = New System.Windows.Forms.Label()
+        Me.LabelPass = New System.Windows.Forms.Label()
+        Me.LabelEmail = New System.Windows.Forms.Label()
+        Me.LabelDNI = New System.Windows.Forms.Label()
+        Me.LblPassNoCoincide = New System.Windows.Forms.Label()
         Me.CMPerfil = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PBUser = New System.Windows.Forms.PictureBox()
@@ -75,6 +80,11 @@ Partial Class Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelDniNumeros)
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelPass)
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelEmail)
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelDNI)
+        Me.PanelAgregarUsuario.Controls.Add(Me.LblPassNoCoincide)
         Me.PanelAgregarUsuario.Controls.Add(Me.CMPerfil)
         Me.PanelAgregarUsuario.Controls.Add(Me.Label1)
         Me.PanelAgregarUsuario.Controls.Add(Me.PBUser)
@@ -98,14 +108,64 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUsuario.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarUsuario.TabIndex = 4
         '
+        'LabelDniNumeros
+        '
+        Me.LabelDniNumeros.AutoSize = True
+        Me.LabelDniNumeros.ForeColor = System.Drawing.Color.Red
+        Me.LabelDniNumeros.Location = New System.Drawing.Point(190, 44)
+        Me.LabelDniNumeros.Name = "LabelDniNumeros"
+        Me.LabelDniNumeros.Size = New System.Drawing.Size(165, 13)
+        Me.LabelDniNumeros.TabIndex = 26
+        Me.LabelDniNumeros.Text = "El D.N.I. contiene solo 8 números"
+        '
+        'LabelPass
+        '
+        Me.LabelPass.AutoSize = True
+        Me.LabelPass.ForeColor = System.Drawing.Color.Red
+        Me.LabelPass.Location = New System.Drawing.Point(190, 337)
+        Me.LabelPass.Name = "LabelPass"
+        Me.LabelPass.Size = New System.Drawing.Size(100, 13)
+        Me.LabelPass.TabIndex = 25
+        Me.LabelPass.Text = "Contraseña inválida"
+        '
+        'LabelEmail
+        '
+        Me.LabelEmail.AutoSize = True
+        Me.LabelEmail.ForeColor = System.Drawing.Color.Red
+        Me.LabelEmail.Location = New System.Drawing.Point(190, 277)
+        Me.LabelEmail.Name = "LabelEmail"
+        Me.LabelEmail.Size = New System.Drawing.Size(136, 13)
+        Me.LabelEmail.TabIndex = 24
+        Me.LabelEmail.Text = "Dirección de e-mail inválido"
+        '
+        'LabelDNI
+        '
+        Me.LabelDNI.AutoSize = True
+        Me.LabelDNI.ForeColor = System.Drawing.Color.Red
+        Me.LabelDNI.Location = New System.Drawing.Point(190, 44)
+        Me.LabelDNI.Name = "LabelDNI"
+        Me.LabelDNI.Size = New System.Drawing.Size(131, 13)
+        Me.LabelDNI.TabIndex = 23
+        Me.LabelDNI.Text = "Ya existe ese N° de D.N.I."
+        '
+        'LblPassNoCoincide
+        '
+        Me.LblPassNoCoincide.AutoSize = True
+        Me.LblPassNoCoincide.ForeColor = System.Drawing.Color.Red
+        Me.LblPassNoCoincide.Location = New System.Drawing.Point(190, 397)
+        Me.LblPassNoCoincide.Name = "LblPassNoCoincide"
+        Me.LblPassNoCoincide.Size = New System.Drawing.Size(149, 13)
+        Me.LblPassNoCoincide.TabIndex = 22
+        Me.LblPassNoCoincide.Text = "Las contraseñas no coinciden"
+        '
         'CMPerfil
         '
+        Me.CMPerfil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CMPerfil.FormattingEnabled = True
         Me.CMPerfil.Location = New System.Drawing.Point(393, 431)
         Me.CMPerfil.Name = "CMPerfil"
         Me.CMPerfil.Size = New System.Drawing.Size(121, 21)
         Me.CMPerfil.TabIndex = 21
-        Me.CMPerfil.Text = "Selecciona un perfil"
         '
         'Label1
         '
@@ -360,7 +420,7 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnAgregarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnAgregarUsuario.Location = New System.Drawing.Point(448, 631)
         Me.BtnAgregarUsuario.Name = "BtnAgregarUsuario"
@@ -420,4 +480,9 @@ Partial Class Agregar_Usuario
     Friend WithEvents BtnAgregarUsuario As Button
     Friend WithEvents CMPerfil As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents LblPassNoCoincide As Label
+    Friend WithEvents LabelDNI As Label
+    Friend WithEvents LabelEmail As Label
+    Friend WithEvents LabelPass As Label
+    Friend WithEvents LabelDniNumeros As Label
 End Class

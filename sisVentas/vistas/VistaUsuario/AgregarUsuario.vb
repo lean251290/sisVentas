@@ -59,45 +59,13 @@ Public Class Agregar_Usuario
         End If
     End Sub
 
-
-
-    Private Sub TEmailUsuario_LostFocus(sender As Object, e As EventArgs) Handles TEmailUsuario.LostFocus
-        Dim mail As String
-        mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
-
-        If Not Regex.IsMatch(TEmailUsuario.Text, mail) Then
-            FrmErrorMail.Show()
-
-            TEmailUsuario.Text = ""
-        End If
-    End Sub
-
-
-
-    Private Sub TRePassUsuario_LostFocus(sender As Object, e As EventArgs) Handles TRePassUsuario.LostFocus
-        If TPassUsuario.Text <> TRePassUsuario.Text Then
-            FrmMatch.Show()
-            TPassUsuario.Text = ""
-            TRePassUsuario.Text = ""
-        End If
-    End Sub
-
-
-
     Private Sub BtnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles BtnAgregarUsuario.Click
-        Dim cantidad As Integer
-        cantidad = Len(TDniUsuario.Text)
-        If cantidad <> 8 Then
-            FrmValidarDni.Show()
-            TDniUsuario.Text = ""
-        End If
         Dim imagen As Image
         imagen = PBUser.Image
         If TNombreUsuario.Text = "" Or TApellidoUsuario.Text = "" Or TDniUsuario.Text = "" Or
            TDireccionUsuario.Text = "" Or TEmailUsuario.Text = "" Or TPassUsuario.Text = "" Or
            TRePassUsuario.Text = "" Or CMPerfil.SelectedItem Is Nothing Or PBUser.Image Is Nothing Then
             FrmRellenarCampos.Show()
-            'p_dni, p_nombre, p_apellido, p_correo, p_direccion, p_pass, p_imagen, p_tipo, p_estado
         Else
             Dim User As New Usuarios(TDniUsuario.Text, TNombreUsuario.Text, TApellidoUsuario.Text, TEmailUsuario.Text, TDireccionUsuario.Text, TPassUsuario.Text, PBUser.Image, CMPerfil.SelectedItem, "Activo")
             If User.agregarUsuario() Then
@@ -108,8 +76,11 @@ Public Class Agregar_Usuario
                 TEmailUsuario.Text = ""
                 TPassUsuario.Text = ""
                 TRePassUsuario.Text = ""
-                CMPerfil.SelectedItem = -1
+                CMPerfil.Refresh()
+                PBUser.Refresh()
                 CMPerfil.Text = "Selecciona un perfil"
+                PanelAdmin.cerrarFormHijo(Me)
+                PanelAdmin.abrirFormHijo(VerUsuarios)
                 FrmDatosCargadosCorrecto.Show()
             Else
                 MsgBox("error", vbCritical, "error")
@@ -123,9 +94,19 @@ Public Class Agregar_Usuario
 
     Private Sub TDniUsuario_LostFocus(sender As Object, e As EventArgs) Handles TDniUsuario.LostFocus
         Dim user As New Usuarios
-        If user.VerificarDNI(TDniUsuario.Text) Then
-            FrmVerificaDNI.Show()
+        Dim cantidad As Integer
+        cantidad = Len(TDniUsuario.Text)
+        If cantidad <> 8 Then
+            LabelDniNumeros.Visible = True
             TDniUsuario.Text = ""
+        Else
+            LabelDniNumeros.Visible = False
+        End If
+        If user.VerificarDNI(TDniUsuario.Text) Then
+            LabelDNI.Visible = True
+            TDniUsuario.Text = ""
+        Else
+            LabelDNI.Visible = False
         End If
 
     End Sub
@@ -142,7 +123,58 @@ Public Class Agregar_Usuario
         Me.CMPerfil.Items.Add("Gerente")
         Me.CMPerfil.Items.Add("Vendedor")
         Me.CMPerfil.Items.Add("Administrador")
+        LblPassNoCoincide.Visible = False
+        LabelDNI.Visible = False
+        LabelEmail.Visible = False
+        LabelPass.Visible = False
+        LabelDniNumeros.Visible = False
     End Sub
 
 
+
+    Private Sub TPassUsuario_LostFocus(sender As Object, e As EventArgs) Handles TPassUsuario.LostFocus
+        '^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$
+        'La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito,
+        'al menos una minúscula, al menos una mayúscula y al menos un caracter no alfanumérico.
+        Dim pass As String
+        pass = "^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$"
+        If Not Regex.IsMatch(TPassUsuario.Text, pass) Then
+            LabelPass.Visible = True
+            TPassUsuario.Text = ""
+        Else
+            LabelPass.Visible = False
+        End If
+    End Sub
+
+    Private Sub TEmailUsuario_LostFocus(sender As Object, e As EventArgs) Handles TEmailUsuario.LostFocus
+        Dim mail As String
+        mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
+        If Not Regex.IsMatch(TEmailUsuario.Text, mail) Then
+            LabelEmail.Visible = True
+            TEmailUsuario.Text = ""
+        Else
+            LabelEmail.Visible = False
+        End If
+    End Sub
+
+    Private Sub TRePassUsuario_TextChanged(sender As Object, e As EventArgs) Handles TRePassUsuario.TextChanged
+
+    End Sub
+
+    Private Sub TRePassUsuario_LostFocus(sender As Object, e As EventArgs) Handles TRePassUsuario.LostFocus
+        If TPassUsuario.Text <> TRePassUsuario.Text Then
+            LblPassNoCoincide.Visible = True
+            TRePassUsuario.Text = ""
+        Else
+            LblPassNoCoincide.Visible = False
+        End If
+    End Sub
+
+    Private Sub TDniUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDniUsuario.TextChanged
+
+    End Sub
+
+    Private Sub TDniUsuario_Layout(sender As Object, e As LayoutEventArgs) Handles TDniUsuario.Layout
+
+    End Sub
 End Class
