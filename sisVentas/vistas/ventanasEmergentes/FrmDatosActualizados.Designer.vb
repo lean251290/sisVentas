@@ -106,7 +106,9 @@ Partial Class FrmDatosActualizados
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmDatosActualizados"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmDatosActualizados"
+        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         CType(Me.PBDatosActualizados, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

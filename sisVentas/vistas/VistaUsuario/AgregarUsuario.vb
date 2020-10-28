@@ -85,6 +85,12 @@ Public Class Agregar_Usuario
 
 
     Private Sub BtnAgregarUsuario_Click(sender As Object, e As EventArgs) Handles BtnAgregarUsuario.Click
+        Dim cantidad As Integer
+        cantidad = Len(TDniUsuario.Text)
+        If cantidad <> 8 Then
+            FrmValidarDni.Show()
+            TDniUsuario.Text = ""
+        End If
         Dim imagen As Image
         imagen = PBUser.Image
         If TNombreUsuario.Text = "" Or TApellidoUsuario.Text = "" Or TDniUsuario.Text = "" Or
@@ -115,24 +121,13 @@ Public Class Agregar_Usuario
         BtnAgregarUsuario.BackgroundImage = My.Resources.btn122x45
     End Sub
 
-    Private Sub TEmailUsuario_TextChanged(sender As Object, e As EventArgs) Handles TEmailUsuario.TextChanged
-
-    End Sub
-
-    Private Sub TDniUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDniUsuario.TextChanged
-
-    End Sub
-
     Private Sub TDniUsuario_LostFocus(sender As Object, e As EventArgs) Handles TDniUsuario.LostFocus
-        Dim cantidad As Integer
-        cantidad = Len(TDniUsuario.Text)
-        If cantidad < 8 Then
-            FrmValidarDni.Show()
-            TDniUsuario.Text = ""
-        ElseIf cantidad > 8 Then
-            FrmValidarDni.Show()
+        Dim user As New Usuarios
+        If user.VerificarDNI(TDniUsuario.Text) Then
+            FrmVerificaDNI.Show()
             TDniUsuario.Text = ""
         End If
+
     End Sub
 
     Private Sub TDireccionUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TDireccionUsuario.KeyPress
@@ -148,4 +143,6 @@ Public Class Agregar_Usuario
         Me.CMPerfil.Items.Add("Vendedor")
         Me.CMPerfil.Items.Add("Administrador")
     End Sub
+
+
 End Class

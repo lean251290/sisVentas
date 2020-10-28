@@ -26,6 +26,12 @@
     Private Sub BtnSiUser_Click(sender As Object, e As EventArgs) Handles BtnSiUser.Click
         Dim user As New Usuarios()
         user.BorrarUser(Me.Tag)
-        VerUsuarios.Refresh()
+        'VerUsuarios.Activate()
+        'VerUsuarios.RBUsuariosBorrados.Checked = True
+        'VerUsuarios.cargarGridUserBorrados()
+        PanelAdmin.cerrarFormHijo(VerUsuarios)
+        PanelAdmin.abrirFormHijo(VerUsuarios)
+        Me.Close()
+        FrmDatosActualizados.Show()
     End Sub
 End Class

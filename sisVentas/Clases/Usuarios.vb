@@ -238,6 +238,7 @@
                               Where q.id_user = id
                               Select q).First
                 borrar.estado = "Eliminado"
+                MST.SaveChanges()
             End Using
             Return True
         Catch ex As Exception
@@ -246,5 +247,32 @@
 
     End Function
 
+    Public Function AltaUser(id As Integer)
+        Try
+            Using MST As New SisVentasEntities
+                Dim activar = (From q In MST.tblUsuarios
+                               Where q.id_user = id
+                               Select q).First
+                activar.estado = "Activo"
+                MST.SaveChanges()
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function VerificarDNI(dni As String) As Boolean
+        Try
+            Using db As New SisVentasEntities
+                Dim existe = (From q In db.tblUsuarios
+                              Where q.dni = dni
+                              Select q).First
+            End Using
+            VerificarDNI = True
+        Catch ex As Exception
+            VerificarDNI = False
+        End Try
+    End Function
 End Class
 

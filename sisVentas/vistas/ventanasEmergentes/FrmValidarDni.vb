@@ -5,5 +5,6 @@
 
     Private Sub PBDni_Click(sender As Object, e As EventArgs) Handles PBDni.Click
         Me.Close()
+
     End Sub
 End Class

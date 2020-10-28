@@ -46,14 +46,13 @@
     End Sub
 
     Private Sub BtnEliminarUsusario_Click(sender As Object, e As EventArgs) Handles BtnEliminarUsusario.Click
+
         Dim NumeroDeFilaSeleccionada As Integer
-        Dim id As Integer
-        Dim user As New Usuarios
         If DataGridUser.SelectedRows.Count > 0 Then
             NumeroDeFilaSeleccionada = DataGridUser.CurrentRow.Index
-            id = Val(DataGridUser.SelectedRows(0).Cells(0).Value.ToString)
-            user.BorrarUser(id)
-            Me.Refresh()
+            FrmSiNoUser.Show()
+            FrmSiNoUser.Tag = DataGridUser.SelectedRows(0).Cells(0).Value
+            cargarGridUserActivo()
         Else
             FrmSeleccioneFila.Show()
         End If
@@ -81,25 +80,17 @@
     End Sub
     Public Sub cargarGridUserBorrados()
         Dim users As New Usuarios()
-
         users.TraerUserBorrados(DataGridUser)
         DataGridUser.Columns(0).Visible = False
-
         CType(DataGridUser.Columns(8), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
         DataGridUser.Columns(8).Width = 50
-        'DataGridUser.Refresh()
-
     End Sub
     Public Sub cargarGridUserActivo()
         Dim users As New Usuarios()
-
         users.TraerUserActivos(DataGridUser)
         DataGridUser.Columns(0).Visible = False
-
         CType(DataGridUser.Columns(8), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Zoom
         DataGridUser.Columns(8).Width = 50
-        'DataGridUser.Refresh()
-
     End Sub
 
     Private Sub VerUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -109,22 +100,48 @@
         'Me.ClientSize = New System.Drawing.Size(i, i)
         'Me.Show()
         'Next
-        cargarGridUserActivo()
         RBUsuariosActivos.Checked = True
+        If RBUsuariosActivos.Checked = True Then
+            cargarGridUserActivo()
+        ElseIf RBUsuariosBorrados.Checked = True Then
+            cargarGridUserBorrados()
+        ElseIf RBTodosLosUsuarios.Checked = True Then
+            cargarGridUser()
+        End If
     End Sub
 
     Private Sub RBUsuariosBorrados_CheckedChanged(sender As Object, e As EventArgs) Handles RBUsuariosBorrados.CheckedChanged
-        Me.Refresh()
         cargarGridUserBorrados()
+        BtnEliminarUsusario.Visible = False
+        BtnModificarUsuario.Visible = False
+        BtnAltaUser.Visible = True
     End Sub
 
     Private Sub RBTodosLosUsuarios_CheckedChanged(sender As Object, e As EventArgs) Handles RBTodosLosUsuarios.CheckedChanged
-        Me.Refresh()
         cargarGridUser()
+        BtnEliminarUsusario.Visible = False
+        BtnModificarUsuario.Visible = False
+        BtnAltaUser.Visible = False
     End Sub
 
     Private Sub RBUsuariosActivos_CheckedChanged(sender As Object, e As EventArgs) Handles RBUsuariosActivos.CheckedChanged
         cargarGridUserActivo()
-        Me.Refresh()
+        BtnEliminarUsusario.Visible = True
+        BtnModificarUsuario.Visible = True
+        BtnAltaUser.Visible = False
+    End Sub
+
+    Private Sub BtnAltaUser_Click(sender As Object, e As EventArgs) Handles BtnAltaUser.Click
+        Dim user As New Usuarios
+        Dim NumeroDeFilaSeleccionada As Integer
+        If DataGridUser.SelectedRows.Count > 0 Then
+            NumeroDeFilaSeleccionada = DataGridUser.CurrentRow.Index
+            user.AltaUser(DataGridUser.SelectedRows(0).Cells(0).Value)
+            FrmDatosActualizados.Show()
+            RBUsuariosActivos.Checked = True
+            cargarGridUserActivo()
+        Else
+            FrmSeleccioneFila.Show()
+        End If
     End Sub
 End Class

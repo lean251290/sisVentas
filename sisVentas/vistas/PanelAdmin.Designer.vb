@@ -673,6 +673,7 @@ Partial Class PanelAdmin
         '
         'PictureBox4
         '
+        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox4.Image = Global.sisVentas.My.Resources.Resources.fondoPanel
         Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox4.Name = "PictureBox4"

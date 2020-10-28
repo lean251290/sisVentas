@@ -410,7 +410,6 @@ Public Class PanelAdmin
             BtnVentasPorUser.Show()
             BtnVentasPorCliente.Show()
             BtnVentasPorProducto.Show()
-
         Else
             PnllReportes.Width = 5
             PnllReportes.BackColor = Color.FromArgb(0, 64, 64)
