@@ -287,5 +287,19 @@
             VerificarEmail = False
         End Try
     End Function
+
+    Public Function Login(user As String, pass As String, tipo As String) As Boolean
+        Try
+            Using db As New SisVentasEntities
+                Dim loguear = (From q In db.tblUsuarios
+                               Where
+                                   q.correo = user And q.pass = pass And q.tipo = tipo
+                               Select q).First
+            End Using
+            Login = True
+        Catch ex As Exception
+            Login = False
+        End Try
+    End Function
 End Class
 

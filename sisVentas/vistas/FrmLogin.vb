@@ -33,30 +33,32 @@ Public Class Login
     End Sub
 
     Private Sub BtnSesion_Click(sender As Object, e As EventArgs) Handles BtnSesion.Click
+        Dim usuario As New Usuarios
         Dim mail As String
+        Dim pass As String
         Dim admin As String
         Dim vendedor As String
         Dim gerente As String
-        vendedor = "vendedor@gmail.com"
-        gerente = "gerente@gmail.com"
-        admin = "admin@gmail.com"
+        vendedor = "Vendedor"
+        gerente = "Gerente"
+        admin = "Administrador"
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
         If TxtUser.Text = "" And TxtPass.Text = "" Then
             FrmErrorLogin.Show()
         ElseIf Not (Regex.IsMatch(TxtUser.Text, mail)) Then
             FrmErrorMail.Show()
-        ElseIf TxtUser.Text = admin Then
+        ElseIf usuario.Login(TxtUser.Text, TxtPass.Text, admin) Then
             Me.Hide()
             PanelAdmin.BotonClientes.Hide()
             PanelAdmin.BotonVentas.Hide()
             PanelAdmin.Show()
-        ElseIf TxtUser.Text = vendedor Then
+        ElseIf usuario.Login(TxtUser.Text, TxtPass.Text, vendedor) Then
             Me.Hide()
             PanelAdmin.BotonUsuarios.Hide()
             PanelAdmin.BotonProductos.Hide()
             PanelAdmin.BotonReportes.Hide()
             PanelAdmin.Show()
-        ElseIf TxtUser.Text = gerente Then
+        ElseIf usuario.Login(TxtUser.Text, TxtPass.Text, gerente) Then
             Me.Hide()
             PanelAdmin.BotonUsuarios.Hide()
             PanelAdmin.BotonProductos.Hide()
