@@ -274,5 +274,18 @@
             VerificarDNI = False
         End Try
     End Function
+
+    Public Function VerificarEmail(email As String) As Boolean
+        Try
+            Using db As New SisVentasEntities
+                Dim existe = (From q In db.tblUsuarios
+                              Where q.correo = email
+                              Select q).First
+            End Using
+            VerificarEmail = True
+        Catch ex As Exception
+            VerificarEmail = False
+        End Try
+    End Function
 End Class
 

@@ -53,6 +53,7 @@ Partial Class Agregar_Usuario
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.dialogUser = New System.Windows.Forms.OpenFileDialog()
         Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
+        Me.LabelVerifEmail = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PBUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -80,6 +81,7 @@ Partial Class Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelVerifEmail)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelDniNumeros)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelPass)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelEmail)
@@ -429,6 +431,16 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario.Text = "Guardar"
         Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
         '
+        'LabelVerifEmail
+        '
+        Me.LabelVerifEmail.AutoSize = True
+        Me.LabelVerifEmail.ForeColor = System.Drawing.Color.Red
+        Me.LabelVerifEmail.Location = New System.Drawing.Point(193, 277)
+        Me.LabelVerifEmail.Name = "LabelVerifEmail"
+        Me.LabelVerifEmail.Size = New System.Drawing.Size(133, 13)
+        Me.LabelVerifEmail.TabIndex = 27
+        Me.LabelVerifEmail.Text = "Ya existe nombre de e-mail"
+        '
         'Agregar_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -485,4 +497,5 @@ Partial Class Agregar_Usuario
     Friend WithEvents LabelEmail As Label
     Friend WithEvents LabelPass As Label
     Friend WithEvents LabelDniNumeros As Label
+    Friend WithEvents LabelVerifEmail As Label
 End Class

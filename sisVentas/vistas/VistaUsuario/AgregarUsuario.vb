@@ -128,6 +128,7 @@ Public Class Agregar_Usuario
         LabelEmail.Visible = False
         LabelPass.Visible = False
         LabelDniNumeros.Visible = False
+        LabelVerifEmail.Visible = False
     End Sub
 
 
@@ -148,6 +149,13 @@ Public Class Agregar_Usuario
 
     Private Sub TEmailUsuario_LostFocus(sender As Object, e As EventArgs) Handles TEmailUsuario.LostFocus
         Dim mail As String
+        Dim user As New Usuarios
+        If user.VerificarEmail(TEmailUsuario.Text) Then
+            LabelVerifEmail.Visible = True
+            TEmailUsuario.Text = ""
+        Else
+            LabelVerifEmail.Visible = False
+        End If
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
         If Not Regex.IsMatch(TEmailUsuario.Text, mail) Then
             LabelEmail.Visible = True
@@ -175,6 +183,10 @@ Public Class Agregar_Usuario
     End Sub
 
     Private Sub TDniUsuario_Layout(sender As Object, e As LayoutEventArgs) Handles TDniUsuario.Layout
+
+    End Sub
+
+    Private Sub TEmailUsuario_TextChanged(sender As Object, e As EventArgs) Handles TEmailUsuario.TextChanged
 
     End Sub
 End Class
