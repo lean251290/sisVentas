@@ -25,6 +25,7 @@ Partial Class Agregar_Usuario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agregar_Usuario))
         Me.LabelAgregarUsuario = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
+        Me.LabelVerifEmail = New System.Windows.Forms.Label()
         Me.LabelDniNumeros = New System.Windows.Forms.Label()
         Me.LabelPass = New System.Windows.Forms.Label()
         Me.LabelEmail = New System.Windows.Forms.Label()
@@ -53,7 +54,6 @@ Partial Class Agregar_Usuario
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.dialogUser = New System.Windows.Forms.OpenFileDialog()
         Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
-        Me.LabelVerifEmail = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PBUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -109,6 +109,16 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUsuario.Name = "PanelAgregarUsuario"
         Me.PanelAgregarUsuario.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarUsuario.TabIndex = 4
+        '
+        'LabelVerifEmail
+        '
+        Me.LabelVerifEmail.AutoSize = True
+        Me.LabelVerifEmail.ForeColor = System.Drawing.Color.Red
+        Me.LabelVerifEmail.Location = New System.Drawing.Point(193, 277)
+        Me.LabelVerifEmail.Name = "LabelVerifEmail"
+        Me.LabelVerifEmail.Size = New System.Drawing.Size(133, 13)
+        Me.LabelVerifEmail.TabIndex = 27
+        Me.LabelVerifEmail.Text = "Ya existe nombre de e-mail"
         '
         'LabelDniNumeros
         '
@@ -430,16 +440,6 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario.TabIndex = 9
         Me.BtnAgregarUsuario.Text = "Guardar"
         Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
-        '
-        'LabelVerifEmail
-        '
-        Me.LabelVerifEmail.AutoSize = True
-        Me.LabelVerifEmail.ForeColor = System.Drawing.Color.Red
-        Me.LabelVerifEmail.Location = New System.Drawing.Point(193, 277)
-        Me.LabelVerifEmail.Name = "LabelVerifEmail"
-        Me.LabelVerifEmail.Size = New System.Drawing.Size(133, 13)
-        Me.LabelVerifEmail.TabIndex = 27
-        Me.LabelVerifEmail.Text = "Ya existe nombre de e-mail"
         '
         'Agregar_Usuario
         '

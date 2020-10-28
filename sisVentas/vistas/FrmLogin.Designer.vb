@@ -113,6 +113,7 @@ Partial Class Login
         Me.TxtPass.Name = "TxtPass"
         Me.TxtPass.Size = New System.Drawing.Size(223, 20)
         Me.TxtPass.TabIndex = 5
+        Me.TxtPass.UseSystemPasswordChar = True
         '
         'LblPass
         '
