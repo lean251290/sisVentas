@@ -1,4 +1,5 @@
 ﻿Public Class Producto
+    Private idP As Integer
     Private nombreP As String
     Private categoriaP As Integer
     Private estadoP As String
@@ -23,6 +24,9 @@
         setProveedorP(p_proveedor)
     End Sub
     'declaracion de los setters 
+    Public Sub setIdP(ByRef p_id As String)
+        idP = p_id
+    End Sub
     Public Sub setNombreP(ByRef p_nombre As String)
         nombreP = p_nombre
     End Sub
@@ -52,6 +56,9 @@
     End Sub
 
     'declaracion de los getters
+    Public Function getIdP()
+        getIdP = idP
+    End Function
     Public Function getNombreP()
         getNombreP = nombreP
     End Function
@@ -139,6 +146,40 @@
                 setPrecioP(traerProdXId(0).precio)
                 setStockP(traerProdXId(0).stock)
                 setCategoriaP(traerProdXId(0).id_categoria)
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function TraerProductoVentaPorNombre(ByVal name As String, ByVal gridP As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim productos = From q In db.tblProducto
+                                Where q.nombre.Contains(name)
+                                Select
+                                    ID = q.id_producto,
+                                    NOMBRE = q.nombre,
+                                    PRECIO = q.precio,
+                                    STOCK = q.stock
+                gridP.DataSource = productos.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Public Function TraerProductoVentaPorId(ByVal idP As Integer, ByVal gridP As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim productos = From q In db.tblProducto
+                                Where q.id_producto = idP
+                                Select
+                                    ID = q.id_producto,
+                                    NOMBRE = q.nombre,
+                                    PRECIO = q.precio
+                gridP.DataSource = productos.ToList
             End Using
             Return True
         Catch ex As Exception
