@@ -33,6 +33,13 @@
     '     cliente.TraerPorNombre(TBuscarCliente.Text, DGVenta)
     ' End Sub
     Private Sub NuevaVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        DGVentaProductos.AllowUserToAddRows = False
+        DGVentaProductos.Columns(0).Width = 105
+        DGVentaProductos.Columns(1).Width = 105
+        DGVentaProductos.Columns(2).Width = 105
+        DGVentaProductos.Columns(3).Width = 105
+        DGVentaProductos.Columns(4).Width = 105
         Dim user As New Usuarios
         user.TraerPorId(PanelAdmin.idUsuario)
         LblNombreVenta.Text = user.getNombre
@@ -133,13 +140,10 @@
         TBuscarCliente.Text = ""
     End Sub
 
-    Private Sub TBCantidad_TextChanged(sender As Object, e As EventArgs) Handles TBCantidad.TextChanged
-
-    End Sub
 
     Private Sub DGVentaProductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVentaProductos.CellContentClick
         Dim ask As MsgBoxResult
-        If e.ColumnIndex = 3 And DGVentaProductos.Rows.Count > 1 Then
+        If e.ColumnIndex = 3 Then
             ask = MsgBox("Esta seguro de querer borrar el registro?", vbYesNo + vbExclamation + vbDefaultButton2, "Eliminar")
             If ask = vbYes Then
                 DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
