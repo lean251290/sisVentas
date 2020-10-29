@@ -133,14 +133,14 @@
   <data name="icoAlerta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\icoAlerta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btn201x45iniciar064" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\btn201x45iniciar064.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn122x45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\btn122x45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sisventas label" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\sisventas label.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -150,6 +150,9 @@
   </data>
   <data name="btn122x45Oscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\btn122x45Oscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icoProducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\icoProducto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icoLupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\icoLupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,14 +169,14 @@
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn201x45iniciar064" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\btn201x45iniciar064.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn122x45Rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\btn122x45Rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GIF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\GIF.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sisventas label" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\sisventas label.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn122x45Oscuro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\btn122x45Oscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,7 +187,7 @@
   <data name="icoCategoria30x30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\icoCategoria30x30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icoProducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\icoProducto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icoAgregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\icoAgregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

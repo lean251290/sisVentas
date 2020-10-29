@@ -1,5 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
+
 Public Class PanelAdmin
+    Public idUsuario As Integer
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
 
@@ -136,8 +138,7 @@ Public Class PanelAdmin
         Dim id As Integer
         user.TraerPorId(Tag)
         nombrelogueado.Text = user.getNombre
-        id = user.getId
-        NuevaVenta.Tag = user.getId
+        idUsuario = user.getId
         esconderSubMenu()
         BtnVentasPorDia.Hide()
         BtnVentasPorFecha.Hide()
@@ -200,7 +201,7 @@ Public Class PanelAdmin
         BtnVentasPorProducto.Hide()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) 
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         abrirFormHijo(New Agregar_Usuario)
         esconderSubMenu()
     End Sub

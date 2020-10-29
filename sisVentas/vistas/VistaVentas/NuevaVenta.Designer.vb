@@ -22,35 +22,41 @@ Partial Class NuevaVenta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LabelNuevaVenta = New System.Windows.Forms.Label()
         Me.PanelVerClientes = New System.Windows.Forms.Panel()
+        Me.TBuscarCliente = New System.Windows.Forms.TextBox()
+        Me.DGVentaProductos = New System.Windows.Forms.DataGridView()
+        Me.DGVenta = New System.Windows.Forms.DataGridView()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.LblBuscarProd = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TBuscarCliente = New System.Windows.Forms.TextBox()
         Me.LBuscarCliente = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.BtnVender = New System.Windows.Forms.Button()
-        Me.BtnCancelarVenta = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LblNombreVenta = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LabelNombreCliente = New System.Windows.Forms.Label()
+        Me.BtnCancelarVenta = New System.Windows.Forms.Button()
+        Me.BtnVender = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PanelVerClientes.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVentaProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelNuevaVenta
@@ -74,24 +80,124 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelVerClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelVerClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelVerClientes.Controls.Add(Me.TBuscarCliente)
+        Me.PanelVerClientes.Controls.Add(Me.DGVentaProductos)
+        Me.PanelVerClientes.Controls.Add(Me.DGVenta)
         Me.PanelVerClientes.Controls.Add(Me.DateTimePicker1)
         Me.PanelVerClientes.Controls.Add(Me.Label1)
-        Me.PanelVerClientes.Controls.Add(Me.DataGridView1)
         Me.PanelVerClientes.Controls.Add(Me.Button1)
         Me.PanelVerClientes.Controls.Add(Me.TextBox2)
         Me.PanelVerClientes.Controls.Add(Me.Label4)
         Me.PanelVerClientes.Controls.Add(Me.Label3)
-        Me.PanelVerClientes.Controls.Add(Me.DataGridView2)
         Me.PanelVerClientes.Controls.Add(Me.PictureBox3)
         Me.PanelVerClientes.Controls.Add(Me.TextBox1)
         Me.PanelVerClientes.Controls.Add(Me.LblBuscarProd)
-        Me.PanelVerClientes.Controls.Add(Me.PictureBox1)
-        Me.PanelVerClientes.Controls.Add(Me.TBuscarCliente)
         Me.PanelVerClientes.Controls.Add(Me.LBuscarCliente)
         Me.PanelVerClientes.Location = New System.Drawing.Point(47, 89)
         Me.PanelVerClientes.Name = "PanelVerClientes"
         Me.PanelVerClientes.Size = New System.Drawing.Size(600, 524)
         Me.PanelVerClientes.TabIndex = 7
+        '
+        'TBuscarCliente
+        '
+        Me.TBuscarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TBuscarCliente.Location = New System.Drawing.Point(174, 48)
+        Me.TBuscarCliente.MaxLength = 15
+        Me.TBuscarCliente.Name = "TBuscarCliente"
+        Me.TBuscarCliente.Size = New System.Drawing.Size(321, 13)
+        Me.TBuscarCliente.TabIndex = 35
+        '
+        'DGVentaProductos
+        '
+        Me.DGVentaProductos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DGVentaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGVentaProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DGVentaProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DGVentaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGVentaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DGVentaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGVentaProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        Me.DGVentaProductos.ColumnHeadersHeight = 28
+        Me.DGVentaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.Green
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Lime
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGVentaProductos.DefaultCellStyle = DataGridViewCellStyle14
+        Me.DGVentaProductos.EnableHeadersVisualStyles = False
+        Me.DGVentaProductos.GridColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.DGVentaProductos.Location = New System.Drawing.Point(43, 373)
+        Me.DGVentaProductos.Name = "DGVentaProductos"
+        Me.DGVentaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGVentaProductos.RowHeadersVisible = False
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Snow
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White
+        Me.DGVentaProductos.RowsDefaultCellStyle = DataGridViewCellStyle15
+        Me.DGVentaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGVentaProductos.Size = New System.Drawing.Size(516, 117)
+        Me.DGVentaProductos.TabIndex = 34
+        '
+        'DGVenta
+        '
+        Me.DGVenta.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DGVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGVenta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DGVenta.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DGVenta.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGVenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DGVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGVenta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
+        Me.DGVenta.ColumnHeadersHeight = 28
+        Me.DGVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.Green
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Lime
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGVenta.DefaultCellStyle = DataGridViewCellStyle17
+        Me.DGVenta.EnableHeadersVisualStyles = False
+        Me.DGVenta.GridColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.DGVenta.Location = New System.Drawing.Point(41, 132)
+        Me.DGVenta.Name = "DGVenta"
+        Me.DGVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGVenta.RowHeadersVisible = False
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.Snow
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White
+        Me.DGVenta.RowsDefaultCellStyle = DataGridViewCellStyle18
+        Me.DGVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGVenta.Size = New System.Drawing.Size(516, 117)
+        Me.DGVenta.TabIndex = 33
         '
         'DateTimePicker1
         '
@@ -116,36 +222,6 @@ Partial Class NuevaVenta
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "Fecha:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(43, 123)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(500, 138)
-        Me.DataGridView1.TabIndex = 29
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(459, 264)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 37)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Cargar"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox2
         '
@@ -180,30 +256,6 @@ Partial Class NuevaVenta
         Me.Label3.Text = "Detalle de la Venta:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'DataGridView2
-        '
-        Me.DataGridView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(43, 357)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(500, 157)
-        Me.DataGridView2.TabIndex = 23
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBox3.Location = New System.Drawing.Point(516, 78)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(41, 39)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 21
-        Me.PictureBox3.TabStop = False
-        '
         'TextBox1
         '
         Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -227,29 +279,6 @@ Partial Class NuevaVenta
         Me.LblBuscarProd.Text = "Buscar Producto:"
         Me.LblBuscarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBox1.Location = New System.Drawing.Point(516, 33)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 17
-        Me.PictureBox1.TabStop = False
-        '
-        'TBuscarCliente
-        '
-        Me.TBuscarCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarCliente.Location = New System.Drawing.Point(174, 48)
-        Me.TBuscarCliente.Name = "TBuscarCliente"
-        Me.TBuscarCliente.Size = New System.Drawing.Size(322, 13)
-        Me.TBuscarCliente.TabIndex = 13
-        '
         'LBuscarCliente
         '
         Me.LBuscarCliente.AutoSize = True
@@ -272,35 +301,49 @@ Partial Class NuevaVenta
         Me.Panel1.Size = New System.Drawing.Size(680, 50)
         Me.Panel1.TabIndex = 8
         '
-        'PictureBox2
+        'Label2
         '
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(53, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 6
-        Me.PictureBox2.TabStop = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(43, 66)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(83, 20)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Vendedor:"
         '
-        'BtnVender
+        'LblNombreVenta
         '
-        Me.BtnVender.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnVender.BackColor = System.Drawing.Color.Transparent
-        Me.BtnVender.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
-        Me.BtnVender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnVender.FlatAppearance.BorderSize = 0
-        Me.BtnVender.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnVender.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnVender.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnVender.Location = New System.Drawing.Point(445, 631)
-        Me.BtnVender.Name = "BtnVender"
-        Me.BtnVender.Size = New System.Drawing.Size(98, 37)
-        Me.BtnVender.TabIndex = 9
-        Me.BtnVender.Text = "Vender"
-        Me.BtnVender.UseVisualStyleBackColor = False
+        Me.LblNombreVenta.AutoSize = True
+        Me.LblNombreVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNombreVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LblNombreVenta.Location = New System.Drawing.Point(133, 66)
+        Me.LblNombreVenta.Name = "LblNombreVenta"
+        Me.LblNombreVenta.Size = New System.Drawing.Size(150, 20)
+        Me.LblNombreVenta.TabIndex = 12
+        Me.LblNombreVenta.Text = "nombredelvendedor"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label5.Location = New System.Drawing.Point(429, 66)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(62, 20)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Cliente:"
+        '
+        'LabelNombreCliente
+        '
+        Me.LabelNombreCliente.AutoSize = True
+        Me.LabelNombreCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNombreCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LabelNombreCliente.Location = New System.Drawing.Point(497, 66)
+        Me.LabelNombreCliente.Name = "LabelNombreCliente"
+        Me.LabelNombreCliente.Size = New System.Drawing.Size(29, 20)
+        Me.LabelNombreCliente.TabIndex = 14
+        Me.LabelNombreCliente.Text = "     "
         '
         'BtnCancelarVenta
         '
@@ -321,25 +364,66 @@ Partial Class NuevaVenta
         Me.BtnCancelarVenta.Text = "Cancelar"
         Me.BtnCancelarVenta.UseVisualStyleBackColor = False
         '
-        'Label2
+        'BtnVender
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(44, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 13)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Vendedor:"
+        Me.BtnVender.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnVender.BackColor = System.Drawing.Color.Transparent
+        Me.BtnVender.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnVender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnVender.FlatAppearance.BorderSize = 0
+        Me.BtnVender.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnVender.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVender.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnVender.Location = New System.Drawing.Point(445, 631)
+        Me.BtnVender.Name = "BtnVender"
+        Me.BtnVender.Size = New System.Drawing.Size(98, 37)
+        Me.BtnVender.TabIndex = 9
+        Me.BtnVender.Text = "Vender"
+        Me.BtnVender.UseVisualStyleBackColor = False
         '
-        'LblNombreVenta
+        'PictureBox2
         '
-        Me.LblNombreVenta.AutoSize = True
-        Me.LblNombreVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LblNombreVenta.Location = New System.Drawing.Point(106, 73)
-        Me.LblNombreVenta.Name = "LblNombreVenta"
-        Me.LblNombreVenta.Size = New System.Drawing.Size(101, 13)
-        Me.LblNombreVenta.TabIndex = 12
-        Me.LblNombreVenta.Text = "nombredelvendedor"
+        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox2.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(53, 50)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 6
+        Me.PictureBox2.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(459, 264)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(98, 37)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Cargar"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = Global.sisVentas.My.Resources.Resources.icoAgregar
+        Me.PictureBox3.Location = New System.Drawing.Point(501, 43)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(26, 26)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 21
+        Me.PictureBox3.TabStop = False
         '
         'NuevaVenta
         '
@@ -347,6 +431,8 @@ Partial Class NuevaVenta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.LabelNombreCliente)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.LblNombreVenta)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnCancelarVenta)
@@ -359,13 +445,12 @@ Partial Class NuevaVenta
         Me.Text = "Form6"
         Me.PanelVerClientes.ResumeLayout(False)
         Me.PanelVerClientes.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVentaProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVenta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -373,8 +458,6 @@ Partial Class NuevaVenta
 
     Friend WithEvents LabelNuevaVenta As Label
     Friend WithEvents PanelVerClientes As Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TBuscarCliente As TextBox
     Friend WithEvents LBuscarCliente As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
@@ -382,15 +465,18 @@ Partial Class NuevaVenta
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents LblBuscarProd As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents BtnVender As Button
     Friend WithEvents BtnCancelarVenta As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents LblNombreVenta As Label
+    Friend WithEvents DGVentaProductos As DataGridView
+    Friend WithEvents DGVenta As DataGridView
+    Friend WithEvents TBuscarCliente As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents LabelNombreCliente As Label
 End Class

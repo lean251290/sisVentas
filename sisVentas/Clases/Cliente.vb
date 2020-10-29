@@ -1,4 +1,5 @@
 ﻿Public Class Cliente
+    Private idC As Integer
     Private nombreC As String
     Private apellidoC As String
     Private dniC As String
@@ -22,6 +23,9 @@
     End Sub
 
     'DECLARACION DE SETTERS
+    Public Sub setId(ByVal p_id As String)
+        idC = p_id
+    End Sub
     Public Sub setNombre(ByVal p_nombre As String)
         nombreC = p_nombre
     End Sub
@@ -44,6 +48,9 @@
     End Sub
 
     'DECLARACION DE GETTERS
+    Public Function getId()
+        getId = idC
+    End Function
     Public Function getNombre()
         getNombre = nombreC
     End Function
@@ -148,6 +155,27 @@
             Return False
         End Try
 
+    End Function
+
+    Public Function TraerPorNombre(name As String, grid As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim mostrarCliente = From q In db.tblCliente
+                                     Where q.nombre.Contains(name)
+                                     Select
+                                    Id = q.id_cliente,
+                                    Nombre = q.nombre,
+                                    Apellido = q.apellido,
+                                    Dni = q.dni,
+                                    correo = q.correo,
+                                    direccion = q.direccion,
+                                    telefono = q.telefono
+                grid.DataSource = mostrarCliente.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
     End Function
 
 End Class

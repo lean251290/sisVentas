@@ -144,4 +144,8 @@
             FrmSeleccioneFila.Show()
         End If
     End Sub
+
+    Private Sub PanelVerUsuarios_Paint(sender As Object, e As PaintEventArgs) Handles PanelVerUsuarios.Paint
+
+    End Sub
 End Class

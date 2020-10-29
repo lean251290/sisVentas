@@ -9,9 +9,9 @@
         If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
             e.Handled = True
             FrmSoloLetras.Show()
+
         End If
     End Sub
-
 
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
         If Not ((Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Or
@@ -28,9 +28,47 @@
         End If
     End Sub
 
+    'Public Sub TraerClienteVenta()
+    ' Dim cliente As New Cliente
+    '     cliente.TraerPorNombre(TBuscarCliente.Text, DGVenta)
+    ' End Sub
     Private Sub NuevaVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim user As New Usuarios
-        user.TraerPorId(Me.Tag)
+        user.TraerPorId(PanelAdmin.idUsuario)
         LblNombreVenta.Text = user.getNombre
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub TBuscarCliente_TextChanged(sender As Object, e As EventArgs) Handles TBuscarCliente.TextChanged
+        Dim cliente As New Cliente
+        Dim cli As String
+        cli = TBuscarCliente.Text
+        If cli <> "" Then
+            cliente.TraerPorNombre(cli, DGVenta)
+        Else
+            DGVenta.DataSource = Nothing
+        End If
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Dim NumeroDeFilaSeleccionada As Integer
+        Dim idUser As Integer
+        Dim user As New Cliente
+        If DGVenta.SelectedRows.Count > 0 Then
+            NumeroDeFilaSeleccionada = DGVenta.CurrentRow.Index
+            idUser = Val(DGVenta.SelectedRows(0).Cells(0).Value)
+            user.TraerPorIdCliente(idUser)
+            LabelNombreCliente.Text = user.getNombre
+        Else
+            FrmSeleccioneFila.Show()
+        End If
+
+
+
     End Sub
 End Class
