@@ -42,6 +42,8 @@ Partial Class NuevaVenta
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnVender = New System.Windows.Forms.Button()
         Me.BtnCancelarVenta = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblNombreVenta = New System.Windows.Forms.Label()
         Me.PanelVerClientes.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,9 +88,9 @@ Partial Class NuevaVenta
         Me.PanelVerClientes.Controls.Add(Me.PictureBox1)
         Me.PanelVerClientes.Controls.Add(Me.TBuscarCliente)
         Me.PanelVerClientes.Controls.Add(Me.LBuscarCliente)
-        Me.PanelVerClientes.Location = New System.Drawing.Point(47, 70)
+        Me.PanelVerClientes.Location = New System.Drawing.Point(47, 89)
         Me.PanelVerClientes.Name = "PanelVerClientes"
-        Me.PanelVerClientes.Size = New System.Drawing.Size(600, 543)
+        Me.PanelVerClientes.Size = New System.Drawing.Size(600, 524)
         Me.PanelVerClientes.TabIndex = 7
         '
         'DateTimePicker1
@@ -97,7 +99,7 @@ Partial Class NuevaVenta
         Me.DateTimePicker1.Cursor = System.Windows.Forms.Cursors.No
         Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(103, 264)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(103, 272)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(106, 20)
         Me.DateTimePicker1.TabIndex = 31
@@ -108,7 +110,7 @@ Partial Class NuevaVenta
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(39, 264)
+        Me.Label1.Location = New System.Drawing.Point(39, 272)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 20)
         Me.Label1.TabIndex = 30
@@ -121,7 +123,7 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(43, 106)
+        Me.DataGridView1.Location = New System.Drawing.Point(43, 123)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(500, 138)
         Me.DataGridView1.TabIndex = 29
@@ -138,7 +140,7 @@ Partial Class NuevaVenta
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(459, 256)
+        Me.Button1.Location = New System.Drawing.Point(459, 264)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(98, 37)
         Me.Button1.TabIndex = 11
@@ -148,7 +150,7 @@ Partial Class NuevaVenta
         'TextBox2
         '
         Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.TextBox2.Location = New System.Drawing.Point(335, 264)
+        Me.TextBox2.Location = New System.Drawing.Point(335, 272)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 32
@@ -159,7 +161,7 @@ Partial Class NuevaVenta
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(252, 264)
+        Me.Label4.Location = New System.Drawing.Point(252, 272)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 20)
         Me.Label4.TabIndex = 27
@@ -171,7 +173,7 @@ Partial Class NuevaVenta
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(39, 317)
+        Me.Label3.Location = New System.Drawing.Point(39, 334)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(148, 20)
         Me.Label3.TabIndex = 26
@@ -185,9 +187,9 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(43, 340)
+        Me.DataGridView2.Location = New System.Drawing.Point(43, 357)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(500, 176)
+        Me.DataGridView2.Size = New System.Drawing.Size(500, 157)
         Me.DataGridView2.TabIndex = 23
         '
         'PictureBox3
@@ -195,7 +197,7 @@ Partial Class NuevaVenta
         Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBox3.Location = New System.Drawing.Point(516, 61)
+        Me.PictureBox3.Location = New System.Drawing.Point(516, 78)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(41, 39)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -208,7 +210,7 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(174, 76)
+        Me.TextBox1.Location = New System.Drawing.Point(174, 93)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(322, 13)
         Me.TextBox1.TabIndex = 20
@@ -218,7 +220,7 @@ Partial Class NuevaVenta
         Me.LblBuscarProd.AutoSize = True
         Me.LblBuscarProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblBuscarProd.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblBuscarProd.Location = New System.Drawing.Point(37, 71)
+        Me.LblBuscarProd.Location = New System.Drawing.Point(37, 88)
         Me.LblBuscarProd.Name = "LblBuscarProd"
         Me.LblBuscarProd.Size = New System.Drawing.Size(131, 20)
         Me.LblBuscarProd.TabIndex = 19
@@ -230,7 +232,7 @@ Partial Class NuevaVenta
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBox1.Location = New System.Drawing.Point(516, 16)
+        Me.PictureBox1.Location = New System.Drawing.Point(516, 33)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(41, 39)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -243,7 +245,7 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarCliente.Location = New System.Drawing.Point(174, 31)
+        Me.TBuscarCliente.Location = New System.Drawing.Point(174, 48)
         Me.TBuscarCliente.Name = "TBuscarCliente"
         Me.TBuscarCliente.Size = New System.Drawing.Size(322, 13)
         Me.TBuscarCliente.TabIndex = 13
@@ -253,7 +255,7 @@ Partial Class NuevaVenta
         Me.LBuscarCliente.AutoSize = True
         Me.LBuscarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBuscarCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LBuscarCliente.Location = New System.Drawing.Point(106, 26)
+        Me.LBuscarCliente.Location = New System.Drawing.Point(106, 43)
         Me.LBuscarCliente.Name = "LBuscarCliente"
         Me.LBuscarCliente.Size = New System.Drawing.Size(62, 20)
         Me.LBuscarCliente.TabIndex = 0
@@ -319,18 +321,41 @@ Partial Class NuevaVenta
         Me.BtnCancelarVenta.Text = "Cancelar"
         Me.BtnCancelarVenta.UseVisualStyleBackColor = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(44, 73)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(56, 13)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Vendedor:"
+        '
+        'LblNombreVenta
+        '
+        Me.LblNombreVenta.AutoSize = True
+        Me.LblNombreVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LblNombreVenta.Location = New System.Drawing.Point(106, 73)
+        Me.LblNombreVenta.Name = "LblNombreVenta"
+        Me.LblNombreVenta.Size = New System.Drawing.Size(101, 13)
+        Me.LblNombreVenta.TabIndex = 12
+        Me.LblNombreVenta.Text = "nombredelvendedor"
+        '
         'NuevaVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.LblNombreVenta)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnCancelarVenta)
         Me.Controls.Add(Me.BtnVender)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelVerClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "NuevaVenta"
+        Me.Tag = ""
         Me.Text = "Form6"
         Me.PanelVerClientes.ResumeLayout(False)
         Me.PanelVerClientes.PerformLayout()
@@ -342,6 +367,7 @@ Partial Class NuevaVenta
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -365,4 +391,6 @@ Partial Class NuevaVenta
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents LblNombreVenta As Label
 End Class

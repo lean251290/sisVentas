@@ -189,4 +189,8 @@ Public Class Agregar_Usuario
     Private Sub TEmailUsuario_TextChanged(sender As Object, e As EventArgs) Handles TEmailUsuario.TextChanged
 
     End Sub
+
+    Private Sub TPassUsuario_TextChanged(sender As Object, e As EventArgs) Handles TPassUsuario.TextChanged
+
+    End Sub
 End Class

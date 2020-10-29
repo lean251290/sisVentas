@@ -132,7 +132,12 @@ Public Class PanelAdmin
         End If
     End Sub
     Private Sub PanelAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim user As New Usuarios
+        Dim id As Integer
+        user.TraerPorId(Tag)
+        nombrelogueado.Text = user.getNombre
+        id = user.getId
+        NuevaVenta.Tag = user.getId
         esconderSubMenu()
         BtnVentasPorDia.Hide()
         BtnVentasPorFecha.Hide()

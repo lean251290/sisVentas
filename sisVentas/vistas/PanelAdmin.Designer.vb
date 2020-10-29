@@ -75,6 +75,9 @@ Partial Class PanelAdmin
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.BtnVentasPorDia = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblNombreUser = New System.Windows.Forms.Label()
+        Me.nombrelogueado = New System.Windows.Forms.Label()
         Me.PanelAdm.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +104,9 @@ Partial Class PanelAdmin
         'PanelAdm
         '
         Me.PanelAdm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PanelAdm.Controls.Add(Me.nombrelogueado)
+        Me.PanelAdm.Controls.Add(Me.LblNombreUser)
+        Me.PanelAdm.Controls.Add(Me.Label1)
         Me.PanelAdm.Controls.Add(Me.PictureBox2)
         Me.PanelAdm.Controls.Add(Me.PictureBox3)
         Me.PanelAdm.Controls.Add(Me.BtnRestaurar)
@@ -849,6 +855,38 @@ Partial Class PanelAdmin
         Me.Panel2.Size = New System.Drawing.Size(5, 100)
         Me.Panel2.TabIndex = 1
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Location = New System.Drawing.Point(221, 5)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(126, 26)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Bienvenido:"
+        '
+        'LblNombreUser
+        '
+        Me.LblNombreUser.AutoSize = True
+        Me.LblNombreUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNombreUser.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LblNombreUser.Location = New System.Drawing.Point(347, 5)
+        Me.LblNombreUser.Name = "LblNombreUser"
+        Me.LblNombreUser.Size = New System.Drawing.Size(0, 26)
+        Me.LblNombreUser.TabIndex = 7
+        '
+        'nombrelogueado
+        '
+        Me.nombrelogueado.AutoSize = True
+        Me.nombrelogueado.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nombrelogueado.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.nombrelogueado.Location = New System.Drawing.Point(353, 3)
+        Me.nombrelogueado.Name = "nombrelogueado"
+        Me.nombrelogueado.Size = New System.Drawing.Size(90, 26)
+        Me.nombrelogueado.TabIndex = 8
+        Me.nombrelogueado.Text = "Nombre"
+        '
         'PanelAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -863,6 +901,7 @@ Partial Class PanelAdmin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PanelAdmin"
         Me.PanelAdm.ResumeLayout(False)
+        Me.PanelAdm.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
@@ -938,4 +977,7 @@ Partial Class PanelAdmin
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents BtnAgregarCategoria As Button
     Friend WithEvents BtnProveedor As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LblNombreUser As Label
+    Friend WithEvents nombrelogueado As Label
 End Class

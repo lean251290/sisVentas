@@ -1,4 +1,5 @@
 ﻿Public Class Usuarios
+    Private id As Integer
     Private nombreU As String
     Private apellidoU As String
     Private dniU As String
@@ -34,6 +35,9 @@
         setEstado(p_estado)
     End Sub
     'DECLARACION DE SETTERS
+    Public Sub setId(ByVal p_id As Integer)
+        id = p_id
+    End Sub
     Public Sub setNombre(ByVal p_nombre As String)
         nombreU = p_nombre
     End Sub
@@ -62,11 +66,14 @@
         imagenU = p_imagen
     End Sub
     'DECLARACION DE GETTERS
+    Public Function getId()
+        getId = id
+    End Function
     Public Function getNombre()
         getNombre = nombreU
     End Function
     Public Function getApellido()
-        getApellido = ApellidoU
+        getApellido = apellidoU
     End Function
     Public Function getDni()
         getDni = dniU
@@ -110,7 +117,6 @@
                 db.tblUsuarios.Add(obj)
                 'aca se escribe en la base de datos
                 db.SaveChanges()
-
             End Using
             Return True
         Catch ex As Exception
@@ -147,6 +153,7 @@
                 Dim mostrarPorId = (From q In MST.tblUsuarios
                                     Where q.id_user = query
                                     Select q).ToList
+                setId(mostrarPorId(0).id_user)
                 setNombre(mostrarPorId(0).nombre)
                 setDni(mostrarPorId(0).dni)
                 setApellido(mostrarPorId(0).apellido)
@@ -288,17 +295,19 @@
         End Try
     End Function
 
-    Public Function Login(user As String, pass As String, tipo As String) As Boolean
+    Public Function Login(user As String, pass As String, tipo As String) As Integer
+        Dim id As Integer
         Try
             Using db As New SisVentasEntities
                 Dim loguear = (From q In db.tblUsuarios
                                Where
                                    q.correo = user And q.pass = pass And q.tipo = tipo
                                Select q).First
+                id = loguear.id_user
             End Using
-            Login = True
+            Return id
         Catch ex As Exception
-            Login = False
+            Return 0
         End Try
     End Function
 End Class

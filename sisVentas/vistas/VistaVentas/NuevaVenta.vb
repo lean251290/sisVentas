@@ -1,4 +1,5 @@
 ﻿Public Class NuevaVenta
+    Public id As Integer
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Close()
     End Sub
@@ -25,5 +26,11 @@
             e.Handled = True
             FrmSoloNumeros.Show()
         End If
+    End Sub
+
+    Private Sub NuevaVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim user As New Usuarios
+        user.TraerPorId(Me.Tag)
+        LblNombreVenta.Text = user.getNombre
     End Sub
 End Class

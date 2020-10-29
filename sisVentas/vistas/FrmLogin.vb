@@ -34,8 +34,8 @@ Public Class Login
 
     Private Sub BtnSesion_Click(sender As Object, e As EventArgs) Handles BtnSesion.Click
         Dim usuario As New Usuarios
+        Dim id As Integer
         Dim mail As String
-        Dim pass As String
         Dim admin As String
         Dim vendedor As String
         Dim gerente As String
@@ -51,12 +51,16 @@ Public Class Login
             Me.Hide()
             PanelAdmin.BotonClientes.Hide()
             PanelAdmin.BotonVentas.Hide()
+            id = usuario.Login(TxtUser.Text, TxtPass.Text, admin)
+            PanelAdmin.Tag = id
             PanelAdmin.Show()
         ElseIf usuario.Login(TxtUser.Text, TxtPass.Text, vendedor) Then
             Me.Hide()
             PanelAdmin.BotonUsuarios.Hide()
             PanelAdmin.BotonProductos.Hide()
             PanelAdmin.BotonReportes.Hide()
+            id = usuario.Login(TxtUser.Text, TxtPass.Text, vendedor)
+            PanelAdmin.Tag = id
             PanelAdmin.Show()
         ElseIf usuario.Login(TxtUser.Text, TxtPass.Text, gerente) Then
             Me.Hide()
@@ -64,6 +68,8 @@ Public Class Login
             PanelAdmin.BotonProductos.Hide()
             PanelAdmin.BotonVentas.Hide()
             PanelAdmin.BotonClientes.Hide()
+            id = usuario.Login(TxtUser.Text, TxtPass.Text, gerente)
+            PanelAdmin.Tag = id
             PanelAdmin.Show()
         Else
             FrmUsuarioInexistente.Show()
