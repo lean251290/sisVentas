@@ -150,4 +150,8 @@
             End If
         End If
     End Sub
+
+    Private Sub DGVentaProductos_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles DGVentaProductos.RowEnter
+        'DGVentaProductos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(209, 227, 254)
+    End Sub
 End Class
