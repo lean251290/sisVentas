@@ -33,7 +33,7 @@
     '     cliente.TraerPorNombre(TBuscarCliente.Text, DGVenta)
     ' End Sub
     Private Sub NuevaVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        DGVentaProductos.Columns(0).Visible = False
         DGVentaProductos.AllowUserToAddRows = False
         DGVentaProductos.Columns(0).Width = 105
         DGVentaProductos.Columns(1).Width = 105
@@ -85,7 +85,7 @@
         Dim NumeroDeFilaSeleccionada As Integer
         Dim idProd As Integer
         'declarqacion de las variables para trabajar con el producto en el datagrid
-        Dim idP As Integer
+        'Dim idP As Integer
         Dim nombre As String
         Dim precio As Double
         Dim cantidad As Integer
@@ -97,7 +97,7 @@
             NumeroDeFilaSeleccionada = DGVenta.CurrentRow.Index
             idProd = Val(DGVenta.SelectedRows(0).Cells(0).Value)
             prod.traerProdId(idProd)
-            idP = prod.getIdP
+            'idP = prod.getIdP
             nombre = prod.getNombreP
             precio = prod.getPrecioP
             stock = prod.getStockP
@@ -108,7 +108,9 @@
             ElseIf cantidad > stock Then
                 MsgBox("no puede agregar no tiene stock")
             Else
-                DGVentaProductos.Rows.Add(nombre, precio, cantidad, "eliminar", subtotal)
+                DGVentaProductos.Rows.Add(idProd, nombre, precio, cantidad, "eliminar", subtotal)
+                prod.ActualizarStock(idProd, cantidad)
+                DGVenta.Refresh()
             End If
         Else
                 FrmSeleccioneFila.Show()
@@ -143,15 +145,32 @@
 
     Private Sub DGVentaProductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVentaProductos.CellContentClick
         Dim ask As MsgBoxResult
-        If e.ColumnIndex = 3 Then
+        Dim cantidad As Integer
+        Dim fila As Integer
+        Dim prod As New Producto
+        If e.ColumnIndex = 4 Then
             ask = MsgBox("Esta seguro de querer borrar el registro?", vbYesNo + vbExclamation + vbDefaultButton2, "Eliminar")
             If ask = vbYes Then
+                fila = DGVentaProductos.CurrentRow.Index
                 DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
+                cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
+                prod.ActualizarStock(id, cantidad)
+
             End If
         End If
     End Sub
 
-    Private Sub DGVentaProductos_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles DGVentaProductos.RowEnter
-        'DGVentaProductos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(209, 227, 254)
+    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim ask As MsgBoxResult
+        Dim cantidad As Integer
+        Dim fila As Integer
+        Dim prod As New Producto
+
+        fila = DGVentaProductos.CurrentRow.Index
+                DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
+                cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
+                prod.ActualizarStock(id, cantidad)
+
+
     End Sub
 End Class

@@ -6,6 +6,7 @@
     Private Sub BtnGuardarProv_Click(sender As Object, e As EventArgs) Handles BtnGuardarProv.Click
         Dim prov As New Proveedor(TNombreProv.Text, TDireccionProv.Text, TTelProv.Text, TEmailProv.Text)
         If prov.AgregarProveedor() Then
+            PanelAdmin.cerrarFormHijo(Me)
             FrmDatosCargadosCorrecto.Show()
         Else
             MsgBox("Ups hubo algun error intenta de nuevo")

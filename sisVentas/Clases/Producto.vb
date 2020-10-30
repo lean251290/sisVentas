@@ -186,4 +186,48 @@
             Return False
         End Try
     End Function
+
+    Public Function ActualizarStock(ByVal p_id As Integer, ByVal cantidad As Integer)
+        Try
+            Using db As New SisVentasEntities
+                Dim actStock = (From p In db.tblProducto
+                                Where p.id_producto = p_id
+                                Select p).First
+                actStock.stock = actStock.stock - cantidad
+                db.SaveChanges()
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function ActStockSuma(ByVal p_id As Integer, ByVal cantidad As Integer)
+        Try
+            Using db As New SisVentasEntities
+                Dim actStock = (From p In db.tblProducto
+                                Where p.id_producto = p_id
+                                Select p).First
+                actStock.stock = actStock.stock + cantidad
+                db.SaveChanges()
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Public Function EliminarProd(ByVal p_id As Integer)
+        Try
+            Using db As New SisVentasEntities
+                Dim actStock = (From p In db.tblProducto
+                                Where p.id_producto = p_id
+                                Select p).First
+                actStock.estado = "Eliminado"
+                db.SaveChanges()
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

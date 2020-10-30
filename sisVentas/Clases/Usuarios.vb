@@ -310,5 +310,73 @@
             Return 0
         End Try
     End Function
+
+    Public Function BuscarUserNombre(ByVal name As String, gridU As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim users = From q In db.tblUsuarios
+                            Where q.nombre.Contains(name)
+                            Select
+                                    Id = q.id_user,
+                                    DNI = q.dni,
+                                    Nombre = q.nombre,
+                                    Apellido = q.apellido,
+                                    Estado = q.estado,
+                                    Direccion = q.direccion,
+                                    Correo = q.correo,
+                                    Tipo = q.tipo,
+                                    Foto = q.imagen
+                gridU.DataSource = users.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Public Function BuscarUserNombreActivo(ByVal name As String, gridU As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim users = From q In db.tblUsuarios
+                            Where q.nombre.Contains(name) And q.estado = "Activo"
+                            Select
+                                    Id = q.id_user,
+                                    DNI = q.dni,
+                                    Nombre = q.nombre,
+                                    Apellido = q.apellido,
+                                    Estado = q.estado,
+                                    Direccion = q.direccion,
+                                    Correo = q.correo,
+                                    Tipo = q.tipo,
+                                    Foto = q.imagen
+                gridU.DataSource = users.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Public Function BuscarUserNombreEliminado(ByVal name As String, gridU As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim users = From q In db.tblUsuarios
+                            Where q.nombre.Contains(name) And q.estado = "Eliminado"
+                            Select
+                                    Id = q.id_user,
+                                    DNI = q.dni,
+                                    Nombre = q.nombre,
+                                    Apellido = q.apellido,
+                                    Estado = q.estado,
+                                    Direccion = q.direccion,
+                                    Correo = q.correo,
+                                    Tipo = q.tipo,
+                                    Foto = q.imagen
+                gridU.DataSource = users.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
 End Class
 

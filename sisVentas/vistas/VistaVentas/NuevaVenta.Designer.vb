@@ -33,11 +33,6 @@ Partial Class NuevaVenta
         Me.LabelNuevaVenta = New System.Windows.Forms.Label()
         Me.PanelVerClientes = New System.Windows.Forms.Panel()
         Me.DGVentaProductos = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PBAgregarProducto = New System.Windows.Forms.PictureBox()
         Me.TBuscarCliente = New System.Windows.Forms.TextBox()
         Me.DGVenta = New System.Windows.Forms.DataGridView()
@@ -58,6 +53,14 @@ Partial Class NuevaVenta
         Me.LabelNombreCliente = New System.Windows.Forms.Label()
         Me.BtnCancelarVenta = New System.Windows.Forms.Button()
         Me.BtnVender = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelVerClientes.SuspendLayout()
         CType(Me.DGVentaProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PBAgregarProducto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +68,7 @@ Partial Class NuevaVenta
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelNuevaVenta
@@ -88,6 +92,8 @@ Partial Class NuevaVenta
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelVerClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelVerClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelVerClientes.Controls.Add(Me.Label6)
+        Me.PanelVerClientes.Controls.Add(Me.PictureBox1)
         Me.PanelVerClientes.Controls.Add(Me.DGVentaProductos)
         Me.PanelVerClientes.Controls.Add(Me.PBAgregarProducto)
         Me.PanelVerClientes.Controls.Add(Me.TBuscarCliente)
@@ -124,7 +130,7 @@ Partial Class NuevaVenta
         Me.DGVentaProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGVentaProductos.ColumnHeadersHeight = 30
         Me.DGVentaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DGVentaProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6})
+        Me.DGVentaProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -160,44 +166,6 @@ Partial Class NuevaVenta
         Me.DGVentaProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVentaProductos.Size = New System.Drawing.Size(550, 147)
         Me.DGVentaProductos.TabIndex = 37
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Nombre"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 110
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Precio"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 110
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Cantidad"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 109
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Eliminar"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Column5.Text = ""
-        Me.Column5.Width = 110
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Sub-Total"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 110
         '
         'PBAgregarProducto
         '
@@ -474,6 +442,75 @@ Partial Class NuevaVenta
         Me.BtnVender.Text = "Vender"
         Me.BtnVender.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.sisVentas.My.Resources.Resources.close
+        Me.PictureBox1.Location = New System.Drawing.Point(549, 328)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(26, 26)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 38
+        Me.PictureBox1.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label6.Location = New System.Drawing.Point(355, 334)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(188, 17)
+        Me.Label6.TabIndex = 39
+        Me.Label6.Text = "Eliminar Producto de la Lista"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "ID"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Nombre"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 110
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Precio"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 110
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Cantidad"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 109
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Eliminar"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Column5.Text = ""
+        Me.Column5.Width = 110
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Sub-Total"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 110
+        '
         'NuevaVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -501,6 +538,7 @@ Partial Class NuevaVenta
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -529,6 +567,9 @@ Partial Class NuevaVenta
     Friend WithEvents LabelNombreCliente As Label
     Friend WithEvents PBAgregarProducto As PictureBox
     Friend WithEvents DGVentaProductos As DataGridView
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn

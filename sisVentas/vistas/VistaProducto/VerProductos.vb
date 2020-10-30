@@ -25,7 +25,15 @@
     End Sub
 
     Private Sub BtnEliminarProducto_Click(sender As Object, e As EventArgs) Handles BtnEliminarProducto.Click
-        FrmSiNoProducto.Show()
+        Dim NumeroDeFilaSeleccionada As Integer
+        If DataGridProd.SelectedRows.Count > 0 Then
+            NumeroDeFilaSeleccionada = DataGridProd.CurrentRow.Index
+            FrmSiNoProducto.Tag = DataGridProd.SelectedRows(0).Cells(0).Value
+            FrmSiNoProducto.Show()
+        Else
+            FrmSiNoProducto.Show()
+        End If
+
     End Sub
 
     Private Sub BtnEliminarProducto_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnEliminarProducto.MouseDown

@@ -1,6 +1,7 @@
 ﻿Public Class FrmSiNoProducto
     Private Sub BtnSiProd_Click(sender As Object, e As EventArgs) Handles BtnSiProd.Click
-
+        Dim prod As New Producto
+        prod.EliminarProd(Me.Tag)
     End Sub
 
     Private Sub BtnSiProd_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnSiProd.MouseDown

@@ -144,8 +144,15 @@
             FrmSeleccioneFila.Show()
         End If
     End Sub
-
-    Private Sub PanelVerUsuarios_Paint(sender As Object, e As PaintEventArgs) Handles PanelVerUsuarios.Paint
+    Private Sub TBuscarUsuario_TextChanged(sender As Object, e As EventArgs) Handles TBuscarUsuario.TextChanged
+        Dim user As New Usuarios
+        If RBTodosLosUsuarios.Checked = True Then
+            user.BuscarUserNombre(TBuscarUsuario.Text, DataGridUser)
+        ElseIf RBUsuariosActivos.Checked = True Then
+            user.BuscarUserNombreActivo(TBuscarUsuario.Text, DataGridUser)
+        Else
+            user.BuscarUserNombreEliminado(TBuscarUsuario.Text, DataGridUser)
+        End If
 
     End Sub
 End Class
