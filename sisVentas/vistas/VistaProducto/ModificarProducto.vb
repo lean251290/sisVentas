@@ -1,7 +1,12 @@
 ﻿Public Class ModificarProducto
     Private Sub BtnActualizarProd_Click(sender As Object, e As EventArgs) Handles BtnActualizarProd.Click
+        Dim precio As Decimal
+        Decimal.TryParse(TbPrecioModifProd.Text, precio)
+        Dim prod As New Producto(TNombreProdModif.Text, CMBModifProdCat.SelectedValue, precio, TBStockModifPrdo.Text)
+        prod.ActualizarProd(Me.Tag, Val(TextBox1.Text))
         PanelAdmin.Enabled = True
         PanelAdmin.Show()
+        PanelAdmin.abrirFormHijo(VerProductos)
         Me.Close()
     End Sub
 
@@ -86,5 +91,20 @@
         CMBModifProdCat.DisplayMember = "descripicion"
 
 
+    End Sub
+
+    Private Sub TBStockModifPrdo_TextChanged(sender As Object, e As EventArgs) Handles TBStockModifPrdo.TextChanged
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8) Then
+            e.Handled = True
+            FrmSoloNumeros.Show()
+        End If
     End Sub
 End Class

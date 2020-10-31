@@ -2,6 +2,12 @@
     Private Sub BtnSiProd_Click(sender As Object, e As EventArgs) Handles BtnSiProd.Click
         Dim prod As New Producto
         prod.EliminarProd(Me.Tag)
+        PanelAdmin.cerrarFormHijo(VerProductos)
+        PanelAdmin.abrirFormHijo(VerProductos)
+
+        VerProductos.CargarProdBorrados()
+        VerProductos.RBprodEliminados.Checked = True
+
     End Sub
 
     Private Sub BtnSiProd_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnSiProd.MouseDown

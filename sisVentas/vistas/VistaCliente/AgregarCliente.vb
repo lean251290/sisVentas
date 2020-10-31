@@ -83,10 +83,16 @@ Public Class AgregarCliente
 
     Private Sub TEmailUsuario_LostFocus(sender As Object, e As EventArgs) Handles TEmailCliente.LostFocus
         Dim mail As String
+        Dim cli As New Cliente
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
 
         If Not Regex.IsMatch(TEmailCliente.Text, mail) Then
             FrmErrorMail.Show()
+        ElseIf cli.VerificarEmail(TEmailCliente.Text) Then
+            LabelEmailCliente.Visible = True
+            TEmailCliente.Text = ""
+        Else
+            LabelEmailCliente.Visible = False
         End If
     End Sub
 
@@ -96,6 +102,7 @@ Public Class AgregarCliente
 
     Private Sub TDniCliente_LostFocus(sender As Object, e As EventArgs) Handles TDniCliente.LostFocus
         Dim cantidad As Integer
+        Dim cliente As New Cliente
         cantidad = Len(TDniCliente.Text)
         If cantidad < 8 Then
             FrmValidarDni.Show()
@@ -103,6 +110,11 @@ Public Class AgregarCliente
         ElseIf cantidad > 8 Then
             FrmValidarDni.Show()
             TDniCliente.Text = ""
+        ElseIf cliente.VerificarDNI(TDniCliente.Text) Then
+            LabelDniCliente.Visible = True
+            TDniCliente.Text = ""
+        Else
+            LabelDniCliente.Visible = False
         End If
     End Sub
 
@@ -119,8 +131,45 @@ Public Class AgregarCliente
 
     Private Sub TTelefonoCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TTelefonoCliente.KeyPress
         If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
+
             e.Handled = True
             FrmSoloNumeros.Show()
         End If
+    End Sub
+
+    Private Sub AgregarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LabelDniCliente.Visible = False
+        LabelEmailCliente.Visible = False
+        LabelDireccionCli.Visible = False
+        LabelTelCli.Visible = False
+    End Sub
+
+
+
+    Private Sub TDireccionCliente_LostFocus(sender As Object, e As EventArgs) Handles TDireccionCliente.LostFocus
+        Dim direccion As String
+        direccion = "^[A-z\s]+(\d{1,5})"
+        If Not Regex.IsMatch(TDireccionCliente.Text, direccion) Then
+            LabelDireccionCli.Visible = True
+            TDireccionCliente.Text = ""
+        Else
+            LabelDireccionCli.Visible = False
+        End If
+    End Sub
+
+
+    Private Sub TTelefonoCliente_LostFocus(sender As Object, e As EventArgs) Handles TTelefonoCliente.LostFocus
+        Dim telefono As String
+        telefono = "^\d{1,3}"
+        If Not Regex.IsMatch(TTelefonoCliente.Text, telefono) Then
+            LabelTelCli.Visible = True
+            TTelefonoCliente.Text = ""
+        Else
+            LabelTelCli.Visible = False
+        End If
+    End Sub
+
+    Private Sub TTelefonoCliente_TextChanged(sender As Object, e As EventArgs) Handles TTelefonoCliente.TextChanged
+
     End Sub
 End Class

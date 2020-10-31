@@ -16,17 +16,11 @@
         Me.Close()
     End Sub
 
-    Private Sub BtnEliminarCliente_Click(sender As Object, e As EventArgs) Handles BtnEliminarCliente.Click
+    Private Sub BtnEliminarCliente_Click(sender As Object, e As EventArgs)
         FrmSiNoCliente.Show()
     End Sub
 
-    Private Sub BtnEliminarCliente_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnEliminarCliente.MouseDown
-        BtnEliminarCliente.BackgroundImage = My.Resources.btn122x45Rojo
-    End Sub
 
-    Private Sub BtnEliminarCliente_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnEliminarCliente.MouseUp
-        BtnEliminarCliente.BackgroundImage = My.Resources.btn122x45
-    End Sub
 
 
 
@@ -62,6 +56,17 @@
         Else
             FrmSeleccioneFila.Show()
         End If
+
+    End Sub
+
+    Private Sub TBuscarCliente_TextChanged(sender As Object, e As EventArgs) Handles TBuscarCliente.TextChanged
+        Dim cliente As New Cliente
+        cliente.TraerPorNombre(TBuscarCliente.Text, DGVerClientes)
+
+
+    End Sub
+
+    Private Sub TBuscarCliente_LostFocus(sender As Object, e As EventArgs) Handles TBuscarCliente.LostFocus
 
     End Sub
 End Class

@@ -174,7 +174,6 @@
                 Dim user = (From q In db.tblUsuarios
                             Where q.id_user = p_id
                             Select q).First
-                'firstordefault xq me arroja el error de la secuencia no tiene elementos
                 user.direccion = getDireccion()
                 user.correo = getCorreo()
                 user.imagen = ImageToByte(getImagen())

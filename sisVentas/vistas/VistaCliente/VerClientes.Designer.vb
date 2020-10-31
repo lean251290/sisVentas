@@ -34,7 +34,6 @@ Partial Class VerClientes
         Me.BtnModificarCliente = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.BtnEliminarCliente = New System.Windows.Forms.Button()
         Me.PanelVerClientes.SuspendLayout()
         CType(Me.DGVerClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,9 +89,9 @@ Partial Class VerClientes
         Me.PanelVerClientes.Controls.Add(Me.PictureBox1)
         Me.PanelVerClientes.Controls.Add(Me.TBuscarCliente)
         Me.PanelVerClientes.Controls.Add(Me.LBuscarCliente)
-        Me.PanelVerClientes.Location = New System.Drawing.Point(50, 90)
+        Me.PanelVerClientes.Location = New System.Drawing.Point(50, 159)
         Me.PanelVerClientes.Name = "PanelVerClientes"
-        Me.PanelVerClientes.Size = New System.Drawing.Size(600, 495)
+        Me.PanelVerClientes.Size = New System.Drawing.Size(600, 466)
         Me.PanelVerClientes.TabIndex = 5
         '
         'DGVerClientes
@@ -137,7 +136,7 @@ Partial Class VerClientes
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         Me.DGVerClientes.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DGVerClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGVerClientes.Size = New System.Drawing.Size(560, 354)
+        Me.DGVerClientes.Size = New System.Drawing.Size(560, 325)
         Me.DGVerClientes.TabIndex = 18
         '
         'PictureBox1
@@ -164,7 +163,7 @@ Partial Class VerClientes
         Me.BtnModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnModificarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModificarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnModificarCliente.Location = New System.Drawing.Point(448, 631)
+        Me.BtnModificarCliente.Location = New System.Drawing.Point(550, 631)
         Me.BtnModificarCliente.Name = "BtnModificarCliente"
         Me.BtnModificarCliente.Size = New System.Drawing.Size(98, 37)
         Me.BtnModificarCliente.TabIndex = 6
@@ -192,25 +191,6 @@ Partial Class VerClientes
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
         '
-        'BtnEliminarCliente
-        '
-        Me.BtnEliminarCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnEliminarCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
-        Me.BtnEliminarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnEliminarCliente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnEliminarCliente.FlatAppearance.BorderSize = 0
-        Me.BtnEliminarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnEliminarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnEliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEliminarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnEliminarCliente.Location = New System.Drawing.Point(552, 631)
-        Me.BtnEliminarCliente.Name = "BtnEliminarCliente"
-        Me.BtnEliminarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnEliminarCliente.TabIndex = 8
-        Me.BtnEliminarCliente.Text = "Eliminar"
-        Me.BtnEliminarCliente.UseVisualStyleBackColor = True
-        '
         'VerClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -218,7 +198,6 @@ Partial Class VerClientes
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(680, 680)
-        Me.Controls.Add(Me.BtnEliminarCliente)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnModificarCliente)
         Me.Controls.Add(Me.PanelVerClientes)
@@ -244,6 +223,5 @@ Partial Class VerClientes
     Friend WithEvents BtnModificarCliente As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents BtnEliminarCliente As Button
     Friend WithEvents DGVerClientes As DataGridView
 End Class

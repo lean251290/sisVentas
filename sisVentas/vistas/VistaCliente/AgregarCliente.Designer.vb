@@ -24,6 +24,10 @@ Partial Class AgregarCliente
     Private Sub InitializeComponent()
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
+        Me.LabelTelCli = New System.Windows.Forms.Label()
+        Me.LabelDireccionCli = New System.Windows.Forms.Label()
+        Me.LabelEmailCliente = New System.Windows.Forms.Label()
+        Me.LabelDniCliente = New System.Windows.Forms.Label()
         Me.TTelefonoCliente = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TEmailCliente = New System.Windows.Forms.TextBox()
@@ -67,6 +71,10 @@ Partial Class AgregarCliente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarCliente.Controls.Add(Me.LabelTelCli)
+        Me.PanelAgregarCliente.Controls.Add(Me.LabelDireccionCli)
+        Me.PanelAgregarCliente.Controls.Add(Me.LabelEmailCliente)
+        Me.PanelAgregarCliente.Controls.Add(Me.LabelDniCliente)
         Me.PanelAgregarCliente.Controls.Add(Me.TTelefonoCliente)
         Me.PanelAgregarCliente.Controls.Add(Me.Label1)
         Me.PanelAgregarCliente.Controls.Add(Me.TEmailCliente)
@@ -83,6 +91,46 @@ Partial Class AgregarCliente
         Me.PanelAgregarCliente.Name = "PanelAgregarCliente"
         Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 514)
         Me.PanelAgregarCliente.TabIndex = 5
+        '
+        'LabelTelCli
+        '
+        Me.LabelTelCli.AutoSize = True
+        Me.LabelTelCli.ForeColor = System.Drawing.Color.Red
+        Me.LabelTelCli.Location = New System.Drawing.Point(190, 331)
+        Me.LabelTelCli.Name = "LabelTelCli"
+        Me.LabelTelCli.Size = New System.Drawing.Size(279, 13)
+        Me.LabelTelCli.TabIndex = 21
+        Me.LabelTelCli.Text = "Teléfono inválido, ""Ejemplo: 3794015410 ú 1134236789"""
+        '
+        'LabelDireccionCli
+        '
+        Me.LabelDireccionCli.AutoSize = True
+        Me.LabelDireccionCli.ForeColor = System.Drawing.Color.Red
+        Me.LabelDireccionCli.Location = New System.Drawing.Point(190, 209)
+        Me.LabelDireccionCli.Name = "LabelDireccionCli"
+        Me.LabelDireccionCli.Size = New System.Drawing.Size(221, 13)
+        Me.LabelDireccionCli.TabIndex = 20
+        Me.LabelDireccionCli.Text = "Dirección inválida, ""Ejemplo: Mendoza 3267"""
+        '
+        'LabelEmailCliente
+        '
+        Me.LabelEmailCliente.AutoSize = True
+        Me.LabelEmailCliente.ForeColor = System.Drawing.Color.Red
+        Me.LabelEmailCliente.Location = New System.Drawing.Point(190, 269)
+        Me.LabelEmailCliente.Name = "LabelEmailCliente"
+        Me.LabelEmailCliente.Size = New System.Drawing.Size(154, 13)
+        Me.LabelEmailCliente.TabIndex = 19
+        Me.LabelEmailCliente.Text = "Ya existe un E-mail ingrese otro"
+        '
+        'LabelDniCliente
+        '
+        Me.LabelDniCliente.AutoSize = True
+        Me.LabelDniCliente.ForeColor = System.Drawing.Color.Red
+        Me.LabelDniCliente.Location = New System.Drawing.Point(190, 34)
+        Me.LabelDniCliente.Name = "LabelDniCliente"
+        Me.LabelDniCliente.Size = New System.Drawing.Size(154, 13)
+        Me.LabelDniCliente.TabIndex = 18
+        Me.LabelDniCliente.Text = "Ya existe un D.N.I. ingrese otro"
         '
         'TTelefonoCliente
         '
@@ -326,4 +374,8 @@ Partial Class AgregarCliente
     Friend WithEvents dialogCliente As OpenFileDialog
     Friend WithEvents Label1 As Label
     Friend WithEvents TTelefonoCliente As TextBox
+    Friend WithEvents LabelDniCliente As Label
+    Friend WithEvents LabelEmailCliente As Label
+    Friend WithEvents LabelDireccionCli As Label
+    Friend WithEvents LabelTelCli As Label
 End Class

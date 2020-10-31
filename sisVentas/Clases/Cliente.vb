@@ -177,5 +177,28 @@
             Return False
         End Try
     End Function
-
+    Public Function VerificarDNI(dni As String) As Boolean
+        Try
+            Using db As New SisVentasEntities
+                Dim existe = (From q In db.tblCliente
+                              Where q.dni = dni
+                              Select q).First
+            End Using
+            VerificarDNI = True
+        Catch ex As Exception
+            VerificarDNI = False
+        End Try
+    End Function
+    Public Function VerificarEmail(correo As String) As Boolean
+        Try
+            Using db As New SisVentasEntities
+                Dim existe = (From q In db.tblCliente
+                              Where q.correo = correo
+                              Select q).First
+            End Using
+            VerificarEmail = True
+        Catch ex As Exception
+            VerificarEmail = False
+        End Try
+    End Function
 End Class

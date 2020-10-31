@@ -25,6 +25,7 @@ Partial Class Agregar_Usuario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agregar_Usuario))
         Me.LabelAgregarUsuario = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
+        Me.LabelDireUser = New System.Windows.Forms.Label()
         Me.LabelVerifEmail = New System.Windows.Forms.Label()
         Me.LabelDniNumeros = New System.Windows.Forms.Label()
         Me.LabelPass = New System.Windows.Forms.Label()
@@ -81,6 +82,7 @@ Partial Class Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelDireUser)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelVerifEmail)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelDniNumeros)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelPass)
@@ -109,6 +111,16 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUsuario.Name = "PanelAgregarUsuario"
         Me.PanelAgregarUsuario.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarUsuario.TabIndex = 4
+        '
+        'LabelDireUser
+        '
+        Me.LabelDireUser.AutoSize = True
+        Me.LabelDireUser.ForeColor = System.Drawing.Color.Red
+        Me.LabelDireUser.Location = New System.Drawing.Point(190, 217)
+        Me.LabelDireUser.Name = "LabelDireUser"
+        Me.LabelDireUser.Size = New System.Drawing.Size(221, 13)
+        Me.LabelDireUser.TabIndex = 105
+        Me.LabelDireUser.Text = "Dirección inválida, ""Ejemplo: Mendoza 3267"""
         '
         'LabelVerifEmail
         '
@@ -498,4 +510,5 @@ Partial Class Agregar_Usuario
     Friend WithEvents LabelPass As Label
     Friend WithEvents LabelDniNumeros As Label
     Friend WithEvents LabelVerifEmail As Label
+    Friend WithEvents LabelDireUser As Label
 End Class

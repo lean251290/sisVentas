@@ -22,20 +22,25 @@ Partial Class VerProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelVerProductos = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RBProdActivos = New System.Windows.Forms.RadioButton()
+        Me.RBprodEliminados = New System.Windows.Forms.RadioButton()
         Me.DataGridProd = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TBuscarCliente = New System.Windows.Forms.TextBox()
+        Me.TBuscarProd = New System.Windows.Forms.TextBox()
         Me.LBuscarCliente = New System.Windows.Forms.Label()
         Me.LabelVerProducto = New System.Windows.Forms.Label()
         Me.BtnModificarProducto = New System.Windows.Forms.Button()
         Me.BtnEliminarProducto = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.BtnAltaProd = New System.Windows.Forms.Button()
         Me.PanelVerProductos.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridProd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -49,14 +54,48 @@ Partial Class VerProductos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelVerProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelVerProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelVerProductos.Controls.Add(Me.GroupBox1)
         Me.PanelVerProductos.Controls.Add(Me.DataGridProd)
         Me.PanelVerProductos.Controls.Add(Me.PictureBox1)
-        Me.PanelVerProductos.Controls.Add(Me.TBuscarCliente)
+        Me.PanelVerProductos.Controls.Add(Me.TBuscarProd)
         Me.PanelVerProductos.Controls.Add(Me.LBuscarCliente)
         Me.PanelVerProductos.Location = New System.Drawing.Point(50, 90)
         Me.PanelVerProductos.Name = "PanelVerProductos"
         Me.PanelVerProductos.Size = New System.Drawing.Size(600, 530)
         Me.PanelVerProductos.TabIndex = 6
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RBProdActivos)
+        Me.GroupBox1.Controls.Add(Me.RBprodEliminados)
+        Me.GroupBox1.Location = New System.Drawing.Point(384, 111)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(200, 66)
+        Me.GroupBox1.TabIndex = 21
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Ver por:"
+        '
+        'RBProdActivos
+        '
+        Me.RBProdActivos.AutoSize = True
+        Me.RBProdActivos.Location = New System.Drawing.Point(6, 30)
+        Me.RBProdActivos.Name = "RBProdActivos"
+        Me.RBProdActivos.Size = New System.Drawing.Size(60, 17)
+        Me.RBProdActivos.TabIndex = 19
+        Me.RBProdActivos.TabStop = True
+        Me.RBProdActivos.Text = "Activos"
+        Me.RBProdActivos.UseVisualStyleBackColor = True
+        '
+        'RBprodEliminados
+        '
+        Me.RBprodEliminados.AutoSize = True
+        Me.RBprodEliminados.Location = New System.Drawing.Point(103, 30)
+        Me.RBprodEliminados.Name = "RBprodEliminados"
+        Me.RBprodEliminados.Size = New System.Drawing.Size(75, 17)
+        Me.RBprodEliminados.TabIndex = 20
+        Me.RBprodEliminados.TabStop = True
+        Me.RBprodEliminados.Text = "Eliminados"
+        Me.RBprodEliminados.UseVisualStyleBackColor = True
         '
         'DataGridProd
         '
@@ -69,36 +108,36 @@ Partial Class VerProductos
         Me.DataGridProd.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridProd.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DataGridProd.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ScrollBar
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridProd.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ScrollBar
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridProd.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridProd.ColumnHeadersHeight = 28
         Me.DataGridProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Green
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridProd.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Green
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Lime
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridProd.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridProd.EnableHeadersVisualStyles = False
         Me.DataGridProd.GridColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.DataGridProd.Location = New System.Drawing.Point(22, 108)
+        Me.DataGridProd.Location = New System.Drawing.Point(35, 183)
         Me.DataGridProd.Name = "DataGridProd"
         Me.DataGridProd.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridProd.RowHeadersVisible = False
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Snow
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridProd.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Snow
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridProd.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridProd.Size = New System.Drawing.Size(549, 332)
         Me.DataGridProd.TabIndex = 18
@@ -115,16 +154,16 @@ Partial Class VerProductos
         Me.PictureBox1.TabIndex = 17
         Me.PictureBox1.TabStop = False
         '
-        'TBuscarCliente
+        'TBuscarProd
         '
-        Me.TBuscarCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.TBuscarProd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TBuscarCliente.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TBuscarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TBuscarCliente.Location = New System.Drawing.Point(122, 51)
-        Me.TBuscarCliente.Name = "TBuscarCliente"
-        Me.TBuscarCliente.Size = New System.Drawing.Size(374, 13)
-        Me.TBuscarCliente.TabIndex = 13
+        Me.TBuscarProd.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TBuscarProd.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TBuscarProd.Location = New System.Drawing.Point(122, 51)
+        Me.TBuscarProd.Name = "TBuscarProd"
+        Me.TBuscarProd.Size = New System.Drawing.Size(374, 13)
+        Me.TBuscarProd.TabIndex = 13
         '
         'LBuscarCliente
         '
@@ -212,12 +251,31 @@ Partial Class VerProductos
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
         '
+        'BtnAltaProd
+        '
+        Me.BtnAltaProd.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnAltaProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAltaProd.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAltaProd.FlatAppearance.BorderSize = 0
+        Me.BtnAltaProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnAltaProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnAltaProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAltaProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAltaProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAltaProd.Location = New System.Drawing.Point(50, 631)
+        Me.BtnAltaProd.Name = "BtnAltaProd"
+        Me.BtnAltaProd.Size = New System.Drawing.Size(98, 37)
+        Me.BtnAltaProd.TabIndex = 12
+        Me.BtnAltaProd.Text = "Alta"
+        Me.BtnAltaProd.UseVisualStyleBackColor = True
+        '
         'VerProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnAltaProd)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnEliminarProducto)
         Me.Controls.Add(Me.BtnModificarProducto)
@@ -227,6 +285,8 @@ Partial Class VerProductos
         Me.Text = "Form2"
         Me.PanelVerProductos.ResumeLayout(False)
         Me.PanelVerProductos.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DataGridProd, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -238,7 +298,7 @@ Partial Class VerProductos
 
     Friend WithEvents PanelVerProductos As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TBuscarCliente As TextBox
+    Friend WithEvents TBuscarProd As TextBox
     Friend WithEvents LBuscarCliente As Label
     Friend WithEvents LabelVerProducto As Label
     Friend WithEvents BtnModificarProducto As Button
@@ -246,4 +306,8 @@ Partial Class VerProductos
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents DataGridProd As DataGridView
+    Friend WithEvents RBprodEliminados As RadioButton
+    Friend WithEvents RBProdActivos As RadioButton
+    Friend WithEvents BtnAltaProd As Button
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

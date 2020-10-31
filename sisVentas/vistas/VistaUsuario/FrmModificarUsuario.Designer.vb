@@ -23,6 +23,8 @@ Partial Class FrmModificarUsuario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
+        Me.LabelEmailUser = New System.Windows.Forms.Label()
+        Me.LabelDirModifUser = New System.Windows.Forms.Label()
         Me.PBUserModif = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TEmailUsuarioModif = New System.Windows.Forms.TextBox()
@@ -55,6 +57,8 @@ Partial Class FrmModificarUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelEmailUser)
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelDirModifUser)
         Me.PanelAgregarUsuario.Controls.Add(Me.PBUserModif)
         Me.PanelAgregarUsuario.Controls.Add(Me.Label2)
         Me.PanelAgregarUsuario.Controls.Add(Me.TEmailUsuarioModif)
@@ -71,6 +75,26 @@ Partial Class FrmModificarUsuario
         Me.PanelAgregarUsuario.Name = "PanelAgregarUsuario"
         Me.PanelAgregarUsuario.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarUsuario.TabIndex = 5
+        '
+        'LabelEmailUser
+        '
+        Me.LabelEmailUser.AutoSize = True
+        Me.LabelEmailUser.ForeColor = System.Drawing.Color.Red
+        Me.LabelEmailUser.Location = New System.Drawing.Point(190, 277)
+        Me.LabelEmailUser.Name = "LabelEmailUser"
+        Me.LabelEmailUser.Size = New System.Drawing.Size(154, 13)
+        Me.LabelEmailUser.TabIndex = 106
+        Me.LabelEmailUser.Text = "Ya existe un E-mail ingrese otro"
+        '
+        'LabelDirModifUser
+        '
+        Me.LabelDirModifUser.AutoSize = True
+        Me.LabelDirModifUser.ForeColor = System.Drawing.Color.Red
+        Me.LabelDirModifUser.Location = New System.Drawing.Point(190, 217)
+        Me.LabelDirModifUser.Name = "LabelDirModifUser"
+        Me.LabelDirModifUser.Size = New System.Drawing.Size(221, 13)
+        Me.LabelDirModifUser.TabIndex = 105
+        Me.LabelDirModifUser.Text = "Dirección inválida, ""Ejemplo: Mendoza 3267"""
         '
         'PBUserModif
         '
@@ -333,4 +357,6 @@ Partial Class FrmModificarUsuario
     Friend WithEvents BtnCancelarUser As Button
     Friend WithEvents DialogModificarUsuario As OpenFileDialog
     Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents LabelDirModifUser As Label
+    Friend WithEvents LabelEmailUser As Label
 End Class

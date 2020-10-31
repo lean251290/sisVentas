@@ -12,6 +12,15 @@
     Public Sub New()
 
     End Sub
+    'TNombreProdModif.Text, CMBModifProdCat.ValueMember, TbPrecioModifProd.Text
+    'constructor para modificar un prod
+    Public Sub New(p_nombre As String, p_categoria As Integer, p_precio As Decimal, p_stock As Integer)
+        setNombreP(p_nombre)
+        setCategoriaP(p_categoria)
+        setPrecioP(p_precio)
+        setStockP(p_stock)
+    End Sub
+
 
     'DECLARO UN CONSTRUCTOR CON TODOS SUS ATRIBUTOS 
     Public Sub New(p_nombre As String, p_categoria As Integer, p_estado As String, p_precio As Decimal, p_stock As Integer, p_stockMinimo As Integer, p_proveedor As Integer)
@@ -87,6 +96,26 @@
         getProveedorP = proveedorP
     End Function
 
+    Public Function ActualizarProd(ByVal p_id As String, cant As Integer)
+        Try
+            Using db As New SisVentasEntities
+                Dim prod = (From q In db.tblProducto
+                            Where q.id_producto = p_id
+                            Select q).First
+                prod.nombre = getNombreP()
+                prod.id_categoria = getCategoriaP()
+                prod.precio = getPrecioP()
+                prod.stock = getStockP() + cant
+                db.SaveChanges()
+
+            End Using
+
+            Return True
+        Catch ex As Exception
+            Return False
+
+        End Try
+    End Function
 
     Public Function NuevoProducto()
         Try
@@ -116,6 +145,28 @@
         Try
             Using db As New SisVentasEntities
                 Dim productos = From q In db.tblProducto
+                                Where q.estado = "Activo"
+                                Select
+                                    ID = q.id_producto,
+                                    NOMBRE = q.nombre,
+                                    CATEGORÍA = q.id_categoria,
+                                    ESTADO = q.estado,
+                                    PRECIO = q.precio,
+                                    STOCK = q.stock,
+                                    STOCKMINIMO = q.stockminimo,
+                                    PROVEEDOR = q.id_proveedor
+                gridP.DataSource = productos.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Public Function TraerProductosEliminados(ByVal gridP As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim productos = From q In db.tblProducto
+                                Where q.estado = "Eliminado"
                                 Select
                                     ID = q.id_producto,
                                     NOMBRE = q.nombre,
@@ -157,7 +208,24 @@
         Try
             Using db As New SisVentasEntities
                 Dim productos = From q In db.tblProducto
-                                Where q.nombre.Contains(name)
+                                Where q.nombre.Contains(name) And q.estado = "Activo"
+                                Select
+                                    ID = q.id_producto,
+                                    NOMBRE = q.nombre,
+                                    PRECIO = q.precio,
+                                    STOCK = q.stock
+                gridP.DataSource = productos.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Public Function traerEliminados(ByVal name As String, ByVal gridP As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim productos = From q In db.tblProducto
+                                Where q.nombre.Contains(name) And q.estado = "Eliminado"
                                 Select
                                     ID = q.id_producto,
                                     NOMBRE = q.nombre,
@@ -223,6 +291,20 @@
                                 Where p.id_producto = p_id
                                 Select p).First
                 actStock.estado = "Eliminado"
+                db.SaveChanges()
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Public Function ActivarProd(ByVal p_id As Integer)
+        Try
+            Using db As New SisVentasEntities
+                Dim actStock = (From p In db.tblProducto
+                                Where p.id_producto = p_id
+                                Select p).First
+                actStock.estado = "Activo"
                 db.SaveChanges()
             End Using
             Return True

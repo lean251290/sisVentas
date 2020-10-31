@@ -26,6 +26,8 @@ Partial Class FrmModificarCliente
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.LabelModificarCliente = New System.Windows.Forms.Label()
         Me.PanelAgregarCliente = New System.Windows.Forms.Panel()
+        Me.LabelDireccionCliModif = New System.Windows.Forms.Label()
+        Me.LabelEmailClienteModif = New System.Windows.Forms.Label()
         Me.TTelefonoClienteModif = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TEmailClienteModif = New System.Windows.Forms.TextBox()
@@ -41,7 +43,6 @@ Partial Class FrmModificarCliente
         Me.BtnCancelarCliente = New System.Windows.Forms.Button()
         Me.BtnActualizarCliente = New System.Windows.Forms.Button()
         Me.dialogModifCli = New System.Windows.Forms.OpenFileDialog()
-        Me.BtnAltaCliente = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarCliente.SuspendLayout()
@@ -89,6 +90,8 @@ Partial Class FrmModificarCliente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarCliente.Controls.Add(Me.LabelDireccionCliModif)
+        Me.PanelAgregarCliente.Controls.Add(Me.LabelEmailClienteModif)
         Me.PanelAgregarCliente.Controls.Add(Me.TTelefonoClienteModif)
         Me.PanelAgregarCliente.Controls.Add(Me.Label1)
         Me.PanelAgregarCliente.Controls.Add(Me.TEmailClienteModif)
@@ -106,6 +109,26 @@ Partial Class FrmModificarCliente
         Me.PanelAgregarCliente.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarCliente.TabIndex = 10
         '
+        'LabelDireccionCliModif
+        '
+        Me.LabelDireccionCliModif.AutoSize = True
+        Me.LabelDireccionCliModif.ForeColor = System.Drawing.Color.Red
+        Me.LabelDireccionCliModif.Location = New System.Drawing.Point(190, 270)
+        Me.LabelDireccionCliModif.Name = "LabelDireccionCliModif"
+        Me.LabelDireccionCliModif.Size = New System.Drawing.Size(221, 13)
+        Me.LabelDireccionCliModif.TabIndex = 104
+        Me.LabelDireccionCliModif.Text = "Dirección inválida, ""Ejemplo: Mendoza 3267"""
+        '
+        'LabelEmailClienteModif
+        '
+        Me.LabelEmailClienteModif.AutoSize = True
+        Me.LabelEmailClienteModif.ForeColor = System.Drawing.Color.Red
+        Me.LabelEmailClienteModif.Location = New System.Drawing.Point(190, 212)
+        Me.LabelEmailClienteModif.Name = "LabelEmailClienteModif"
+        Me.LabelEmailClienteModif.Size = New System.Drawing.Size(154, 13)
+        Me.LabelEmailClienteModif.TabIndex = 103
+        Me.LabelEmailClienteModif.Text = "Ya existe un E-mail ingrese otro"
+        '
         'TTelefonoClienteModif
         '
         Me.TTelefonoClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -114,7 +137,7 @@ Partial Class FrmModificarCliente
         Me.TTelefonoClienteModif.Location = New System.Drawing.Point(193, 332)
         Me.TTelefonoClienteModif.Name = "TTelefonoClienteModif"
         Me.TTelefonoClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TTelefonoClienteModif.TabIndex = 9
+        Me.TTelefonoClienteModif.TabIndex = 3
         '
         'Label1
         '
@@ -137,7 +160,7 @@ Partial Class FrmModificarCliente
         Me.TEmailClienteModif.Location = New System.Drawing.Point(193, 196)
         Me.TEmailClienteModif.Name = "TEmailClienteModif"
         Me.TEmailClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailClienteModif.TabIndex = 7
+        Me.TEmailClienteModif.TabIndex = 1
         '
         'TDireccionClienteModif
         '
@@ -147,7 +170,7 @@ Partial Class FrmModificarCliente
         Me.TDireccionClienteModif.Location = New System.Drawing.Point(193, 254)
         Me.TDireccionClienteModif.Name = "TDireccionClienteModif"
         Me.TDireccionClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionClienteModif.TabIndex = 6
+        Me.TDireccionClienteModif.TabIndex = 2
         '
         'TNombreClienteModif
         '
@@ -159,7 +182,7 @@ Partial Class FrmModificarCliente
         Me.TNombreClienteModif.Name = "TNombreClienteModif"
         Me.TNombreClienteModif.ReadOnly = True
         Me.TNombreClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreClienteModif.TabIndex = 4
+        Me.TNombreClienteModif.TabIndex = 100
         '
         'TApellidoClienteModif
         '
@@ -171,7 +194,7 @@ Partial Class FrmModificarCliente
         Me.TApellidoClienteModif.Name = "TApellidoClienteModif"
         Me.TApellidoClienteModif.ReadOnly = True
         Me.TApellidoClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TApellidoClienteModif.TabIndex = 5
+        Me.TApellidoClienteModif.TabIndex = 101
         '
         'TDniClienteModif
         '
@@ -184,7 +207,7 @@ Partial Class FrmModificarCliente
         Me.TDniClienteModif.Name = "TDniClienteModif"
         Me.TDniClienteModif.ReadOnly = True
         Me.TDniClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDniClienteModif.TabIndex = 3
+        Me.TDniClienteModif.TabIndex = 102
         '
         'LblDireccionModif
         '
@@ -265,7 +288,7 @@ Partial Class FrmModificarCliente
         Me.BtnCancelarCliente.Location = New System.Drawing.Point(542, 631)
         Me.BtnCancelarCliente.Name = "BtnCancelarCliente"
         Me.BtnCancelarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnCancelarCliente.TabIndex = 1
+        Me.BtnCancelarCliente.TabIndex = 5
         Me.BtnCancelarCliente.TabStop = False
         Me.BtnCancelarCliente.Text = "Cancelar"
         Me.BtnCancelarCliente.UseVisualStyleBackColor = True
@@ -284,7 +307,7 @@ Partial Class FrmModificarCliente
         Me.BtnActualizarCliente.Location = New System.Drawing.Point(439, 631)
         Me.BtnActualizarCliente.Name = "BtnActualizarCliente"
         Me.BtnActualizarCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnActualizarCliente.TabIndex = 0
+        Me.BtnActualizarCliente.TabIndex = 4
         Me.BtnActualizarCliente.TabStop = False
         Me.BtnActualizarCliente.Text = "Actualizar"
         Me.BtnActualizarCliente.UseVisualStyleBackColor = True
@@ -293,32 +316,12 @@ Partial Class FrmModificarCliente
         '
         Me.dialogModifCli.FileName = "OpenFileDialog1"
         '
-        'BtnAltaCliente
-        '
-        Me.BtnAltaCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAltaCliente.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
-        Me.BtnAltaCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAltaCliente.FlatAppearance.BorderSize = 0
-        Me.BtnAltaCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnAltaCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnAltaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAltaCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAltaCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnAltaCliente.Location = New System.Drawing.Point(40, 631)
-        Me.BtnAltaCliente.Name = "BtnAltaCliente"
-        Me.BtnAltaCliente.Size = New System.Drawing.Size(98, 37)
-        Me.BtnAltaCliente.TabIndex = 2
-        Me.BtnAltaCliente.TabStop = False
-        Me.BtnAltaCliente.Text = "Alta"
-        Me.BtnAltaCliente.UseVisualStyleBackColor = True
-        '
         'FrmModificarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
-        Me.Controls.Add(Me.BtnAltaCliente)
         Me.Controls.Add(Me.BtnCancelarCliente)
         Me.Controls.Add(Me.BtnActualizarCliente)
         Me.Controls.Add(Me.PanelAgregarCliente)
@@ -353,7 +356,8 @@ Partial Class FrmModificarCliente
     Friend WithEvents BtnActualizarCliente As Button
     Friend WithEvents BtnCancelarCliente As Button
     Friend WithEvents dialogModifCli As OpenFileDialog
-    Friend WithEvents BtnAltaCliente As Button
     Friend WithEvents TTelefonoClienteModif As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents LabelEmailClienteModif As Label
+    Friend WithEvents LabelDireccionCliModif As Label
 End Class

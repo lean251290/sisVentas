@@ -45,12 +45,24 @@ Public Class FrmModificarUsuario
 
 
     Private Sub TEmailUsuarioModif_LostFocus(sender As Object, e As EventArgs) Handles TEmailUsuarioModif.LostFocus
+        Dim user As New Usuarios
+        Dim emailbd As String
+        user.TraerPorId(Me.Tag)
+        emailbd = user.getCorreo
         Dim mail As String
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
         If Not Regex.IsMatch(TEmailUsuarioModif.Text, mail) Then
             FrmErrorMail.Show()
             TEmailUsuarioModif.Text = ""
-        End If
+        ElseIf TEmailUsuarioModif.Text <> emailbd Then
+            user.VerificarEmail(TEmailUsuarioModif.Text)
+            LabelEmailUser.Visible = True
+            TEmailUsuarioModif.Text = ""
+        Else
+            LabelEmailUser.Visible = False
+            End If
+
+
     End Sub
 
 
@@ -103,6 +115,8 @@ Public Class FrmModificarUsuario
 
 
     Private Sub FrmModificarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LabelEmailUser.Visible = False
+        LabelDirModifUser.Visible = False
         Dim user As New Usuarios()
         user.TraerPorId(Me.Tag)
         TDniUsuarioModif.Text = user.getDni
@@ -126,6 +140,25 @@ Public Class FrmModificarUsuario
         Else
             FrmUpsError.Show()
         End If
+
+    End Sub
+
+    Private Sub TDireccionUsuarioModif_TextChanged(sender As Object, e As EventArgs) Handles TDireccionUsuarioModif.TextChanged
+
+    End Sub
+
+    Private Sub TDireccionUsuarioModif_LostFocus(sender As Object, e As EventArgs) Handles TDireccionUsuarioModif.LostFocus
+        Dim direccion As String
+        direccion = "^[A-z\s]+(\d{1,5})"
+        If Not Regex.IsMatch(TDireccionUsuarioModif.Text, direccion) Then
+            LabelDirModifUser.Visible = True
+            TDireccionUsuarioModif.Text = ""
+        Else
+            LabelDirModifUser.Visible = False
+        End If
+    End Sub
+
+    Private Sub TEmailUsuarioModif_TextChanged(sender As Object, e As EventArgs) Handles TEmailUsuarioModif.TextChanged
 
     End Sub
 End Class

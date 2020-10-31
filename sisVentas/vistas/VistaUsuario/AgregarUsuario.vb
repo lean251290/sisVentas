@@ -129,6 +129,7 @@ Public Class Agregar_Usuario
         LabelPass.Visible = False
         LabelDniNumeros.Visible = False
         LabelVerifEmail.Visible = False
+        LabelDireUser.Visible = False
     End Sub
 
 
@@ -178,19 +179,18 @@ Public Class Agregar_Usuario
         End If
     End Sub
 
-    Private Sub TDniUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDniUsuario.TextChanged
+    Private Sub TDireccionUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDireccionUsuario.TextChanged
 
     End Sub
 
-    Private Sub TDniUsuario_Layout(sender As Object, e As LayoutEventArgs) Handles TDniUsuario.Layout
-
-    End Sub
-
-    Private Sub TEmailUsuario_TextChanged(sender As Object, e As EventArgs) Handles TEmailUsuario.TextChanged
-
-    End Sub
-
-    Private Sub TPassUsuario_TextChanged(sender As Object, e As EventArgs) Handles TPassUsuario.TextChanged
-
+    Private Sub TDireccionUsuario_LostFocus(sender As Object, e As EventArgs) Handles TDireccionUsuario.LostFocus
+        Dim direccion As String
+        direccion = "^[A-z\s]+(\d{1,5})"
+        If Not Regex.IsMatch(TDireccionUsuario.Text, direccion) Then
+            LabelDireUser.Visible = True
+            TDireccionUsuario.Text = ""
+        Else
+            LabelDireUser.Visible = False
+        End If
     End Sub
 End Class

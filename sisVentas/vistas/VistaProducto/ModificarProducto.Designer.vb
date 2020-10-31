@@ -26,6 +26,8 @@ Partial Class ModificarProducto
         Me.LblModificarProducto = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelAgregarProducto = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.CMBModifProdCat = New System.Windows.Forms.ComboBox()
         Me.TBStockModifPrdo = New System.Windows.Forms.TextBox()
         Me.TNombreProdModif = New System.Windows.Forms.TextBox()
@@ -37,7 +39,6 @@ Partial Class ModificarProducto
         Me.BtnActualizarProd = New System.Windows.Forms.Button()
         Me.BtnCancelarModifProd = New System.Windows.Forms.Button()
         Me.DialogProducto = New System.Windows.Forms.OpenFileDialog()
-        Me.BtnAltaProd = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarProducto.SuspendLayout()
@@ -86,6 +87,8 @@ Partial Class ModificarProducto
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarProducto.Controls.Add(Me.TextBox1)
+        Me.PanelAgregarProducto.Controls.Add(Me.Label1)
         Me.PanelAgregarProducto.Controls.Add(Me.CMBModifProdCat)
         Me.PanelAgregarProducto.Controls.Add(Me.TBStockModifPrdo)
         Me.PanelAgregarProducto.Controls.Add(Me.TNombreProdModif)
@@ -98,6 +101,29 @@ Partial Class ModificarProducto
         Me.PanelAgregarProducto.Name = "PanelAgregarProducto"
         Me.PanelAgregarProducto.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarProducto.TabIndex = 7
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Location = New System.Drawing.Point(433, 201)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(81, 13)
+        Me.TextBox1.TabIndex = 22
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label1.Location = New System.Drawing.Point(294, 196)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(126, 20)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = "Stock a agregar:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'CMBModifProdCat
         '
@@ -114,9 +140,10 @@ Partial Class ModificarProducto
         Me.TBStockModifPrdo.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TBStockModifPrdo.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TBStockModifPrdo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TBStockModifPrdo.Enabled = False
         Me.TBStockModifPrdo.Location = New System.Drawing.Point(193, 201)
         Me.TBStockModifPrdo.Name = "TBStockModifPrdo"
-        Me.TBStockModifPrdo.Size = New System.Drawing.Size(321, 13)
+        Me.TBStockModifPrdo.Size = New System.Drawing.Size(81, 13)
         Me.TBStockModifPrdo.TabIndex = 14
         '
         'TNombreProdModif
@@ -145,7 +172,7 @@ Partial Class ModificarProducto
         Me.LblStockModifProd.AutoSize = True
         Me.LblStockModifProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblStockModifProd.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblStockModifProd.Location = New System.Drawing.Point(30, 201)
+        Me.LblStockModifProd.Location = New System.Drawing.Point(30, 196)
         Me.LblStockModifProd.Name = "LblStockModifProd"
         Me.LblStockModifProd.Size = New System.Drawing.Size(54, 20)
         Me.LblStockModifProd.TabIndex = 4
@@ -231,31 +258,12 @@ Partial Class ModificarProducto
         '
         Me.DialogProducto.FileName = "OpenFileDialog1"
         '
-        'BtnAltaProd
-        '
-        Me.BtnAltaProd.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
-        Me.BtnAltaProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAltaProd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAltaProd.FlatAppearance.BorderSize = 0
-        Me.BtnAltaProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnAltaProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnAltaProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAltaProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAltaProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnAltaProd.Location = New System.Drawing.Point(40, 631)
-        Me.BtnAltaProd.Name = "BtnAltaProd"
-        Me.BtnAltaProd.Size = New System.Drawing.Size(98, 37)
-        Me.BtnAltaProd.TabIndex = 10
-        Me.BtnAltaProd.Text = "Alta"
-        Me.BtnAltaProd.UseVisualStyleBackColor = True
-        '
         'ModificarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
-        Me.Controls.Add(Me.BtnAltaProd)
         Me.Controls.Add(Me.BtnCancelarModifProd)
         Me.Controls.Add(Me.BtnActualizarProd)
         Me.Controls.Add(Me.PanelAgregarProducto)
@@ -278,15 +286,16 @@ Partial Class ModificarProducto
     Friend WithEvents LblModificarProducto As Label
     Friend WithEvents PanelAgregarProducto As Panel
     Friend WithEvents CMBModifProdCat As ComboBox
-    Friend WithEvents TBStockModifPrdo As TextBox
     Friend WithEvents TNombreProdModif As TextBox
     Friend WithEvents TbPrecioModifProd As TextBox
-    Friend WithEvents LblStockModifProd As Label
     Friend WithEvents LblPrecioModifProd As Label
     Friend WithEvents LblCategoriaPModif As Label
     Friend WithEvents LblNombrePModif As Label
     Friend WithEvents BtnActualizarProd As Button
     Friend WithEvents BtnCancelarModifProd As Button
     Friend WithEvents DialogProducto As OpenFileDialog
-    Friend WithEvents BtnAltaProd As Button
+    Friend WithEvents TBStockModifPrdo As TextBox
+    Friend WithEvents LblStockModifProd As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
 End Class

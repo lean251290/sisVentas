@@ -19,6 +19,8 @@ Public Class FrmModificarCliente
     End Sub
 
     Private Sub FrmModificarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LabelEmailClienteModif.Visible = False
+        LabelDireccionCliModif.Visible = False
         Dim cli As New Cliente()
         cli.TraerPorIdCliente(Me.Tag)
         TDniClienteModif.Text = cli.getDni
@@ -85,12 +87,22 @@ Public Class FrmModificarCliente
 
 
     Private Sub TEmailClienteModif_LostFocus(sender As Object, e As EventArgs) Handles TEmailClienteModif.LostFocus
+        Dim cli As New Cliente
         Dim mail As String
-        mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
+        Dim mailbd As String
+        cli.TraerPorIdCliente(Me.Tag)
+        mailbd = cli.getCorreo
 
+        mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
         If Not Regex.IsMatch(TEmailClienteModif.Text, mail) Then
             FrmErrorMail.Show()
             TEmailClienteModif.Text = ""
+        ElseIf TEmailClienteModif.Text <> mailbd Then
+            cli.VerificarEmail(TEmailClienteModif.Text)
+            TEmailClienteModif.Text = ""
+            LabelEmailClienteModif.Visible = True
+        Else
+            LabelEmailClienteModif.Visible = False
         End If
     End Sub
 
@@ -106,7 +118,35 @@ Public Class FrmModificarCliente
         'End If
     End Sub
 
-    Private Sub TDniClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TDniClienteModif.TextChanged
+
+    Private Sub TDireccionClienteModif_LostFocus(sender As Object, e As EventArgs) Handles TDireccionClienteModif.LostFocus
+        Dim direccion As String
+        direccion = "^[A-z\s]+(\d{1,5})"
+        If Not Regex.IsMatch(TDireccionClienteModif.Text, direccion) Then
+            LabelDireccionCliModif.Visible = True
+            TDireccionClienteModif.Text = ""
+        Else
+            LabelDireccionCliModif.Visible = False
+        End If
+    End Sub
+
+    Private Sub TTelefonoClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TTelefonoClienteModif.TextChanged
+
+    End Sub
+
+    Private Sub TTelefonoClienteModif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TTelefonoClienteModif.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
+
+            e.Handled = True
+            FrmSoloNumeros.Show()
+        End If
+    End Sub
+
+    Private Sub TDireccionClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TDireccionClienteModif.TextChanged
+
+    End Sub
+
+    Private Sub TEmailClienteModif_TextChanged(sender As Object, e As EventArgs) Handles TEmailClienteModif.TextChanged
 
     End Sub
 End Class
