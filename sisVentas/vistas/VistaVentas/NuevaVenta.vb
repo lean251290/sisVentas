@@ -84,20 +84,17 @@
     Private Sub PBAgregarProducto_Click(sender As Object, e As EventArgs) Handles PBAgregarProducto.Click
         Dim NumeroDeFilaSeleccionada As Integer
         Dim idProd As Integer
-        'declarqacion de las variables para trabajar con el producto en el datagrid
-        'Dim idP As Integer
         Dim nombre As String
         Dim precio As Double
+        Dim total As Decimal
         Dim cantidad As Integer
         Dim stock As Integer
         Dim subtotal As Double
-        'fin declaracion de variables para trabajar con el producto
         Dim prod As New Producto
         If DGVenta.SelectedRows.Count > 0 Then
             NumeroDeFilaSeleccionada = DGVenta.CurrentRow.Index
             idProd = Val(DGVenta.SelectedRows(0).Cells(0).Value)
             prod.traerProdId(idProd)
-            'idP = prod.getIdP
             nombre = prod.getNombreP
             precio = prod.getPrecioP
             stock = prod.getStockP
@@ -108,10 +105,21 @@
             ElseIf cantidad > stock Then
                 MsgBox("no puede agregar no tiene stock")
             Else
+                For Each fila As DataGridViewRow In DGVentaProductos.Rows
+                    If fila.Cells(0).Value = idProd Then
+                        fila.Cells(3).Value = fila.Cells(3).Value + cantidad
+                        fila.Cells(5).Value = fila.Cells(2).Value * fila.Cells(3).Value
+                        total = total + fila.Cells(5).Value
+                        Exit Sub
+                    End If
+                Next
                 DGVentaProductos.Rows.Add(idProd, nombre, precio, cantidad, "eliminar", subtotal)
-                prod.ActualizarStock(idProd, cantidad)
-                DGVenta.Refresh()
+                For Each fila As DataGridViewRow In DGVentaProductos.Rows
+                    total = total + fila.Cells(5).Value
+                Next
             End If
+
+            LblTot.Text = total
         Else
                 FrmSeleccioneFila.Show()
         End If
@@ -160,16 +168,16 @@
         End If
     End Sub
 
-    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs)
         Dim ask As MsgBoxResult
         Dim cantidad As Integer
         Dim fila As Integer
         Dim prod As New Producto
 
         fila = DGVentaProductos.CurrentRow.Index
-                DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
-                cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
-                prod.ActualizarStock(id, cantidad)
+        DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
+        cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
+        prod.ActualizarStock(id, cantidad)
 
 
     End Sub
