@@ -193,4 +193,21 @@ Public Class Agregar_Usuario
             LabelDireUser.Visible = False
         End If
     End Sub
+
+    Private Sub TNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles TNombreUsuario.TextChanged
+
+    End Sub
+
+    Private Sub TNombreUsuario_LostFocus(sender As Object, e As EventArgs) Handles TNombreUsuario.LostFocus
+        If TNombreUsuario.Text <> "" Then
+            Dim texto As String()
+            Dim nombreCompleto As String = ""
+            texto = TNombreUsuario.Text.Split(" ")
+            For Each part In texto
+                part = part(0).ToString.ToUpper & Mid(part, 2).ToLower
+                nombreCompleto = nombreCompleto & part & " "
+            Next
+            TNombreUsuario.Text = Trim(nombreCompleto)
+        End If
+    End Sub
 End Class
