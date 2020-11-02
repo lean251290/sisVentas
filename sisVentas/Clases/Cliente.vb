@@ -120,12 +120,9 @@
                 Dim cli = (From q In db.tblCliente
                            Where q.id_cliente = p_id
                            Select q).First
-                'firstordefault xq me arroja el error de la secuencia no tiene elementos
-                cli.correo = getCorreo()
+                'cli.correo = getCorreo()
                 cli.direccion = getDireccion()
                 cli.telefono = getTelefono()
-
-
                 db.SaveChanges()
 
             End Using

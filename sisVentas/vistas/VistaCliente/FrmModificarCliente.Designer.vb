@@ -157,10 +157,12 @@ Partial Class FrmModificarCliente
         Me.TEmailClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TEmailClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TEmailClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TEmailClienteModif.Cursor = System.Windows.Forms.Cursors.No
         Me.TEmailClienteModif.Location = New System.Drawing.Point(193, 196)
         Me.TEmailClienteModif.Name = "TEmailClienteModif"
+        Me.TEmailClienteModif.ReadOnly = True
         Me.TEmailClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailClienteModif.TabIndex = 1
+        Me.TEmailClienteModif.TabIndex = 103
         '
         'TDireccionClienteModif
         '

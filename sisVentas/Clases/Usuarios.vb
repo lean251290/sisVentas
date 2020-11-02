@@ -175,9 +175,8 @@
                             Where q.id_user = p_id
                             Select q).First
                 user.direccion = getDireccion()
-                user.correo = getCorreo()
+                'user.correo = getCorreo()
                 user.imagen = ImageToByte(getImagen())
-
                 db.SaveChanges()
 
             End Using

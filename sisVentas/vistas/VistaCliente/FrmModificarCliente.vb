@@ -1,7 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Public Class FrmModificarCliente
     Private Sub BtnActualizarCliente_Click(sender As Object, e As EventArgs) Handles BtnActualizarCliente.Click
-        Dim cliente As New Cliente(TNombreClienteModif.Text, TApellidoClienteModif.Text, TDniClienteModif.Text, TEmailClienteModif.Text,
+        Dim cliente As New Cliente(TDniClienteModif.Text, TNombreClienteModif.Text, TApellidoClienteModif.Text, TEmailClienteModif.Text,
          TDireccionClienteModif.Text, TTelefonoClienteModif.Text)
 
         If cliente.ActualizarCliente(Me.Tag) Then

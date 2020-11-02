@@ -124,10 +124,12 @@ Partial Class FrmModificarUsuario
         Me.TEmailUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TEmailUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TEmailUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TEmailUsuarioModif.Cursor = System.Windows.Forms.Cursors.No
         Me.TEmailUsuarioModif.Location = New System.Drawing.Point(193, 261)
         Me.TEmailUsuarioModif.Name = "TEmailUsuarioModif"
+        Me.TEmailUsuarioModif.ReadOnly = True
         Me.TEmailUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailUsuarioModif.TabIndex = 1
+        Me.TEmailUsuarioModif.TabIndex = 113
         '
         'TDniUsuarioModif
         '
@@ -140,7 +142,7 @@ Partial Class FrmModificarUsuario
         Me.TDniUsuarioModif.Name = "TDniUsuarioModif"
         Me.TDniUsuarioModif.ReadOnly = True
         Me.TDniUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDniUsuarioModif.TabIndex = 11
+        Me.TDniUsuarioModif.TabIndex = 110
         '
         'TDireccionUsuarioModif
         '
@@ -150,7 +152,7 @@ Partial Class FrmModificarUsuario
         Me.TDireccionUsuarioModif.Location = New System.Drawing.Point(193, 201)
         Me.TDireccionUsuarioModif.Name = "TDireccionUsuarioModif"
         Me.TDireccionUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionUsuarioModif.TabIndex = 0
+        Me.TDireccionUsuarioModif.TabIndex = 1
         '
         'TNombreUsuarioModif
         '
@@ -162,7 +164,7 @@ Partial Class FrmModificarUsuario
         Me.TNombreUsuarioModif.Name = "TNombreUsuarioModif"
         Me.TNombreUsuarioModif.ReadOnly = True
         Me.TNombreUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TNombreUsuarioModif.TabIndex = 13
+        Me.TNombreUsuarioModif.TabIndex = 111
         '
         'TApellidoUsuarioModif
         '
@@ -174,7 +176,7 @@ Partial Class FrmModificarUsuario
         Me.TApellidoUsuarioModif.Name = "TApellidoUsuarioModif"
         Me.TApellidoUsuarioModif.ReadOnly = True
         Me.TApellidoUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TApellidoUsuarioModif.TabIndex = 12
+        Me.TApellidoUsuarioModif.TabIndex = 112
         '
         'LblDireccion
         '
