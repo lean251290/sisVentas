@@ -2,8 +2,8 @@
     Private Sub BtnGuardarProducto_Click(sender As Object, e As EventArgs) Handles BtnGuardarProducto.Click
         Dim precio As Decimal
 
-        If TNombreProd.Text = "" Or TPrecioProd.Text = "" Or
-         TStockProd.Text = "" Then
+        If TNombreProd.Text = "Ingrese Precio" Or TPrecioProd.Text = "Ingrese Producto" Or
+         TStockProd.Text = "Ingrese Stock" Then
             FrmRellenarCampos.Show()
         Else
             'p_nombre, p_categoria, p_estado, p_precio, p_stock, p_stockMinimo, p_proveedor
@@ -88,8 +88,66 @@
     Private Sub AgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarCat()
         cargarProveedor()
+        TNombreProd.Text = "Ingrese Nombre"
+        TPrecioProd.Text = "Ingrese Precio"
+        TStockProd.Text = "Ingrese Stock"
+        TNombreProd.ForeColor = Color.DarkSlateGray
+        TPrecioProd.ForeColor = Color.DarkSlateGray
+        TStockProd.ForeColor = Color.DarkSlateGray
     End Sub
 
+    Private Sub TNombreProd_TextChanged(sender As Object, e As EventArgs) Handles TNombreProd.TextChanged
+
+    End Sub
+
+    Private Sub TNombreProd_GotFocus(sender As Object, e As EventArgs) Handles TNombreProd.GotFocus
+        If TNombreProd.Text = "Ingrese Nombre" Then
+            TNombreProd.ForeColor = Color.Black
+            TNombreProd.Text = ""
+        End If
+    End Sub
+
+    Private Sub TNombreProd_LostFocus(sender As Object, e As EventArgs) Handles TNombreProd.LostFocus
+        If TNombreProd.Text = Nothing Then
+            TNombreProd.ForeColor = Color.DarkSlateGray
+            TNombreProd.Text = "Ingrese Nombre"
+        End If
+    End Sub
+
+    Private Sub TPrecioProd_TextChanged(sender As Object, e As EventArgs) Handles TPrecioProd.TextChanged
+
+    End Sub
+
+    Private Sub TPrecioProd_GotFocus(sender As Object, e As EventArgs) Handles TPrecioProd.GotFocus
+        If TPrecioProd.Text = "Ingrese Precio" Then
+            TPrecioProd.ForeColor = Color.Black
+            TPrecioProd.Text = ""
+        End If
+    End Sub
+
+    Private Sub TPrecioProd_LostFocus(sender As Object, e As EventArgs) Handles TPrecioProd.LostFocus
+        If TPrecioProd.Text = Nothing Then
+            TPrecioProd.ForeColor = Color.DarkSlateGray
+            TPrecioProd.Text = "Ingrese Precio"
+        End If
+    End Sub
+
+    Private Sub TStockProd_TextChanged(sender As Object, e As EventArgs) Handles TStockProd.TextChanged
 
 
+    End Sub
+
+    Private Sub TStockProd_GotFocus(sender As Object, e As EventArgs) Handles TStockProd.GotFocus
+        If TStockProd.Text = "Ingrese Stock" Then
+            TStockProd.ForeColor = Color.Black
+            TStockProd.Text = ""
+        End If
+    End Sub
+
+    Private Sub TStockProd_LostFocus(sender As Object, e As EventArgs) Handles TStockProd.LostFocus
+        If TStockProd.Text = Nothing Then
+            TStockProd.ForeColor = Color.DarkSlateGray
+            TStockProd.Text = "Ingrese Stock"
+        End If
+    End Sub
 End Class

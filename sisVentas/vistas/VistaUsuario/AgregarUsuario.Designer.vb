@@ -55,6 +55,7 @@ Partial Class Agregar_Usuario
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.dialogUser = New System.Windows.Forms.OpenFileDialog()
         Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PBUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -82,6 +83,7 @@ Partial Class Agregar_Usuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarUsuario.Controls.Add(Me.Label3)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelDireUser)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelVerifEmail)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelDniNumeros)
@@ -148,9 +150,9 @@ Partial Class Agregar_Usuario
         Me.LabelPass.ForeColor = System.Drawing.Color.Red
         Me.LabelPass.Location = New System.Drawing.Point(190, 337)
         Me.LabelPass.Name = "LabelPass"
-        Me.LabelPass.Size = New System.Drawing.Size(100, 13)
+        Me.LabelPass.Size = New System.Drawing.Size(385, 13)
         Me.LabelPass.TabIndex = 25
-        Me.LabelPass.Text = "Contraseña inválida"
+        Me.LabelPass.Text = "Contraseña inválida, al menos una mayúscula, un número y un carácter especial"
         '
         'LabelEmail
         '
@@ -453,6 +455,16 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario.Text = "Guardar"
         Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(433, 305)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(81, 13)
+        Me.Label3.TabIndex = 106
+        Me.Label3.Text = "(8-16 caráteres)"
+        '
         'Agregar_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -511,4 +523,5 @@ Partial Class Agregar_Usuario
     Friend WithEvents LabelDniNumeros As Label
     Friend WithEvents LabelVerifEmail As Label
     Friend WithEvents LabelDireUser As Label
+    Friend WithEvents Label3 As Label
 End Class
