@@ -48,9 +48,6 @@
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub TBuscarCliente_TextChanged(sender As Object, e As EventArgs) Handles TBuscarCliente.TextChanged
         Dim cliente As New Cliente
@@ -61,7 +58,6 @@
         Else
             DGVenta.DataSource = Nothing
         End If
-
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
@@ -84,45 +80,65 @@
     Private Sub PBAgregarProducto_Click(sender As Object, e As EventArgs) Handles PBAgregarProducto.Click
         Dim NumeroDeFilaSeleccionada As Integer
         Dim idProd As Integer
+        Dim existe As Boolean
         Dim nombre As String
         Dim precio As Double
         Dim total As Decimal
+        Dim totalFRep As Decimal
         Dim cantidad As Integer
         Dim stock As Integer
         Dim subtotal As Double
         Dim prod As New Producto
-        If DGVenta.SelectedRows.Count > 0 Then
-            NumeroDeFilaSeleccionada = DGVenta.CurrentRow.Index
-            idProd = Val(DGVenta.SelectedRows(0).Cells(0).Value)
-            prod.traerProdId(idProd)
-            nombre = prod.getNombreP
-            precio = prod.getPrecioP
-            stock = prod.getStockP
-            cantidad = Val(TBCantidad.Text)
-            subtotal = precio * cantidad
-            If TBCantidad.Text = "" Then
-                MsgBox("debe agregar una cantidad")
-            ElseIf cantidad > stock Then
-                MsgBox("no puede agregar no tiene stock")
-            Else
-                For Each fila As DataGridViewRow In DGVentaProductos.Rows
-                    If fila.Cells(0).Value = idProd Then
-                        fila.Cells(3).Value = fila.Cells(3).Value + cantidad
-                        fila.Cells(5).Value = fila.Cells(2).Value * fila.Cells(3).Value
-                        total = total + fila.Cells(5).Value
-                        Exit Sub
-                    End If
-                Next
-                DGVentaProductos.Rows.Add(idProd, nombre, precio, cantidad, "eliminar", subtotal)
-                For Each fila As DataGridViewRow In DGVentaProductos.Rows
-                    total = total + fila.Cells(5).Value
-                Next
-            End If
-
-            LblTot.Text = total
-        Else
-                FrmSeleccioneFila.Show()
+        If DGVenta.SelectedRows.Count = 0 Then
+            FrmSeleccioneFila.Show()
+            Exit Sub
         End If
+
+        NumeroDeFilaSeleccionada = DGVenta.CurrentRow.Index
+        idProd = Val(DGVenta.SelectedRows(0).Cells(0).Value)
+        prod.traerProdId(idProd)
+        nombre = prod.getNombreP
+        precio = prod.getPrecioP
+        stock = prod.getStockP
+        cantidad = Val(TBCantidad.Text)
+        subtotal = precio * cantidad
+
+        If TBCantidad.Text = "" Then
+            MsgBox("debe agregar una cantidad")
+            Exit Sub
+        End If
+        If cantidad > stock Then
+            MsgBox("no puede agregar no tiene stock")
+            Exit Sub
+        End If
+
+        For Each fila As DataGridViewRow In DGVentaProductos.Rows
+            Dim cantidadVenta As Integer
+            Dim totalXFila As Integer
+
+            If fila.Cells(0).Value = idProd Then
+                existe = True
+                cantidadVenta = fila.Cells(3).Value
+                totalXFila = cantidadVenta + cantidad
+                If totalXFila > stock Then
+                    MsgBox("supera el stock")
+                    Exit Sub
+                Else
+                    fila.Cells(3).Value = fila.Cells(3).Value + cantidad
+                    fila.Cells(5).Value = fila.Cells(2).Value * fila.Cells(3).Value
+                End If
+            End If
+        Next
+        If Not existe Then
+            DGVentaProductos.Rows.Add(idProd, nombre, precio, cantidad, "eliminar", subtotal)
+        End If
+
+
+        For Each fila As DataGridViewRow In DGVentaProductos.Rows
+            total = total + fila.Cells(5).Value + totalFRep
+        Next
+        LblTot.Text = total
+
     End Sub
 
     Private Sub TBProducto_TextChanged(sender As Object, e As EventArgs) Handles TBProducto.TextChanged
@@ -155,6 +171,7 @@
         Dim ask As MsgBoxResult
         Dim cantidad As Integer
         Dim fila As Integer
+        Dim total As Decimal
         Dim prod As New Producto
         If e.ColumnIndex = 4 Then
             ask = MsgBox("Esta seguro de querer borrar el registro?", vbYesNo + vbExclamation + vbDefaultButton2, "Eliminar")
@@ -162,8 +179,11 @@
                 fila = DGVentaProductos.CurrentRow.Index
                 DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
                 cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
-                prod.ActualizarStock(id, cantidad)
-
+                'prod.ActualizarStock(id, cantidad)
+                For Each fila2 As DataGridViewRow In DGVentaProductos.Rows
+                    total = total + fila2.Cells(5).Value
+                Next
+                LblTot.Text = total
             End If
         End If
     End Sub

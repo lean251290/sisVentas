@@ -107,4 +107,18 @@
             FrmSoloNumeros.Show()
         End If
     End Sub
+
+
+    Private Sub TNombreProdModif_LostFocus(sender As Object, e As EventArgs) Handles TNombreProdModif.LostFocus
+        If TNombreProdModif.Text <> "" Then
+            Dim texto As String()
+            Dim nombreCompleto As String = ""
+            texto = TNombreProdModif.Text.Split(" ")
+            For Each part In texto
+                part = part(0).ToString.ToUpper & Mid(part, 2).ToLower
+                nombreCompleto = nombreCompleto & part & " "
+            Next
+            TNombreProdModif.Text = Trim(nombreCompleto)
+        End If
+    End Sub
 End Class

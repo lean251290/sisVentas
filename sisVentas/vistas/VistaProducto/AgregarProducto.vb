@@ -90,7 +90,6 @@
         cargarProveedor()
     End Sub
 
-    Private Sub TPrecioProd_TextChanged(sender As Object, e As EventArgs) Handles TPrecioProd.TextChanged
 
-    End Sub
+
 End Class

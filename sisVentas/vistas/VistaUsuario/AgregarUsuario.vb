@@ -179,10 +179,6 @@ Public Class Agregar_Usuario
         End If
     End Sub
 
-    Private Sub TDireccionUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDireccionUsuario.TextChanged
-
-    End Sub
-
     Private Sub TDireccionUsuario_LostFocus(sender As Object, e As EventArgs) Handles TDireccionUsuario.LostFocus
         Dim direccion As String
         direccion = "^[A-z\s]+(\d{1,5})"
@@ -208,6 +204,20 @@ Public Class Agregar_Usuario
                 nombreCompleto = nombreCompleto & part & " "
             Next
             TNombreUsuario.Text = Trim(nombreCompleto)
+        End If
+    End Sub
+
+
+    Private Sub TApellidoUsuario_LostFocus(sender As Object, e As EventArgs) Handles TApellidoUsuario.LostFocus
+        If TApellidoUsuario.Text <> "" Then
+            Dim texto As String()
+            Dim nombreCompleto As String = ""
+            texto = TApellidoUsuario.Text.Split(" ")
+            For Each part In texto
+                part = part(0).ToString.ToUpper & Mid(part, 2).ToLower
+                nombreCompleto = nombreCompleto & part & " "
+            Next
+            TApellidoUsuario.Text = Trim(nombreCompleto)
         End If
     End Sub
 End Class

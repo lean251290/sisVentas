@@ -43,9 +43,6 @@ Public Class AgregarCliente
     End Sub
 
 
-    Private Sub TNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles TNombreCliente.TextChanged
-
-    End Sub
 
     Private Sub TNombreUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TNombreCliente.KeyPress
         If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
@@ -55,9 +52,6 @@ Public Class AgregarCliente
 
     End Sub
 
-    Private Sub TDniUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDniCliente.TextChanged
-
-    End Sub
 
     Private Sub TDniUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TDniCliente.KeyPress
         If Not (Char.IsDigit(e.KeyChar) Or (Asc(e.KeyChar) = 46) Or Asc(e.KeyChar) = 8) Then
@@ -66,9 +60,7 @@ Public Class AgregarCliente
         End If
     End Sub
 
-    Private Sub TApellidoUsuario_TextChanged(sender As Object, e As EventArgs) Handles TApellidoCliente.TextChanged
 
-    End Sub
 
     Private Sub TApellidoUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TApellidoCliente.KeyPress
         If Not (Char.IsLetter(e.KeyChar) Or (Asc(e.KeyChar) = 32) Or Asc(e.KeyChar) = 8) Then
@@ -77,9 +69,6 @@ Public Class AgregarCliente
         End If
     End Sub
 
-    Private Sub TEmailUsuario_TextChanged(sender As Object, e As EventArgs) Handles TEmailCliente.TextChanged
-
-    End Sub
 
     Private Sub TEmailUsuario_LostFocus(sender As Object, e As EventArgs) Handles TEmailCliente.LostFocus
         Dim mail As String
@@ -169,7 +158,34 @@ Public Class AgregarCliente
         End If
     End Sub
 
-    Private Sub TTelefonoCliente_TextChanged(sender As Object, e As EventArgs) Handles TTelefonoCliente.TextChanged
+    Private Sub TNombreCliente_LostFocus(sender As Object, e As EventArgs) Handles TNombreCliente.LostFocus
+        If TNombreCliente.Text <> "" Then
+            Dim texto As String()
+            Dim nombreCompleto As String = ""
+            texto = TNombreCliente.Text.Split(" ")
+            For Each part In texto
+                part = part(0).ToString.ToUpper & Mid(part, 2).ToLower
+                nombreCompleto = nombreCompleto & part & " "
+            Next
+            TNombreCliente.Text = Trim(nombreCompleto)
+        End If
+    End Sub
 
+    Private Sub TApellidoCliente_LostFocus(sender As Object, e As EventArgs) Handles TApellidoCliente.LostFocus
+        If TApellidoCliente.Text <> "" Then
+            Dim texto As String()
+            Dim nombreCompleto As String = ""
+            texto = TApellidoCliente.Text.Split(" ")
+            For Each part In texto
+                part = part(0).ToString.ToUpper & Mid(part, 2).ToLower
+                nombreCompleto = nombreCompleto & part & " "
+            Next
+            TApellidoCliente.Text = Trim(nombreCompleto)
+        End If
+    End Sub
+
+    Private Sub BtnCancelarCliente_Click(sender As Object, e As EventArgs) Handles BtnCancelarCliente.Click
+        Me.Close()
+        PanelAdmin.Show()
     End Sub
 End Class
