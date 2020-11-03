@@ -74,4 +74,29 @@
             Return 0
         End Try
     End Function
+
+    Public Function VerVentasPorUser(grid As DataGridView, idUser As Integer)
+        Dim fechaHoy As DateTime
+        fechaHoy = DateTime.Now.Date
+        Dim fechaString As String
+        fechaString = fechaHoy.ToShortDateString()
+        Try
+            Using db As New SisVentasEntities
+                Dim verVentasUser = From cab In db.tblCabecera
+                                    Where cab.id_user = idUser And cab.fecha = fechaString
+                                    Join cli In db.tblCliente
+                                    On cab.id_cliente Equals cli.id_cliente
+                                    Select
+                                        CLIENTE = cli.nombre,
+                                        FECHA = cab.fecha,
+                                        TOTAL = cab.total
+                grid.DataSource = verVentasUser.ToList
+
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
 End Class

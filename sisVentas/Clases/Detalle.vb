@@ -1,17 +1,20 @@
 ﻿Public Class Detalle
+    Private idDetalle As Integer
     Private producto As Integer
     Private cantidad As Integer
     Private venta As Integer
+    Private subTotal As Decimal
 
     Public Sub New()
 
     End Sub
 
     'DECLARO UN CONSTRUCTOR CON TODOS SUS ATRIBUTOS 
-    Public Sub New(p_producto As Integer, p_cantidad As Integer, p_venta As Integer)
+    Public Sub New(p_producto As Integer, p_cantidad As Integer, p_venta As Integer, p_subtotal As Decimal)
         setProducto(p_producto)
         setCantidad(p_cantidad)
         setVenta(p_venta)
+        setSubTotal(p_subtotal)
     End Sub
 
     'DECLARO TODOS LOS SETTERS 
@@ -26,6 +29,9 @@
     Public Sub setVenta(ByRef p_venta As Integer)
         venta = p_venta
     End Sub
+    Public Sub setSubTotal(ByRef p_subtotal As Integer)
+        subTotal = p_subtotal
+    End Sub
 
     'DECLARO TODOS LOS GETTERS 
     Public Function getProducto()
@@ -39,6 +45,9 @@
     Public Function getVenta()
         getVenta = venta
     End Function
+    Public Function getSubTotal()
+        getSubTotal = subTotal
+    End Function
 
 
     Public Function NuevoDetalle()
@@ -49,6 +58,7 @@
                     .id_producto = getProducto()
                     .cantidad = getCantidad()
                     .id_venta = getVenta()
+                    .subtotal = getSubTotal()
                 End With
                 db.tblDetalle.Add(detalle)
                 db.SaveChanges()

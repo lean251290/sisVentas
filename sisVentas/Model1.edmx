@@ -52,6 +52,7 @@
           <Property Name="id_producto" Type="int" />
           <Property Name="cantidad" Type="int" />
           <Property Name="id_venta" Type="int" />
+          <Property Name="subtotal" Type="decimal" Precision="10" Scale="4" />
         </EntityType>
         <EntityType Name="tblProducto">
           <Key>
@@ -254,6 +255,7 @@
           <Property Name="id_producto" Type="Int32" />
           <Property Name="cantidad" Type="Int32" />
           <Property Name="id_venta" Type="Int32" />
+          <Property Name="subtotal" Type="Decimal" Precision="10" Scale="4" />
           <NavigationProperty Name="tblCabecera" Relationship="Self.FK_Det_Cab" FromRole="tblDetalle" ToRole="tblCabecera" />
           <NavigationProperty Name="tblProducto" Relationship="Self.FK_Det_Prod" FromRole="tblDetalle" ToRole="tblProducto" />
         </EntityType>
@@ -462,6 +464,7 @@
                 <ScalarProperty Name="id_producto" ColumnName="id_producto" />
                 <ScalarProperty Name="cantidad" ColumnName="cantidad" />
                 <ScalarProperty Name="id_venta" ColumnName="id_venta" />
+                <ScalarProperty Name="subtotal" ColumnName="subtotal" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

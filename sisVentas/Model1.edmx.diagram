@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9b0433f98e2045508a1c02f5724e8da8" Name="Diagram1">
+      <Diagram DiagramId="956982cc70814096a9b81a87643e99a8" Name="Diagram1">
         <EntityTypeShape EntityType="SisVentasModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblCabecera" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblCategoria" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblCliente" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SisVentasModel.tblDetalle" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisVentasModel.tblDetalle" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblProducto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblProveedores" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblUsuarios" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />

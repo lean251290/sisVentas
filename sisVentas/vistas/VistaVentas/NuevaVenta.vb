@@ -219,13 +219,21 @@
         idventa = venta.VentaCabecera()
         Dim idPrdoDetalle As Integer
         Dim cantidad As Integer
+        Dim subTot As Decimal
+        Dim subTot2 As Decimal
         If idventa <> 0 Then
             For Each fila As DataGridViewRow In DGVentaProductos.Rows
                 idPrdoDetalle = fila.Cells(0).Value
                 cantidad = fila.Cells(3).Value
-                Dim detalle As New Detalle(idPrdoDetalle, cantidad, idventa)
+                subTot = fila.Cells(5).Value
+                'Decimal.TryParse(subTot, subTot2)
+
+                Dim detalle As New Detalle(idPrdoDetalle, cantidad, idventa, subTot)
                 detalle.NuevoDetalle()
+                Dim prod As New Producto
+                prod.ActualizarStock(idPrdoDetalle, cantidad)
             Next
+            PanelAdmin.cerrarFormHijo(Me)
         Else
             MsgBox("todomal")
         End If

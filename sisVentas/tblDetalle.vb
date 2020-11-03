@@ -15,6 +15,7 @@ Partial Public Class tblDetalle
     Public Property id_producto As Nullable(Of Integer)
     Public Property cantidad As Nullable(Of Integer)
     Public Property id_venta As Nullable(Of Integer)
+    Public Property subtotal As Nullable(Of Decimal)
 
     Public Overridable Property tblCabecera As tblCabecera
     Public Overridable Property tblProducto As tblProducto

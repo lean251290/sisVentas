@@ -29,4 +29,11 @@
 
         End If
     End Sub
+    Public Sub verVentasXUser()
+        Dim venta As New Cabecera
+        venta.VerVentasPorUser(DataGridVerVentas, PanelAdmin.idUsuario)
+    End Sub
+    Private Sub VerVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        verVentasXUser()
+    End Sub
 End Class
