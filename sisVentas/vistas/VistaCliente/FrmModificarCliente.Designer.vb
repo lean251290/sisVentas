@@ -43,6 +43,7 @@ Partial Class FrmModificarCliente
         Me.BtnCancelarCliente = New System.Windows.Forms.Button()
         Me.BtnActualizarCliente = New System.Windows.Forms.Button()
         Me.dialogModifCli = New System.Windows.Forms.OpenFileDialog()
+        Me.LabelEmailInvalido = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAgregarCliente.SuspendLayout()
@@ -90,6 +91,7 @@ Partial Class FrmModificarCliente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarCliente.Controls.Add(Me.LabelEmailInvalido)
         Me.PanelAgregarCliente.Controls.Add(Me.LabelDireccionCliModif)
         Me.PanelAgregarCliente.Controls.Add(Me.LabelEmailClienteModif)
         Me.PanelAgregarCliente.Controls.Add(Me.TTelefonoClienteModif)
@@ -157,12 +159,11 @@ Partial Class FrmModificarCliente
         Me.TEmailClienteModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TEmailClienteModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TEmailClienteModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEmailClienteModif.Cursor = System.Windows.Forms.Cursors.No
+        Me.TEmailClienteModif.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TEmailClienteModif.Location = New System.Drawing.Point(193, 196)
         Me.TEmailClienteModif.Name = "TEmailClienteModif"
-        Me.TEmailClienteModif.ReadOnly = True
         Me.TEmailClienteModif.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailClienteModif.TabIndex = 103
+        Me.TEmailClienteModif.TabIndex = 0
         '
         'TDireccionClienteModif
         '
@@ -318,6 +319,16 @@ Partial Class FrmModificarCliente
         '
         Me.dialogModifCli.FileName = "OpenFileDialog1"
         '
+        'LabelEmailInvalido
+        '
+        Me.LabelEmailInvalido.AutoSize = True
+        Me.LabelEmailInvalido.ForeColor = System.Drawing.Color.Red
+        Me.LabelEmailInvalido.Location = New System.Drawing.Point(190, 212)
+        Me.LabelEmailInvalido.Name = "LabelEmailInvalido"
+        Me.LabelEmailInvalido.Size = New System.Drawing.Size(137, 13)
+        Me.LabelEmailInvalido.TabIndex = 105
+        Me.LabelEmailInvalido.Text = "Dirección de E-mail inválida"
+        '
         'FrmModificarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -362,4 +373,5 @@ Partial Class FrmModificarCliente
     Friend WithEvents Label1 As Label
     Friend WithEvents LabelEmailClienteModif As Label
     Friend WithEvents LabelDireccionCliModif As Label
+    Friend WithEvents LabelEmailInvalido As Label
 End Class

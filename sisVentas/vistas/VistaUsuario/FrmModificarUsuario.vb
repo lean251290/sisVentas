@@ -51,16 +51,17 @@ Public Class FrmModificarUsuario
         emailbd = user.getCorreo
         Dim mail As String
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
+
         If Not Regex.IsMatch(TEmailUsuarioModif.Text, mail) Then
-            FrmErrorMail.Show()
+            LabelEmailInvalido.Visible = True
             TEmailUsuarioModif.Text = ""
-        ElseIf TEmailUsuarioModif.Text <> emailbd Then
-            user.VerificarEmail(TEmailUsuarioModif.Text)
+        ElseIf user.VerificarEmail(TEmailUsuarioModif.Text) Then
             LabelEmailUser.Visible = True
             TEmailUsuarioModif.Text = ""
+            LabelEmailInvalido.Visible = False
         Else
             LabelEmailUser.Visible = False
-            End If
+        End If
 
 
     End Sub
@@ -116,6 +117,7 @@ Public Class FrmModificarUsuario
 
     Private Sub FrmModificarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LabelEmailUser.Visible = False
+        LabelEmailInvalido.Visible = False
         LabelDirModifUser.Visible = False
         Dim user As New Usuarios()
         user.TraerPorId(Me.Tag)

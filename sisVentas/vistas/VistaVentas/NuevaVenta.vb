@@ -1,5 +1,9 @@
 ﻿Public Class NuevaVenta
     Public id As Integer
+    Dim idCliente As Integer
+    'Dim idVendedor As Integer
+    Dim idUsuario As Integer
+
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Close()
     End Sub
@@ -33,6 +37,8 @@
     '     cliente.TraerPorNombre(TBuscarCliente.Text, DGVenta)
     ' End Sub
     Private Sub NuevaVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        idUsuario = PanelAdmin.idUsuario
         DGVentaProductos.Columns(0).Visible = False
         DGVentaProductos.AllowUserToAddRows = False
         DGVentaProductos.Columns(0).Width = 105
@@ -62,12 +68,12 @@
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Dim NumeroDeFilaSeleccionada As Integer
-        Dim idUser As Integer
+
         Dim user As New Cliente
         If DGVenta.SelectedRows.Count > 0 Then
             NumeroDeFilaSeleccionada = DGVenta.CurrentRow.Index
-            idUser = Val(DGVenta.SelectedRows(0).Cells(0).Value)
-            user.TraerPorIdCliente(idUser)
+            idCliente = Val(DGVenta.SelectedRows(0).Cells(0).Value)
+            user.TraerPorIdCliente(idCliente)
             LabelNombreCliente.Text = user.getNombre
         Else
             FrmSeleccioneFila.Show()
@@ -198,6 +204,23 @@
         DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
         cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
         prod.ActualizarStock(id, cantidad)
+
+
+    End Sub
+
+    Private Sub BtnVender_Click(sender As Object, e As EventArgs) Handles BtnVender.Click
+        Dim totalCabecera As Decimal
+        Dim fecha As Date
+        fecha = DateTimePicker1.Value.Date
+        Decimal.TryParse(LblTot.Text, totalCabecera)
+        Dim venta As New Cabecera(fecha, totalCabecera, Val(idUsuario), Val(idCliente))
+
+        If venta.VentaCabecera() Then
+            MsgBox("todo bien")
+        Else
+            MsgBox("todomal")
+        End If
+
 
 
     End Sub

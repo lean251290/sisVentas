@@ -120,7 +120,7 @@
                 Dim cli = (From q In db.tblCliente
                            Where q.id_cliente = p_id
                            Select q).First
-                'cli.correo = getCorreo()
+                cli.correo = getCorreo()
                 cli.direccion = getDireccion()
                 cli.telefono = getTelefono()
                 db.SaveChanges()

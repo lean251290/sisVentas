@@ -44,6 +44,7 @@ Partial Class FrmModificarUsuario
         Me.BtnCancelarUser = New System.Windows.Forms.Button()
         Me.DialogModificarUsuario = New System.Windows.Forms.OpenFileDialog()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.LabelEmailInvalido = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PBUserModif, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -57,6 +58,7 @@ Partial Class FrmModificarUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAgregarUsuario.Controls.Add(Me.LabelEmailInvalido)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelEmailUser)
         Me.PanelAgregarUsuario.Controls.Add(Me.LabelDirModifUser)
         Me.PanelAgregarUsuario.Controls.Add(Me.PBUserModif)
@@ -124,12 +126,11 @@ Partial Class FrmModificarUsuario
         Me.TEmailUsuarioModif.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TEmailUsuarioModif.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.TEmailUsuarioModif.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEmailUsuarioModif.Cursor = System.Windows.Forms.Cursors.No
+        Me.TEmailUsuarioModif.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TEmailUsuarioModif.Location = New System.Drawing.Point(193, 261)
         Me.TEmailUsuarioModif.Name = "TEmailUsuarioModif"
-        Me.TEmailUsuarioModif.ReadOnly = True
         Me.TEmailUsuarioModif.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailUsuarioModif.TabIndex = 113
+        Me.TEmailUsuarioModif.TabIndex = 0
         '
         'TDniUsuarioModif
         '
@@ -315,6 +316,16 @@ Partial Class FrmModificarUsuario
         '
         Me.DialogModificarUsuario.FileName = "OpenFileDialog1"
         '
+        'LabelEmailInvalido
+        '
+        Me.LabelEmailInvalido.AutoSize = True
+        Me.LabelEmailInvalido.ForeColor = System.Drawing.Color.Red
+        Me.LabelEmailInvalido.Location = New System.Drawing.Point(360, 277)
+        Me.LabelEmailInvalido.Name = "LabelEmailInvalido"
+        Me.LabelEmailInvalido.Size = New System.Drawing.Size(74, 13)
+        Me.LabelEmailInvalido.TabIndex = 114
+        Me.LabelEmailInvalido.Text = "Email inválido "
+        '
         'FrmModificarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -361,4 +372,5 @@ Partial Class FrmModificarUsuario
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents LabelDirModifUser As Label
     Friend WithEvents LabelEmailUser As Label
+    Friend WithEvents LabelEmailInvalido As Label
 End Class

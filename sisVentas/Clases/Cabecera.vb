@@ -14,7 +14,7 @@
         setFecha(p_fecha)
         setTotal(p_total)
         setUsuario(p_usuario)
-        setcliente(p_cliente)
+        setCliente(p_cliente)
     End Sub
 
     'DECLARO TODOS LOS SETTERS
@@ -24,11 +24,11 @@
     Public Sub setTotal(ByRef p_total As Decimal)
         total = p_total
     End Sub
-    Public Sub setUsuario(ByRef p_usuarios As Integer)
-        usuario = p_usuarios
+    Public Sub setUsuario(ByRef p_usuario As Integer)
+        usuario = p_usuario
     End Sub
-    Public Sub setcliente(ByRef p_clientes As Integer)
-        p_clientes = p_clientes
+    Public Sub setCliente(ByRef p_cliente As Integer)
+        cliente = p_cliente
     End Sub
 
     'DECLARACION DE LOS GETTERS
@@ -46,4 +46,24 @@
         getCliente = cliente
     End Function
 
+
+    Public Function VentaCabecera()
+        Try
+            Using db As New SisVentasEntities
+                Dim venta As New tblCabecera
+                With venta
+                    .fecha = getFecha()
+                    .total = getTotal()
+                    .id_user = getUsuario()
+                    .id_cliente = getCliente()
+                End With
+                db.tblCabecera.Add(venta)
+                db.SaveChanges()
+
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

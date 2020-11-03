@@ -1,6 +1,13 @@
 ﻿Imports System.Text.RegularExpressions
 Public Class FrmModificarCliente
     Private Sub BtnActualizarCliente_Click(sender As Object, e As EventArgs) Handles BtnActualizarCliente.Click
+
+        If TEmailClienteModif.Text = "" Or TDireccionClienteModif.Text = "" Or TTelefonoClienteModif.Text = "" Then
+            FrmRellenarCampos.Show()
+            Exit Sub
+        End If
+
+
         Dim cliente As New Cliente(TDniClienteModif.Text, TNombreClienteModif.Text, TApellidoClienteModif.Text, TEmailClienteModif.Text,
          TDireccionClienteModif.Text, TTelefonoClienteModif.Text)
 
@@ -21,6 +28,7 @@ Public Class FrmModificarCliente
     Private Sub FrmModificarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LabelEmailClienteModif.Visible = False
         LabelDireccionCliModif.Visible = False
+        LabelEmailInvalido.Visible = False
         Dim cli As New Cliente()
         cli.TraerPorIdCliente(Me.Tag)
         TDniClienteModif.Text = cli.getDni
@@ -95,15 +103,18 @@ Public Class FrmModificarCliente
 
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
         If Not Regex.IsMatch(TEmailClienteModif.Text, mail) Then
-            FrmErrorMail.Show()
+            LabelEmailInvalido.Visible = True
             TEmailClienteModif.Text = ""
-        ElseIf TEmailClienteModif.Text <> mailbd Then
-            cli.VerificarEmail(TEmailClienteModif.Text)
-            TEmailClienteModif.Text = ""
+        ElseIf cli.VerificarEmail(TEmailClienteModif.Text) Then
             LabelEmailClienteModif.Visible = True
+            TEmailClienteModif.Text = ""
+            LabelEmailInvalido.Visible = False
         Else
             LabelEmailClienteModif.Visible = False
+
         End If
+
+
     End Sub
 
     Private Sub TDniClienteModif_LostFocus(sender As Object, e As EventArgs) Handles TDniClienteModif.LostFocus
