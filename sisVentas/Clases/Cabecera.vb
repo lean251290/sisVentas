@@ -1,4 +1,5 @@
 ﻿Public Class Cabecera
+    Private id As Integer
     Private fecha As Date
     Private total As Decimal
     Private usuario As Integer
@@ -18,6 +19,9 @@
     End Sub
 
     'DECLARO TODOS LOS SETTERS
+    Public Sub setId(ByRef p_id As Integer)
+        id = p_id
+    End Sub
     Public Sub setFecha(ByRef p_fecha As Date)
         fecha = p_fecha
     End Sub
@@ -45,9 +49,13 @@
     Public Function getCliente()
         getCliente = cliente
     End Function
+    Public Function getId()
+        getId = id
+    End Function
 
 
-    Public Function VentaCabecera()
+    Public Function VentaCabecera() As Integer
+        Dim id As Integer
         Try
             Using db As New SisVentasEntities
                 Dim venta As New tblCabecera
@@ -59,11 +67,11 @@
                 End With
                 db.tblCabecera.Add(venta)
                 db.SaveChanges()
-
+                id = venta.id_venta
             End Using
-            Return True
+            Return id
         Catch ex As Exception
-            Return False
+            Return 0
         End Try
     End Function
 End Class

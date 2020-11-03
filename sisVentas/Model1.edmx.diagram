@@ -4,7 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7827fb3d810e42df9729871dc2e6a9fe" Name="Diagram1">
+      <Diagram DiagramId="9b0433f98e2045508a1c02f5724e8da8" Name="Diagram1">
+        <EntityTypeShape EntityType="SisVentasModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblCabecera" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblCategoria" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblCliente" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />

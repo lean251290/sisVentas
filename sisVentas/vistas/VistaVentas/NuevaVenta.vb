@@ -215,8 +215,17 @@
         Decimal.TryParse(LblTot.Text, totalCabecera)
         Dim venta As New Cabecera(fecha, totalCabecera, Val(idUsuario), Val(idCliente))
 
-        If venta.VentaCabecera() Then
-            MsgBox("todo bien")
+        Dim idventa As Integer
+        idventa = venta.VentaCabecera()
+        Dim idPrdoDetalle As Integer
+        Dim cantidad As Integer
+        If idventa <> 0 Then
+            For Each fila As DataGridViewRow In DGVentaProductos.Rows
+                idPrdoDetalle = fila.Cells(0).Value
+                cantidad = fila.Cells(3).Value
+                Dim detalle As New Detalle(idPrdoDetalle, cantidad, idventa)
+                detalle.NuevoDetalle()
+            Next
         Else
             MsgBox("todomal")
         End If

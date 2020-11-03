@@ -3,7 +3,9 @@
     Private cantidad As Integer
     Private venta As Integer
 
+    Public Sub New()
 
+    End Sub
 
     'DECLARO UN CONSTRUCTOR CON TODOS SUS ATRIBUTOS 
     Public Sub New(p_producto As Integer, p_cantidad As Integer, p_venta As Integer)
@@ -38,4 +40,22 @@
         getVenta = venta
     End Function
 
+
+    Public Function NuevoDetalle()
+        Try
+            Using db As New SisVentasEntities
+                Dim detalle As New tblDetalle
+                With detalle
+                    .id_producto = getProducto()
+                    .cantidad = getCantidad()
+                    .id_venta = getVenta()
+                End With
+                db.tblDetalle.Add(detalle)
+                db.SaveChanges()
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class
