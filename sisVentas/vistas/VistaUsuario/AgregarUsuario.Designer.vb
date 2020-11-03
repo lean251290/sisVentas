@@ -25,6 +25,7 @@ Partial Class Agregar_Usuario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Agregar_Usuario))
         Me.LabelAgregarUsuario = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.LabelDireUser = New System.Windows.Forms.Label()
         Me.LabelVerifEmail = New System.Windows.Forms.Label()
         Me.LabelDniNumeros = New System.Windows.Forms.Label()
@@ -55,7 +56,6 @@ Partial Class Agregar_Usuario
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.dialogUser = New System.Windows.Forms.OpenFileDialog()
         Me.BtnAgregarUsuario = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.PanelAgregarUsuario.SuspendLayout()
         CType(Me.PBUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -113,6 +113,16 @@ Partial Class Agregar_Usuario
         Me.PanelAgregarUsuario.Name = "PanelAgregarUsuario"
         Me.PanelAgregarUsuario.Size = New System.Drawing.Size(600, 530)
         Me.PanelAgregarUsuario.TabIndex = 4
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(433, 305)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(81, 13)
+        Me.Label3.TabIndex = 106
+        Me.Label3.Text = "(8-16 caráteres)"
         '
         'LabelDireUser
         '
@@ -237,7 +247,7 @@ Partial Class Agregar_Usuario
         Me.TRePassUsuario.Location = New System.Drawing.Point(193, 381)
         Me.TRePassUsuario.Name = "TRePassUsuario"
         Me.TRePassUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TRePassUsuario.TabIndex = 7
+        Me.TRePassUsuario.TabIndex = 6
         Me.TRePassUsuario.UseSystemPasswordChar = True
         '
         'TPassUsuario
@@ -248,7 +258,7 @@ Partial Class Agregar_Usuario
         Me.TPassUsuario.Location = New System.Drawing.Point(193, 321)
         Me.TPassUsuario.Name = "TPassUsuario"
         Me.TPassUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TPassUsuario.TabIndex = 6
+        Me.TPassUsuario.TabIndex = 5
         Me.TPassUsuario.UseSystemPasswordChar = True
         '
         'TNombreUsuario
@@ -269,7 +279,7 @@ Partial Class Agregar_Usuario
         Me.TEmailUsuario.Location = New System.Drawing.Point(193, 261)
         Me.TEmailUsuario.Name = "TEmailUsuario"
         Me.TEmailUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TEmailUsuario.TabIndex = 5
+        Me.TEmailUsuario.TabIndex = 4
         '
         'TDireccionUsuario
         '
@@ -279,7 +289,7 @@ Partial Class Agregar_Usuario
         Me.TDireccionUsuario.Location = New System.Drawing.Point(193, 201)
         Me.TDireccionUsuario.Name = "TDireccionUsuario"
         Me.TDireccionUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDireccionUsuario.TabIndex = 4
+        Me.TDireccionUsuario.TabIndex = 3
         '
         'TApellidoUsuario
         '
@@ -300,7 +310,7 @@ Partial Class Agregar_Usuario
         Me.TDniUsuario.MaxLength = 15
         Me.TDniUsuario.Name = "TDniUsuario"
         Me.TDniUsuario.Size = New System.Drawing.Size(321, 13)
-        Me.TDniUsuario.TabIndex = 3
+        Me.TDniUsuario.TabIndex = 0
         '
         'Lblrepetir
         '
@@ -454,16 +464,6 @@ Partial Class Agregar_Usuario
         Me.BtnAgregarUsuario.TabIndex = 9
         Me.BtnAgregarUsuario.Text = "Guardar"
         Me.BtnAgregarUsuario.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(433, 305)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(81, 13)
-        Me.Label3.TabIndex = 106
-        Me.Label3.Text = "(8-16 caráteres)"
         '
         'Agregar_Usuario
         '

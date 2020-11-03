@@ -93,18 +93,24 @@ Public Class Agregar_Usuario
     End Sub
 
     Private Sub TDniUsuario_LostFocus(sender As Object, e As EventArgs) Handles TDniUsuario.LostFocus
+        If TDniUsuario.Text = Nothing Then
+            TDniUsuario.Text = "Ingrese D.N.I."
+            TDniUsuario.ForeColor = Color.DarkSlateGray
+        End If
         Dim user As New Usuarios
         Dim cantidad As Integer
         cantidad = Len(TDniUsuario.Text)
         If cantidad <> 8 Then
             LabelDniNumeros.Visible = True
-            TDniUsuario.Text = ""
+            TDniUsuario.ForeColor = Color.DarkSlateGray
+            TDniUsuario.Text = "Ingrese D.N.I."
         Else
             LabelDniNumeros.Visible = False
         End If
         If user.VerificarDNI(TDniUsuario.Text) Then
             LabelDNI.Visible = True
-            TDniUsuario.Text = ""
+            TDniUsuario.ForeColor = Color.DarkSlateGray
+            TDniUsuario.Text = "Ingrese D.N.I."
         Else
             LabelDNI.Visible = False
         End If
@@ -130,6 +136,22 @@ Public Class Agregar_Usuario
         LabelDniNumeros.Visible = False
         LabelVerifEmail.Visible = False
         LabelDireUser.Visible = False
+
+        TDniUsuario.Text = "Ingrese D.N.I."
+        TDniUsuario.ForeColor = Color.DarkSlateGray
+        TNombreUsuario.Text = "Ingrese Nombre"
+        TNombreUsuario.ForeColor = Color.DarkSlateGray
+        TApellidoUsuario.Text = "Ingrese Apellido"
+        TApellidoUsuario.ForeColor = Color.DarkSlateGray
+        TEmailUsuario.Text = "Ingrese Email"
+        TEmailUsuario.ForeColor = Color.DarkSlateGray
+        TDireccionUsuario.Text = "Ingrese Dirección"
+        TDireccionUsuario.ForeColor = Color.DarkSlateGray
+        TPassUsuario.Text = "xxxxxxxx"
+        TPassUsuario.ForeColor = Color.DarkSlateGray
+        TRePassUsuario.Text = "xxxxxxxx"
+        TRePassUsuario.ForeColor = Color.DarkSlateGray
+
     End Sub
 
 
@@ -149,18 +171,24 @@ Public Class Agregar_Usuario
     End Sub
 
     Private Sub TEmailUsuario_LostFocus(sender As Object, e As EventArgs) Handles TEmailUsuario.LostFocus
+        If TEmailUsuario.Text = Nothing Then
+            TEmailUsuario.Text = "Ingrese Email"
+            TEmailUsuario.ForeColor = Color.DarkSlateGray
+        End If
         Dim mail As String
         Dim user As New Usuarios
         If user.VerificarEmail(TEmailUsuario.Text) Then
             LabelVerifEmail.Visible = True
-            TEmailUsuario.Text = ""
+            TEmailUsuario.Text = "Ingrese Email"
+            TEmailUsuario.ForeColor = Color.DarkSlateGray
         Else
             LabelVerifEmail.Visible = False
         End If
         mail = "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$"
         If Not Regex.IsMatch(TEmailUsuario.Text, mail) Then
             LabelEmail.Visible = True
-            TEmailUsuario.Text = ""
+            TEmailUsuario.Text = "Ingrese Email"
+            TEmailUsuario.ForeColor = Color.DarkSlateGray
         Else
             LabelEmail.Visible = False
         End If
@@ -180,21 +208,29 @@ Public Class Agregar_Usuario
     End Sub
 
     Private Sub TDireccionUsuario_LostFocus(sender As Object, e As EventArgs) Handles TDireccionUsuario.LostFocus
+        If TDireccionUsuario.Text = Nothing Then
+            TDireccionUsuario.Text = "Ingrese Dirección"
+            TDireccionUsuario.ForeColor = Color.DarkSlateGray
+        End If
         Dim direccion As String
         direccion = "^[A-z\s]+(\d{1,5})"
         If Not Regex.IsMatch(TDireccionUsuario.Text, direccion) Then
             LabelDireUser.Visible = True
-            TDireccionUsuario.Text = ""
+            TDireccionUsuario.Text = "Ingrese Dirección"
+            TDireccionUsuario.ForeColor = Color.DarkSlateGray
         Else
             LabelDireUser.Visible = False
         End If
     End Sub
 
-    Private Sub TNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles TNombreUsuario.TextChanged
 
-    End Sub
 
     Private Sub TNombreUsuario_LostFocus(sender As Object, e As EventArgs) Handles TNombreUsuario.LostFocus
+        If TNombreUsuario.Text = Nothing Then
+            TNombreUsuario.Text = "Ingrese Nombre"
+            TNombreUsuario.ForeColor = Color.DarkSlateGray
+        End If
+
         If TNombreUsuario.Text <> "" Then
             Dim texto As String()
             Dim nombreCompleto As String = ""
@@ -209,6 +245,10 @@ Public Class Agregar_Usuario
 
 
     Private Sub TApellidoUsuario_LostFocus(sender As Object, e As EventArgs) Handles TApellidoUsuario.LostFocus
+        If TApellidoUsuario.Text = Nothing Then
+            TApellidoUsuario.Text = "Ingrese Apellido"
+            TApellidoUsuario.ForeColor = Color.DarkSlateGray
+        End If
         If TApellidoUsuario.Text <> "" Then
             Dim texto As String()
             Dim nombreCompleto As String = ""
@@ -218,6 +258,63 @@ Public Class Agregar_Usuario
                 nombreCompleto = nombreCompleto & part & " "
             Next
             TApellidoUsuario.Text = Trim(nombreCompleto)
+        End If
+    End Sub
+
+    Private Sub TNombreUsuario_GotFocus(sender As Object, e As EventArgs) Handles TNombreUsuario.GotFocus
+        If TNombreUsuario.Text = "Ingrese Nombre" Then
+            TNombreUsuario.ForeColor = Color.Black
+            TNombreUsuario.Text = ""
+        End If
+    End Sub
+
+    Private Sub TDireccionUsuario_GotFocus(sender As Object, e As EventArgs) Handles TDireccionUsuario.GotFocus
+        If TDireccionUsuario.Text = "Ingrese Dirección" Then
+            TDireccionUsuario.ForeColor = Color.Black
+            TDireccionUsuario.Text = ""
+        End If
+    End Sub
+
+
+    Private Sub TDniUsuario_GotFocus(sender As Object, e As EventArgs) Handles TDniUsuario.GotFocus
+        If TDniUsuario.Text = "Ingrese D.N.I." Then
+            TDniUsuario.ForeColor = Color.Black
+            TDniUsuario.Text = ""
+        End If
+    End Sub
+
+
+    Private Sub TApellidoUsuario_GotFocus(sender As Object, e As EventArgs) Handles TApellidoUsuario.GotFocus
+        If TApellidoUsuario.Text = "Ingrese Apellido" Then
+            TApellidoUsuario.ForeColor = Color.Black
+            TApellidoUsuario.Text = ""
+        End If
+    End Sub
+
+    Private Sub TEmailUsuario_GotFocus(sender As Object, e As EventArgs) Handles TEmailUsuario.GotFocus
+        If TEmailUsuario.Text = "Ingrese Email" Then
+            TEmailUsuario.ForeColor = Color.Black
+            TEmailUsuario.Text = ""
+        End If
+    End Sub
+
+    Private Sub TDniUsuario_TextChanged(sender As Object, e As EventArgs) Handles TDniUsuario.TextChanged
+
+    End Sub
+
+
+
+    Private Sub TPassUsuario_GotFocus(sender As Object, e As EventArgs) Handles TPassUsuario.GotFocus
+        If TPassUsuario.Text = "xxxxxxxx" Then
+            TPassUsuario.ForeColor = Color.Black
+            TPassUsuario.Text = ""
+        End If
+    End Sub
+
+    Private Sub TRePassUsuario_GotFocus(sender As Object, e As EventArgs) Handles TRePassUsuario.GotFocus
+        If TRePassUsuario.Text = "xxxxxxxx" Then
+            TRePassUsuario.ForeColor = Color.Black
+            TRePassUsuario.Text = ""
         End If
     End Sub
 End Class
