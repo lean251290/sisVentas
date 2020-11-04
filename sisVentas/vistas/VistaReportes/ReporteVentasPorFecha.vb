@@ -12,6 +12,16 @@
             FrmFechaActual.Show()
             fecha = DateAdd(DateInterval.Day, -1, fechaActual)
             DateTimePicker1.Value = fecha
+        Else
+            Dim fechaInicio As DateTime
+            Dim fechaFin As DateTime
+            fechaInicio = DateTimePicker1.Value
+            fechaFin = DateTimePicker2.Value
+
+            Dim fechaStringInicio As String = fechaInicio.ToShortDateString()
+            Dim fechaStringFin As String = fechaFin.ToShortDateString()
+            Dim cabecera As New Cabecera()
+            RichTextBox1.Text = cabecera.reportes(fechaStringInicio, fechaStringFin, TextBoxCorreo.Text)
         End If
     End Sub
 
@@ -26,6 +36,16 @@
         ElseIf DateTime.Compare(DateTimePicker2.Value, fechaActual) > 0 Then
             FrmFechaActual.Show()
             DateTimePicker2.Value = fechaActual
+        Else
+            Dim fechaInicio As DateTime
+            Dim fechaFin As DateTime
+            fechaInicio = DateTimePicker1.Value
+            fechaFin = DateTimePicker2.Value
+
+            Dim fechaStringInicio As String = fechaInicio.ToShortDateString()
+            Dim fechaStringFin As String = fechaFin.ToShortDateString()
+            Dim cabecera As New Cabecera()
+            RichTextBox1.Text = cabecera.reportes(fechaStringInicio, fechaStringFin, TextBoxCorreo.Text)
 
         End If
 

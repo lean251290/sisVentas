@@ -39,6 +39,7 @@ Partial Class ReporteVentasPorFecha
         Me.Label5 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TextBoxCorreo = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReportesVentas.SuspendLayout()
@@ -87,6 +88,7 @@ Partial Class ReporteVentasPorFecha
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportesVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportesVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportesVentas.Controls.Add(Me.Label6)
         Me.PanelReportesVentas.Controls.Add(Me.TextBoxCorreo)
         Me.PanelReportesVentas.Controls.Add(Me.RichTextBox1)
         Me.PanelReportesVentas.Controls.Add(Me.PictureBuscarUsuario)
@@ -108,7 +110,7 @@ Partial Class ReporteVentasPorFecha
         '
         Me.PictureBuscarUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBuscarUsuario.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(540, 23)
+        Me.PictureBuscarUsuario.Location = New System.Drawing.Point(561, 32)
         Me.PictureBuscarUsuario.Name = "PictureBuscarUsuario"
         Me.PictureBuscarUsuario.Size = New System.Drawing.Size(36, 35)
         Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -141,7 +143,7 @@ Partial Class ReporteVentasPorFecha
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(383, 38)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(235, 38)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
         Me.DateTimePicker2.TabIndex = 18
@@ -149,7 +151,7 @@ Partial Class ReporteVentasPorFecha
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(122, 37)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(65, 38)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
         Me.DateTimePicker1.TabIndex = 17
@@ -160,7 +162,7 @@ Partial Class ReporteVentasPorFecha
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(321, 38)
+        Me.Label3.Location = New System.Drawing.Point(173, 38)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 20)
         Me.Label3.TabIndex = 16
@@ -173,7 +175,7 @@ Partial Class ReporteVentasPorFecha
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(60, 37)
+        Me.Label2.Location = New System.Drawing.Point(3, 38)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(60, 20)
         Me.Label2.TabIndex = 15
@@ -209,7 +211,7 @@ Partial Class ReporteVentasPorFecha
         Me.LblVentas.AutoSize = True
         Me.LblVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVentas.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblVentas.Location = New System.Drawing.Point(50, 82)
+        Me.LblVentas.Location = New System.Drawing.Point(8, 103)
         Me.LblVentas.Name = "LblVentas"
         Me.LblVentas.Size = New System.Drawing.Size(147, 20)
         Me.LblVentas.TabIndex = 1
@@ -242,10 +244,23 @@ Partial Class ReporteVentasPorFecha
         '
         'TextBoxCorreo
         '
-        Me.TextBoxCorreo.Location = New System.Drawing.Point(476, 82)
+        Me.TextBoxCorreo.Location = New System.Drawing.Point(454, 38)
         Me.TextBoxCorreo.Name = "TextBoxCorreo"
         Me.TextBoxCorreo.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxCorreo.TabIndex = 23
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label6.Location = New System.Drawing.Point(392, 38)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(68, 20)
+        Me.Label6.TabIndex = 24
+        Me.Label6.Text = "Usuario:"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ReporteVentasPorFecha
         '
@@ -289,4 +304,5 @@ Partial Class ReporteVentasPorFecha
     Friend WithEvents PictureBuscarUsuario As PictureBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents TextBoxCorreo As TextBox
+    Friend WithEvents Label6 As Label
 End Class
