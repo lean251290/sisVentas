@@ -15,6 +15,7 @@ Public Class AgregarCliente
                 TDniCliente.Text = ""
                 TDireccionCliente.Text = ""
                 TTelefonoCliente.Text = ""
+                PanelAdmin.abrirFormHijo(NuevaVenta)
             End If
         End If
     End Sub

@@ -14,6 +14,7 @@
 
             If producto.NuevoProducto() Then
                 FmrProductoAgregado.Show()
+                PanelAdmin.abrirFormHijo(VerProductos)
             Else
                 FrmUpsError.Show()
             End If

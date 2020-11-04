@@ -1,6 +1,7 @@
 ﻿Public Class NuevaVenta
     Public id As Integer
     Dim idCliente As Integer
+    Public devForm As Integer
     'Dim idVendedor As Integer
     Dim idUsuario As Integer
 
@@ -37,7 +38,8 @@
     '     cliente.TraerPorNombre(TBuscarCliente.Text, DGVenta)
     ' End Sub
     Private Sub NuevaVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LabelCantidad.Visible = False
+        LabelStock.Visible = False
         idUsuario = PanelAdmin.idUsuario
         DGVentaProductos.Columns(0).Visible = False
         DGVentaProductos.AllowUserToAddRows = False
@@ -110,12 +112,18 @@
         subtotal = precio * cantidad
 
         If TBCantidad.Text = "" Then
-            MsgBox("debe agregar una cantidad")
+            'MsgBox("debe agregar una cantidad")
+            LabelCantidad.Visible = True
             Exit Sub
+        Else
+            LabelCantidad.Visible = False
         End If
         If cantidad > stock Then
-            MsgBox("no puede agregar no tiene stock")
+            'MsgBox("no puede agregar no tiene stock")
+            LabelStock.Visible = True
             Exit Sub
+        Else
+            LabelStock.Visible = False
         End If
 
         For Each fila As DataGridViewRow In DGVentaProductos.Rows
@@ -180,18 +188,20 @@
         Dim total As Decimal
         Dim prod As New Producto
         If e.ColumnIndex = 4 Then
+            'FrmEliminarProdDetalle.Show()
             ask = MsgBox("Esta seguro de querer borrar el registro?", vbYesNo + vbExclamation + vbDefaultButton2, "Eliminar")
             If ask = vbYes Then
+                'If Me.devForm = FrmEliminarProdDetalle.Tag Then
                 fila = DGVentaProductos.CurrentRow.Index
-                cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
-                DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
-                'prod.ActualizarStock(id, cantidad)
-                For Each fila2 As DataGridViewRow In DGVentaProductos.Rows
-                    total = total + fila2.Cells(5).Value
-                Next
-                LblTot.Text = total
+                    cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
+                    DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
+                    'prod.ActualizarStock(id, cantidad)
+                    For Each fila2 As DataGridViewRow In DGVentaProductos.Rows
+                        total = total + fila2.Cells(5).Value
+                    Next
+                    LblTot.Text = total
+                End If
             End If
-        End If
     End Sub
 
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs)
@@ -234,9 +244,10 @@
                 prod.ActualizarStock(idPrdoDetalle, cantidad)
             Next
             PanelAdmin.cerrarFormHijo(Me)
+            FrmVerificaDNI.Show()
             PanelAdmin.abrirFormHijo(VerVentas)
         Else
-            MsgBox("todomal")
+            ErrorVenta.Show()
         End If
 
 

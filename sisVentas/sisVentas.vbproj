@@ -190,6 +190,12 @@
     <Compile Include="vistas\ventanasEmergentes\FrmDebeAgregarCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmEliminarProdDetalle.Designer.vb">
+      <DependentUpon>FrmEliminarProdDetalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmEliminarProdDetalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmSeleccioneFila.Designer.vb">
       <DependentUpon>FrmSeleccioneFila.vb</DependentUpon>
     </Compile>
@@ -314,6 +320,12 @@
       <DependentUpon>FrmVerificaDNI.vb</DependentUpon>
     </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmVerificaDNI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\ErrorVenta.Designer.vb">
+      <DependentUpon>ErrorVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\ErrorVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\VistaCliente\AgregarCliente.Designer.vb">
@@ -483,6 +495,9 @@
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmDebeAgregarCategoria.resx">
       <DependentUpon>FrmDebeAgregarCategoria.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmEliminarProdDetalle.resx">
+      <DependentUpon>FrmEliminarProdDetalle.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmSeleccioneFila.resx">
       <DependentUpon>FrmSeleccioneFila.vb</DependentUpon>
     </EmbeddedResource>
@@ -545,6 +560,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmVerificaDNI.resx">
       <DependentUpon>FrmVerificaDNI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\ErrorVenta.resx">
+      <DependentUpon>ErrorVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaCliente\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.vb</DependentUpon>
