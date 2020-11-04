@@ -68,4 +68,24 @@
             Return False
         End Try
     End Function
+
+    Public Function traerDetalle(ByVal idVenta As Integer, ByVal grid As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim detalle = (From d In db.tblDetalle
+                               Join p In db.tblProducto On p.id_producto Equals d.id_producto
+                               Where d.id_venta = idVenta
+                               Select
+                                  NOMBRE = p.nombre,
+                                  CANTIDAD = d.cantidad,
+                                  SUBTOTAL = d.subtotal)
+                grid.DataSource = detalle.ToList
+            End Using
+            Return True
+
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
 End Class

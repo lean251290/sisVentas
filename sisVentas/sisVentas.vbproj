@@ -472,6 +472,12 @@
     <Compile Include="vistas\ventanasEmergentes\UsuarioAgregado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\VistaVentas\VistaDetalle.Designer.vb">
+      <DependentUpon>VistaDetalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\VistaVentas\VistaDetalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -635,6 +641,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\VistaVentas\VerVentas.resx">
       <DependentUpon>VerVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\VistaVentas\VistaDetalle.resx">
+      <DependentUpon>VistaDetalle.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -87,6 +87,7 @@
                                     Join cli In db.tblCliente
                                     On cab.id_cliente Equals cli.id_cliente
                                     Select
+                                        IDVENTA = cab.id_venta,
                                         CLIENTE = cli.nombre,
                                         FECHA = cab.fecha,
                                         TOTAL = cab.total

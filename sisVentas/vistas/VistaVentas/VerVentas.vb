@@ -11,4 +11,19 @@
     Private Sub VerVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         verVentasXUser()
     End Sub
+
+    Private Sub DataGridVerVentas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridVerVentas.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridVerVentas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridVerVentas.CellClick
+
+
+    End Sub
+
+    Private Sub DataGridVerVentas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridVerVentas.CellDoubleClick
+        Dim filaSeleccionada = DataGridVerVentas.CurrentRow.Index
+        VistaDetalle.idVenta = Val(DataGridVerVentas.Rows(filaSeleccionada).Cells(0).Value)
+        VistaDetalle.Show()
+    End Sub
 End Class
