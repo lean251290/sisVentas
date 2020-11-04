@@ -36,8 +36,9 @@ Partial Class ReporteVentasPorFecha
         Me.TexBoxTotalUsuarios = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblVentas = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.TextBoxCorreo = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReportesVentas.SuspendLayout()
@@ -86,6 +87,8 @@ Partial Class ReporteVentasPorFecha
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportesVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportesVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportesVentas.Controls.Add(Me.TextBoxCorreo)
+        Me.PanelReportesVentas.Controls.Add(Me.RichTextBox1)
         Me.PanelReportesVentas.Controls.Add(Me.PictureBuscarUsuario)
         Me.PanelReportesVentas.Controls.Add(Me.TextBox1)
         Me.PanelReportesVentas.Controls.Add(Me.Label4)
@@ -96,7 +99,6 @@ Partial Class ReporteVentasPorFecha
         Me.PanelReportesVentas.Controls.Add(Me.TexBoxTotalUsuarios)
         Me.PanelReportesVentas.Controls.Add(Me.Label1)
         Me.PanelReportesVentas.Controls.Add(Me.LblVentas)
-        Me.PanelReportesVentas.Controls.Add(Me.Panel2)
         Me.PanelReportesVentas.Location = New System.Drawing.Point(30, 99)
         Me.PanelReportesVentas.Name = "PanelReportesVentas"
         Me.PanelReportesVentas.Size = New System.Drawing.Size(600, 530)
@@ -214,15 +216,6 @@ Partial Class ReporteVentasPorFecha
         Me.LblVentas.Text = "Ventas Realizadas:"
         Me.LblVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.ForeColor = System.Drawing.Color.Black
-        Me.Panel2.Location = New System.Drawing.Point(54, 105)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(500, 347)
-        Me.Panel2.TabIndex = 0
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -236,6 +229,23 @@ Partial Class ReporteVentasPorFecha
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Reporte Ventas"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 126)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(594, 311)
+        Me.RichTextBox1.TabIndex = 22
+        Me.RichTextBox1.Text = ""
+        '
+        'TextBoxCorreo
+        '
+        Me.TextBoxCorreo.Location = New System.Drawing.Point(476, 82)
+        Me.TextBoxCorreo.Name = "TextBoxCorreo"
+        Me.TextBoxCorreo.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxCorreo.TabIndex = 23
         '
         'ReporteVentasPorFecha
         '
@@ -268,7 +278,6 @@ Partial Class ReporteVentasPorFecha
     Friend WithEvents TexBoxTotalUsuarios As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LblVentas As Label
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
@@ -278,4 +287,6 @@ Partial Class ReporteVentasPorFecha
     Friend WithEvents LabelReporteVentas As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBuscarUsuario As PictureBox
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents TextBoxCorreo As TextBox
 End Class

@@ -234,6 +234,7 @@
                 prod.ActualizarStock(idPrdoDetalle, cantidad)
             Next
             PanelAdmin.cerrarFormHijo(Me)
+            PanelAdmin.abrirFormHijo(VerVentas)
         Else
             MsgBox("todomal")
         End If
