@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PanelRepoVentaXUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,23 +20,23 @@ Partial Class PanelRepoVentaXUsuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LabelAgregarCliente = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelReportesVenta = New System.Windows.Forms.Panel()
-        Me.DTPVentaXUsuarioHasta = New System.Windows.Forms.DateTimePicker()
-        Me.DTPVentaXUsuarioDesde = New System.Windows.Forms.DateTimePicker()
-        Me.LblHastaVentaXUsuario = New System.Windows.Forms.Label()
-        Me.LblDesdeVentaXUsuario = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.PBUsuarioReportes = New System.Windows.Forms.PictureBox()
         Me.TbReporteVentaXUsuario = New System.Windows.Forms.TextBox()
         Me.TexBoxTotalVentaXUsuarios = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblNombre = New System.Windows.Forms.Label()
-        Me.PanelReporteVentaXUsuario = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Panel1.SuspendLayout()
@@ -87,62 +87,82 @@ Partial Class PanelRepoVentaXUsuario
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportesVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportesVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelReportesVenta.Controls.Add(Me.DTPVentaXUsuarioHasta)
-        Me.PanelReportesVenta.Controls.Add(Me.DTPVentaXUsuarioDesde)
-        Me.PanelReportesVenta.Controls.Add(Me.LblHastaVentaXUsuario)
-        Me.PanelReportesVenta.Controls.Add(Me.LblDesdeVentaXUsuario)
+        Me.PanelReportesVenta.Controls.Add(Me.Label8)
+        Me.PanelReportesVenta.Controls.Add(Me.Label7)
+        Me.PanelReportesVenta.Controls.Add(Me.Label4)
+        Me.PanelReportesVenta.Controls.Add(Me.Label3)
+        Me.PanelReportesVenta.Controls.Add(Me.RichTextBox1)
         Me.PanelReportesVenta.Controls.Add(Me.PBUsuarioReportes)
         Me.PanelReportesVenta.Controls.Add(Me.TbReporteVentaXUsuario)
         Me.PanelReportesVenta.Controls.Add(Me.TexBoxTotalVentaXUsuarios)
         Me.PanelReportesVenta.Controls.Add(Me.Label1)
         Me.PanelReportesVenta.Controls.Add(Me.LblNombre)
-        Me.PanelReportesVenta.Controls.Add(Me.PanelReporteVentaXUsuario)
         Me.PanelReportesVenta.Location = New System.Drawing.Point(43, 107)
         Me.PanelReportesVenta.Name = "PanelReportesVenta"
         Me.PanelReportesVenta.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportesVenta.TabIndex = 7
         '
-        'DTPVentaXUsuarioHasta
+        'Label8
         '
-        Me.DTPVentaXUsuarioHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPVentaXUsuarioHasta.Location = New System.Drawing.Point(378, 61)
-        Me.DTPVentaXUsuarioHasta.Name = "DTPVentaXUsuarioHasta"
-        Me.DTPVentaXUsuarioHasta.Size = New System.Drawing.Size(99, 20)
-        Me.DTPVentaXUsuarioHasta.TabIndex = 22
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label8.Location = New System.Drawing.Point(546, 94)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(31, 13)
+        Me.Label8.TabIndex = 37
+        Me.Label8.Text = "Total"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'DTPVentaXUsuarioDesde
+        'Label7
         '
-        Me.DTPVentaXUsuarioDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPVentaXUsuarioDesde.Location = New System.Drawing.Point(117, 60)
-        Me.DTPVentaXUsuarioDesde.Name = "DTPVentaXUsuarioDesde"
-        Me.DTPVentaXUsuarioDesde.Size = New System.Drawing.Size(99, 20)
-        Me.DTPVentaXUsuarioDesde.TabIndex = 21
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label7.Location = New System.Drawing.Point(110, 94)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
+        Me.Label7.TabIndex = 36
+        Me.Label7.Text = "Cliente"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblHastaVentaXUsuario
+        'Label4
         '
-        Me.LblHastaVentaXUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblHastaVentaXUsuario.AutoSize = True
-        Me.LblHastaVentaXUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblHastaVentaXUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblHastaVentaXUsuario.Location = New System.Drawing.Point(316, 61)
-        Me.LblHastaVentaXUsuario.Name = "LblHastaVentaXUsuario"
-        Me.LblHastaVentaXUsuario.Size = New System.Drawing.Size(56, 20)
-        Me.LblHastaVentaXUsuario.TabIndex = 20
-        Me.LblHastaVentaXUsuario.Text = "Hasta:"
-        Me.LblHastaVentaXUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label4.Location = New System.Drawing.Point(318, 94)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.TabIndex = 35
+        Me.Label4.Text = "Vendedor"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'LblDesdeVentaXUsuario
+        'Label3
         '
-        Me.LblDesdeVentaXUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblDesdeVentaXUsuario.AutoSize = True
-        Me.LblDesdeVentaXUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDesdeVentaXUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblDesdeVentaXUsuario.Location = New System.Drawing.Point(55, 60)
-        Me.LblDesdeVentaXUsuario.Name = "LblDesdeVentaXUsuario"
-        Me.LblDesdeVentaXUsuario.Size = New System.Drawing.Size(60, 20)
-        Me.LblDesdeVentaXUsuario.TabIndex = 19
-        Me.LblDesdeVentaXUsuario.Text = "Desde:"
-        Me.LblDesdeVentaXUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label3.Location = New System.Drawing.Point(25, 94)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.TabIndex = 34
+        Me.Label3.Text = "Fecha"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 110)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(594, 311)
+        Me.RichTextBox1.TabIndex = 33
+        Me.RichTextBox1.Text = ""
         '
         'PBUsuarioReportes
         '
@@ -197,15 +217,6 @@ Partial Class PanelRepoVentaXUsuario
         Me.LblNombre.Text = "Usuarios:"
         Me.LblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'PanelReporteVentaXUsuario
-        '
-        Me.PanelReporteVentaXUsuario.BackColor = System.Drawing.Color.White
-        Me.PanelReporteVentaXUsuario.ForeColor = System.Drawing.Color.Black
-        Me.PanelReporteVentaXUsuario.Location = New System.Drawing.Point(54, 114)
-        Me.PanelReporteVentaXUsuario.Name = "PanelReporteVentaXUsuario"
-        Me.PanelReporteVentaXUsuario.Size = New System.Drawing.Size(500, 338)
-        Me.PanelReporteVentaXUsuario.TabIndex = 0
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -254,7 +265,6 @@ Partial Class PanelRepoVentaXUsuario
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LabelAgregarCliente As Label
     Friend WithEvents PanelReportesVenta As Panel
-    Friend WithEvents PanelReporteVentaXUsuario As Panel
     Friend WithEvents LblNombre As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TexBoxTotalVentaXUsuarios As TextBox
@@ -262,8 +272,9 @@ Partial Class PanelRepoVentaXUsuario
     Friend WithEvents TbReporteVentaXUsuario As TextBox
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents PBUsuarioReportes As PictureBox
-    Friend WithEvents DTPVentaXUsuarioHasta As DateTimePicker
-    Friend WithEvents DTPVentaXUsuarioDesde As DateTimePicker
-    Friend WithEvents LblHastaVentaXUsuario As Label
-    Friend WithEvents LblDesdeVentaXUsuario As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class

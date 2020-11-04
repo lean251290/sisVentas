@@ -18,4 +18,9 @@
             DTPVentasXDia.Value = fecha
         End If
     End Sub
+
+    Private Sub ReportesPorDia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim cabecera As New Cabecera()
+        RichTextBox1.Text = cabecera.reportesPorDia()
+    End Sub
 End Class

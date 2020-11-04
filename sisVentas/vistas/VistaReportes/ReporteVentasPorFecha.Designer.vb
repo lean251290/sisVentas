@@ -26,20 +26,20 @@ Partial Class ReporteVentasPorFecha
         Me.LabelReporteVentas = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelReportesVentas = New System.Windows.Forms.Panel()
-        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBoxCorreo = New System.Windows.Forms.TextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.PictureBuscarUsuario = New System.Windows.Forms.PictureBox()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TexBoxTotalUsuarios = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblVentas = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TextBoxCorreo = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReportesVentas.SuspendLayout()
@@ -88,23 +88,92 @@ Partial Class ReporteVentasPorFecha
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportesVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportesVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelReportesVentas.Controls.Add(Me.Label8)
+        Me.PanelReportesVentas.Controls.Add(Me.Label7)
+        Me.PanelReportesVentas.Controls.Add(Me.Label4)
         Me.PanelReportesVentas.Controls.Add(Me.Label6)
         Me.PanelReportesVentas.Controls.Add(Me.TextBoxCorreo)
         Me.PanelReportesVentas.Controls.Add(Me.RichTextBox1)
         Me.PanelReportesVentas.Controls.Add(Me.PictureBuscarUsuario)
-        Me.PanelReportesVentas.Controls.Add(Me.TextBox1)
-        Me.PanelReportesVentas.Controls.Add(Me.Label4)
         Me.PanelReportesVentas.Controls.Add(Me.DateTimePicker2)
         Me.PanelReportesVentas.Controls.Add(Me.DateTimePicker1)
         Me.PanelReportesVentas.Controls.Add(Me.Label3)
         Me.PanelReportesVentas.Controls.Add(Me.Label2)
-        Me.PanelReportesVentas.Controls.Add(Me.TexBoxTotalUsuarios)
         Me.PanelReportesVentas.Controls.Add(Me.Label1)
         Me.PanelReportesVentas.Controls.Add(Me.LblVentas)
         Me.PanelReportesVentas.Location = New System.Drawing.Point(30, 99)
         Me.PanelReportesVentas.Name = "PanelReportesVentas"
         Me.PanelReportesVentas.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportesVentas.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label8.Location = New System.Drawing.Point(547, 110)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(31, 13)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "Total"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label7.Location = New System.Drawing.Point(111, 110)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Cliente"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label4.Location = New System.Drawing.Point(319, 110)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.TabIndex = 25
+        Me.Label4.Text = "Vendedor"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label6.Location = New System.Drawing.Point(392, 38)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(68, 20)
+        Me.Label6.TabIndex = 24
+        Me.Label6.Text = "Usuario:"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TextBoxCorreo
+        '
+        Me.TextBoxCorreo.Location = New System.Drawing.Point(454, 38)
+        Me.TextBoxCorreo.Name = "TextBoxCorreo"
+        Me.TextBoxCorreo.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxCorreo.TabIndex = 23
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 126)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(594, 311)
+        Me.RichTextBox1.TabIndex = 22
+        Me.RichTextBox1.Text = ""
         '
         'PictureBuscarUsuario
         '
@@ -116,29 +185,6 @@ Partial Class ReporteVentasPorFecha
         Me.PictureBuscarUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBuscarUsuario.TabIndex = 21
         Me.PictureBuscarUsuario.TabStop = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(414, 489)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(140, 13)
-        Me.TextBox1.TabIndex = 20
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(300, 484)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(117, 20)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Monto vendido:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DateTimePicker2
         '
@@ -182,27 +228,17 @@ Partial Class ReporteVentasPorFecha
         Me.Label2.Text = "Desde:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TexBoxTotalUsuarios
-        '
-        Me.TexBoxTotalUsuarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TexBoxTotalUsuarios.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.TexBoxTotalUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TexBoxTotalUsuarios.Location = New System.Drawing.Point(152, 489)
-        Me.TexBoxTotalUsuarios.Name = "TexBoxTotalUsuarios"
-        Me.TexBoxTotalUsuarios.Size = New System.Drawing.Size(120, 13)
-        Me.TexBoxTotalUsuarios.TabIndex = 14
-        '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(34, 484)
+        Me.Label1.Location = New System.Drawing.Point(26, 110)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 20)
+        Me.Label1.Size = New System.Drawing.Size(37, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Total de ventas:"
+        Me.Label1.Text = "Fecha"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblVentas
@@ -211,7 +247,7 @@ Partial Class ReporteVentasPorFecha
         Me.LblVentas.AutoSize = True
         Me.LblVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVentas.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblVentas.Location = New System.Drawing.Point(8, 103)
+        Me.LblVentas.Location = New System.Drawing.Point(3, 70)
         Me.LblVentas.Name = "LblVentas"
         Me.LblVentas.Size = New System.Drawing.Size(147, 20)
         Me.LblVentas.TabIndex = 1
@@ -232,36 +268,6 @@ Partial Class ReporteVentasPorFecha
         Me.Label5.Text = "Reporte Ventas"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(3, 126)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(594, 311)
-        Me.RichTextBox1.TabIndex = 22
-        Me.RichTextBox1.Text = ""
-        '
-        'TextBoxCorreo
-        '
-        Me.TextBoxCorreo.Location = New System.Drawing.Point(454, 38)
-        Me.TextBoxCorreo.Name = "TextBoxCorreo"
-        Me.TextBoxCorreo.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxCorreo.TabIndex = 23
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label6.Location = New System.Drawing.Point(392, 38)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(68, 20)
-        Me.Label6.TabIndex = 24
-        Me.Label6.Text = "Usuario:"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'ReporteVentasPorFecha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -275,7 +281,6 @@ Partial Class ReporteVentasPorFecha
         Me.Name = "ReporteVentasPorFecha"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
-        Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -290,19 +295,19 @@ Partial Class ReporteVentasPorFecha
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PanelReportesVentas As Panel
-    Friend WithEvents TexBoxTotalUsuarios As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LblVentas As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents LabelReporteVentas As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBuscarUsuario As PictureBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents TextBoxCorreo As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
 End Class

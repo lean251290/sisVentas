@@ -183,8 +183,8 @@
             ask = MsgBox("Esta seguro de querer borrar el registro?", vbYesNo + vbExclamation + vbDefaultButton2, "Eliminar")
             If ask = vbYes Then
                 fila = DGVentaProductos.CurrentRow.Index
-                DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
                 cantidad = Val(DGVentaProductos.SelectedRows(0).Cells(3).Value)
+                DGVentaProductos.Rows.Remove(DGVentaProductos.CurrentRow)
                 'prod.ActualizarStock(id, cantidad)
                 For Each fila2 As DataGridViewRow In DGVentaProductos.Rows
                     total = total + fila2.Cells(5).Value

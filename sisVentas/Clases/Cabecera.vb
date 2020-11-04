@@ -102,18 +102,130 @@
 
     Public Function reportes(ByVal fechaI As String, ByVal fechaFinal As String, ByVal mail As String)
         Dim cadena As String = ""
+
         Dim output As New System.Text.StringBuilder
         Try
             Using db As New SisVentasEntities
                 Dim repo = From cabe In db.tblCabecera
                            Join usua In db.tblUsuarios On usua.id_user Equals cabe.id_user
                            Join clie In db.tblCliente On clie.id_cliente Equals cabe.id_cliente
-                           Where fechaI >= cabe.fecha And fechaFinal <= cabe.fecha And usua.correo.Contains(mail)
+                           Where cabe.fecha >= fechaI And cabe.fecha <= fechaFinal And usua.correo.Contains(mail)
                            Select
                                cab_fecha = cabe.fecha,
                                cab_total = cabe.total,
                                cab_cliente = clie.nombre & " " & clie.apellido,
                                cab_vendedor = usua.nombre & " " & usua.apellido
+
+                For Each cabe In repo
+
+                    Dim fechaHoy As DateTime
+                    fechaHoy = cabe.cab_fecha
+                    Dim fechaString As String = fechaHoy.ToShortDateString()
+
+                    Dim StrFecha As String = fechaString & Space(11 - fechaString.Length)
+                    Dim StrCliente As String = cabe.cab_cliente & Space(30 - cabe.cab_cliente.ToString.Length)
+                    Dim StrVendedor As String = cabe.cab_vendedor & Space(30 - cabe.cab_vendedor.ToString.Length)
+                    Dim StrTotal As String = Space(11 - Format(cabe.cab_total, "$ #0.00").Length) & Format(cabe.cab_total, "$ #0.00")
+
+                    cadena = cadena & StrFecha & StrCliente & StrVendedor & StrTotal & vbCrLf
+                    'cadena = cadena & cabe.cab_fecha & " " & cabe.cab_cliente & " " & cabe.cab_vendedor & " " & cabe.cab_total & vbCrLf
+                Next
+            End Using
+            Return cadena
+        Catch ex As Exception
+            Return ""
+        End Try
+    End Function
+    Public Function reportesPorDia()
+        Dim fechaActual As DateTime
+        fechaActual = DateTime.Now.Date
+        Dim fechaCadena As String
+        fechaCadena = fechaActual.ToShortDateString()
+        Dim cadena As String = ""
+        Dim output As New System.Text.StringBuilder
+        Try
+            Using db As New SisVentasEntities
+                Dim repo = From cabe In db.tblCabecera
+                           Join usua In db.tblUsuarios On usua.id_user Equals cabe.id_user
+                           Join clie In db.tblCliente On clie.id_cliente Equals cabe.id_cliente
+                           Where cabe.fecha = fechaCadena
+                           Select
+                               cab_fecha = cabe.fecha,
+                               cab_total = cabe.total,
+                               cab_cliente = clie.nombre & " " & clie.apellido,
+                               cab_vendedor = usua.nombre & " " & usua.apellido
+
+                For Each cabe In repo
+
+                    Dim fechaHoy As DateTime
+                    fechaHoy = cabe.cab_fecha
+                    Dim fechaString As String = fechaHoy.ToShortDateString()
+
+                    Dim StrFecha As String = fechaString & Space(11 - fechaString.Length)
+                    Dim StrCliente As String = cabe.cab_cliente & Space(30 - cabe.cab_cliente.ToString.Length)
+                    Dim StrVendedor As String = cabe.cab_vendedor & Space(30 - cabe.cab_vendedor.ToString.Length)
+                    Dim StrTotal As String = Space(11 - Format(cabe.cab_total, "$ #0.00").Length) & Format(cabe.cab_total, "$ #0.00")
+                    cadena = cadena & StrFecha & StrCliente & StrVendedor & StrTotal & vbCrLf
+                    'cadena = cadena & cabe.cab_fecha & " " & cabe.cab_cliente & " " & cabe.cab_vendedor & " " & cabe.cab_total & vbCrLf
+                Next
+            End Using
+            Return cadena
+        Catch ex As Exception
+            Return ""
+        End Try
+    End Function
+
+    Public Function reportesPorUsuario(ByVal name As String)
+
+        Dim cadena As String = ""
+        Dim output As New System.Text.StringBuilder
+        Try
+            Using db As New SisVentasEntities
+                Dim repo = From cabe In db.tblCabecera
+                           Join usua In db.tblUsuarios On usua.id_user Equals cabe.id_user
+                           Join clie In db.tblCliente On clie.id_cliente Equals cabe.id_cliente
+                           Where usua.nombre.Contains(name)
+                           Select
+                              cab_fecha = cabe.fecha,
+                              cab_total = cabe.total,
+                              cab_cliente = clie.nombre & " " & clie.apellido,
+                              cab_vendedor = usua.nombre & " " & usua.apellido
+
+                For Each cabe In repo
+
+                    Dim fechaHoy As DateTime
+                    fechaHoy = cabe.cab_fecha
+                    Dim fechaString As String = fechaHoy.ToShortDateString()
+
+                    Dim StrFecha As String = fechaString & Space(11 - fechaString.Length)
+                    Dim StrCliente As String = cabe.cab_cliente & Space(30 - cabe.cab_cliente.ToString.Length)
+                    Dim StrVendedor As String = cabe.cab_vendedor & Space(30 - cabe.cab_vendedor.ToString.Length)
+                    Dim StrTotal As String = Space(11 - Format(cabe.cab_total, "$ #0.00").Length) & Format(cabe.cab_total, "$ #0.00")
+                    cadena = cadena & StrFecha & StrCliente & StrVendedor & StrTotal & vbCrLf
+                    'cadena = cadena & cabe.cab_fecha & " " & cabe.cab_cliente & " " & cabe.cab_vendedor & " " & cabe.cab_total & vbCrLf
+                Next
+            End Using
+            Return cadena
+        Catch ex As Exception
+            Return ""
+        End Try
+    End Function
+
+    Public Function reportesPorCliente(ByVal name As String)
+
+        Dim cadena As String = ""
+        Dim output As New System.Text.StringBuilder
+        Try
+            Using db As New SisVentasEntities
+                Dim repo = From cabe In db.tblCabecera
+                           Join usua In db.tblUsuarios On usua.id_user Equals cabe.id_user
+                           Join clie In db.tblCliente On clie.id_cliente Equals cabe.id_cliente
+                           Where clie.nombre.Contains(name)
+                           Select
+                              cab_fecha = cabe.fecha,
+                              cab_total = cabe.total,
+                              cab_cliente = clie.nombre & " " & clie.apellido,
+                              cab_vendedor = usua.nombre & " " & usua.apellido
 
                 For Each cabe In repo
 

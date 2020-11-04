@@ -12,6 +12,7 @@
             FrmFechaActual.Show()
             fecha = DateAdd(DateInterval.Day, -1, fechaActual)
             DateTimePicker1.Value = fecha
+
         Else
             Dim fechaInicio As DateTime
             Dim fechaFin As DateTime
@@ -33,9 +34,11 @@
         If DateTime.Compare(DateTimePicker2.Value, DateTimePicker1.Value) < 0 Then
             FrmErrorFechaFinal.Show()
             DateTimePicker2.Value = fechaActual
+
         ElseIf DateTime.Compare(DateTimePicker2.Value, fechaActual) > 0 Then
             FrmFechaActual.Show()
             DateTimePicker2.Value = fechaActual
+
         Else
             Dim fechaInicio As DateTime
             Dim fechaFin As DateTime

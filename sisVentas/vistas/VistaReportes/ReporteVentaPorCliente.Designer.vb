@@ -24,19 +24,19 @@ Partial Class ReporteVentaPorCliente
     Private Sub InitializeComponent()
         Me.LblReporteVentaXCliente = New System.Windows.Forms.Label()
         Me.PanelReportes = New System.Windows.Forms.Panel()
-        Me.DTPVentaXClienteHasta = New System.Windows.Forms.DateTimePicker()
-        Me.DTPVentaXClienteDesde = New System.Windows.Forms.DateTimePicker()
-        Me.LblHastaVentaXCliente = New System.Windows.Forms.Label()
-        Me.LblDesdeVentaXCliente = New System.Windows.Forms.Label()
         Me.PBReporteVentaXCliente = New System.Windows.Forms.PictureBox()
         Me.TbReporteVentaXCliente = New System.Windows.Forms.TextBox()
         Me.TexBoxMontoTotalCliente = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblCliente = New System.Windows.Forms.Label()
-        Me.PanelReporteVentaXCliente = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LabelReporteVentaXCliente = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.PanelReportes.SuspendLayout()
         CType(Me.PBReporteVentaXCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -64,67 +64,25 @@ Partial Class ReporteVentaPorCliente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelReportes.Controls.Add(Me.DTPVentaXClienteHasta)
-        Me.PanelReportes.Controls.Add(Me.DTPVentaXClienteDesde)
-        Me.PanelReportes.Controls.Add(Me.LblHastaVentaXCliente)
-        Me.PanelReportes.Controls.Add(Me.LblDesdeVentaXCliente)
+        Me.PanelReportes.Controls.Add(Me.Label8)
+        Me.PanelReportes.Controls.Add(Me.Label7)
+        Me.PanelReportes.Controls.Add(Me.Label4)
+        Me.PanelReportes.Controls.Add(Me.Label3)
+        Me.PanelReportes.Controls.Add(Me.RichTextBox1)
         Me.PanelReportes.Controls.Add(Me.PBReporteVentaXCliente)
         Me.PanelReportes.Controls.Add(Me.TbReporteVentaXCliente)
         Me.PanelReportes.Controls.Add(Me.TexBoxMontoTotalCliente)
         Me.PanelReportes.Controls.Add(Me.Label1)
         Me.PanelReportes.Controls.Add(Me.LblCliente)
-        Me.PanelReportes.Controls.Add(Me.PanelReporteVentaXCliente)
         Me.PanelReportes.Location = New System.Drawing.Point(39, 109)
         Me.PanelReportes.Name = "PanelReportes"
         Me.PanelReportes.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportes.TabIndex = 10
         '
-        'DTPVentaXClienteHasta
-        '
-        Me.DTPVentaXClienteHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPVentaXClienteHasta.Location = New System.Drawing.Point(375, 71)
-        Me.DTPVentaXClienteHasta.Name = "DTPVentaXClienteHasta"
-        Me.DTPVentaXClienteHasta.Size = New System.Drawing.Size(99, 20)
-        Me.DTPVentaXClienteHasta.TabIndex = 26
-        '
-        'DTPVentaXClienteDesde
-        '
-        Me.DTPVentaXClienteDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPVentaXClienteDesde.Location = New System.Drawing.Point(114, 70)
-        Me.DTPVentaXClienteDesde.Name = "DTPVentaXClienteDesde"
-        Me.DTPVentaXClienteDesde.Size = New System.Drawing.Size(99, 20)
-        Me.DTPVentaXClienteDesde.TabIndex = 25
-        '
-        'LblHastaVentaXCliente
-        '
-        Me.LblHastaVentaXCliente.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblHastaVentaXCliente.AutoSize = True
-        Me.LblHastaVentaXCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblHastaVentaXCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblHastaVentaXCliente.Location = New System.Drawing.Point(313, 71)
-        Me.LblHastaVentaXCliente.Name = "LblHastaVentaXCliente"
-        Me.LblHastaVentaXCliente.Size = New System.Drawing.Size(56, 20)
-        Me.LblHastaVentaXCliente.TabIndex = 24
-        Me.LblHastaVentaXCliente.Text = "Hasta:"
-        Me.LblHastaVentaXCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LblDesdeVentaXCliente
-        '
-        Me.LblDesdeVentaXCliente.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.LblDesdeVentaXCliente.AutoSize = True
-        Me.LblDesdeVentaXCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblDesdeVentaXCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblDesdeVentaXCliente.Location = New System.Drawing.Point(52, 70)
-        Me.LblDesdeVentaXCliente.Name = "LblDesdeVentaXCliente"
-        Me.LblDesdeVentaXCliente.Size = New System.Drawing.Size(60, 20)
-        Me.LblDesdeVentaXCliente.TabIndex = 23
-        Me.LblDesdeVentaXCliente.Text = "Desde:"
-        Me.LblDesdeVentaXCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'PBReporteVentaXCliente
         '
         Me.PBReporteVentaXCliente.Image = Global.sisVentas.My.Resources.Resources.icoLupa
-        Me.PBReporteVentaXCliente.Location = New System.Drawing.Point(480, 3)
+        Me.PBReporteVentaXCliente.Location = New System.Drawing.Point(483, 48)
         Me.PBReporteVentaXCliente.Name = "PBReporteVentaXCliente"
         Me.PBReporteVentaXCliente.Size = New System.Drawing.Size(74, 47)
         Me.PBReporteVentaXCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -134,7 +92,7 @@ Partial Class ReporteVentaPorCliente
         'TbReporteVentaXCliente
         '
         Me.TbReporteVentaXCliente.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TbReporteVentaXCliente.Location = New System.Drawing.Point(132, 17)
+        Me.TbReporteVentaXCliente.Location = New System.Drawing.Point(135, 62)
         Me.TbReporteVentaXCliente.Name = "TbReporteVentaXCliente"
         Me.TbReporteVentaXCliente.Size = New System.Drawing.Size(330, 20)
         Me.TbReporteVentaXCliente.TabIndex = 15
@@ -168,21 +126,12 @@ Partial Class ReporteVentaPorCliente
         Me.LblCliente.AutoSize = True
         Me.LblCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCliente.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblCliente.Location = New System.Drawing.Point(50, 17)
+        Me.LblCliente.Location = New System.Drawing.Point(53, 62)
         Me.LblCliente.Name = "LblCliente"
         Me.LblCliente.Size = New System.Drawing.Size(62, 20)
         Me.LblCliente.TabIndex = 1
         Me.LblCliente.Text = "Cliente:"
         Me.LblCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PanelReporteVentaXCliente
-        '
-        Me.PanelReporteVentaXCliente.BackColor = System.Drawing.Color.White
-        Me.PanelReporteVentaXCliente.ForeColor = System.Drawing.Color.Black
-        Me.PanelReporteVentaXCliente.Location = New System.Drawing.Point(54, 128)
-        Me.PanelReporteVentaXCliente.Name = "PanelReporteVentaXCliente"
-        Me.PanelReporteVentaXCliente.Size = New System.Drawing.Size(500, 324)
-        Me.PanelReporteVentaXCliente.TabIndex = 0
         '
         'Panel1
         '
@@ -220,6 +169,68 @@ Partial Class ReporteVentaPorCliente
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
         '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 150)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(594, 311)
+        Me.RichTextBox1.TabIndex = 34
+        Me.RichTextBox1.Text = ""
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label8.Location = New System.Drawing.Point(538, 134)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(31, 13)
+        Me.Label8.TabIndex = 41
+        Me.Label8.Text = "Total"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label7.Location = New System.Drawing.Point(102, 134)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
+        Me.Label7.TabIndex = 40
+        Me.Label7.Text = "Cliente"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label4.Location = New System.Drawing.Point(310, 134)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.TabIndex = 39
+        Me.Label4.Text = "Vendedor"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label3.Location = New System.Drawing.Point(17, 134)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.TabIndex = 38
+        Me.Label3.Text = "Fecha"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'ReporteVentaPorCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -253,12 +264,12 @@ Partial Class ReporteVentaPorCliente
     Friend WithEvents TexBoxMontoTotalCliente As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LblCliente As Label
-    Friend WithEvents PanelReporteVentaXCliente As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents LabelReporteVentaXCliente As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents DTPVentaXClienteHasta As DateTimePicker
-    Friend WithEvents DTPVentaXClienteDesde As DateTimePicker
-    Friend WithEvents LblHastaVentaXCliente As Label
-    Friend WithEvents LblDesdeVentaXCliente As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class

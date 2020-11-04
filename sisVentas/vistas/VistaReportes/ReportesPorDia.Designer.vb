@@ -24,7 +24,11 @@ Partial Class ReportesPorDia
     Private Sub InitializeComponent()
         Me.LReportes = New System.Windows.Forms.Label()
         Me.PanelReportesVentasXdia = New System.Windows.Forms.Panel()
-        Me.PanelVentasXDia = New System.Windows.Forms.Panel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.DTPVentasXDia = New System.Windows.Forms.DateTimePicker()
         Me.LblVentasXdia = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -55,7 +59,11 @@ Partial Class ReportesPorDia
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelReportesVentasXdia.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.PanelReportesVentasXdia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelReportesVentasXdia.Controls.Add(Me.PanelVentasXDia)
+        Me.PanelReportesVentasXdia.Controls.Add(Me.RichTextBox1)
+        Me.PanelReportesVentasXdia.Controls.Add(Me.Label8)
+        Me.PanelReportesVentasXdia.Controls.Add(Me.Label7)
+        Me.PanelReportesVentasXdia.Controls.Add(Me.Label4)
+        Me.PanelReportesVentasXdia.Controls.Add(Me.Label1)
         Me.PanelReportesVentasXdia.Controls.Add(Me.DTPVentasXDia)
         Me.PanelReportesVentasXdia.Controls.Add(Me.LblVentasXdia)
         Me.PanelReportesVentasXdia.Location = New System.Drawing.Point(50, 90)
@@ -63,19 +71,74 @@ Partial Class ReportesPorDia
         Me.PanelReportesVentasXdia.Size = New System.Drawing.Size(600, 530)
         Me.PanelReportesVentasXdia.TabIndex = 6
         '
-        'PanelVentasXDia
+        'RichTextBox1
         '
-        Me.PanelVentasXDia.BackColor = System.Drawing.Color.White
-        Me.PanelVentasXDia.ForeColor = System.Drawing.Color.Black
-        Me.PanelVentasXDia.Location = New System.Drawing.Point(50, 92)
-        Me.PanelVentasXDia.Name = "PanelVentasXDia"
-        Me.PanelVentasXDia.Size = New System.Drawing.Size(500, 347)
-        Me.PanelVentasXDia.TabIndex = 19
+        Me.RichTextBox1.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 110)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(594, 311)
+        Me.RichTextBox1.TabIndex = 32
+        Me.RichTextBox1.Text = ""
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label8.Location = New System.Drawing.Point(537, 92)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(31, 13)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "Total"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label7.Location = New System.Drawing.Point(101, 92)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
+        Me.Label7.TabIndex = 30
+        Me.Label7.Text = "Cliente"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label4.Location = New System.Drawing.Point(309, 92)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.TabIndex = 29
+        Me.Label4.Text = "Vendedor"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label1.Location = New System.Drawing.Point(16, 92)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Fecha"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DTPVentasXDia
         '
+        Me.DTPVentasXDia.Cursor = System.Windows.Forms.Cursors.No
+        Me.DTPVentasXDia.Enabled = False
         Me.DTPVentasXDia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPVentasXDia.Location = New System.Drawing.Point(88, 39)
+        Me.DTPVentasXDia.Location = New System.Drawing.Point(135, 20)
         Me.DTPVentasXDia.Name = "DTPVentasXDia"
         Me.DTPVentasXDia.Size = New System.Drawing.Size(99, 20)
         Me.DTPVentasXDia.TabIndex = 18
@@ -86,11 +149,11 @@ Partial Class ReportesPorDia
         Me.LblVentasXdia.AutoSize = True
         Me.LblVentasXdia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVentasXdia.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.LblVentasXdia.Location = New System.Drawing.Point(41, 40)
+        Me.LblVentasXdia.Location = New System.Drawing.Point(15, 20)
         Me.LblVentasXdia.Name = "LblVentasXdia"
-        Me.LblVentasXdia.Size = New System.Drawing.Size(41, 20)
+        Me.LblVentasXdia.Size = New System.Drawing.Size(114, 20)
         Me.LblVentasXdia.TabIndex = 16
-        Me.LblVentasXdia.Text = "Día :"
+        Me.LblVentasXdia.Text = "Ventas del día:"
         Me.LblVentasXdia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel1
@@ -140,7 +203,6 @@ Partial Class ReportesPorDia
         Me.Name = "ReportesPorDia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
-        Me.TopMost = True
         Me.PanelReportesVentasXdia.ResumeLayout(False)
         Me.PanelReportesVentasXdia.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -158,5 +220,9 @@ Partial Class ReportesPorDia
     Friend WithEvents LabelVentasXdia As Label
     Friend WithEvents LblVentasXdia As Label
     Friend WithEvents DTPVentasXDia As DateTimePicker
-    Friend WithEvents PanelVentasXDia As Panel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
