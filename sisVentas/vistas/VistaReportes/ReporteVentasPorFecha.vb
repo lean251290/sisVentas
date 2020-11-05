@@ -83,6 +83,6 @@
         Dim fechaStringInicio As String = fechaInicio.ToShortDateString()
         Dim fechaStringFin As String = fechaFin.ToShortDateString()
         Dim cabecera As New Cabecera()
-        RichTextBox1.Text = cabecera.reportes(fechaStringInicio, fechaStringFin, TextBoxCorreo.Text)
+        RichTextBox1.Text = cabecera.CabeceraDetalle(fechaStringInicio, fechaStringFin, TextBoxCorreo.Text)
     End Sub
 End Class

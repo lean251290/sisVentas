@@ -239,7 +239,62 @@
                     Dim StrVendedor As String = cabe.cab_vendedor & Space(30 - cabe.cab_vendedor.ToString.Length)
                     Dim StrTotal As String = Space(11 - Format(cabe.cab_total, "$ #0.00").Length) & Format(cabe.cab_total, "$ #0.00")
                     cadena = cadena & StrFecha & StrCliente & StrVendedor & StrTotal & vbCrLf
-                    'cadena = cadena & cabe.cab_fecha & " " & cabe.cab_cliente & " " & cabe.cab_vendedor & " " & cabe.cab_total & vbCrLf
+
+                Next
+            End Using
+            Return cadena
+        Catch ex As Exception
+            Return ""
+        End Try
+    End Function
+
+    Public Function CabeceraDetalle(ByVal fechaI As String, ByVal fechaFinal As String, ByVal mail As String)
+        Dim cadena As String = ""
+        Dim cadena2 As String = ""
+
+
+        Dim output As New System.Text.StringBuilder
+        Try
+            Using db As New SisVentasEntities
+                Dim repo = From cabe In db.tblCabecera
+                           Join detalle In db.tblDetalle On detalle.id_venta Equals cabe.id_venta
+                           Join prod In db.tblProducto On prod.id_producto Equals detalle.id_producto
+                           Join usua In db.tblUsuarios On usua.id_user Equals cabe.id_user
+                           Join clie In db.tblCliente On clie.id_cliente Equals cabe.id_cliente
+                           Where usua.correo.Contains(mail)
+                           Select
+                               cab_idVenta = cabe.id_venta,
+                               detalle_idVenta = detalle.id_venta,
+                               cab_fecha = cabe.fecha,
+                               cab_total = cabe.total,
+                               cab_cliente = clie.nombre & " " & clie.apellido,
+                               cab_vendedor = usua.nombre & " " & usua.apellido,
+                               detalle_producto = prod.nombre,
+                               detalle_cantidad = detalle.cantidad,
+                               detalle_subtotal = detalle.subtotal
+
+                For Each cabe In repo
+
+                    Dim fechaHoy As DateTime
+                    fechaHoy = cabe.cab_fecha
+                    Dim fechaString As String = fechaHoy.ToShortDateString()
+                    Dim StrFecha As String = fechaString & Space(11 - fechaString.Length)
+                    Dim StrCliente As String = cabe.cab_cliente & Space(30 - cabe.cab_cliente.ToString.Length)
+                    Dim StrVendedor As String = cabe.cab_vendedor & Space(30 - cabe.cab_vendedor.ToString.Length)
+                    Dim StrTotal As String = Space(10 - Format(cabe.cab_total, "$ #0.00").Length) & Format(cabe.cab_total, "$ #0.00")
+
+                    cadena = cadena & StrFecha & StrCliente & StrVendedor & StrTotal & vbCrLf & vbCrLf
+                    For Each detalle In repo
+                        If detalle.detalle_idVenta = cabe.cab_idVenta Then
+                            Dim StrProducto As String = vbTab & detalle.detalle_producto & Space(30 - detalle.detalle_producto.ToString.Length)
+                            Dim detalleCantidad As String = detalle.detalle_cantidad & Space(30 - detalle.detalle_cantidad.ToString.Length)
+                            Dim detalleStrTotal As String = Space(10 - Format(detalle.detalle_subtotal, "$ #0.00").Length) & Format(detalle.detalle_subtotal, "$ #0.00") & vbCrLf
+                            cadena2 = cadena2 & StrProducto & detalleCantidad & detalleStrTotal
+                        End If
+                    Next
+
+                    cadena = cadena & cadena2 & vbCrLf
+                    cadena2 = ""
                 Next
             End Using
             Return cadena
