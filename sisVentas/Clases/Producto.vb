@@ -8,6 +8,7 @@
     Private stockMinimoP As Integer
     Private proveedorP As Integer
 
+
     'DECLARO UN CONTRUCTOR VACIO
     Public Sub New()
 
@@ -312,4 +313,5 @@
             Return False
         End Try
     End Function
+
 End Class

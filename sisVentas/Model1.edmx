@@ -24,6 +24,7 @@
           <Property Name="total" Type="decimal" Precision="10" Scale="4" />
           <Property Name="id_user" Type="int" />
           <Property Name="id_cliente" Type="int" />
+          <Property Name="estado" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tblCategoria">
           <Key>
@@ -222,6 +223,7 @@
           <Property Name="total" Type="Decimal" Precision="10" Scale="4" />
           <Property Name="id_user" Type="Int32" />
           <Property Name="id_cliente" Type="Int32" />
+          <Property Name="estado" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tblCliente" Relationship="Self.FK_Cab_Cli" FromRole="tblCabecera" ToRole="tblCliente" />
           <NavigationProperty Name="tblUsuarios" Relationship="Self.FK_Cab_User" FromRole="tblCabecera" ToRole="tblUsuarios" />
           <NavigationProperty Name="tblDetalle" Relationship="Self.FK_Det_Cab" FromRole="tblCabecera" ToRole="tblDetalle" />
@@ -433,6 +435,7 @@
                 <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="id_user" ColumnName="id_user" />
                 <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

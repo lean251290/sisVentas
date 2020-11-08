@@ -114,6 +114,7 @@
         If TBCantidad.Text = "" Then
             'MsgBox("debe agregar una cantidad")
             LabelCantidad.Visible = True
+            TBCantidad.Text = ""
             Exit Sub
         Else
             LabelCantidad.Visible = False
@@ -121,6 +122,7 @@
         If cantidad > stock Then
             'MsgBox("no puede agregar no tiene stock")
             LabelStock.Visible = True
+            TBCantidad.Text = ""
             Exit Sub
         Else
             LabelStock.Visible = False

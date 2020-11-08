@@ -1,4 +1,5 @@
 ﻿Public Class FrmEliminarVenta
+    Public idVenta As Integer
     Private Sub PBCerrarEliminarVenta_Click(sender As Object, e As EventArgs) Handles PBCerrarEliminarVenta.Click
         Me.Close()
     End Sub
@@ -24,5 +25,16 @@
 
     Private Sub BtnEliminarVentaNo_Click(sender As Object, e As EventArgs) Handles BtnEliminarVentaNo.Click
         Me.Close()
+    End Sub
+
+    Private Sub BtnEliminarVentaSi_Click(sender As Object, e As EventArgs) Handles BtnEliminarVentaSi.Click
+        'DataGridVerVentas
+        Dim anular As New Cabecera
+        Dim anularD As New Detalle
+        If anular.AnularVenta(Me.Tag) Then
+            anularD.AnularVenta(idVenta)
+            FrmDatosActualizados.Show()
+        End If
+
     End Sub
 End Class

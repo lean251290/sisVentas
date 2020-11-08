@@ -4,6 +4,7 @@
     Private total As Decimal
     Private usuario As Integer
     Private cliente As Integer
+    Private estado As String
 
     'DECLARO UN CONTRUCTOR VACIO
     Public Sub New()
@@ -34,6 +35,9 @@
     Public Sub setCliente(ByRef p_cliente As Integer)
         cliente = p_cliente
     End Sub
+    Public Sub setEstado(ByRef p_estado As Integer)
+        estado = p_estado
+    End Sub
 
     'DECLARACION DE LOS GETTERS
     Public Function getFecha()
@@ -51,6 +55,9 @@
     End Function
     Public Function getId()
         getId = id
+    End Function
+    Public Function getEstado()
+        getEstado = estado
     End Function
 
 
@@ -305,10 +312,15 @@
     Public Function AnularVenta(ByVal p_id As Integer)
         Try
             Using db As New SisVentasEntities
-
+                Dim anular = (From p In db.tblCabecera
+                              Where p.id_venta = p_id
+                              Select p).First
+                anular.estado = "Anulado"
+                db.SaveChanges()
             End Using
+            Return True
         Catch ex As Exception
-
+            Return False
         End Try
     End Function
 

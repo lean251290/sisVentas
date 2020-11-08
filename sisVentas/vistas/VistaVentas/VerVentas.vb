@@ -38,6 +38,16 @@
     End Sub
 
     Private Sub BtnAnular_Click(sender As Object, e As EventArgs) Handles BtnAnular.Click
-        FrmEliminarVenta.Show()
+        Dim NumeroDeFilaSeleccionada As Integer
+
+        If DataGridVerVentas.SelectedRows.Count > 0 Then
+            NumeroDeFilaSeleccionada = DataGridVerVentas.CurrentRow.Index
+            FrmEliminarVenta.Tag = DataGridVerVentas.SelectedRows(0).Cells(0).Value.ToString
+            FrmEliminarVenta.idVenta = DataGridVerVentas.SelectedRows(0).Cells(0).Value
+            FrmEliminarVenta.Show()
+        Else
+            FrmSeleccioneFila.Show()
+        End If
+
     End Sub
 End Class

@@ -16,6 +16,7 @@ Partial Public Class tblCabecera
     Public Property total As Nullable(Of Decimal)
     Public Property id_user As Nullable(Of Integer)
     Public Property id_cliente As Nullable(Of Integer)
+    Public Property estado As String
 
     Public Overridable Property tblCliente As tblCliente
     Public Overridable Property tblUsuarios As tblUsuarios

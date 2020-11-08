@@ -88,4 +88,28 @@
         End Try
 
     End Function
+
+
+    Public Function AnularVenta(ByVal idVenta As Integer)
+        Dim prod As New Producto
+        Try
+            Using db As New SisVentasEntities
+
+                Dim detalle = From d In db.tblDetalle
+                              Where d.id_venta = idVenta
+                              Select
+                                    d
+                For Each d In detalle
+                    prod.ActStockSuma(d.id_producto, d.cantidad)
+                Next
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
+
+
+
 End Class

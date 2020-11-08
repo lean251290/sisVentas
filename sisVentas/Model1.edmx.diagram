@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="956982cc70814096a9b81a87643e99a8" Name="Diagram1">
-        <EntityTypeShape EntityType="SisVentasModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SisVentasModel.tblCabecera" Width="1.5" PointX="8.875" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SisVentasModel.tblCategoria" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SisVentasModel.tblCliente" Width="1.5" PointX="4.625" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SisVentasModel.tblDetalle" Width="1.5" PointX="8.875" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SisVentasModel.tblProducto" Width="1.5" PointX="2.75" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SisVentasModel.tblProveedores" Width="1.5" PointX="0.5" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SisVentasModel.tblUsuarios" Width="1.5" PointX="6.5" PointY="3.125" IsExpanded="true" />
+      <Diagram DiagramId="59c3477cdae240b7a529bdbda242f3f6" Name="Diagram1">
+        <EntityTypeShape EntityType="SisVentasModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisVentasModel.tblCabecera" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisVentasModel.tblCategoria" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisVentasModel.tblCliente" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisVentasModel.tblDetalle" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisVentasModel.tblProducto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisVentasModel.tblProveedores" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SisVentasModel.tblUsuarios" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
         <AssociationConnector Association="SisVentasModel.FK_Cab_Cli" ManuallyRouted="false" />
         <AssociationConnector Association="SisVentasModel.FK_Cab_User" ManuallyRouted="false" />
         <AssociationConnector Association="SisVentasModel.FK_Det_Cab" ManuallyRouted="false" />
