@@ -26,4 +26,18 @@
         VistaDetalle.idVenta = Val(DataGridVerVentas.Rows(filaSeleccionada).Cells(0).Value)
         VistaDetalle.Show()
     End Sub
+
+
+
+    Private Sub BtnAnular_MouseDown(sender As Object, e As MouseEventArgs) Handles BtnAnular.MouseDown
+        BtnAnular.BackgroundImage = My.Resources.btn122x45Oscuro
+    End Sub
+
+    Private Sub BtnAnular_MouseUp(sender As Object, e As MouseEventArgs) Handles BtnAnular.MouseUp
+        BtnAnular.BackgroundImage = My.Resources.btn122x45
+    End Sub
+
+    Private Sub BtnAnular_Click(sender As Object, e As EventArgs) Handles BtnAnular.Click
+        FrmEliminarVenta.Show()
+    End Sub
 End Class

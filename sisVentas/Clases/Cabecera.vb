@@ -302,5 +302,14 @@
             Return ""
         End Try
     End Function
+    Public Function AnularVenta(ByVal p_id As Integer)
+        Try
+            Using db As New SisVentasEntities
+
+            End Using
+        Catch ex As Exception
+
+        End Try
+    End Function
 
 End Class

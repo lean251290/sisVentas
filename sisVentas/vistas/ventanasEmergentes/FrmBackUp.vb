@@ -12,22 +12,27 @@ Public Class FrmBackUp
 
     Private Sub Btnbackupsi_Click(sender As Object, e As EventArgs) Handles Btnbackupsi.Click
 
-        Dim nombre_copia As String = (Date.Today.Day.ToString & "-" & Date.Today.Month.ToString & "-" & Date.Today.Year.ToString & "-" & Date.Now.Hour.ToString & "-" & Date.Now.Minute.ToString & "-" & Date.Now.Second.ToString & "MiCopia")
-        Dim comando_consulta As String = "BACKUP DATABASE [SisVentas] To  DISK = N'C:\Desarrollo\" & nombre_copia & "' WITH NOFORMAT, NOINIT,  NAME = N'SisVentas-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10"
-        Dim cmd As SqlCommand = New SqlCommand(comando_consulta, conexion)
-
-        Try
-            conexion.Open()
-            cmd.ExecuteNonQuery()
-            MsgBox("LA COPIA DE SEGURIDAD SE HA REALIZADO")
-        Catch ex As Exception
-            MsgBox("UPS!!! ALGO OCURRIO, CIERRE EL FORMULARIO E INTENTE NUEVAMENTE")
-
-        Finally
-            conexion.Close()
-            conexion.Dispose()
-        End Try
+        'Data Source=DESKTOP-PAK241P\LEAN;Initial Catalog=SisVentas;Integrated Security=True
+        Dim sBackup As String = "BACKUP DATABASE SisVentas To DISK = 'C:\Desarrollo\SisVentas.bak' WITH DIFFERENTIAL"
+        Dim csb As New SqlConnectionStringBuilder
+        csb.DataSource = "DESKTOP-PAK241P\LEAN"
+        csb.InitialCatalog = "SisVentas"
+        csb.IntegratedSecurity = True
+        Using con As New SqlConnection(csb.ConnectionString)
+            Try
+                con.Open()
+                Dim cmdBackUp As New SqlCommand(sBackup, con)
+                cmdBackUp.ExecuteNonQuery()
+                MsgBox("Se ha creado un BackUp de La base de datos satisfactoria", vbOKOnly + vbInformation, "BackUp")
+                con.Close()
+            Catch ex As Exception
+                MsgBox(ex.Message, vbOKOnly + vbCritical, "Error")
+            End Try
+        End Using
 
     End Sub
 
+    Private Sub Btnbackupno_Click(sender As Object, e As EventArgs) Handles Btnbackupno.Click
+
+    End Sub
 End Class

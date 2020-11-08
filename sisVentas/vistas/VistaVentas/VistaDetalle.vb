@@ -5,4 +5,10 @@
         det.traerDetalle(idVenta, DGDetalle)
 
     End Sub
+
+
+
+    Private Sub PBCerraDetalleDeVenta_Click(sender As Object, e As EventArgs) Handles PBCerraDetalleDeVenta.Click
+        Me.Close()
+    End Sub
 End Class
