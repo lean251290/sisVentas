@@ -34,6 +34,8 @@
         If anular.AnularVenta(Me.Tag) Then
             anularD.AnularVenta(idVenta)
             FrmDatosActualizados.Show()
+            VerVentas.Close()
+            PanelAdmin.abrirFormHijo(VerVentas)
             Me.Close()
         End If
 
