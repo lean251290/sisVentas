@@ -133,4 +133,8 @@
             prod.traerEliminados(TBuscarProd.Text, DataGridProd)
         End If
     End Sub
+
+    Private Sub DataGridProd_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridProd.CellContentClick
+
+    End Sub
 End Class

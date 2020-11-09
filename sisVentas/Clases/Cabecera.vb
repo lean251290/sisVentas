@@ -97,7 +97,8 @@
                                         IDVENTA = cab.id_venta,
                                         CLIENTE = cli.nombre,
                                         FECHA = cab.fecha,
-                                        TOTAL = cab.total
+                                        TOTAL = cab.total,
+                                        ESTADO = cab.estado
                 grid.DataSource = verVentasUser.ToList
 
             End Using
@@ -321,6 +322,20 @@
             Return True
         Catch ex As Exception
             Return False
+        End Try
+    End Function
+
+
+    Public Function verificarVenta(ByVal idVenta As Integer) As Boolean
+        Try
+            Using db As New SisVentasEntities
+                Dim existe = (From d In db.tblCabecera
+                              Where d.estado = "Anulado" And d.id_venta = idVenta
+                              Select d).First
+            End Using
+            verificarVenta = True
+        Catch ex As Exception
+            verificarVenta = False
         End Try
     End Function
 

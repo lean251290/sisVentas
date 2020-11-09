@@ -322,6 +322,12 @@
     <Compile Include="vistas\ventanasEmergentes\FrmValidarDni.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmVentaAnulada.Designer.vb">
+      <DependentUpon>FrmVentaAnulada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ventanasEmergentes\FrmVentaAnulada.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vistas\ventanasEmergentes\FrmVerificaDNI.Designer.vb">
       <DependentUpon>FrmVerificaDNI.vb</DependentUpon>
     </Compile>
@@ -578,6 +584,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmValidarDni.resx">
       <DependentUpon>FrmValidarDni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\ventanasEmergentes\FrmVentaAnulada.resx">
+      <DependentUpon>FrmVentaAnulada.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\ventanasEmergentes\FrmVerificaDNI.resx">
       <DependentUpon>FrmVerificaDNI.vb</DependentUpon>

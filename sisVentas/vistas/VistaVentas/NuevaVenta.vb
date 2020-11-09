@@ -228,29 +228,34 @@
         Dim venta As New Cabecera(fecha, totalCabecera, Val(idUsuario), Val(idCliente))
 
         Dim idventa As Integer
-        idventa = venta.VentaCabecera()
-        Dim idPrdoDetalle As Integer
-        Dim cantidad As Integer
-        Dim subTot As Decimal
-        Dim subTot2 As Decimal
-        If idventa <> 0 Then
-            For Each fila As DataGridViewRow In DGVentaProductos.Rows
-                idPrdoDetalle = fila.Cells(0).Value
-                cantidad = fila.Cells(3).Value
-                subTot = fila.Cells(5).Value
-                'Decimal.TryParse(subTot, subTot2)
-
-                Dim detalle As New Detalle(idPrdoDetalle, cantidad, idventa, subTot)
-                detalle.NuevoDetalle()
-                Dim prod As New Producto
-                prod.ActualizarStock(idPrdoDetalle, cantidad)
-            Next
-            PanelAdmin.cerrarFormHijo(Me)
-            FrmVerificaDNI.Show()
-            PanelAdmin.abrirFormHijo(VerVentas)
+        If DGVentaProductos.Rows.Count = 0 Then
+            MsgBox("debe seleccionar produtos")
         Else
-            ErrorVenta.Show()
+            idventa = venta.VentaCabecera()
+            Dim idPrdoDetalle As Integer
+            Dim cantidad As Integer
+            Dim subTot As Decimal
+            Dim subTot2 As Decimal
+            If idventa <> 0 Then
+                For Each fila As DataGridViewRow In DGVentaProductos.Rows
+                    idPrdoDetalle = fila.Cells(0).Value
+                    cantidad = fila.Cells(3).Value
+                    subTot = fila.Cells(5).Value
+                    'Decimal.TryParse(subTot, subTot2)
+
+                    Dim detalle As New Detalle(idPrdoDetalle, cantidad, idventa, subTot)
+                    detalle.NuevoDetalle()
+                    Dim prod As New Producto
+                    prod.ActualizarStock(idPrdoDetalle, cantidad)
+                Next
+                PanelAdmin.cerrarFormHijo(Me)
+                FrmVerificaDNI.Show()
+                PanelAdmin.abrirFormHijo(VerVentas)
+            Else
+                ErrorVenta.Show()
+            End If
         End If
+
 
 
 

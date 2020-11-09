@@ -34,6 +34,7 @@
         If anular.AnularVenta(Me.Tag) Then
             anularD.AnularVenta(idVenta)
             FrmDatosActualizados.Show()
+            Me.Close()
         End If
 
     End Sub
