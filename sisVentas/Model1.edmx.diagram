@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="59c3477cdae240b7a529bdbda242f3f6" Name="Diagram1">
+      <Diagram DiagramId="e0476b4ae0f246fdadb65a0ae79c8e10" Name="Diagram1">
         <EntityTypeShape EntityType="SisVentasModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblCabecera" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SisVentasModel.tblCategoria" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />

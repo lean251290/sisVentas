@@ -4,9 +4,9 @@ Public Class backup
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
-
+    'metadata=res://*/Model12.csdl|res://*/Model12.ssdl|res://*/Model12.msl;provider=System.Data.SqlClient;provider connection string="data source=DESKTOP-2CT3B8H;initial catalog=SisVentas;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
     Private Sub btnConectar_Click(sender As Object, e As EventArgs) Handles btnConectar.Click
-        Dim conString As String = "data source=DESKTOP-PAK241P\LEAN;initial catalog=SisVentas;Uid=LEANDRO;Pwd=123asd;integrated security=True"
+        Dim conString As String = "data source=.;initial catalog=SisVentas;integrated security=True"
 
         Dim conexion As New SqlClient.SqlConnection
         conexion.ConnectionString = conString
@@ -39,11 +39,11 @@ Public Class backup
     Private Sub btnBackup_Click_1(sender As Object, e As EventArgs) Handles btnBackup.Click
         Try
             'Verifica que exista la carpeta, en caso contrario la crea
-            If Not Directory.Exists("E:\Backup") Then
-                Directory.CreateDirectory("E:\Backup")
+            If Not Directory.Exists("D:\backup") Then
+                Directory.CreateDirectory("D:\backup")
             End If
 
-            Process.Start("cmd", "/k" & "sqlcmd -S DESKTOP-PAK241P\LEAN -E -Q ""BACKUP DATABASE [" & cboBaseDatos.Text & "] TO DISK='" & txtRutaGuardar.Text & "'""")
+            Process.Start("cmd", "/k" & "sqlcmd -S DESKTOP-2CT3B8H -E -Q ""BACKUP DATABASE [" & cboBaseDatos.Text & "] TO DISK='" & txtRutaGuardar.Text & "'""")
 
         Catch ex As Exception
             MessageBox.Show(Err.Description)
@@ -60,7 +60,7 @@ Public Class backup
     End Sub
 
     Private Sub btnRestaurar_Click_1(sender As Object, e As EventArgs) Handles btnRestaurar.Click
-        Process.Start("cmd", "/k" & "Sqlcmd -S DESKTOP-PAK241P\LEAN -E -Q ""RESTORE DATABASE [" & txtBaseRestaurar.Text & "] FROM DISK = '" & txtRutaRestaurar.Text & "'""")
+        Process.Start("cmd", "/k" & "Sqlcmd -S DESKTOP-2CT3B8H -E -Q ""RESTORE DATABASE [" & txtBaseRestaurar.Text & "] FROM DISK = '" & txtRutaRestaurar.Text & "'""")
     End Sub
 
 

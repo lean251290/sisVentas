@@ -94,7 +94,6 @@
         Dim prod As New Producto
         Try
             Using db As New SisVentasEntities
-
                 Dim detalle = From d In db.tblDetalle
                               Where d.id_venta = idVenta
                               Select
@@ -110,6 +109,22 @@
 
     End Function
 
-
+    Public Function TraerDetalleTicket(ByVal id As Integer, ByVal DG As DataGridView)
+        Try
+            Using db As New SisVentasEntities
+                Dim detalleTicket = (From d In db.tblDetalle
+                                     Join p In db.tblProducto On p.id_producto Equals d.id_producto
+                                     Where d.id_venta = id
+                                     Select
+                                        NOMBRED = p.nombre,
+                                        CANTIDADD = d.cantidad,
+                                        SUBTOTALD = d.subtotal)
+                DG.DataSource = detalleTicket.ToList
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 
 End Class

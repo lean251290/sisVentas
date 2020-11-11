@@ -269,7 +269,7 @@
                            Join prod In db.tblProducto On prod.id_producto Equals detalle.id_producto
                            Join usua In db.tblUsuarios On usua.id_user Equals cabe.id_user
                            Join clie In db.tblCliente On clie.id_cliente Equals cabe.id_cliente
-                           Where usua.correo.Contains(mail)
+                           Where usua.nombre.Contains(mail)
                            Select
                                cab_idVenta = cabe.id_venta,
                                detalle_idVenta = detalle.id_venta,
@@ -337,6 +337,43 @@
         Catch ex As Exception
             verificarVenta = False
         End Try
+    End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Public Function GenerarTicket(ByVal id As Integer) As Double
+        Dim total As Double
+        Try
+            Using db As New SisVentasEntities
+                Dim consulta = (From cabe In db.tblCabecera
+                                Where cabe.id_venta = id
+                                Select cabe).First
+                total = consulta.total
+            End Using
+            Return total
+        Catch ex As Exception
+            Return 0
+        End Try
+
     End Function
 
 End Class

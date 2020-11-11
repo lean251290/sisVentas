@@ -151,7 +151,7 @@ Partial Class ReporteVentasPorFecha
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label6.Location = New System.Drawing.Point(392, 38)
+        Me.Label6.Location = New System.Drawing.Point(380, 39)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(68, 20)
         Me.Label6.TabIndex = 24

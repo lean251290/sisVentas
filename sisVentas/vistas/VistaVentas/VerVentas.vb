@@ -1,4 +1,5 @@
 ﻿Public Class VerVentas
+
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Close()
     End Sub
@@ -42,7 +43,6 @@
         Dim verificar As New Cabecera
         If DataGridVerVentas.SelectedRows.Count > 0 Then
             NumeroDeFilaSeleccionada = DataGridVerVentas.CurrentRow.Index
-            FrmEliminarVenta.Tag = DataGridVerVentas.SelectedRows(0).Cells(0).Value.ToString
             FrmEliminarVenta.idVenta = DataGridVerVentas.SelectedRows(0).Cells(0).Value
             If verificar.verificarVenta(FrmEliminarVenta.idVenta) Then
                 FrmVentaAnulada.Show()
@@ -63,5 +63,18 @@
                 e.CellStyle.BackColor = Color.Red
             End If
         End If
+    End Sub
+
+    Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
+        Dim fila As Integer
+        fila = DataGridVerVentas.CurrentRow.Index
+        If fila > 0 Then
+            GenerarTicket.idTicket = DataGridVerVentas.Rows(0).Cells(0).Value
+
+            GenerarTicket.Show()
+        Else
+            MsgBox("debe selecionar una fila")
+        End If
+
     End Sub
 End Class

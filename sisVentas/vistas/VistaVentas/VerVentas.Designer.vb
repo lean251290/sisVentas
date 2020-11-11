@@ -33,6 +33,7 @@ Partial Class VerVentas
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnAnular = New System.Windows.Forms.Button()
+        Me.BtnImprimir = New System.Windows.Forms.Button()
         Me.PanelVerVentas.SuspendLayout()
         CType(Me.DataGridVerVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBuscarUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,12 +176,31 @@ Partial Class VerVentas
         Me.BtnAnular.Text = "Anular "
         Me.BtnAnular.UseVisualStyleBackColor = False
         '
+        'BtnImprimir
+        '
+        Me.BtnImprimir.BackColor = System.Drawing.Color.Transparent
+        Me.BtnImprimir.BackgroundImage = Global.sisVentas.My.Resources.Resources.btn122x45
+        Me.BtnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnImprimir.FlatAppearance.BorderSize = 0
+        Me.BtnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImprimir.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnImprimir.Location = New System.Drawing.Point(154, 631)
+        Me.BtnImprimir.Name = "BtnImprimir"
+        Me.BtnImprimir.Size = New System.Drawing.Size(98, 37)
+        Me.BtnImprimir.TabIndex = 25
+        Me.BtnImprimir.Text = "Ticket"
+        Me.BtnImprimir.UseVisualStyleBackColor = False
+        '
         'VerVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(680, 680)
+        Me.Controls.Add(Me.BtnImprimir)
         Me.Controls.Add(Me.BtnAnular)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelVerVentas)
@@ -205,4 +225,5 @@ Partial Class VerVentas
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGridVerVentas As DataGridView
     Friend WithEvents BtnAnular As Button
+    Friend WithEvents BtnImprimir As Button
 End Class

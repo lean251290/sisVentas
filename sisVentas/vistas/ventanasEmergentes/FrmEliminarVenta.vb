@@ -31,7 +31,7 @@
         'DataGridVerVentas
         Dim anular As New Cabecera
         Dim anularD As New Detalle
-        If anular.AnularVenta(Me.Tag) Then
+        If anular.AnularVenta(idVenta) Then
             anularD.AnularVenta(idVenta)
             FrmDatosActualizados.Show()
             VerVentas.Close()

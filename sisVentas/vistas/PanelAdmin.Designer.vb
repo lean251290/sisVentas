@@ -715,7 +715,7 @@ Partial Class PanelAdmin
         Me.PictureBox4.Image = Global.sisVentas.My.Resources.Resources.fondoPanel
         Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(475, 680)
+        Me.PictureBox4.Size = New System.Drawing.Size(675, 680)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 1
         Me.PictureBox4.TabStop = False
@@ -729,9 +729,9 @@ Partial Class PanelAdmin
         Me.PnllReportes.Controls.Add(Me.Panel3)
         Me.PnllReportes.Controls.Add(Me.Panel2)
         Me.PnllReportes.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PnllReportes.Location = New System.Drawing.Point(475, 0)
+        Me.PnllReportes.Location = New System.Drawing.Point(675, 0)
         Me.PnllReportes.Name = "PnllReportes"
-        Me.PnllReportes.Size = New System.Drawing.Size(205, 680)
+        Me.PnllReportes.Size = New System.Drawing.Size(5, 680)
         Me.PnllReportes.TabIndex = 0
         '
         'Panel7
@@ -740,7 +740,7 @@ Partial Class PanelAdmin
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 500)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(205, 100)
+        Me.Panel7.Size = New System.Drawing.Size(5, 100)
         Me.Panel7.TabIndex = 31
         '
         'BtnVentasPorProducto
@@ -756,7 +756,7 @@ Partial Class PanelAdmin
         Me.BtnVentasPorProducto.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BtnVentasPorProducto.Location = New System.Drawing.Point(0, 0)
         Me.BtnVentasPorProducto.Name = "BtnVentasPorProducto"
-        Me.BtnVentasPorProducto.Size = New System.Drawing.Size(205, 40)
+        Me.BtnVentasPorProducto.Size = New System.Drawing.Size(5, 40)
         Me.BtnVentasPorProducto.TabIndex = 26
         Me.BtnVentasPorProducto.Text = "  VENTA POR CLIENTES"
         Me.BtnVentasPorProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -769,7 +769,7 @@ Partial Class PanelAdmin
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel6.Location = New System.Drawing.Point(0, 400)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(205, 100)
+        Me.Panel6.Size = New System.Drawing.Size(5, 100)
         Me.Panel6.TabIndex = 30
         '
         'BtnVentasPorCliente
@@ -785,7 +785,7 @@ Partial Class PanelAdmin
         Me.BtnVentasPorCliente.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BtnVentasPorCliente.Location = New System.Drawing.Point(0, 0)
         Me.BtnVentasPorCliente.Name = "BtnVentasPorCliente"
-        Me.BtnVentasPorCliente.Size = New System.Drawing.Size(205, 40)
+        Me.BtnVentasPorCliente.Size = New System.Drawing.Size(5, 40)
         Me.BtnVentasPorCliente.TabIndex = 26
         Me.BtnVentasPorCliente.Text = "             BACK-UP"
         Me.BtnVentasPorCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -798,7 +798,7 @@ Partial Class PanelAdmin
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(0, 300)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(205, 100)
+        Me.Panel5.Size = New System.Drawing.Size(5, 100)
         Me.Panel5.TabIndex = 29
         '
         'BtnVentasPorUser
@@ -814,7 +814,7 @@ Partial Class PanelAdmin
         Me.BtnVentasPorUser.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BtnVentasPorUser.Location = New System.Drawing.Point(0, 0)
         Me.BtnVentasPorUser.Name = "BtnVentasPorUser"
-        Me.BtnVentasPorUser.Size = New System.Drawing.Size(205, 40)
+        Me.BtnVentasPorUser.Size = New System.Drawing.Size(5, 40)
         Me.BtnVentasPorUser.TabIndex = 26
         Me.BtnVentasPorUser.Text = "   VENTA POR USUARIO"
         Me.BtnVentasPorUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -827,7 +827,7 @@ Partial Class PanelAdmin
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 200)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(205, 100)
+        Me.Panel4.Size = New System.Drawing.Size(5, 100)
         Me.Panel4.TabIndex = 28
         '
         'BtnVentasPorFecha
@@ -843,7 +843,7 @@ Partial Class PanelAdmin
         Me.BtnVentasPorFecha.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BtnVentasPorFecha.Location = New System.Drawing.Point(0, 0)
         Me.BtnVentasPorFecha.Name = "BtnVentasPorFecha"
-        Me.BtnVentasPorFecha.Size = New System.Drawing.Size(205, 40)
+        Me.BtnVentasPorFecha.Size = New System.Drawing.Size(5, 40)
         Me.BtnVentasPorFecha.TabIndex = 26
         Me.BtnVentasPorFecha.Text = "     VENTAS POR FECHA"
         Me.BtnVentasPorFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -856,7 +856,7 @@ Partial Class PanelAdmin
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 100)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(205, 100)
+        Me.Panel3.Size = New System.Drawing.Size(5, 100)
         Me.Panel3.TabIndex = 27
         '
         'BtnVentasPorDia
@@ -872,7 +872,7 @@ Partial Class PanelAdmin
         Me.BtnVentasPorDia.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.BtnVentasPorDia.Location = New System.Drawing.Point(0, 0)
         Me.BtnVentasPorDia.Name = "BtnVentasPorDia"
-        Me.BtnVentasPorDia.Size = New System.Drawing.Size(205, 40)
+        Me.BtnVentasPorDia.Size = New System.Drawing.Size(5, 40)
         Me.BtnVentasPorDia.TabIndex = 26
         Me.BtnVentasPorDia.Text = "       VENTAS DEL DIA"
         Me.BtnVentasPorDia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -884,7 +884,7 @@ Partial Class PanelAdmin
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(205, 100)
+        Me.Panel2.Size = New System.Drawing.Size(5, 100)
         Me.Panel2.TabIndex = 1
         '
         'PanelAdmin
