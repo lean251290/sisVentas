@@ -22,6 +22,9 @@ Partial Class GenerarTicket
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGTicket = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -34,6 +37,8 @@ Partial Class GenerarTicket
         Me.Label7 = New System.Windows.Forms.Label()
         Me.LblTotalTicket = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.BtnImprimir = New System.Windows.Forms.Button()
         CType(Me.DGTicket, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -52,11 +57,37 @@ Partial Class GenerarTicket
         Me.DGTicket.BackgroundColor = System.Drawing.Color.White
         Me.DGTicket.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGTicket.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.DGTicket.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGTicket.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGTicket.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGTicket.GridColor = System.Drawing.Color.White
         Me.DGTicket.Location = New System.Drawing.Point(28, 179)
         Me.DGTicket.Name = "DGTicket"
         Me.DGTicket.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGTicket.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DGTicket.RowHeadersVisible = False
         Me.DGTicket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGTicket.Size = New System.Drawing.Size(331, 270)
         Me.DGTicket.TabIndex = 2
@@ -156,12 +187,26 @@ Partial Class GenerarTicket
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
+        'PrintDocument1
+        '
+        Me.PrintDocument1.OriginAtMargins = True
+        '
+        'BtnImprimir
+        '
+        Me.BtnImprimir.Location = New System.Drawing.Point(325, 0)
+        Me.BtnImprimir.Name = "BtnImprimir"
+        Me.BtnImprimir.Size = New System.Drawing.Size(75, 23)
+        Me.BtnImprimir.TabIndex = 13
+        Me.BtnImprimir.Text = "imprimir"
+        Me.BtnImprimir.UseVisualStyleBackColor = True
+        '
         'GenerarTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(400, 500)
+        Me.Controls.Add(Me.BtnImprimir)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LblTotalTicket)
         Me.Controls.Add(Me.Label7)
@@ -196,4 +241,6 @@ Partial Class GenerarTicket
     Friend WithEvents Label7 As Label
     Friend WithEvents LblTotalTicket As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Public WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents BtnImprimir As Button
 End Class

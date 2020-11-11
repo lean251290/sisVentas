@@ -20,4 +20,8 @@
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Close()
     End Sub
+
+    Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
+        PrintDocument1.Print()
+    End Sub
 End Class
